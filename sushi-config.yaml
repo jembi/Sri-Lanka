@@ -10,8 +10,8 @@ id: openhie.fhir.sri-lanka
 canonical: http://openhie.org/fhir/sri-lanka
 url: http://openhie.org/fhir/sri-lanka/ImplementationGuide/openhie.fhir.sri-lanka
 name: SriLanka
-title: "HL7 FHIR Implementation Guide: Sri Lanaka"
-description: A FHIR Implementation Guide - Sri Lanaka
+title: "HL7 FHIR Implementation Guide: Sri Lanka"
+description: A FHIR Implementation Guide - Sri Lanka
 status: active
 license: CC0-1.0
 date: 2023-10-05
