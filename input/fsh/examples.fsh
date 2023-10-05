@@ -132,3 +132,65 @@ Description: "Represents the Systolic and Diastolic blood pressure for the patie
 * component[Diastolic].valueQuantity.unit = "mmHg"
 * component[Diastolic].valueQuantity.system = "http://unitsofmeasure.org"
 * component[Diastolic].valueQuantity.code = #mm[Hg]
+
+Instance: WeightExample
+InstanceOf: Weight
+Usage: #example
+Title: "Patient Weight"
+Description: "Represents the patient's weight."
+* status = #final
+* category.coding.code = #vital-signs
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* code.coding.code = #29463-7
+* code.coding.system = "http://loinc.org"
+* code.text = "Body Weight"
+* subject = Reference(HIMSPatientExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* effectiveDateTime = "2022-11-30"
+* valueQuantity.value = 110
+* valueQuantity.unit = "kg"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #kg
+* performer = Reference(OrganizationExample)
+
+Instance: HeightExample
+InstanceOf: Height
+Usage: #example
+Title: "Patient Height"
+Description: "Represents the patient's height."
+* status = #final
+* category.coding.code = #vital-signs
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* code.coding.code = #8302-2
+* code.coding.system = "http://loinc.org"
+* code.text = "Body Height"
+* subject = Reference(HIMSPatientExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* effectiveDateTime = "2022-11-30"
+* valueQuantity.value = 185
+* valueQuantity.unit = "cm"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #cm
+* performer = Reference(OrganizationExample)
+
+Instance: BMIExample
+InstanceOf: BMI
+Usage: #example
+Title: "Patient BMI"
+Description: "Represents the patient's BMI."
+* status = #final
+* category.coding.code = #vital-signs
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* code.coding.code = #39156-5
+* code.coding.system = "http://loinc.org"
+* code.text = "Body mass index (BMI)"
+* subject = Reference(HIMSPatientExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* effectiveDateTime = "2022-11-30"
+* valueQuantity.value = 16.2
+* valueQuantity.unit = "kg/m2"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #kg/m2
+* performer = Reference(OrganizationExample)
+* derivedFrom[+] = Reference(WeightExample)
+* derivedFrom[+] = Reference(HeightExample)

@@ -32,10 +32,8 @@ Description: "Represents the current facility at which the patient is receiving 
 Profile: HIMSPatient
 Parent: Patient
 Id: hims-patient
-Title: "Patient"
+Title: "HIMS Patient"
 Description: "Is used to document demographics and other administrative information about an individual receiving care or other health-related services."
-* ^description = 
-    "Sri Lanka team to provide a rationale for this structure defintion and when it is appopriate to use it. It should also describe the must support (aka MS) elements."
 * identifier 1..*
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
@@ -100,8 +98,6 @@ Parent: Observation
 Id: risk-behaviour-physical-activity
 Title: "Physical Activity Status Observation"
 Description: "Represents the physical status of the patient."
-* ^description = 
-    "Sri Lanka team to provide a rationale for this structure defintion and when it is appopriate to use it."
 * status 1..1
 * code.coding.code = #106020009
 * code.coding.system = "http://snomed.info/sct"
@@ -118,8 +114,6 @@ Parent: Observation
 Id: risk-behaviour-tobacco-smoker
 Title: "Tobacco Smoker Observation"
 Description: "Represents the tobacco smoking status of the patient."
-* ^description = 
-    "Sri Lanka team to provide a rationale for this structure defintion and when it is appopriate to use it."
 * status 1..1
 * code.coding.code = #72166-2
 * code.coding.system = "http://loinc.org"
@@ -136,8 +130,6 @@ Parent: Observation
 Id: blood-pressure
 Title: "Blood Pressure Observation"
 Description: "Represents the patient's blood pressure."
-* ^description = 
-    "Sri Lanka team to provide a rationale for this structure defintion and when it is appopriate to use it. It should also describe the must support (aka MS) elements."
 * status 1..1
 * code.coding.code = #85354-9
 * code.coding.system = "http://loinc.org"
@@ -173,3 +165,64 @@ Description: "Represents the patient's blood pressure."
 * component[Diastolic].valueQuantity.system = "http://unitsofmeasure.org"
 * component[Diastolic].valueQuantity.code = #mm[Hg]
 * performer 1..*
+
+Profile: Weight
+Parent: Observation
+Id: weight
+Title: "Patient Weight"
+Description: "Represents the patient's weight."
+* status 1..1
+* category.coding.code = #vital-signs
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* code.coding.code = #29463-7
+* code.coding.system = "http://loinc.org"
+* code.text = "Body Weight"
+* subject 1..1
+* encounter 1..1
+* effectiveDateTime 1..1
+* valueQuantity.value 1..1
+* valueQuantity.unit = "kg"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #kg
+* performer 1..*
+
+Profile: Height
+Parent: Observation
+Id: height
+Title: "Patient Height"
+Description: "Represents the patient's height."
+* status 1..1
+* category.coding.code = #vital-signs
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* code.coding.code = #8302-2
+* code.coding.system = "http://loinc.org"
+* code.text = "Body Height"
+* subject 1..1
+* encounter 1..1
+* effectiveDateTime 1..1
+* valueQuantity.value 1..1
+* valueQuantity.unit = "cm"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #cm
+* performer 1..*
+
+Profile: BMI
+Parent: Observation
+Id: bmi
+Title: "Patient BMI"
+Description: "Represents the patient's BMI."
+* status 1..1
+* category.coding.code = #vital-signs
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* code.coding.code = #39156-5
+* code.coding.system = "http://loinc.org"
+* code.text = "Body mass index (BMI)"
+* subject 1..1
+* encounter 1..1
+* effectiveDateTime 1..1
+* valueQuantity.value 1..1
+* valueQuantity.unit = "kg/m2"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #kg/m2
+* performer 1..*
+* derivedFrom 0..*
