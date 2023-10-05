@@ -32,3 +32,12 @@ Title: "Risk Assessment - Tobacco Smoker"
 Description: "Risk Assessment - Tobacco Smoker"
 * ^experimental = false
 * include codes from system CSRiskBehaviourTobaccoSmoker
+
+CodeSystem: CSIdentifierTypes
+Id: cs-identifier-types
+Title: "Patient Business Identifier Types"
+Description: "Patient Business Identifier Types"
+* ^experimental = false
+* ^caseSensitive = true
+* #SCN "Senior Citizen Number" "Sri Lanka team to provide defitinion for this coded value"
+* #PHN "Personal Health Number" "Sri Lanka team to provide defitinion for this coded value"
