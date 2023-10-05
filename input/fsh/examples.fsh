@@ -104,3 +104,31 @@ Description: "Represents the tobacco smoking status of the patient."
 * valueCodeableConcept.coding.code = #User
 * valueCodeableConcept.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-tobacco-smoker"
 * performer = Reference(OrganizationExample)
+
+Instance: BloodPressureExample
+InstanceOf: BloodPressure
+Usage: #example
+Title: "Blood Pressure Observation"
+Description: "Represents the Systolic and Diastolic blood pressure for the patient."
+* status = #final
+* category.coding.code = #vital-signs
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* code.coding.code = #85354-9
+* code.coding.system = "http://loinc.org"
+* code.text = "Blood Pressure"
+* subject = Reference(HIMSPatientExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* effectiveDateTime = "2022-11-30"
+* performer = Reference(OrganizationExample)
+
+* component[Systolic].code = $LNC#8480-6
+* component[Systolic].valueQuantity.value = 106
+* component[Systolic].valueQuantity.unit = "mmHg"
+* component[Systolic].valueQuantity.system = "http://unitsofmeasure.org"
+* component[Systolic].valueQuantity.code = #mm[Hg]
+
+* component[Diastolic].code = $LNC#8462-4
+* component[Diastolic].valueQuantity.value = 60
+* component[Diastolic].valueQuantity.unit = "mmHg"
+* component[Diastolic].valueQuantity.system = "http://unitsofmeasure.org"
+* component[Diastolic].valueQuantity.code = #mm[Hg]

@@ -1,3 +1,6 @@
+Alias: $LNC = http://loinc.org
+Alias: $SCT = http://snomed.info/sct
+
 CodeSystem: CSRiskBehaviourPhysicalActivity
 Id: cs-risk-behaviour-physical-activity
 Title: "Risk Assessment - Physical Activity"

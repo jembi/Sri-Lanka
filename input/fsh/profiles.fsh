@@ -100,6 +100,8 @@ Parent: Observation
 Id: risk-behaviour-physical-activity
 Title: "Physical Activity Status Observation"
 Description: "Represents the physical status of the patient."
+* ^description = 
+    "Sri Lanka team to provide a rationale for this structure defintion and when it is appopriate to use it."
 * status 1..1
 * code.coding.code = #106020009
 * code.coding.system = "http://snomed.info/sct"
@@ -116,6 +118,8 @@ Parent: Observation
 Id: risk-behaviour-tobacco-smoker
 Title: "Tobacco Smoker Observation"
 Description: "Represents the tobacco smoking status of the patient."
+* ^description = 
+    "Sri Lanka team to provide a rationale for this structure defintion and when it is appopriate to use it."
 * status 1..1
 * code.coding.code = #72166-2
 * code.coding.system = "http://loinc.org"
@@ -125,4 +129,47 @@ Description: "Represents the tobacco smoking status of the patient."
 * effectiveDateTime 1..1
 * valueCodeableConcept 1..1
 * valueCodeableConcept from VSRiskBehaviourTobaccoSmoker (required)
+* performer 1..*
+
+Profile: BloodPressure
+Parent: Observation
+Id: blood-pressure
+Title: "Blood Pressure Observation"
+Description: "Represents the patient's blood pressure."
+* ^description = 
+    "Sri Lanka team to provide a rationale for this structure defintion and when it is appopriate to use it. It should also describe the must support (aka MS) elements."
+* status 1..1
+* code.coding.code = #85354-9
+* code.coding.system = "http://loinc.org"
+* code.text = "Blood Pressure"
+* category.coding.code = #vital-signs
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* subject 1..1
+* encounter 1..1
+* effectiveDateTime 1..1
+* component 1..*
+* component ^slicing.discriminator.type = #pattern
+* component ^slicing.discriminator.path = "code"
+* component ^slicing.rules = #open
+* component ^slicing.ordered = false
+* component ^slicing.description = "Slice based on the type of component.code."
+* component contains
+    Systolic 0..1 MS and
+    Diastolic 0..1 MS
+
+* component[Systolic] ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
+* component[Systolic].code = $LNC#8480-6
+* component[Systolic].valueQuantity.value 1..1
+* component[Systolic].valueQuantity.unit = "mmHg"
+* component[Systolic].valueQuantity.system = "http://unitsofmeasure.org"
+* component[Systolic].valueQuantity.code = #mm[Hg]
+
+* component[Diastolic] ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
+* component[Diastolic].code = $LNC#8462-4
+* component[Diastolic].valueQuantity.value 1..1
+* component[Diastolic].valueQuantity.unit = "mmHg"
+* component[Diastolic].valueQuantity.system = "http://unitsofmeasure.org"
+* component[Diastolic].valueQuantity.code = #mm[Hg]
 * performer 1..*
