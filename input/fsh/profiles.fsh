@@ -12,11 +12,10 @@ Description: "Organization providing health related services."
 * identifier contains
     XX 1..1
 * identifier[XX].value 1..1
-* identifier[XX].system = "http://openhie.org/fhir/sri-lanka/identifier/hiv-organization" (exactly)
+* identifier[XX].system = "http://openhie.org/fhir/sri-lanka/identifier/organization" (exactly)
 * identifier[XX].type.coding.code = #XX
 * identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[XX].type.coding.display = "Organization identifier"
-* identifier[XX].type.text = "HIV Organization identifier"
+* identifier[XX].type.text = "Organization identifier"
 * name 1..1
 
 Profile: TargetFacilityEncounter
@@ -53,20 +52,31 @@ Description: "Is used to document demographics and other administrative informat
 * identifier[PPN].system = "http://openhie.org/fhir/sri-lanka/identifier/passport"
 * identifier[PPN].type.coding.code = #PPN
 * identifier[PPN].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[PPN].type.coding.display = "Passport number"
 * identifier[PPN].type.text = "Passport number"
 
 * identifier[Drivers].value 1..1
 * identifier[Drivers].system = "http://openhie.org/fhir/sri-lanka/identifier/drivers"
+* identifier[Drivers].type.coding.code = #DL
+* identifier[Drivers].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[Drivers].type.text = "Driver's license number"
 
 * identifier[NIC].value 1..1
 * identifier[NIC].system = "http://openhie.org/fhir/sri-lanka/identifier/nic"
+* identifier[NIC].type.coding.code = #NNLKA
+* identifier[NIC].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[NIC].type.text = "National identity number"
 
 * identifier[SCN].value 1..1
 * identifier[SCN].system = "http://openhie.org/fhir/sri-lanka/identifier/scn"
+* identifier[SCN].type.coding.code = #SCN
+* identifier[SCN].type.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-identifier-types"
+* identifier[SCN].type.text = "Senior Citizen Number"
 
 * identifier[PHN].value 1..1
 * identifier[PHN].system = "http://openhie.org/fhir/sri-lanka/identifier/phn"
+* identifier[PHN].type.coding.code = #PHN
+* identifier[PHN].type.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-identifier-types"
+* identifier[PHN].type.text = "Personal Health Number"
 
 * name 1..*
 * name.given 1..*
