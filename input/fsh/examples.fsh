@@ -104,3 +104,93 @@ Description: "Represents the tobacco smoking status of the patient."
 * valueCodeableConcept.coding.code = #User
 * valueCodeableConcept.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-tobacco-smoker"
 * performer = Reference(OrganizationExample)
+
+Instance: BloodPressureExample
+InstanceOf: BloodPressure
+Usage: #example
+Title: "Blood Pressure Observation"
+Description: "Represents the Systolic and Diastolic blood pressure for the patient."
+* status = #final
+* category.coding.code = #vital-signs
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* code.coding.code = #85354-9
+* code.coding.system = "http://loinc.org"
+* code.text = "Blood Pressure"
+* subject = Reference(HIMSPatientExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* effectiveDateTime = "2022-11-30"
+* performer = Reference(OrganizationExample)
+
+* component[Systolic].code = $LNC#8480-6
+* component[Systolic].valueQuantity.value = 106
+* component[Systolic].valueQuantity.unit = "mmHg"
+* component[Systolic].valueQuantity.system = "http://unitsofmeasure.org"
+* component[Systolic].valueQuantity.code = #mm[Hg]
+
+* component[Diastolic].code = $LNC#8462-4
+* component[Diastolic].valueQuantity.value = 60
+* component[Diastolic].valueQuantity.unit = "mmHg"
+* component[Diastolic].valueQuantity.system = "http://unitsofmeasure.org"
+* component[Diastolic].valueQuantity.code = #mm[Hg]
+
+Instance: WeightExample
+InstanceOf: Weight
+Usage: #example
+Title: "Patient Weight"
+Description: "Represents the patient's weight."
+* status = #final
+* category.coding.code = #vital-signs
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* code.coding.code = #29463-7
+* code.coding.system = "http://loinc.org"
+* code.text = "Body Weight"
+* subject = Reference(HIMSPatientExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* effectiveDateTime = "2022-11-30"
+* valueQuantity.value = 110
+* valueQuantity.unit = "kg"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #kg
+* performer = Reference(OrganizationExample)
+
+Instance: HeightExample
+InstanceOf: Height
+Usage: #example
+Title: "Patient Height"
+Description: "Represents the patient's height."
+* status = #final
+* category.coding.code = #vital-signs
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* code.coding.code = #8302-2
+* code.coding.system = "http://loinc.org"
+* code.text = "Body Height"
+* subject = Reference(HIMSPatientExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* effectiveDateTime = "2022-11-30"
+* valueQuantity.value = 185
+* valueQuantity.unit = "cm"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #cm
+* performer = Reference(OrganizationExample)
+
+Instance: BMIExample
+InstanceOf: BMI
+Usage: #example
+Title: "Patient BMI"
+Description: "Represents the patient's BMI."
+* status = #final
+* category.coding.code = #vital-signs
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* code.coding.code = #39156-5
+* code.coding.system = "http://loinc.org"
+* code.text = "Body mass index (BMI)"
+* subject = Reference(HIMSPatientExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* effectiveDateTime = "2022-11-30"
+* valueQuantity.value = 16.2
+* valueQuantity.unit = "kg/m2"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #kg/m2
+* performer = Reference(OrganizationExample)
+* derivedFrom[+] = Reference(WeightExample)
+* derivedFrom[+] = Reference(HeightExample)
