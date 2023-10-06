@@ -321,3 +321,39 @@ Description: "Represents the patient's total cholesterol results."
 * referenceRange[=].high.unit = "mmol/l"
 * referenceRange[=].high.code = #mmol/l
 * referenceRange[=].high.system = "http://unitsofmeasure.org"
+
+Instance: CVSRiskFactorExample
+InstanceOf: CVSRiskFactor
+Usage: #example
+Title: "Cardiovascular Risk Assesment"
+Description: "Cardiovascular Risk Assesment"
+* identifier[CVS].value = "risk-assessment-cardiac"
+* identifier[CVS].system = "http://openhie.org/fhir/sri-lanka/identifier/cvs-risk-factor"
+* identifier[CVS].type.coding.code = #FILL
+* identifier[CVS].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[CVS].type.text = "CVS risk factor identifier"
+* status = #final
+* subject = Reference(HIMSPatientExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* occurrenceDateTime = "2023-10-06T13:28:17-05:00"
+* performer = Reference(ObservingPractitionerExample)
+* basis[+] = Reference(HIMSPatientExample)
+* basis[+] = Reference(RiskBehaviourTobaccoSmokerExample)
+* basis[+] = Reference(TotalCholesterolExample)
+* basis[+] = Reference(BloodPressureExample)
+* basis[+] = Reference(RandomBloodSugarExample)
+* basis[+] = Reference(FastingBloodSugarExample)
+* prediction[+].outcome.coding.code = #395112001
+* prediction[=].outcome.coding.system = "http://snomed.info/sct"
+* prediction[=].outcome.text = "Risk of heart attack"
+* prediction[=].probabilityDecimal = 0.02
+
+* prediction[=].whenRange.low.value = 39
+* prediction[=].whenRange.low.unit = "years"
+* prediction[=].whenRange.low.code = #a
+* prediction[=].whenRange.low.system = "http://unitsofmeasure.org"
+
+* prediction[=].whenRange.high.value = 49
+* prediction[=].whenRange.high.unit = "years"
+* prediction[=].whenRange.high.code = #a
+* prediction[=].whenRange.high.system = "http://unitsofmeasure.org"
