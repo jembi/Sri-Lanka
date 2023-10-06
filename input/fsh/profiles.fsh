@@ -18,6 +18,17 @@ Description: "Organization providing health related services."
 * identifier[XX].type.text = "Organization identifier"
 * name 1..1
 
+Profile: ObservingPractitioner
+Parent: Practitioner
+Id: practitioner
+Title: "Practitioner"
+Description: 
+    "Represents the practitioners who participated in the observation."
+* name 1..*
+* name.given 1..*
+* name.family 1..1
+* telecom 1..*
+
 Profile: TargetFacilityEncounter
 Parent: Encounter
 Id: target-facility-encounter
@@ -236,3 +247,75 @@ Description: "Represents the patient's BMI."
 * valueQuantity.code = #kg/m2
 * performer 1..*
 * derivedFrom 0..*
+
+Profile: RandomBloodSugar
+Parent: Observation
+Id: random-blood-sugar
+Title: "Random Blood Sugar Observation"
+Description: "Represents the patient's RBS results."
+* status 1..1
+* code.coding.code = #15074-8
+* code.coding.system = "http://loinc.org"
+* code.text = "Glucose"
+* subject 1..1
+* encounter 1..1
+* effectiveDateTime 1..1
+* valueQuantity.value 1..1
+* valueQuantity.unit = "mmol/l"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #mmol/l
+* performer 1..*
+* interpretation 0..* MS
+* interpretation ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
+* referenceRange 0..* MS
+* referenceRange ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
+
+Profile: FastingBloodSugar
+Parent: Observation
+Id: fasting-blood-sugar
+Title: "Fasting Blood Sugar Observation"
+Description: "Represents the patient's FBS results."
+* status 1..1
+* code.coding.code = #76629-5
+* code.coding.system = "http://loinc.org"
+* code.text = "Fasting glucose"
+* subject 1..1
+* encounter 1..1
+* effectiveDateTime 1..1
+* valueQuantity.value 1..1
+* valueQuantity.unit = "mmol/l"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #mmol/l
+* performer 1..*
+* interpretation 0..* MS
+* interpretation ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
+* referenceRange 0..* MS
+* referenceRange ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
+
+Profile: TotalCholesterol
+Parent: Observation
+Id: total-cholesterol
+Title: "Total Cholesterol"
+Description: "Represents the patient's total cholesterol results."
+* status 1..1
+* code.coding.code = #2093-3
+* code.coding.system = "http://loinc.org"
+* code.text = "Cholesterol"
+* subject 1..1
+* encounter 1..1
+* effectiveDateTime 1..1
+* valueQuantity.value 1..1
+* valueQuantity.unit = "mmol/l"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #mmol/l
+* performer 1..*
+* interpretation 0..* MS
+* interpretation ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
+* referenceRange 0..* MS
+* referenceRange ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
