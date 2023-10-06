@@ -416,8 +416,22 @@ Description: "Follow-up at HLC"
 * activity 1..* 
 * activity.reference 1..1
 * activity.reference only Reference (ServiceRequest)
-/** activity.detail.kind 1..1
-* activity.detail.kind = #ServiceRequest
-* activity.detail.status 1..1
-* activity.detail.code 1..1
-* activity.detail.code from VSFollowUpAtHLC (required)*/
+
+Profile: HIMSComposition
+Parent: Composition
+Id: hims-composition
+Title: "HIMS Composition"
+Description: "Logically groups all resources into a single document structure."
+* identifier 0..1 MS
+* identifier ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
+* identifier.value 1..1
+* identifier.system = "http://openhie.org/fhir/sri-lanka/identifier/document"
+* status 1..1
+* subject 1..1
+* encounter 1..1
+* type 1..1
+* date 1..1
+* author 1..*
+* title 1..1
+* section 1..*
