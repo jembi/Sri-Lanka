@@ -65,19 +65,25 @@ Description: "Is used to document demographics and other administrative informat
 * identifier[PPN].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[PPN].type.text = "Passport number"
 
+* identifier[Drivers].extension contains MultipleValuesForPatientIdentifier named DriversID 1..*
 * identifier[Drivers].value 1..1
+* identifier[Drivers].value = "A patient may have multiple drivers license numbers."
 * identifier[Drivers].system = "http://openhie.org/fhir/sri-lanka/identifier/drivers"
 * identifier[Drivers].type.coding.code = #DL
 * identifier[Drivers].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[Drivers].type.text = "Driver's license number"
 
+* identifier[NIC].extension contains MultipleValuesForPatientIdentifier named NICID 1..*
 * identifier[NIC].value 1..1
+* identifier[NIC].value = "A patient may have multiple national identity numbers."
 * identifier[NIC].system = "http://openhie.org/fhir/sri-lanka/identifier/nic"
 * identifier[NIC].type.coding.code = #NNLKA
 * identifier[NIC].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[NIC].type.text = "National identity number"
 
+* identifier[SCN].extension contains MultipleValuesForPatientIdentifier named SCNID 1..*
 * identifier[SCN].value 1..1
+* identifier[SCN].value = "A patient may have multiple senior citizen numbers."
 * identifier[SCN].system = "http://openhie.org/fhir/sri-lanka/identifier/scn"
 * identifier[SCN].type.coding.code = #SCN
 * identifier[SCN].type.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-identifier-types"
