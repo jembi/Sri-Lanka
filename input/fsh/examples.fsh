@@ -104,7 +104,7 @@ Description: "Represents the physical status of the patient."
 * valueCodeableConcept.coding.code = #Physically-active
 * valueCodeableConcept.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-physical-activity"
 * performer[+] = Reference(OrganizationExample)
-* performer[+] = Reference(ObservingPractitionerExample)
+* performer[+] = Reference(GeneralPractitionerExample)
 
 Instance: RiskBehaviourTobaccoSmokerExample
 InstanceOf: RiskBehaviourTobaccoSmoker
@@ -121,7 +121,7 @@ Description: "Represents the tobacco smoking status of the patient."
 * valueCodeableConcept.coding.code = #User
 * valueCodeableConcept.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-tobacco-smoker"
 * performer[+] = Reference(OrganizationExample)
-* performer[+] = Reference(ObservingPractitionerExample)
+* performer[+] = Reference(GeneralPractitionerExample)
 
 Instance: BloodPressureExample
 InstanceOf: BloodPressure
@@ -138,7 +138,7 @@ Description: "Represents the Systolic and Diastolic blood pressure for the patie
 * encounter = Reference(TargetFacilityEncounterExample)
 * effectiveDateTime = "2022-11-30"
 * performer[+] = Reference(OrganizationExample)
-* performer[+] = Reference(ObservingPractitionerExample)
+* performer[+] = Reference(GeneralPractitionerExample)
 
 * component[Systolic].code = $LNC#8480-6
 * component[Systolic].valueQuantity.value = 106
@@ -171,7 +171,7 @@ Description: "Represents the patient's weight."
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #kg
 * performer[+] = Reference(OrganizationExample)
-* performer[+] = Reference(ObservingPractitionerExample)
+* performer[+] = Reference(GeneralPractitionerExample)
 
 Instance: HeightExample
 InstanceOf: Height
@@ -192,7 +192,7 @@ Description: "Represents the patient's height."
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #cm
 * performer[+] = Reference(OrganizationExample)
-* performer[+] = Reference(ObservingPractitionerExample)
+* performer[+] = Reference(GeneralPractitionerExample)
 
 Instance: BMIExample
 InstanceOf: BMI
@@ -213,7 +213,7 @@ Description: "Represents the patient's BMI."
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #kg/m2
 * performer[+] = Reference(OrganizationExample)
-* performer[+] = Reference(ObservingPractitionerExample)
+* performer[+] = Reference(GeneralPractitionerExample)
 * derivedFrom[+] = Reference(WeightExample)
 * derivedFrom[+] = Reference(HeightExample)
 
@@ -234,7 +234,7 @@ Description: "Represents the patient's RBS results."
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #mmol/l
 * performer[+] = Reference(OrganizationExample)
-* performer[+] = Reference(ObservingPractitionerExample)
+* performer[+] = Reference(GeneralPractitionerExample)
 * interpretation[+].coding.code = #H
 * interpretation[=].coding.system = "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
 * referenceRange[+].type.coding.code = #type
@@ -267,7 +267,7 @@ Description: "Represents the patient's FBS results."
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #mmol/l
 * performer[+] = Reference(OrganizationExample)
-* performer[+] = Reference(ObservingPractitionerExample)
+* performer[+] = Reference(GeneralPractitionerExample)
 * interpretation[+].coding.code = #N
 * interpretation[=].coding.system = "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
 * referenceRange[+].type.coding.code = #type
@@ -283,8 +283,8 @@ Description: "Represents the patient's FBS results."
 * referenceRange[=].high.code = #mmol/l
 * referenceRange[=].high.system = "http://unitsofmeasure.org"
 
-Instance: ObservingPractitionerExample
-InstanceOf: ObservingPractitioner
+Instance: GeneralPractitionerExample
+InstanceOf: GeneralPractitioner
 Usage: #example
 Title: "Practitioner"
 Description: 
@@ -317,7 +317,7 @@ Description: "Represents the patient's total cholesterol results."
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #mmol/l
 * performer[+] = Reference(OrganizationExample)
-* performer[+] = Reference(ObservingPractitionerExample)
+* performer[+] = Reference(GeneralPractitionerExample)
 * interpretation[+].coding.code = #H
 * interpretation[=].coding.system = "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
 * referenceRange[+].type.coding.code = #type
@@ -342,7 +342,7 @@ Description: "Cardiovascular Risk Assesment"
 * subject = Reference(HIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
 * occurrenceDateTime = "2023-10-06T13:28:17-05:00"
-* performer = Reference(ObservingPractitionerExample)
+* performer = Reference(GeneralPractitionerExample)
 * basis[+] = Reference(HIMSPatientExample)
 * basis[+] = Reference(RiskBehaviourTobaccoSmokerExample)
 * basis[+] = Reference(TotalCholesterolExample)
@@ -363,3 +363,44 @@ Description: "Cardiovascular Risk Assesment"
 * prediction[=].whenRange.high.unit = "years"
 * prediction[=].whenRange.high.code = #a
 * prediction[=].whenRange.high.system = "http://unitsofmeasure.org"
+
+Instance: FollowUpPlanServiceRequestExample
+InstanceOf: FollowUpPlanServiceRequest
+Usage: #example
+Title: "Follow-up Plan"
+Description: "Follow-up Plan"
+* identifier[PLAC].value = "Refferal-12345"
+* identifier[PLAC].system = "http://openhie.org/fhir/sri-lanka/identifier/referral-request"
+* identifier[PLAC].type.coding.code = #PLAC
+* identifier[PLAC].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[PLAC].type.coding.display = "Placer Identifier"
+* identifier[PLAC].type.text = "Referral request identifier"
+* status = #completed
+* intent = #order
+* category.coding.code = #306206005
+* category.coding.system = "http://snomed.info/sct"
+* category.text = "Referral to service"
+* code.coding.code = #Follow-up-at-hlc
+* code.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-plan"
+* code.text = "Follow up at HLC"
+* subject = Reference(HIMSPatientExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* occurrenceDateTime = "2023-10-06T13:28:17-05:00"
+* requester = Reference(GeneralPractitionerExample)
+* reasonCode[+].coding.code = #Followed-in-6-months-at-hlc
+* reasonCode[=].coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-reasons"
+* reasonCode[=].text = "Followed in 6 months at HLC"
+
+Instance: FollowUpAtHLCExample
+InstanceOf: FollowUpAtHLC
+Usage: #example
+Title: "Follow-up at HLC"
+Description: "Follow-up at HLC"
+* status = #active
+* intent = #order
+* subject = Reference(HIMSPatientExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* period.start = "2022-12-01"
+* contributor[+] = Reference(GeneralPractitionerExample)
+* contributor[=] = Reference(OrganizationExample)
+* activity.reference = Reference(FollowUpPlanServiceRequestExample)

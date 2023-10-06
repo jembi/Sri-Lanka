@@ -18,7 +18,7 @@ Description: "Organization providing health related services."
 * identifier[XX].type.text = "Organization identifier"
 * name 1..1
 
-Profile: ObservingPractitioner
+Profile: GeneralPractitioner
 Parent: Practitioner
 Id: practitioner
 Title: "Practitioner"
@@ -356,3 +356,68 @@ Description: "Cardiovascular Risk Assesment"
 * prediction.outcome 1..1
 * prediction.probabilityDecimal 1..1
 * prediction.whenRange 1..1
+
+Profile: FollowUpPlanServiceRequest
+Parent: ServiceRequest
+Id: follow-up-plan
+Title: "Follow-up Plan"
+Description: "Follow-up Plan"
+* identifier 1..*
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.ordered = false
+* identifier ^slicing.description = "Slice based on the type of identifier."
+* identifier contains
+    PLAC 0..1
+
+* identifier[PLAC] ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
+* identifier[PLAC].value 1..1
+* identifier[PLAC].system = "http://openhie.org/fhir/sri-lanka/identifier/referral-request"
+* identifier[PLAC].type.coding.code = #PLAC
+* identifier[PLAC].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[PLAC].type.coding.display = "Placer Identifier"
+* identifier[PLAC].type.text = "Referral request identifier"
+* status 1..1
+* intent 1..1
+* category 1..1
+* category.coding.code = #306206005
+* category.coding.system = "http://snomed.info/sct"
+* category.text = "Referral to service"
+* code 1..1
+* code from VSFollowUpPlan (required)
+* subject 1..1
+* subject only Reference(Patient)
+* encounter 1..1
+* requester 1..1
+* requester only Reference (Practitioner or PractitionerRole or Organization)
+* reasonCode 0..* MS
+* reasonCode ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
+* reasonCode from VSFollowUpReasons (extensible)
+
+Profile: FollowUpAtHLC 
+Parent: CarePlan
+Id: follow-up-at-hlc
+Title: "Follow-up at HLC"
+Description: "Follow-up at HLC"
+* identifier 0..* MS
+* identifier ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
+* status 1..1
+* intent 1..1
+* subject 1..1
+* subject only Reference(Patient)
+* encounter 1..1
+* period 1..1
+* contributor 1..*
+* contributor only Reference (Practitioner or PractitionerRole or Organization)
+* activity 1..* 
+* activity.reference 1..1
+* activity.reference only Reference (ServiceRequest)
+/** activity.detail.kind 1..1
+* activity.detail.kind = #ServiceRequest
+* activity.detail.status 1..1
+* activity.detail.code 1..1
+* activity.detail.code from VSFollowUpAtHLC (required)*/
