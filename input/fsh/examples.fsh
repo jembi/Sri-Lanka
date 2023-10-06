@@ -404,3 +404,26 @@ Description: "Follow-up at HLC"
 * contributor[+] = Reference(GeneralPractitionerExample)
 * contributor[=] = Reference(OrganizationExample)
 * activity.reference = Reference(FollowUpPlanServiceRequestExample)
+
+Instance: HIMSCompositionExample
+InstanceOf: HIMSComposition
+Usage: #example
+Title: "HIMS Composition"
+Description: "Logically groups all resources into a single document structure."
+* identifier.value = "PAT0001-v1"
+* identifier.system = "http://openhie.org/fhir/sri-lanka/identifier/document"
+* status = #final
+* subject = Reference(HIMSPatientExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* type = $LNC#11502-2
+* date = "2023-08-22"
+* author[+] = Reference(GeneralPractitionerExample)
+* author[+] = Reference(OrganizationExample)
+* title = "Laboratory Report For Viral Load Testing"
+
+* section[+].title = "Risk Behaviour - Assessment of Physical Activity"
+* section[=].code.coding.code = #398636004
+* section[=].code.coding.system = "http://snomed.info/sct"
+* section[=].entry[+] = Reference(RiskBehaviourPhysicalActivityExample)
+* section[=].text.status = #generated
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
