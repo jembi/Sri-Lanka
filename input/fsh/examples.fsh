@@ -462,3 +462,11 @@ Description: "Logically groups all resources into a single document structure."
 * section[=].entry[+] = Reference(BMIExample)
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+
+* section[+].title = "Bloodwork"
+* section[=].code.coding.code = #LA17759-4
+* section[=].code.coding.system = "http://loinc.org"
+* section[=].entry[+] = Reference(RandomBloodSugarExample)
+* section[=].entry[+] = Reference(FastingBloodSugarExample)
+* section[=].text.status = #generated
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
