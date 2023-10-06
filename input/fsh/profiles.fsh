@@ -12,11 +12,22 @@ Description: "Organization providing health related services."
 * identifier contains
     XX 1..1
 * identifier[XX].value 1..1
-* identifier[XX].system = "http://openhie.org/fhir/sri-lanka/identifier/organization" (exactly)
+* identifier[XX].system = "http://openhie.org/fhir/sri-lanka/identifier/organization"
 * identifier[XX].type.coding.code = #XX
 * identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[XX].type.text = "Organization identifier"
 * name 1..1
+
+Profile: GeneralPractitioner
+Parent: Practitioner
+Id: practitioner
+Title: "Practitioner"
+Description: 
+    "Represents the practitioners who participated in the observation."
+* name 1..*
+* name.given 1..*
+* name.family 1..1
+* telecom 1..*
 
 Profile: TargetFacilityEncounter
 Parent: Encounter
@@ -54,19 +65,25 @@ Description: "Is used to document demographics and other administrative informat
 * identifier[PPN].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[PPN].type.text = "Passport number"
 
+* identifier[Drivers].extension contains MultipleValuesForPatientIdentifier named DriversID 1..*
 * identifier[Drivers].value 1..1
+* identifier[Drivers].value = "A patient may have multiple drivers license numbers."
 * identifier[Drivers].system = "http://openhie.org/fhir/sri-lanka/identifier/drivers"
 * identifier[Drivers].type.coding.code = #DL
 * identifier[Drivers].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[Drivers].type.text = "Driver's license number"
 
+* identifier[NIC].extension contains MultipleValuesForPatientIdentifier named NICID 1..*
 * identifier[NIC].value 1..1
+* identifier[NIC].value = "A patient may have multiple national identity numbers."
 * identifier[NIC].system = "http://openhie.org/fhir/sri-lanka/identifier/nic"
 * identifier[NIC].type.coding.code = #NNLKA
 * identifier[NIC].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[NIC].type.text = "National identity number"
 
+* identifier[SCN].extension contains MultipleValuesForPatientIdentifier named SCNID 1..*
 * identifier[SCN].value 1..1
+* identifier[SCN].value = "A patient may have multiple senior citizen numbers."
 * identifier[SCN].system = "http://openhie.org/fhir/sri-lanka/identifier/scn"
 * identifier[SCN].type.coding.code = #SCN
 * identifier[SCN].type.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-identifier-types"
@@ -236,3 +253,171 @@ Description: "Represents the patient's BMI."
 * valueQuantity.code = #kg/m2
 * performer 1..*
 * derivedFrom 0..*
+
+Profile: RandomBloodSugar
+Parent: Observation
+Id: random-blood-sugar
+Title: "Random Blood Sugar Observation"
+Description: "Represents the patient's RBS results."
+* status 1..1
+* code.coding.code = #15074-8
+* code.coding.system = "http://loinc.org"
+* code.text = "Glucose"
+* subject 1..1
+* encounter 1..1
+* effectiveDateTime 1..1
+* valueQuantity.value 1..1
+* valueQuantity.unit = "mmol/l"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #mmol/l
+* performer 1..*
+* interpretation 0..* MS
+* interpretation ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
+* referenceRange 0..* MS
+* referenceRange ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
+
+Profile: FastingBloodSugar
+Parent: Observation
+Id: fasting-blood-sugar
+Title: "Fasting Blood Sugar Observation"
+Description: "Represents the patient's FBS results."
+* status 1..1
+* code.coding.code = #76629-5
+* code.coding.system = "http://loinc.org"
+* code.text = "Fasting glucose"
+* subject 1..1
+* encounter 1..1
+* effectiveDateTime 1..1
+* valueQuantity.value 1..1
+* valueQuantity.unit = "mmol/l"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #mmol/l
+* performer 1..*
+* interpretation 0..* MS
+* interpretation ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
+* referenceRange 0..* MS
+* referenceRange ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
+
+Profile: TotalCholesterol
+Parent: Observation
+Id: total-cholesterol
+Title: "Total Cholesterol"
+Description: "Represents the patient's total cholesterol results."
+* status 1..1
+* code.coding.code = #2093-3
+* code.coding.system = "http://loinc.org"
+* code.text = "Cholesterol"
+* subject 1..1
+* encounter 1..1
+* effectiveDateTime 1..1
+* valueQuantity.value 1..1
+* valueQuantity.unit = "mmol/l"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #mmol/l
+* performer 1..*
+* interpretation 0..* MS
+* interpretation ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
+* referenceRange 0..* MS
+* referenceRange ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
+
+Profile: CVSRiskFactor
+Parent: RiskAssessment
+Id: cvs-risk-factor
+Title: "Cardiovascular Risk Assesment"
+Description: "Cardiovascular Risk Assesment"
+* identifier 1..*
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.ordered = false
+* identifier ^slicing.description = "Slice based on the type of identifier."
+* identifier contains
+    CVS 1..1
+* identifier[CVS].value 1..1
+* identifier[CVS].system = "http://openhie.org/fhir/sri-lanka/identifier/cvs-risk-factor"
+* identifier[CVS].type.coding.code = #FILL
+* identifier[CVS].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[CVS].type.text = "CVS risk factor identifier"
+* status 1..1
+* subject 1..1
+* subject only Reference(Patient)
+* encounter 1..1
+* occurrenceDateTime 1..1
+* performer 1..1
+* performer only Reference(Practitioner or PractitionerRole)
+* basis 1..*
+* prediction 1..*
+* prediction.outcome 1..1
+* prediction.probabilityDecimal 1..1
+* prediction.whenRange 1..1
+
+Profile: FollowUpPlanServiceRequest
+Parent: ServiceRequest
+Id: follow-up-plan
+Title: "Follow-up Plan"
+Description: "Follow-up Plan"
+* identifier 1..*
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.ordered = false
+* identifier ^slicing.description = "Slice based on the type of identifier."
+* identifier contains
+    PLAC 0..1
+
+* identifier[PLAC] ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
+* identifier[PLAC].value 1..1
+* identifier[PLAC].system = "http://openhie.org/fhir/sri-lanka/identifier/referral-request"
+* identifier[PLAC].type.coding.code = #PLAC
+* identifier[PLAC].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[PLAC].type.coding.display = "Placer Identifier"
+* identifier[PLAC].type.text = "Referral request identifier"
+* status 1..1
+* intent 1..1
+* category 1..1
+* category.coding.code = #306206005
+* category.coding.system = "http://snomed.info/sct"
+* category.text = "Referral to service"
+* code 1..1
+* code from VSFollowUpPlan (required)
+* subject 1..1
+* subject only Reference(Patient)
+* encounter 1..1
+* requester 1..1
+* requester only Reference (Practitioner or PractitionerRole or Organization)
+* reasonCode 0..* MS
+* reasonCode ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
+* reasonCode from VSFollowUpReasons (extensible)
+
+Profile: FollowUpAtHLC 
+Parent: CarePlan
+Id: follow-up-at-hlc
+Title: "Follow-up at HLC"
+Description: "Follow-up at HLC"
+* identifier 0..* MS
+* identifier ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
+* status 1..1
+* intent 1..1
+* subject 1..1
+* subject only Reference(Patient)
+* encounter 1..1
+* period 1..1
+* contributor 1..*
+* contributor only Reference (Practitioner or PractitionerRole or Organization)
+* activity 1..* 
+* activity.reference 1..1
+* activity.reference only Reference (ServiceRequest)
+/** activity.detail.kind 1..1
+* activity.detail.kind = #ServiceRequest
+* activity.detail.status 1..1
+* activity.detail.code 1..1
+* activity.detail.code from VSFollowUpAtHLC (required)*/
