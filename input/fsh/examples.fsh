@@ -419,11 +419,46 @@ Description: "Logically groups all resources into a single document structure."
 * date = "2023-08-22"
 * author[+] = Reference(GeneralPractitionerExample)
 * author[+] = Reference(OrganizationExample)
-* title = "Laboratory Report For Viral Load Testing"
+* title = "Sri Lanka team to advise on title"
 
 * section[+].title = "Risk Behaviour - Assessment of Physical Activity"
 * section[=].code.coding.code = #398636004
 * section[=].code.coding.system = "http://snomed.info/sct"
 * section[=].entry[+] = Reference(RiskBehaviourPhysicalActivityExample)
+* section[=].text.status = #generated
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+
+* section[+].title = "Risk Behaviour - Tobacco smoking Assessment"
+* section[=].code.coding.code = #72166-2
+* section[=].code.coding.system = "http://loinc.org"
+* section[=].entry[+] = Reference(RiskBehaviourTobaccoSmokerExample)
+* section[=].text.status = #generated
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+
+* section[+].title = "Blood Pressure"
+* section[=].code.coding.code = #75367002
+* section[=].code.coding.system = "http://snomed.info/sct"
+* section[=].entry[+] = Reference(BloodPressureExample)
+* section[=].text.status = #generated
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+
+* section[+].title = "Patient Weight"
+* section[=].code.coding.code = #3141-9
+* section[=].code.coding.system = "http://loinc.org"
+* section[=].entry[+] = Reference(WeightExample)
+* section[=].text.status = #generated
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+
+* section[+].title = "Patient Height"
+* section[=].code.coding.code = #3137-7
+* section[=].code.coding.system = "http://loinc.org"
+* section[=].entry[+] = Reference(HeightExample)
+* section[=].text.status = #generated
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+
+* section[+].title = "Patient BMI"
+* section[=].code.coding.code = #97057-4
+* section[=].code.coding.system = "http://loinc.org"
+* section[=].entry[+] = Reference(BMIExample)
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"

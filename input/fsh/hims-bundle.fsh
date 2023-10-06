@@ -11,5 +11,32 @@ Description: "Represents the VLSMS VL Request Bundle (Document Type)."
 * entry[+].fullUrl = "Composition/HIMSCompositionExample"
 * entry[=].resource = HIMSCompositionExample
 
+* entry[+].fullUrl = "Patient/HIMSPatientExample"
+* entry[=].resource = HIMSPatientExample
+
 * entry[+].fullUrl = "Observation/RiskBehaviourPhysicalActivityExample"
 * entry[=].resource = RiskBehaviourPhysicalActivityExample
+
+* entry[+].fullUrl = "Practitioner/GeneralPractitionerExample"
+* entry[=].resource = GeneralPractitionerExample
+
+* entry[+].fullUrl = "Organization/OrganizationExample"
+* entry[=].resource = OrganizationExample
+
+* entry[+].fullUrl = "Encounter/TargetFacilityEncounterExample"
+* entry[=].resource = TargetFacilityEncounterExample
+
+* entry[+].fullUrl = "Observation/RiskBehaviourTobaccoSmokerExample"
+* entry[=].resource = RiskBehaviourTobaccoSmokerExample
+
+* entry[+].fullUrl = "Observation/BloodPressureExample"
+* entry[=].resource = BloodPressureExample
+
+* entry[+].fullUrl = "Observation/WeightExample"
+* entry[=].resource = WeightExample
+
+* entry[+].fullUrl = "Observation/HeightExample"
+* entry[=].resource = HeightExample
+
+* entry[+].fullUrl = "Observation/BMIExample"
+* entry[=].resource = BMIExample
