@@ -468,5 +468,27 @@ Description: "Logically groups all resources into a single document structure."
 * section[=].code.coding.system = "http://loinc.org"
 * section[=].entry[+] = Reference(RandomBloodSugarExample)
 * section[=].entry[+] = Reference(FastingBloodSugarExample)
+* section[=].entry[+] = Reference(TotalCholesterolExample)
+* section[=].text.status = #generated
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+
+* section[+].title = "Risk Assessment Report"
+* section[=].code.coding.code = #71482-4
+* section[=].code.coding.system = "http://loinc.org"
+* section[=].entry[+] = Reference(CVSRiskFactorExample)
+* section[=].text.status = #generated
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+
+* section[+].title = "Referral Requests"
+* section[=].code.coding.code = #LA24277-8
+* section[=].code.coding.system = "http://loinc.org"
+* section[=].entry[+] = Reference(FollowUpPlanServiceRequestExample)
+* section[=].text.status = #generated
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+
+* section[+].title = "Treatment and Care"
+* section[=].code.coding.code = #68833-3
+* section[=].code.coding.system = "http://loinc.org"
+* section[=].entry[+] = Reference(FollowUpAtHLCExample)
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"

@@ -46,3 +46,15 @@ Description: "HIMS Document Bundle"
 
 * entry[+].fullUrl = "Observation/FastingBloodSugarExample"
 * entry[=].resource = FastingBloodSugarExample
+
+* entry[+].fullUrl = "Observation/TotalCholesterolExample"
+* entry[=].resource = TotalCholesterolExample
+
+* entry[+].fullUrl = "RiskAssessment/CVSRiskFactorExample"
+* entry[=].resource = CVSRiskFactorExample
+
+* entry[+].fullUrl = "ServiceRequest/FollowUpPlanServiceRequestExample"
+* entry[=].resource = FollowUpPlanServiceRequestExample
+
+* entry[+].fullUrl = "CarePlan/FollowUpAtHLCExample"
+* entry[=].resource = FollowUpAtHLCExample
