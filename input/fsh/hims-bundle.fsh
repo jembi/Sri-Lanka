@@ -1,8 +1,8 @@
-Instance: VLSMS-VL-Request-Document
+Instance: HIMS-Document
 InstanceOf: Bundle
 Usage: #example
-Title: "VLSMS VL Request Bundle"
-Description: "Represents the VLSMS VL Request Bundle (Document Type)."
+Title: "HIMS Document Bundle"
+Description: "HIMS Document Bundle"
 * type = #document
 * identifier[+].value = "document-1"
 * identifier[=].system = "http://openhie.org/fhir/sri-lanka/identifier/bundle-id"
@@ -40,3 +40,21 @@ Description: "Represents the VLSMS VL Request Bundle (Document Type)."
 
 * entry[+].fullUrl = "Observation/BMIExample"
 * entry[=].resource = BMIExample
+
+* entry[+].fullUrl = "Observation/RandomBloodSugarExample"
+* entry[=].resource = RandomBloodSugarExample
+
+* entry[+].fullUrl = "Observation/FastingBloodSugarExample"
+* entry[=].resource = FastingBloodSugarExample
+
+* entry[+].fullUrl = "Observation/TotalCholesterolExample"
+* entry[=].resource = TotalCholesterolExample
+
+* entry[+].fullUrl = "RiskAssessment/CVSRiskFactorExample"
+* entry[=].resource = CVSRiskFactorExample
+
+* entry[+].fullUrl = "ServiceRequest/FollowUpPlanServiceRequestExample"
+* entry[=].resource = FollowUpPlanServiceRequestExample
+
+* entry[+].fullUrl = "CarePlan/FollowUpAtHLCExample"
+* entry[=].resource = FollowUpAtHLCExample
