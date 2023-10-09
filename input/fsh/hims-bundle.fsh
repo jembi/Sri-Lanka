@@ -14,6 +14,9 @@ Description: "HIMS Document Bundle"
 * entry[+].fullUrl = "Patient/HIMSPatientExample"
 * entry[=].resource = HIMSPatientExample
 
+* entry[+].fullUrl = "Patient/HHIMSPatientExample"
+* entry[=].resource = HHIMSPatientExample
+
 * entry[+].fullUrl = "Observation/RiskBehaviourPhysicalActivityExample"
 * entry[=].resource = RiskBehaviourPhysicalActivityExample
 

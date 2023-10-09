@@ -77,6 +77,48 @@ Description: "Is used to document demographics and other administrative informat
 * telecom[+].system = #email
 * telecom[=].value = "someone2@something.com"
 
+Instance: HHIMSPatientExample
+InstanceOf: HHIMSPatient
+Usage: #example
+Title: "HHIMSPatientExample"
+Description: "HHIMSPatientExample"
+* identifier[NIC][+].value = "A patient may have multiple national identity numbers."
+* identifier[NIC][=].extension[NICID][+].valueString = "National identity number-1"
+* identifier[NIC][=].extension[NICID][+].valueString = "National identity number-2"
+* identifier[NIC][=].system = "http://openhie.org/fhir/sri-lanka/identifier/nic"
+* identifier[NIC][=].type.coding.code = #NNLKA
+* identifier[NIC][=].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[NIC][=].type.text = "National identity number"
+
+* identifier[PHN][+].value = "personal health number"
+* identifier[PHN][=].system = "http://openhie.org/fhir/sri-lanka/identifier/phn"
+* identifier[PHN][=].type.coding.code = #PHN
+* identifier[PHN][=].type.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-identifier-types"
+* identifier[PHN][=].type.text = "Personal Health Number"
+
+* name[+].use = #official
+* name[=].family = "Smith"
+* name[=].given[+] = "Mike"
+* name[=].given[+] = "John"
+* gender = #male
+* birthDate = "1983-05-22"
+
+* address[+].country = "Sri Lanka"
+* address[=].type = #postal
+* address[=].district = "Ampara"
+* address[=].line[+] = "177"
+* address[=].line[+] = "Nawala Road"
+* address[=].city = "Nugegoda"
+* address[=].postalCode = "32350"
+* address[=].state = "Colombo"
+
+* telecom[+].system = #phone
+* telecom[=].value = "+27829999999"
+* telecom[+].system = #email
+* telecom[=].value = "someone@something.com"
+* telecom[+].system = #email
+* telecom[=].value = "someone2@something.com"
+
 Instance: TargetFacilityEncounterExample
 InstanceOf: TargetFacilityEncounter
 Usage: #example
@@ -414,6 +456,7 @@ Description: "Logically groups all resources into a single document structure."
 * identifier.system = "http://openhie.org/fhir/sri-lanka/identifier/document"
 * status = #final
 * subject = Reference(HIMSPatientExample)
+* subject = Reference(HHIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
 * type = $LNC#11502-2
 * date = "2023-08-22"

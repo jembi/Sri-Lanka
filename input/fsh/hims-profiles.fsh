@@ -126,6 +126,54 @@ Description: "This extension can be used by those patient identifiers where mult
 * ^context[+].type = #element
 * ^context[=].expression = "Patient.identifier"
 
+Profile: HHIMSPatient
+Parent: Patient
+Id: hhims-patient
+Title: "HHIMS Patient"
+Description: "Is used to document demographics and other administrative information about an HHIMS individual receiving care or other health-related services."
+* identifier 1..*
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.ordered = false
+* identifier ^slicing.description = "Slice based on the type of identifier."
+* identifier contains
+    NIC 0..1 MS and
+    PHN 1..1
+
+* identifier[NIC] ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
+* identifier[NIC].extension contains MultipleValuesForPatientIdentifier named NICID 1..*
+* identifier[NIC].value 1..1
+* identifier[NIC].value = "A patient may have multiple national identity numbers."
+* identifier[NIC].system = "http://openhie.org/fhir/sri-lanka/identifier/nic"
+* identifier[NIC].type.coding.code = #NNLKA
+* identifier[NIC].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[NIC].type.text = "National identity number"
+
+* identifier[PHN].value 1..1
+* identifier[PHN].system = "http://openhie.org/fhir/sri-lanka/identifier/phn"
+* identifier[PHN].type.coding.code = #PHN
+* identifier[PHN].type.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-identifier-types"
+* identifier[PHN].type.text = "Personal Health Number"
+
+* name 1..*
+* name.given 1..*
+* name.family 1..1
+* gender 1..1
+* birthDate 1..1
+* address 0..* MS
+* address ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
+* address.city 1..1
+* address.line 1..*
+* address.district 1..1
+* address.state 1..1
+* address.country 1..1
+* telecom 0..* MS
+* telecom ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
+
 Profile: RiskBehaviourPhysicalActivity
 Parent: Observation
 Id: risk-behaviour-physical-activity
