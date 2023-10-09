@@ -1,5 +1,5 @@
 Instance: OrganizationExample
-InstanceOf: Organization
+InstanceOf: ServiceProvider
 Usage: #example
 Title: "Organization"
 Description: "Organization providing health related services."

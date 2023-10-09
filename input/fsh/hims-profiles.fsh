@@ -1,4 +1,4 @@
-Profile: Organization
+Profile: ServiceProvider
 Parent: Organization
 Id: organization
 Title: "Organization"
