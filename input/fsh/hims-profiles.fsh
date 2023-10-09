@@ -52,9 +52,9 @@ Description: "Is used to document demographics and other administrative informat
 * identifier ^slicing.description = "Slice based on the type of identifier."
 * identifier contains
     PPN 1..1 and
-    Drivers 0..1 and
-    NIC 0..1 and
-    SCN 0..1 and
+    Drivers 0..1 MS and
+    NIC 0..1 MS and
+    SCN 0..1 MS and
     PHN 1..1
 
 * identifier[PPN].extension contains MultipleValuesForPatientIdentifier named PASSID 1..*
@@ -65,6 +65,8 @@ Description: "Is used to document demographics and other administrative informat
 * identifier[PPN].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[PPN].type.text = "Passport number"
 
+* identifier[Drivers] ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
 * identifier[Drivers].extension contains MultipleValuesForPatientIdentifier named DriversID 1..*
 * identifier[Drivers].value 1..1
 * identifier[Drivers].value = "A patient may have multiple drivers license numbers."
@@ -73,6 +75,8 @@ Description: "Is used to document demographics and other administrative informat
 * identifier[Drivers].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[Drivers].type.text = "Driver's license number"
 
+* identifier[NIC] ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
 * identifier[NIC].extension contains MultipleValuesForPatientIdentifier named NICID 1..*
 * identifier[NIC].value 1..1
 * identifier[NIC].value = "A patient may have multiple national identity numbers."
@@ -81,6 +85,8 @@ Description: "Is used to document demographics and other administrative informat
 * identifier[NIC].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[NIC].type.text = "National identity number"
 
+* identifier[SCN] ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
 * identifier[SCN].extension contains MultipleValuesForPatientIdentifier named SCNID 1..*
 * identifier[SCN].value 1..1
 * identifier[SCN].value = "A patient may have multiple senior citizen numbers."
@@ -108,8 +114,8 @@ Description: "Is used to document demographics and other administrative informat
 * address.district 1..1
 * address.state 1..1
 * address.country 1..1
-* contact.telecom 0..* MS
-* contact.telecom ^definition =
+* telecom 0..* MS
+* telecom ^definition =
     "Sri Lanka team to provide motivation for supporting this element."
 
 Extension: MultipleValuesForPatientIdentifier
