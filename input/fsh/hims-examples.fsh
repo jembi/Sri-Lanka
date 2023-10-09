@@ -14,7 +14,7 @@ Instance: HIMSPatientExample
 InstanceOf: HIMSPatient
 Usage: #example
 Title: "HIMS Patient"
-Description: "Is used to document demographics and other administrative information about an individual receiving care or other health-related services."
+Description: "Is used to document demographics and other administrative information about an individual receiving care or other health-related services. In addition to the profiled data elements, this profile includes all data elements from the HHIMS Patient profile."
 
 * identifier[PPN][+].value = "A patient can have multiple passport IDs."
 * identifier[PPN][=].extension[PASSID][+].valueString = "Passport-1"
@@ -80,8 +80,8 @@ Description: "Is used to document demographics and other administrative informat
 Instance: HHIMSPatientExample
 InstanceOf: HHIMSPatient
 Usage: #example
-Title: "HHIMSPatientExample"
-Description: "HHIMSPatientExample"
+Title: "HHIMS PatientExample"
+Description: "Is used to document demographics and other administrative information about an HHIMS individual receiving care or other health-related services."
 * identifier[NIC][+].value = "A patient may have multiple national identity numbers."
 * identifier[NIC][=].extension[NICID][+].valueString = "National identity number-1"
 * identifier[NIC][=].extension[NICID][+].valueString = "National identity number-2"
