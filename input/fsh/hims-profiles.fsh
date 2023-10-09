@@ -1,4 +1,4 @@
-Profile: HIMSOrganization
+Profile: Organization
 Parent: Organization
 Id: organization
 Title: "Organization"
