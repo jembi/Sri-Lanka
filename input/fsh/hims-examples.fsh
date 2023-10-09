@@ -1,5 +1,5 @@
 Instance: OrganizationExample
-InstanceOf: HIMSOrganization
+InstanceOf: ServiceProvider
 Usage: #example
 Title: "Organization"
 Description: "Organization providing health related services."
@@ -13,7 +13,7 @@ Description: "Organization providing health related services."
 Instance: HIMSPatientExample
 InstanceOf: HIMSPatient
 Usage: #example
-Title: "Patient"
+Title: "HIMS Patient"
 Description: "Is used to document demographics and other administrative information about an individual receiving care or other health-related services."
 
 * identifier[PPN][+].value = "A patient can have multiple passport IDs."

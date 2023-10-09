@@ -1,4 +1,4 @@
-Profile: HIMSOrganization
+Profile: ServiceProvider
 Parent: Organization
 Id: organization
 Title: "Organization"
