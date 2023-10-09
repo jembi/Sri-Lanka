@@ -43,7 +43,9 @@ Profile: HIMSPatient
 Parent: HHIMSPatient
 Id: hims-patient
 Title: "HIMS Patient"
-Description: "Is used to document demographics and other administrative information about an individual receiving care or other health-related services. In addition to the profiled data elements, this profile includes all data elements from the HHIMS Patient profile."
+Description: 
+    "Is used to document demographics and other administrative information about an individual receiving care or other health-related services. 
+    In addition to the profiled data elements, this profile includes all data elements from the HHIMS Patient profile."
 * identifier 1..*
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
