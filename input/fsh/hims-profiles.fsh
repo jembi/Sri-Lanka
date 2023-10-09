@@ -375,7 +375,7 @@ Description: "Follow-up Plan"
 * identifier ^slicing.ordered = false
 * identifier ^slicing.description = "Slice based on the type of identifier."
 * identifier contains
-    PLAC 0..1
+    PLAC 0..1 MS
 
 * identifier[PLAC] ^definition =
     "Sri Lanka team to provide motivation for supporting this slice."
