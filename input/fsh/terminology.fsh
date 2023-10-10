@@ -78,3 +78,39 @@ Title: "Follow up at HLC"
 Description: "Follow up at HLC"
 * ^experimental = false
 * include codes from system CSFollowUpReasons
+
+CodeSystem: CSCVDRiskCategory
+Id: cs-cvd-risk-category
+Title: "Cardiovascular Risk Category Probability Percentage Ranges"
+Description: "Cardiovascular Risk Category Probability Percentage Ranges"
+* ^experimental = false
+* ^caseSensitive = true
+* #less-than-5 "Less than 5%" "Sri Lanka team to provide defitinion for this coded value"
+* #5-to-less-than-10 "5% to less than 10%" "Sri Lanka team to provide defitinion for this coded value"
+* #10-to-less-than-20 "10% to less than 20%" "Sri Lanka team to provide defitinion for this coded value"
+* #20-to-less-than-30 "20% to less than 30%" "Sri Lanka team to provide defitinion for this coded value"
+* #greater-than-or-equal-to-30 "Equal or more than 30%" "Sri Lanka team to provide defitinion for this coded value"
+
+ValueSet: VSCVDRiskCategory
+Id: vs-cvd-risk-category
+Title: "Cardiovascular Risk Category Probability Percentage Ranges"
+Description: "Cardiovascular Risk Category Probability Percentage Ranges"
+* ^experimental = false
+* include codes from system CSCVDRiskCategory
+
+CodeSystem: CSMedicalConditions
+Id: cs-medical-conditions
+Title: "Conditions"
+Description: "Represents previous, pre-existing and new conditions."
+* ^experimental = false
+* ^caseSensitive = true
+* #Bronchial-asthma "Bronchial Asthma" "Sri Lanka team to provide defitinion for this coded value"
+* #Diabetes "Diabetes" "Sri Lanka team to provide defitinion for this coded value"
+* #Cerebrovascular-Accident "Cerebrovascular Accident" "Sri Lanka team to provide defitinion for this coded value"
+
+ValueSet: VSMedicalConditions
+Id: vs-medical-conditions
+Title: "Conditions"
+Description: "Represents previous, pre-existing and new conditions."
+* ^experimental = false
+* include codes from system CSMedicalConditions

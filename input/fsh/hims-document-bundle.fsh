@@ -1,4 +1,4 @@
-Instance: HIMS-Document
+Instance: HIMS-Document-Bundle
 InstanceOf: Bundle
 Usage: #example
 Title: "HIMS Document Bundle"
@@ -53,11 +53,17 @@ Description: "HIMS Document Bundle"
 * entry[+].fullUrl = "Observation/TotalCholesterolExample"
 * entry[=].resource = TotalCholesterolExample
 
-* entry[+].fullUrl = "RiskAssessment/CVSRiskFactorExample"
-* entry[=].resource = CVSRiskFactorExample
+* entry[+].fullUrl = "RiskAssessment/CVDRiskCategoryExample"
+* entry[=].resource = CVDRiskCategoryExample
 
 * entry[+].fullUrl = "ServiceRequest/FollowUpPlanServiceRequestExample"
 * entry[=].resource = FollowUpPlanServiceRequestExample
 
 * entry[+].fullUrl = "CarePlan/FollowUpAtHLCExample"
 * entry[=].resource = FollowUpAtHLCExample
+
+* entry[+].fullUrl = "Observation/HypertensionExample"
+* entry[=].resource = HypertensionExample
+
+* entry[+].fullUrl = "Condition/MedicalHistoryExample"
+* entry[=].resource = MedicalHistoryExample
