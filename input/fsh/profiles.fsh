@@ -182,6 +182,7 @@ Description: "Represents the patient's blood pressure."
 * code.coding.code = #85354-9
 * code.coding.system = "http://loinc.org"
 * code.text = "Blood Pressure"
+* category 1..1
 * category.coding.code = #vital-signs
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * subject 1..1
@@ -220,6 +221,7 @@ Id: weight
 Title: "Patient Weight"
 Description: "Represents the patient's weight."
 * status 1..1
+* category 1..1
 * category.coding.code = #vital-signs
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * code.coding.code = #29463-7
@@ -240,6 +242,7 @@ Id: height
 Title: "Patient Height"
 Description: "Represents the patient's height."
 * status 1..1
+* category 1..1
 * category.coding.code = #vital-signs
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * code.coding.code = #8302-2
@@ -260,6 +263,7 @@ Id: bmi
 Title: "Patient BMI"
 Description: "Represents the patient's BMI."
 * status 1..1
+* category 1..1
 * category.coding.code = #vital-signs
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * code.coding.code = #39156-5
@@ -380,7 +384,7 @@ Description: "Cardiovascular Risk Category"
 * prediction.qualitativeRisk from VSCVDRiskCategory (required)
 * prediction.qualitativeRisk.text = "Risk Category"
 * prediction.probabilityDecimal ^definition =
-    "Sri Lanka team to provide motivation for supporting this slice."
+    "Sri Lanka team to provide motivation for supporting this element."
 * prediction.whenRange 1..1
 
 Profile: FollowUpPlanServiceRequest
@@ -420,7 +424,7 @@ Description: "Follow-up Plan"
 * requester only Reference (Practitioner or PractitionerRole or Organization)
 * reasonCode 0..* MS
 * reasonCode ^definition =
-    "Sri Lanka team to provide motivation for supporting this slice."
+    "Sri Lanka team to provide motivation for supporting this element."
 * reasonCode from VSFollowUpReasons (extensible)
 
 Profile: FollowUpAtHLC 
@@ -461,3 +465,57 @@ Description: "Logically groups all resources into a single document structure."
 * author 1..*
 * title 1..1
 * section 1..*
+
+Profile: Hypertension
+Parent: Observation
+Id: hypertension
+Title: "Hypertension"
+Description: "Patient is diagnosed with Hypertension due to high blood pressure."
+* status 1..1
+* code.coding.code = #38341003
+* code.coding.system = "http://snomed.info/sct"
+* code.text = "Hypertension"
+* category 1..1
+* category.coding.code = #vital-signs
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* subject 1..1
+* encounter 1..1
+* effectiveDateTime 1..1
+* valueQuantity 1..1
+* valueQuantity.value 1..1
+* valueQuantity.unit = "mmHg"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #mm[Hg]
+* performer 1..*
+* derivedFrom 1..*
+* derivedFrom only Reference(Observation)
+
+Profile: MedicalHistory
+Parent: Condition
+Id: MedicalHistory
+Title: "Medical History"
+Description: "Represents previous, pre-existing and new conditions."
+* identifier 0..* MS
+* identifier ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
+* clinicalStatus 1..1
+* verificationStatus 0..1 MS
+* verificationStatus ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
+* category 0..*
+* category ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
+* code 1..1
+* code from VSMedicalConditions (extensible)
+* subject 1..1
+* subject only Reference(Patient)
+* encounter 1..1
+* recorder 0..1 MS
+* recorder ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
+* recorder only Reference(Practitioner or PractitionerRole)
+* asserter 0..1 MS
+* asserter ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
+* asserter only Reference(Practitioner or PractitionerRole)
+* recordedDate 1..1

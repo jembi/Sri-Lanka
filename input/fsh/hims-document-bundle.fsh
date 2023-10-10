@@ -1,4 +1,4 @@
-Instance: HIMS-Document
+Instance: HIMS-Document-Bundle
 InstanceOf: Bundle
 Usage: #example
 Title: "HIMS Document Bundle"
@@ -61,3 +61,9 @@ Description: "HIMS Document Bundle"
 
 * entry[+].fullUrl = "CarePlan/FollowUpAtHLCExample"
 * entry[=].resource = FollowUpAtHLCExample
+
+* entry[+].fullUrl = "Observation/HypertensionExample"
+* entry[=].resource = HypertensionExample
+
+* entry[+].fullUrl = "Condition/MedicalHistoryExample"
+* entry[=].resource = MedicalHistoryExample

@@ -488,6 +488,7 @@ Description: "Logically groups all resources into a single document structure."
 * section[=].code.coding.code = #75367002
 * section[=].code.coding.system = "http://snomed.info/sct"
 * section[=].entry[+] = Reference(BloodPressureExample)
+* section[=].entry[+] = Reference(HypertensionExample)
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
 
@@ -541,3 +542,52 @@ Description: "Logically groups all resources into a single document structure."
 * section[=].entry[+] = Reference(FollowUpAtHLCExample)
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+
+* section[+].title = "Previous, pre-existing and new conditions"
+* section[=].code.coding.code = #67804-5
+* section[=].code.coding.system = "http://loinc.org"
+* section[=].entry[+] = Reference(MedicalHistoryExample)
+* section[=].text.status = #generated
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+
+Instance: HypertensionExample
+InstanceOf: Hypertension
+Usage: #example
+Title: "Hypertension"
+Description: "Patient is diagnosed with Hypertension due to high blood pressure."
+* status = #final
+* category.coding.code = #vital-signs
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* code.coding.code = #38341003
+* code.coding.system = "http://snomed.info/sct"
+* code.text = "Hypertension"
+* subject = Reference(HIMSPatientExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* effectiveDateTime = "2022-11-30"
+* performer[+] = Reference(OrganizationExample)
+* performer[+] = Reference(GeneralPractitionerExample)
+
+* valueQuantity.value = 140
+* valueQuantity.unit = "mmHg"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #mm[Hg]
+* derivedFrom[+] = Reference(BloodPressureExample)
+
+Instance: MedicalHistoryExample
+InstanceOf: MedicalHistory
+Usage: #example
+Title: "Medical History"
+Description: "Represents previous, pre-existing and new conditions."
+* clinicalStatus.coding.code = #active
+* clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
+* verificationStatus.coding.code = #confirmed
+* verificationStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+* category[+].coding.code = #encounter-diagnosis
+* category[=].coding.system = "http://terminology.hl7.org/CodeSystem/condition-category"
+* code.coding.code = #Cerebrovascular-Accident
+* code.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-medical-conditions"
+* subject = Reference(HIMSPatientExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* recorder = Reference(GeneralPractitionerExample)
+* asserter = Reference(GeneralPractitionerExample)
+* recordedDate = "2023-10-06T13:28:17-05:00"

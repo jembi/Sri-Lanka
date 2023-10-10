@@ -97,3 +97,20 @@ Title: "Cardiovascular Risk Category Probability Percentage Ranges"
 Description: "Cardiovascular Risk Category Probability Percentage Ranges"
 * ^experimental = false
 * include codes from system CSCVDRiskCategory
+
+CodeSystem: CSMedicalConditions
+Id: cs-medical-conditions
+Title: "Conditions"
+Description: "Represents previous, pre-existing and new conditions."
+* ^experimental = false
+* ^caseSensitive = true
+* #Bronchial-asthma "Bronchial Asthma" "Sri Lanka team to provide defitinion for this coded value"
+* #Diabetes "Diabetes" "Sri Lanka team to provide defitinion for this coded value"
+* #Cerebrovascular-Accident "Cerebrovascular Accident" "Sri Lanka team to provide defitinion for this coded value"
+
+ValueSet: VSMedicalConditions
+Id: vs-medical-conditions
+Title: "Conditions"
+Description: "Represents previous, pre-existing and new conditions."
+* ^experimental = false
+* include codes from system CSMedicalConditions
