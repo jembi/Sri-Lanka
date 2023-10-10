@@ -56,6 +56,7 @@ Description: "Is used to document demographics and other administrative informat
 
 * name[+].use = #official
 * name[=].family = "Smith"
+* name[=].given[+] = "Mr."
 * name[=].given[+] = "Mike"
 * name[=].given[+] = "John"
 * gender = #male
@@ -98,6 +99,7 @@ Description: "Is used to document demographics and other administrative informat
 
 * name[+].use = #official
 * name[=].family = "Smith"
+* name[=].given[+] = "Mr."
 * name[=].given[+] = "Mike"
 * name[=].given[+] = "John"
 * gender = #male
@@ -370,16 +372,16 @@ Description: "Represents the patient's total cholesterol results."
 * referenceRange[=].high.code = #mmol/l
 * referenceRange[=].high.system = "http://unitsofmeasure.org"
 
-Instance: CVSRiskFactorExample
-InstanceOf: CVSRiskFactor
+Instance: CVDRiskCategoryExample
+InstanceOf: CVDRiskCategory
 Usage: #example
-Title: "Cardiovascular Risk Assesment"
-Description: "Cardiovascular Risk Assesment"
-* identifier[CVS].value = "risk-assessment-cardiac"
-* identifier[CVS].system = "http://openhie.org/fhir/sri-lanka/identifier/cvs-risk-factor"
-* identifier[CVS].type.coding.code = #FILL
-* identifier[CVS].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[CVS].type.text = "CVS risk factor identifier"
+Title: "Cardiovascular Risk Category"
+Description: "Cardiovascular Risk Category"
+* identifier[CVD].value = "risk-assessment-cardiac"
+* identifier[CVD].system = "http://openhie.org/fhir/sri-lanka/identifier/CVD-risk-category"
+* identifier[CVD].type.coding.code = #FILL
+* identifier[CVD].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[CVD].type.text = "CVD risk category identifier"
 * status = #final
 * subject = Reference(HIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
@@ -395,6 +397,10 @@ Description: "Cardiovascular Risk Assesment"
 * prediction[=].outcome.coding.system = "http://snomed.info/sct"
 * prediction[=].outcome.text = "Risk of heart attack"
 * prediction[=].probabilityDecimal = 0.02
+
+* prediction[=].qualitativeRisk.coding.code = #greater-than-or-equal-to-30
+* prediction[=].qualitativeRisk.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-cvd-risk-category"
+* prediction[=].qualitativeRisk.text = "Risk Category"
 
 * prediction[=].whenRange.low.value = 39
 * prediction[=].whenRange.low.unit = "years"
@@ -518,7 +524,7 @@ Description: "Logically groups all resources into a single document structure."
 * section[+].title = "Risk Assessment Report"
 * section[=].code.coding.code = #71482-4
 * section[=].code.coding.system = "http://loinc.org"
-* section[=].entry[+] = Reference(CVSRiskFactorExample)
+* section[=].entry[+] = Reference(CVDRiskCategoryExample)
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
 

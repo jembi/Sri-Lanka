@@ -347,11 +347,11 @@ Description: "Represents the patient's total cholesterol results."
 * referenceRange ^definition =
     "Sri Lanka team to provide motivation for supporting this element."
 
-Profile: CVSRiskFactor
+Profile: CVDRiskCategory
 Parent: RiskAssessment
-Id: cvs-risk-factor
-Title: "Cardiovascular Risk Assesment"
-Description: "Cardiovascular Risk Assesment"
+Id: cvd-risk-category
+Title: "Cardiovascular Risk Category"
+Description: "Cardiovascular Risk Category"
 * identifier 1..*
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
@@ -359,12 +359,12 @@ Description: "Cardiovascular Risk Assesment"
 * identifier ^slicing.ordered = false
 * identifier ^slicing.description = "Slice based on the type of identifier."
 * identifier contains
-    CVS 1..1
-* identifier[CVS].value 1..1
-* identifier[CVS].system = "http://openhie.org/fhir/sri-lanka/identifier/cvs-risk-factor"
-* identifier[CVS].type.coding.code = #FILL
-* identifier[CVS].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[CVS].type.text = "CVS risk factor identifier"
+    CVD 1..1
+* identifier[CVD].value 1..1
+* identifier[CVD].system = "http://openhie.org/fhir/sri-lanka/identifier/CVD-risk-category"
+* identifier[CVD].type.coding.code = #FILL
+* identifier[CVD].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[CVD].type.text = "CVD risk category identifier"
 * status 1..1
 * subject 1..1
 * subject only Reference(Patient)
@@ -375,7 +375,12 @@ Description: "Cardiovascular Risk Assesment"
 * basis 1..*
 * prediction 1..*
 * prediction.outcome 1..1
-* prediction.probabilityDecimal 1..1
+* prediction.probabilityDecimal 0..1 MS
+* prediction.qualitativeRisk 1..1
+* prediction.qualitativeRisk from VSCVDRiskCategory (required)
+* prediction.qualitativeRisk.text = "Risk Category"
+* prediction.probabilityDecimal ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
 * prediction.whenRange 1..1
 
 Profile: FollowUpPlanServiceRequest
