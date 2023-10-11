@@ -132,6 +132,8 @@ Description: "Represents the current facility at which the patient is receiving 
 * subject = Reference(HIMSPatientExample)
 * period.start = "2022-12-01"
 * period.end = "2023-01-20"
+* reasonCode[+].coding.code = #LKRFE73
+* reasonCode[=].coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-reason-for-encounter"
 
 Instance: RiskBehaviourPhysicalActivityExample
 InstanceOf: RiskBehaviourPhysicalActivity

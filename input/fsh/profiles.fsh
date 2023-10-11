@@ -38,6 +38,14 @@ Description: "Represents the current facility at which the patient is receiving 
 * class 1..1
 * subject 1..1
 * period 1..1
+* reasonCode 0..* MS
+* reasonCode ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
+* reasonCode from VSReasonForEncounter (extensible)
+* location 0..* MS
+* location ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
+* location.location 1..1
 
 Profile: HIMSPatient
 Parent: HHIMSPatient
@@ -382,7 +390,6 @@ Description: "Cardiovascular Risk Category"
 * prediction.probabilityDecimal 0..1 MS
 * prediction.qualitativeRisk 1..1
 * prediction.qualitativeRisk from VSCVDRiskCategory (required)
-* prediction.qualitativeRisk.text = "Risk Category"
 * prediction.probabilityDecimal ^definition =
     "Sri Lanka team to provide motivation for supporting this element."
 * prediction.whenRange 1..1
