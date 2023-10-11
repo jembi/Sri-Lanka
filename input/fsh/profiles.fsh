@@ -526,7 +526,10 @@ Id: allergy-intolerance
 Title: "Allergy Intolerance"
 Description: "Allergy Intolerance"
 * encounter 1..1
-* code 1..1
+* code 0..1 MS
+* code ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
+* code.text 1..1
 * code from VSAllergyIntoleranceSubstanceCondition (preferred)
 * code ^binding.extension[+].extension[+].url = "purpose"
 * code ^binding.extension[=].extension[=].valueCode = #candidate
