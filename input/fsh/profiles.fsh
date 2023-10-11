@@ -492,7 +492,7 @@ Description: "Patient is diagnosed with Hypertension due to high blood pressure.
 
 Profile: MedicalHistory
 Parent: Condition
-Id: MedicalHistory
+Id: medical-history
 Title: "Medical History"
 Description: "Represents previous, pre-existing and new conditions."
 * identifier 0..* MS
@@ -519,3 +519,39 @@ Description: "Represents previous, pre-existing and new conditions."
     "Sri Lanka team to provide motivation for supporting this element."
 * asserter only Reference(Practitioner or PractitionerRole)
 * recordedDate 1..1
+
+Profile: Allergies
+Parent: AllergyIntolerance
+Id: allergy-intolerance
+Title: "Allergy Intolerance"
+Description: "Allergy Intolerance"
+* encounter 1..1
+* code 0..1 MS
+* code ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
+* code.text 1..1
+* code from VSAllergyIntoleranceSubstanceCondition (preferred)
+* code ^binding.extension[+].extension[+].url = "purpose"
+* code ^binding.extension[=].extension[=].valueCode = #candidate
+* code ^binding.extension[=].extension[+].url = "valueSet"
+* code ^binding.extension[=].extension[=].valueCanonical = "http://openhie.org/fhir/sri-lanka/ValueSet/vs-allergy-intolerance-snomed-ct-free-set"
+* code ^binding.extension[=].extension[+].url = "documentation"
+* code ^binding.extension[=].extension[=].valueMarkdown = "Type of the substance/product, allergy or intolerance condition."
+* code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+
+* code ^binding.extension[+].extension[+].url = "purpose"
+* code ^binding.extension[=].extension[=].valueCode = #candidate
+* code ^binding.extension[=].extension[+].url = "valueSet"
+* code ^binding.extension[=].extension[=].valueCanonical = "http://openhie.org/fhir/sri-lanka/ValueSet/vs-whoatc"
+* code ^binding.extension[=].extension[+].url = "documentation"
+* code ^binding.extension[=].extension[=].valueMarkdown = "Type of the substance/product, allergy or intolerance condition."
+* code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+
+* code ^binding.extension[+].extension[+].url = "purpose"
+* code ^binding.extension[=].extension[=].valueCode = #candidate
+* code ^binding.extension[=].extension[+].url = "valueSet"
+* code ^binding.extension[=].extension[=].valueCanonical = "http://openhie.org/fhir/sri-lanka/ValueSet/vs-absent-or-unknown-allergies"
+* code ^binding.extension[=].extension[+].url = "documentation"
+* code ^binding.extension[=].extension[=].valueMarkdown = "Absent and unknown codes for allergy or intolerance."
+* code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+* code ^binding.description = "Type of the substance/product, allergy or intolerance condition or or a code for absent/unknown allergy."
