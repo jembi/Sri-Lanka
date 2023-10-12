@@ -460,8 +460,8 @@ Description: "Cardiovascular Risk Category"
 Instance: FollowUpPlanServiceRequestExample
 InstanceOf: FollowUpPlanServiceRequest
 Usage: #example
-Title: "Follow-up Plan"
-Description: "Follow-up Plan"
+Title: "Referral Request For Follow-up Plan"
+Description: "Referral Request For Follow-up Plan"
 * identifier[PLAC].value = "Refferal-12345"
 * identifier[PLAC].system = "http://openhie.org/fhir/sri-lanka/identifier/referral-request"
 * identifier[PLAC].type.coding.code = #PLAC
@@ -483,6 +483,30 @@ Description: "Follow-up Plan"
 * reasonCode[+].coding.code = #Followed-in-6-months-at-hlc
 * reasonCode[=].coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-reasons"
 * reasonCode[=].text = "Followed in 6 months at HLC"
+* locationReference[+] = Reference(ProvidersLocationExample)
+
+Instance: GeneralReferralServiceRequestExample
+InstanceOf: GeneralReferralServiceRequest
+Usage: #example
+Title: "General Referral Request"
+Description: "General Referral Request"
+* identifier[PLAC].value = "Refferal-12345"
+* identifier[PLAC].system = "http://openhie.org/fhir/sri-lanka/identifier/referral-request"
+* identifier[PLAC].type.coding.code = #PLAC
+* identifier[PLAC].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[PLAC].type.coding.display = "Placer Identifier"
+* identifier[PLAC].type.text = "Referral request identifier"
+* status = #completed
+* status.extension[BoolStatus].valueBoolean = true
+* intent = #order
+* category.coding.code = #306206005
+* category.coding.system = "http://snomed.info/sct"
+* category.text = "Referral to service"
+* subject = Reference(HHIMSPatientExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* occurrenceDateTime = "2023-10-06T13:28:17-05:00"
+* requester = Reference(GeneralPractitionerExample)
+* locationReference[+] = Reference(ProvidersLocationExample)
 
 Instance: FollowUpAtHLCExample
 InstanceOf: FollowUpAtHLC
@@ -645,12 +669,9 @@ Description: "Referral Task"
 * status = #completed
 * intent = #order
 * priority = #routine
-* code.coding.code = #306206005
-* code.coding.system = "http://snomed.info/sct"
-* code.text = "Referral request"
 * description = "some information regarding the need for the referral request, if any."
 * for = Reference(HHIMSPatientExample)
-* focus = Reference(FollowUpPlanServiceRequestExample)
+* focus = Reference(GeneralReferralServiceRequestExample)
 * encounter = Reference(TargetFacilityEncounterExample)
 * authoredOn = "2023-10-06T13:28:17-05:00"
 * requester = Reference(GeneralPractitionerExample)

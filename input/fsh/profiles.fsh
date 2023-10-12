@@ -460,9 +460,6 @@ Description: "Referral Task"
 * priority 0..1 MS
 * priority ^definition =
     "Sri Lanka team to provide motivation for supporting this element."
-* code 1..1
-* code.coding.code = #306206005
-* code.coding.system = "http://snomed.info/sct"
 * description 0..1 MS
 * description ^definition =
     "Sri Lanka team to provide motivation for supporting this element."
@@ -475,11 +472,62 @@ Description: "Referral Task"
 * requester 1..1
 * location 1..1
 
+Profile: GeneralReferralServiceRequest
+Parent: ServiceRequest
+Id: general-referral-request
+Title: "General Referral Request"
+Description: "General Referral Request"
+* identifier 1..*
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.ordered = false
+* identifier ^slicing.description = "Slice based on the type of identifier."
+* identifier contains
+    PLAC 0..1 MS
+
+* identifier[PLAC] ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
+* identifier[PLAC].value 1..1
+* identifier[PLAC].system = "http://openhie.org/fhir/sri-lanka/identifier/referral-request"
+* identifier[PLAC].type.coding.code = #PLAC
+* identifier[PLAC].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[PLAC].type.coding.display = "Placer Identifier"
+* identifier[PLAC].type.text = "Referral request identifier"
+* status 1..1
+* status.extension contains ReferredOrNot named BoolStatus 0..1 MS
+* intent 1..1
+* category 1..1
+* category.coding.code = #306206005
+* category.coding.system = "http://snomed.info/sct"
+* category.text = "Referral to service"
+* subject 1..1
+* subject only Reference(Patient)
+* encounter 1..1
+* requester 1..1
+* requester only Reference (Practitioner or PractitionerRole or Organization)
+* locationReference 0..* MS
+* locationReference ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
+
+Extension: ReferredOrNot
+Id: referred-or-not
+Title: "Referred or Not"
+Description: "Extension for indicating whether the patient was referred or not."
+* value[x] 1..
+* value[x] only boolean
+* ^context[+].type = #element
+* ^context[=].expression = "ServiceRequest.status"
+* ^purpose = 
+    "This extension is defined to represent a patient's referral status in a boolean format. If the ServiceRequest.status has a value of completed then this extension value should be true else false."
+* . ^definition = "true means \"Referred\" while false means \" Not Referred\""
+* . ^short = "true | false"
+
 Profile: FollowUpPlanServiceRequest
 Parent: ServiceRequest
 Id: follow-up-plan
-Title: "Follow-up Plan"
-Description: "Follow-up Plan"
+Title: "Referral Request For Follow-up Plan"
+Description: "Referral Request For Follow-up Plan"
 * identifier 1..*
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
@@ -514,6 +562,9 @@ Description: "Follow-up Plan"
 * reasonCode ^definition =
     "Sri Lanka team to provide motivation for supporting this element."
 * reasonCode from VSFollowUpReasons (extensible)
+* locationReference 0..* MS
+* locationReference ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
 
 Profile: FollowUpAtHLC 
 Parent: CarePlan
