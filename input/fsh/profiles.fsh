@@ -463,11 +463,23 @@ Description: "Referral Task"
 * requester 1..1
 * location 1..1*/
 
+Invariant: Boolean-Status-true
+Description: "If ServiceRequest.status is completed, then ServiceRequest.status.extension:BoolStatus must be true"
+Expression: "status.exists() and status = 'completed' implies status.extension.exists(value = true)"
+Severity: #error
+
+Invariant: Boolean-Status-false
+Description: "If ServiceRequest.status is NOT completed, then ServiceRequest.status.extension:BoolStatus must be false"
+Expression: "status.exists() and status != 'completed' implies status.extension.exists(value = false)"
+Severity: #error
+
 Profile: GeneralReferralServiceRequest
 Parent: ServiceRequest
 Id: general-referral-request
 Title: "General Referral Request"
 Description: "General Referral Request"
+* obeys Boolean-Status-true
+* obeys Boolean-Status-false
 * identifier 1..*
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
