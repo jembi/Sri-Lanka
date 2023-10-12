@@ -658,7 +658,7 @@ Description: "Represents previous, pre-existing and new conditions."
 * asserter = Reference(GeneralPractitionerExample)
 * recordedDate = "2023-10-06T13:28:17-05:00"
 
-Instance: ReferralTaskExample
+/*Instance: ReferralTaskExample
 InstanceOf: ReferralTask
 Usage: #example
 Title: "Referral Task"
@@ -672,7 +672,7 @@ Description: "Referral Task"
 * encounter = Reference(TargetFacilityEncounterExample)
 * authoredOn = "2023-10-06T13:28:17-05:00"
 * requester = Reference(GeneralPractitionerExample)
-* location = Reference(ProvidersLocationExample)
+* location = Reference(ProvidersLocationExample)*/
 
 Instance: AllergiesExample
 InstanceOf: Allergies

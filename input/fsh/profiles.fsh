@@ -447,7 +447,7 @@ Description: "Cardiovascular Risk Category"
     "Sri Lanka team to provide motivation for supporting this element."
 * prediction.whenRange 1..1
 
-Profile: ReferralTask
+/*Profile: ReferralTask
 Parent: Task
 Id: referral-task
 Title: "Referral Task"
@@ -470,7 +470,7 @@ Description: "Referral Task"
 * encounter 1..1
 * authoredOn 1..1
 * requester 1..1
-* location 1..1
+* location 1..1*/
 
 Profile: GeneralReferralServiceRequest
 Parent: ServiceRequest
