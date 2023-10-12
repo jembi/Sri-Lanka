@@ -590,8 +590,8 @@ Description: "Allergy Intolerance"
 * code ^definition =
     "Sri Lanka team to provide motivation for supporting this element."
 * code.text 1..1
-* code from VSAllergyIntoleranceSubstanceCondition (preferred)
-* code ^binding.extension[+].extension[+].url = "purpose"
+* code from http://hl7.org/fhir/uv/ips/ValueSet/allergy-intolerance-uv-ips (preferred)
+/** code ^binding.extension[+].extension[+].url = "purpose"
 * code ^binding.extension[=].extension[=].valueCode = #candidate
 * code ^binding.extension[=].extension[+].url = "valueSet"
 * code ^binding.extension[=].extension[=].valueCanonical = "http://openhie.org/fhir/sri-lanka/ValueSet/vs-allergy-intolerance-snomed-ct-free-set"
@@ -615,3 +615,4 @@ Description: "Allergy Intolerance"
 * code ^binding.extension[=].extension[=].valueMarkdown = "Absent and unknown codes for allergy or intolerance."
 * code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 * code ^binding.description = "Type of the substance/product, allergy or intolerance condition or or a code for absent/unknown allergy."
+*/
