@@ -208,8 +208,7 @@ Id: risk-behaviour-physical-activity
 Title: "Physical Activity Status Observation"
 Description: "Represents the physical status of the patient."
 * status 1..1
-* code.coding.code = #106020009
-* code.coding.system = "http://snomed.info/sct"
+* code = $SCT#106020009
 * code.text = "Physical Activity"
 * subject 1..1
 * encounter 1..1
@@ -224,8 +223,7 @@ Id: risk-behaviour-tobacco-smoker
 Title: "Tobacco Smoker Observation"
 Description: "Represents the tobacco smoking status of the patient."
 * status 1..1
-* code.coding.code = #72166-2
-* code.coding.system = "http://loinc.org"
+* code = $LNC#72166-2
 * code.text = "Tobacco smoking"
 * subject 1..1
 * encounter 1..1
@@ -240,8 +238,7 @@ Id: blood-pressure
 Title: "Blood Pressure Observation"
 Description: "Represents the patient's blood pressure."
 * status 1..1
-* code.coding.code = #85354-9
-* code.coding.system = "http://loinc.org"
+* code = $LNC#85354-9
 * code.text = "Blood Pressure"
 * category 1..1
 * category.coding.code = #vital-signs
@@ -285,8 +282,7 @@ Description: "Represents the patient's weight."
 * category 1..1
 * category.coding.code = #vital-signs
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* code.coding.code = #29463-7
-* code.coding.system = "http://loinc.org"
+* code = $LNC#29463-7
 * code.text = "Body Weight"
 * subject 1..1
 * encounter 1..1
@@ -306,8 +302,7 @@ Description: "Represents the patient's height."
 * category 1..1
 * category.coding.code = #vital-signs
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* code.coding.code = #8302-2
-* code.coding.system = "http://loinc.org"
+* code = $LNC#8302-2
 * code.text = "Body Height"
 * subject 1..1
 * encounter 1..1
@@ -327,8 +322,7 @@ Description: "Represents the patient's BMI."
 * category 1..1
 * category.coding.code = #vital-signs
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* code.coding.code = #39156-5
-* code.coding.system = "http://loinc.org"
+* code = $LNC#39156-5
 * code.text = "Body mass index (BMI)"
 * subject 1..1
 * encounter 1..1
@@ -346,8 +340,7 @@ Id: random-blood-sugar
 Title: "Random Blood Sugar Observation"
 Description: "Represents the patient's RBS results."
 * status 1..1
-* code.coding.code = #15074-8
-* code.coding.system = "http://loinc.org"
+* code = $LNC#15074-8
 * code.text = "Glucose"
 * subject 1..1
 * encounter 1..1
@@ -370,8 +363,7 @@ Id: fasting-blood-sugar
 Title: "Fasting Blood Sugar Observation"
 Description: "Represents the patient's FBS results."
 * status 1..1
-* code.coding.code = #76629-5
-* code.coding.system = "http://loinc.org"
+* code = $LNC#76629-5
 * code.text = "Fasting glucose"
 * subject 1..1
 * encounter 1..1
@@ -394,8 +386,7 @@ Id: total-cholesterol
 Title: "Total Cholesterol"
 Description: "Represents the patient's total cholesterol results."
 * status 1..1
-* code.coding.code = #2093-3
-* code.coding.system = "http://loinc.org"
+* code = $LNC#2093-3
 * code.text = "Cholesterol"
 * subject 1..1
 * encounter 1..1
@@ -498,8 +489,7 @@ Description: "General Referral Request"
 * intent 1..1
 * code 1..1
 * code from http://hl7.org/fhir/ValueSet/procedure-code (extensible)
-* code.coding.code = #3457005
-* code.coding.system = "http://snomed.info/sct"
+* code = $SCT#3457005
 * subject 1..1
 * subject only Reference(Patient)
 * encounter 1..1
@@ -605,8 +595,7 @@ Id: hypertension
 Title: "Hypertension"
 Description: "Patient is diagnosed with Hypertension due to high blood pressure."
 * status 1..1
-* code.coding.code = #38341003
-* code.coding.system = "http://snomed.info/sct"
+* code = $SCT#38341003
 * code.text = "Hypertension"
 * category 1..1
 * category.coding.code = #vital-signs

@@ -184,8 +184,7 @@ Usage: #example
 Title: "Physical Activity Status Observation"
 Description: "Represents the physical status of the patient."
 * status = #final
-* code.coding.code = #106020009
-* code.coding.system = "http://snomed.info/sct"
+* code = $SCT#106020009
 * code.text = "Physical Activity"
 * subject = Reference(HIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
@@ -201,8 +200,7 @@ Usage: #example
 Title: "Tobacco Smoker Observation"
 Description: "Represents the tobacco smoking status of the patient."
 * status = #final
-* code.coding.code = #72166-2
-* code.coding.system = "http://loinc.org"
+* code = $LNC#72166-2
 * code.text = "Tobacco smoking"
 * subject = Reference(HIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
@@ -220,8 +218,7 @@ Description: "Represents the Systolic and Diastolic blood pressure for the patie
 * status = #final
 * category.coding.code = #vital-signs
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* code.coding.code = #85354-9
-* code.coding.system = "http://loinc.org"
+* code = $LNC#85354-9
 * code.text = "Blood Pressure"
 * subject = Reference(HIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
@@ -249,8 +246,7 @@ Description: "Represents the patient's weight."
 * status = #final
 * category.coding.code = #vital-signs
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* code.coding.code = #29463-7
-* code.coding.system = "http://loinc.org"
+* code = $LNC#29463-7
 * code.text = "Body Weight"
 * subject = Reference(HIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
@@ -270,8 +266,7 @@ Description: "Represents the patient's height."
 * status = #final
 * category.coding.code = #vital-signs
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* code.coding.code = #8302-2
-* code.coding.system = "http://loinc.org"
+* code = $LNC#8302-2
 * code.text = "Body Height"
 * subject = Reference(HIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
@@ -291,8 +286,7 @@ Description: "Represents the patient's BMI."
 * status = #final
 * category.coding.code = #vital-signs
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* code.coding.code = #39156-5
-* code.coding.system = "http://loinc.org"
+* code = $LNC#39156-5
 * code.text = "Body mass index (BMI)"
 * subject = Reference(HIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
@@ -312,8 +306,7 @@ Usage: #example
 Title: "Random Blood Sugar Observation"
 Description: "Represents the patient's RBS results."
 * status = #final
-* code.coding.code = #15074-8
-* code.coding.system = "http://loinc.org"
+* code = $LNC#15074-8
 * code.text = "Glucose"
 * subject = Reference(HIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
@@ -345,8 +338,7 @@ Usage: #example
 Title: "Fasting Blood Sugar Observation"
 Description: "Represents the patient's FBS results."
 * status = #final
-* code.coding.code = #76629-5
-* code.coding.system = "http://loinc.org"
+* code = $LNC#76629-5
 * code.text = "Fasting glucose"
 * subject = Reference(HIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
@@ -395,8 +387,7 @@ Usage: #example
 Title: "Total Cholesterol"
 Description: "Represents the patient's total cholesterol results."
 * status = #final
-* code.coding.code = #2093-3
-* code.coding.system = "http://loinc.org"
+* code = $LNC#2093-3
 * code.text = "Cholesterol"
 * subject = Reference(HIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
@@ -438,8 +429,7 @@ Description: "Cardiovascular Risk Category"
 * basis[+] = Reference(BloodPressureExample)
 * basis[+] = Reference(RandomBloodSugarExample)
 * basis[+] = Reference(FastingBloodSugarExample)
-* prediction[+].outcome.coding.code = #395112001
-* prediction[=].outcome.coding.system = "http://snomed.info/sct"
+* prediction[+].outcome = $SCT#395112001
 * prediction[=].outcome.text = "Risk of heart attack"
 * prediction[=].probabilityDecimal = 0.02
 
@@ -496,8 +486,7 @@ Description: "General Referral Request"
 * status = #completed
 * status.extension[BoolStatus].valueBoolean = true
 * intent = #order
-* code.coding.code = #3457005
-* code.coding.system = "http://snomed.info/sct"
+* code = $SCT#3457005
 * code.text = "Patient referral"
 * subject = Reference(HHIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
@@ -537,51 +526,44 @@ Description: "Logically groups all resources into a single document structure."
 * title = "Sri Lanka team to advise on title"
 
 * section[+].title = "Risk Behaviour - Assessment of Physical Activity"
-* section[=].code.coding.code = #398636004
-* section[=].code.coding.system = "http://snomed.info/sct"
+* section[=].code = $SCT#398636004
 * section[=].entry[+] = Reference(RiskBehaviourPhysicalActivityExample)
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
 
 * section[+].title = "Risk Behaviour - Tobacco smoking Assessment"
-* section[=].code.coding.code = #72166-2
-* section[=].code.coding.system = "http://loinc.org"
+* section[=].code = $LNC#72166-2
 * section[=].entry[+] = Reference(RiskBehaviourTobaccoSmokerExample)
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
 
 * section[+].title = "Blood Pressure"
-* section[=].code.coding.code = #75367002
-* section[=].code.coding.system = "http://snomed.info/sct"
+* section[=].code = $SCT#75367002
 * section[=].entry[+] = Reference(BloodPressureExample)
 * section[=].entry[+] = Reference(HypertensionExample)
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
 
 * section[+].title = "Patient Weight"
-* section[=].code.coding.code = #3141-9
-* section[=].code.coding.system = "http://loinc.org"
+* section[=].code = $LNC#3141-9
 * section[=].entry[+] = Reference(WeightExample)
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
 
 * section[+].title = "Patient Height"
-* section[=].code.coding.code = #3137-7
-* section[=].code.coding.system = "http://loinc.org"
+* section[=].code = $LNC#3137-7
 * section[=].entry[+] = Reference(HeightExample)
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
 
 * section[+].title = "Patient BMI"
-* section[=].code.coding.code = #97057-4
-* section[=].code.coding.system = "http://loinc.org"
+* section[=].code = $LNC#97057-4
 * section[=].entry[+] = Reference(BMIExample)
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
 
 * section[+].title = "Bloodwork"
-* section[=].code.coding.code = #LA17759-4
-* section[=].code.coding.system = "http://loinc.org"
+* section[=].code = $LNC#LA17759-4
 * section[=].entry[+] = Reference(RandomBloodSugarExample)
 * section[=].entry[+] = Reference(FastingBloodSugarExample)
 * section[=].entry[+] = Reference(TotalCholesterolExample)
@@ -589,29 +571,25 @@ Description: "Logically groups all resources into a single document structure."
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
 
 * section[+].title = "Risk Assessment Report"
-* section[=].code.coding.code = #71482-4
-* section[=].code.coding.system = "http://loinc.org"
+* section[=].code = $LNC#71482-4
 * section[=].entry[+] = Reference(CVDRiskCategoryExample)
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
 
 * section[+].title = "Referral Requests"
-* section[=].code.coding.code = #LA24277-8
-* section[=].code.coding.system = "http://loinc.org"
+* section[=].code = $LNC#LA24277-8
 * section[=].entry[+] = Reference(FollowUpPlanServiceRequestExample)
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
 
 * section[+].title = "Treatment and Care"
-* section[=].code.coding.code = #68833-3
-* section[=].code.coding.system = "http://loinc.org"
+* section[=].code = $LNC#68833-3
 * section[=].entry[+] = Reference(FollowUpAtHLCExample)
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
 
 * section[+].title = "Previous, pre-existing and new conditions"
-* section[=].code.coding.code = #67804-5
-* section[=].code.coding.system = "http://loinc.org"
+* section[=].code = $LNC#67804-5
 * section[=].entry[+] = Reference(MedicalHistoryExample)
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
@@ -624,8 +602,7 @@ Description: "Patient is diagnosed with Hypertension due to high blood pressure.
 * status = #final
 * category.coding.code = #vital-signs
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* code.coding.code = #38341003
-* code.coding.system = "http://snomed.info/sct"
+* code = $SCT#38341003
 * code.text = "Hypertension"
 * subject = Reference(HIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
@@ -679,8 +656,7 @@ InstanceOf: Allergies
 Usage: #example
 Title: "Allergy Intolerance - Using a Coded Allergy"
 Description: "Example where a code is used to represent an allergy"
-* code.coding.code = #28647000
-* code.coding.system = "http://snomed.info/sct"
+* code = $SCT#28647000
 * code.text = "Meat"
 * encounter = Reference(TargetFacilityEncounterExample)
 * clinicalStatus.coding.code = #active
