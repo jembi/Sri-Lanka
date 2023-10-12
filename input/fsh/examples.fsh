@@ -470,9 +470,6 @@ Description: "Referral Request For Follow-up Plan"
 * identifier[PLAC].type.text = "Referral request identifier"
 * status = #completed
 * intent = #order
-* category.coding.code = #306206005
-* category.coding.system = "http://snomed.info/sct"
-* category.text = "Referral to service"
 * code.coding.code = #Follow-up-at-hlc
 * code.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-plan"
 * code.text = "Follow up at HLC"
@@ -499,9 +496,9 @@ Description: "General Referral Request"
 * status = #completed
 * status.extension[BoolStatus].valueBoolean = true
 * intent = #order
-* category.coding.code = #306206005
-* category.coding.system = "http://snomed.info/sct"
-* category.text = "Referral to service"
+* code.coding.code = #3457005
+* code.coding.system = "http://snomed.info/sct"
+* code.text = "Patient referral"
 * subject = Reference(HHIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
 * occurrenceDateTime = "2023-10-06T13:28:17-05:00"

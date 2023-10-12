@@ -485,7 +485,6 @@ Description: "General Referral Request"
 * identifier ^slicing.description = "Slice based on the type of identifier."
 * identifier contains
     PLAC 0..1 MS
-
 * identifier[PLAC] ^definition =
     "Sri Lanka team to provide motivation for supporting this slice."
 * identifier[PLAC].value 1..1
@@ -497,10 +496,10 @@ Description: "General Referral Request"
 * status 1..1
 * status.extension contains ReferredOrNot named BoolStatus 0..1 MS
 * intent 1..1
-* category 1..1
-* category.coding.code = #306206005
-* category.coding.system = "http://snomed.info/sct"
-* category.text = "Referral to service"
+* code 1..1
+* code from http://hl7.org/fhir/ValueSet/procedure-code (extensible)
+* code.coding.code = #3457005
+* code.coding.system = "http://snomed.info/sct"
 * subject 1..1
 * subject only Reference(Patient)
 * encounter 1..1
@@ -536,7 +535,6 @@ Description: "Referral Request For Follow-up Plan"
 * identifier ^slicing.description = "Slice based on the type of identifier."
 * identifier contains
     PLAC 0..1 MS
-
 * identifier[PLAC] ^definition =
     "Sri Lanka team to provide motivation for supporting this slice."
 * identifier[PLAC].value 1..1
@@ -547,10 +545,6 @@ Description: "Referral Request For Follow-up Plan"
 * identifier[PLAC].type.text = "Referral request identifier"
 * status 1..1
 * intent 1..1
-* category 1..1
-* category.coding.code = #306206005
-* category.coding.system = "http://snomed.info/sct"
-* category.text = "Referral to service"
 * code 1..1
 * code from VSFollowUpPlan (required)
 * subject 1..1
