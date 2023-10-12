@@ -640,8 +640,8 @@ Description: "Represents previous, pre-existing and new conditions."
 Instance: AllergiesExample
 InstanceOf: Allergies
 Usage: #example
-Title: "Allergy Intolerance Example"
-Description: "Allergy Intolerance Example where a code is used to represent an allergy"
+Title: "Allergy Intolerance - Using a Coded Allergy"
+Description: "Example where a code is used to represent an allergy"
 * code.coding.code = #28647000
 * code.coding.system = "http://snomed.info/sct"
 * code.text = "Meat"
@@ -651,14 +651,15 @@ Description: "Allergy Intolerance Example where a code is used to represent an a
 * verificationStatus.coding.code = #confirmed
 * verificationStatus.coding.system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"
 * patient = Reference(HHIMSPatientExample)
-* recordedDate = "2023-10-11T17:21:33-08:00"
+* onsetDateTime = "2023-10-11T17:21:33-08:00"
 * recorder = Reference(GeneralPractitionerExample)
+* type = #allergy
 
 Instance: AllergiesNoCodeExample
 InstanceOf: Allergies
 Usage: #example
-Title: "Allergy Intolerance Example"
-Description: "Allergy Intolerance Example where only a text value is used to represent an allergy"
+Title: "Allergy Intolerance - Using Only a Text-based Value For an Allergy"
+Description: "Example where only a text value is used to represent an allergy"
 * code.text = "Meat"
 * encounter = Reference(TargetFacilityEncounterExample)
 * clinicalStatus.coding.code = #active
@@ -666,5 +667,6 @@ Description: "Allergy Intolerance Example where only a text value is used to rep
 * verificationStatus.coding.code = #confirmed
 * verificationStatus.coding.system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"
 * patient = Reference(HHIMSPatientExample)
-* recordedDate = "2023-10-11T17:21:33-08:00"
+* onsetDateTime = "2023-10-11T17:21:33-08:00"
 * recorder = Reference(GeneralPractitionerExample)
+* type = #allergy

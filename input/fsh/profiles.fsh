@@ -623,9 +623,10 @@ Description: "Allergy Intolerance"
 * verificationStatus ^definition =
     "Sri Lanka team to provide motivation for supporting this element."
 * patient 1..1
-* recordedDate 0..1 MS
-* recordedDate ^definition =
+* onsetDateTime 0..1 MS
+* onsetDateTime ^definition =
     "Sri Lanka team to provide motivation for supporting this element."
 * recorder 0..1 MS
 * recorder ^definition =
     "Sri Lanka team to provide motivation for supporting this element."
+* type 1..1
