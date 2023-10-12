@@ -132,6 +132,51 @@ Description: "Represents the current facility at which the patient is receiving 
 * subject = Reference(HIMSPatientExample)
 * period.start = "2022-12-01"
 * period.end = "2023-01-20"
+* reasonCode[+].coding.code = #LKRFE73
+* reasonCode[=].coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-reason-for-encounter"
+* location[+].location = Reference(ProvidersLocationExample)
+* participant[+].individual = Reference(GeneralPractitionerExample)
+
+Instance: ProvidersLocationExample
+InstanceOf: ProvidersLocation
+Usage: #example
+Title: "Providers Location"
+Description: "Providers Location"
+* identifier[LocationID][+].value = "A provider's location may be associated with multiple identifiers."
+* identifier[LocationID][=].extension[LocID][+].valueString = "Location-ID-1"
+* identifier[LocationID][=].extension[LocID][+].valueString = "Location-ID-2"
+* identifier[LocationID][=].system = "http://openhie.org/fhir/sri-lanka/identifier/provider-location"
+* identifier[LocationID][=].type.coding.code = #PIN
+* identifier[LocationID][=].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[LocationID].type.text = "Provider location identifier"
+* name = "Name for the location"
+* status = #active
+* address[+].country = "Sri Lanka"
+* address[=].type = #postal
+* address[=].district = "Ampara"
+* address[=].line[+] = "177"
+* address[=].line[+] = "Nawala Road"
+* address[=].city = "Nugegoda"
+* address[=].postalCode = "32350"
+* address[=].state = "Colombo"
+
+* telecom[+].system = #phone
+* telecom[=].value = "+27829999999"
+* telecom[+].system = #email
+* telecom[=].value = "someone@something.com"
+* telecom[+].system = #email
+* telecom[=].value = "someone2@something.com"
+* managingOrganization = Reference(OrganizationExample)
+
+Instance: NotifiableDiseasesNotifiedExample
+InstanceOf: NotifiableDiseasesNotified
+Usage: #example
+Title: "Notifiable Diseases Notified"
+Description: "Notifiable Diseases Notified"
+* status = #completed
+* subject = Reference(HHIMSPatientExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* sent = "2023-10-06T13:28:17-05:00"
 
 Instance: RiskBehaviourPhysicalActivityExample
 InstanceOf: RiskBehaviourPhysicalActivity

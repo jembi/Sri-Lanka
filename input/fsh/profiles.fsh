@@ -38,6 +38,65 @@ Description: "Represents the current facility at which the patient is receiving 
 * class 1..1
 * subject 1..1
 * period 1..1
+* reasonCode 0..* MS
+* reasonCode ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
+* reasonCode from VSReasonForEncounter (extensible)
+* location 0..* MS
+* location ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
+* location.location 1..1
+* participant 1..*
+* participant.individual 1..1
+* participant.individual only Reference(Practitioner or PractitionerRole)
+
+Profile: ProvidersLocation
+Parent: Location
+Id: providers-location
+Title: "Providers Location"
+Description: "Providers Location"
+* identifier 0..*
+* identifier ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.ordered = false
+* identifier ^slicing.description = "Slice based on the type of identifier."
+* identifier contains
+    LocationID 0..1 MS
+
+* identifier[LocationID] ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
+* identifier[LocationID].extension contains MultipleValuesForPatientIdentifier named LocID 1..*
+* identifier[LocationID].value 1..1
+* identifier[LocationID].value = "A provider's location may be associated with multiple identifiers."
+* identifier[LocationID].system = "http://openhie.org/fhir/sri-lanka/identifier/provider-location"
+* identifier[LocationID].type.coding.code = #PIN
+* identifier[LocationID].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[LocationID].type.text = "Provider location identifier"
+* name 1..1
+* status 1..1
+* telecom 0..* MS
+* telecom ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
+* address 0..1 MS
+* address ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
+* managingOrganization 1..1
+
+Profile: NotifiableDiseasesNotified
+Parent: Communication
+Id: notifiable-diseases-notified
+Title: "Notifiable Diseases Notified"
+Description: "Notifiable Diseases Notified"
+* status 1..1
+* subject 1..1
+* subject only Reference(Patient)
+* encounter 1..1
+* sent 0..1 MS
+* sent ^definition =
+    "Sri Lanka team to provide motivation for supporting this slice."
 
 Profile: HIMSPatient
 Parent: HHIMSPatient
@@ -92,6 +151,8 @@ Description: "This extension can be used by those patient identifiers where mult
 * value[x] only string
 * ^context[+].type = #element
 * ^context[=].expression = "Patient.identifier"
+* ^context[+].type = #element
+* ^context[=].expression = "Location.identifier"
 
 Profile: HHIMSPatient
 Parent: Patient
@@ -382,7 +443,6 @@ Description: "Cardiovascular Risk Category"
 * prediction.probabilityDecimal 0..1 MS
 * prediction.qualitativeRisk 1..1
 * prediction.qualitativeRisk from VSCVDRiskCategory (required)
-* prediction.qualitativeRisk.text = "Risk Category"
 * prediction.probabilityDecimal ^definition =
     "Sri Lanka team to provide motivation for supporting this element."
 * prediction.whenRange 1..1
