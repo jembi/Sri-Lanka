@@ -615,3 +615,18 @@ Description: "Allergy Intolerance"
 * code ^binding.extension[=].extension[=].valueMarkdown = "Absent and unknown codes for allergy or intolerance."
 * code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 * code ^binding.description = "Type of the substance/product, allergy or intolerance condition or or a code for absent/unknown allergy."
+
+* clinicalStatus 0..1 MS
+* clinicalStatus ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
+* verificationStatus 0..1 MS
+* verificationStatus ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
+* patient 1..1
+* onsetDateTime 0..1 MS
+* onsetDateTime ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
+* recorder 0..1 MS
+* recorder ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
+* type 1..1
