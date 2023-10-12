@@ -447,6 +447,34 @@ Description: "Cardiovascular Risk Category"
     "Sri Lanka team to provide motivation for supporting this element."
 * prediction.whenRange 1..1
 
+Profile: ReferralTask
+Parent: Task
+Id: referral-task
+Title: "Referral Task"
+Description: "Referral Task"
+* identifier 0..* MS
+* identifier ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
+* status 1..1
+* intent 1..1
+* priority 0..1 MS
+* priority ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
+* code 1..1
+* code.coding.code = #306206005
+* code.coding.system = "http://snomed.info/sct"
+* description 0..1 MS
+* description ^definition =
+    "Sri Lanka team to provide motivation for supporting this element."
+* for 1..1
+* for only Reference(Patient)
+* focus 1..1
+* focus only Reference(ServiceRequest)
+* encounter 1..1
+* authoredOn 1..1
+* requester 1..1
+* location 1..1
+
 Profile: FollowUpPlanServiceRequest
 Parent: ServiceRequest
 Id: follow-up-plan
