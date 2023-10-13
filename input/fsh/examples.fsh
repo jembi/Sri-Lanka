@@ -413,11 +413,6 @@ InstanceOf: CVDRiskCategory
 Usage: #example
 Title: "Cardiovascular Risk Category"
 Description: "Cardiovascular Risk Category"
-* identifier[CVD].value = "risk-assessment-cardiac"
-* identifier[CVD].system = "http://openhie.org/fhir/sri-lanka/identifier/CVD-risk-category"
-* identifier[CVD].type.coding.code = #FILL
-* identifier[CVD].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[CVD].type.text = "CVD risk category identifier"
 * status = #final
 * subject = Reference(HIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
@@ -452,12 +447,6 @@ InstanceOf: FollowUpPlanServiceRequest
 Usage: #example
 Title: "Referral Request For Follow-up Plan"
 Description: "Referral Request For Follow-up Plan"
-* identifier[PLAC].value = "Refferal-12345"
-* identifier[PLAC].system = "http://openhie.org/fhir/sri-lanka/identifier/referral-request"
-* identifier[PLAC].type.coding.code = #PLAC
-* identifier[PLAC].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[PLAC].type.coding.display = "Placer Identifier"
-* identifier[PLAC].type.text = "Referral request identifier"
 * status = #completed
 * intent = #order
 * code.coding.code = #Follow-up-at-hlc
@@ -477,12 +466,6 @@ InstanceOf: GeneralReferralServiceRequest
 Usage: #example
 Title: "General Referral Request"
 Description: "General Referral Request"
-* identifier[PLAC].value = "Refferal-12345"
-* identifier[PLAC].system = "http://openhie.org/fhir/sri-lanka/identifier/referral-request"
-* identifier[PLAC].type.coding.code = #PLAC
-* identifier[PLAC].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[PLAC].type.coding.display = "Placer Identifier"
-* identifier[PLAC].type.text = "Referral request identifier"
 * status = #completed
 * intent = #order
 * code = $SCT#3457005
@@ -634,11 +617,11 @@ Description: "Represents previous, pre-existing and new conditions."
 * asserter = Reference(GeneralPractitionerExample)
 * recordedDate = "2023-10-06T13:28:17-05:00"
 
-Instance: ReferralTaskExample
+Instance: HHIMSReferralTaskExample
 InstanceOf: ReferralTask
 Usage: #example
-Title: "Referral Task"
-Description: "Referral Task"
+Title: "HHIMS Referral Task"
+Description: "Indicates the outcome of a patient's referral."
 * status = #completed
 * intent = #order
 * priority = #routine
@@ -653,7 +636,7 @@ Description: "Referral Task"
 Instance: AllergiesExample
 InstanceOf: Allergies
 Usage: #example
-Title: "Allergy Intolerance - Using a Coded Allergy"
+Title: "Allergy Intolerance"
 Description: "Example where a code is used to represent an allergy"
 * code = $SCT#28647000
 * code.text = "Meat"
@@ -670,7 +653,7 @@ Description: "Example where a code is used to represent an allergy"
 Instance: AllergiesNoCodeExample
 InstanceOf: Allergies
 Usage: #example
-Title: "Allergy Intolerance - Using Only a Text-based Value For an Allergy"
+Title: "Allergy Intolerance"
 Description: "Example where only a text value is used to represent an allergy"
 * code.text = "Meat"
 * encounter = Reference(TargetFacilityEncounterExample)
@@ -682,3 +665,52 @@ Description: "Example where only a text value is used to represent an allergy"
 * onsetDateTime = "2023-10-11T17:21:33-08:00"
 * recorder = Reference(GeneralPractitionerExample)
 * type = #allergy
+
+Instance: ProceduresExample
+InstanceOf: Procedures
+Usage: #example
+Title: "Procedures"
+Description: "Procedures"
+* status = #in-progress
+* category = $SCT#409073007
+* code.coding.code = #dummy-1
+* code.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-procedure"
+* subject = Reference(HHIMSPatientExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* performedDateTime = "2023-10-11T17:21:33-08:00"
+* recorder = Reference(GeneralPractitionerExample)
+* asserter = Reference(GeneralPractitionerExample)
+* performer[+].actor = Reference(GeneralPractitionerExample)
+* location = Reference(ProvidersLocationExample)
+
+Instance: InjectionsExample
+InstanceOf: Injections
+Usage: #example
+Title: "Injections"
+Description: "Example where a code is used to represent the route of drug admninistration"
+* status = #completed
+* medicationCodeableConcept.coding.code = #dummy-1
+* medicationCodeableConcept.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-injection"
+* subject = Reference(HHIMSPatientExample)
+* context = Reference(TargetFacilityEncounterExample)
+* effectiveDateTime = "2023-10-11T17:21:33-08:00"
+* performer[+].actor = Reference(GeneralPractitionerExample)
+* dosage.dose.value = 12
+* dosage.route = $SCT#47625008
+* dosage.route.text = "Intravenous route"
+
+Instance: InjectionsNoCodeExample
+InstanceOf: Injections
+Usage: #example
+Title: "Injections"
+Description: "Example where only a text value is used to represent the route of drug admninistration"
+* status = #completed
+* medicationCodeableConcept.coding.code = #dummy-1
+* medicationCodeableConcept.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-injection"
+* subject = Reference(HHIMSPatientExample)
+* context = Reference(TargetFacilityEncounterExample)
+* effectiveDateTime = "2023-10-11T17:21:33-08:00"
+* performer[+].actor = Reference(GeneralPractitionerExample)
+* dosage.dose.value = 12
+* dosage.route.text = "Intravenous route"
+

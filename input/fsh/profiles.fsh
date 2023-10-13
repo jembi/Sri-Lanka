@@ -40,15 +40,14 @@ Description: "Represents the current facility at which the patient is receiving 
 * period 1..1
 * reasonCode 0..* MS
 * reasonCode ^definition =
-    "Sri Lanka team to provide motivation for supporting this slice."
+    "reason(s) why this should be supported."
 * reasonCode from VSReasonForEncounter (extensible)
 * location 0..* MS
 * location ^definition =
-    "Sri Lanka team to provide motivation for supporting this slice."
+    "reason(s) why this should be supported."
 * location.location 1..1
 * participant 1..*
 * participant.individual 1..1
-* participant.individual only Reference(Practitioner or PractitionerRole)
 
 Profile: ProvidersLocation
 Parent: Location
@@ -57,7 +56,7 @@ Title: "Providers Location"
 Description: "Providers Location"
 * identifier 0..*
 * identifier ^definition =
-    "Sri Lanka team to provide motivation for supporting this slice."
+    "reason(s) why this should be supported."
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
@@ -67,7 +66,7 @@ Description: "Providers Location"
     LocationID 0..1 MS
 
 * identifier[LocationID] ^definition =
-    "Sri Lanka team to provide motivation for supporting this slice."
+    "reason(s) why this should be supported."
 * identifier[LocationID].extension contains MultipleValuesForPatientIdentifier named LocID 1..*
 * identifier[LocationID].value 1..1
 * identifier[LocationID].value = "A provider's location may be associated with multiple identifiers."
@@ -79,10 +78,10 @@ Description: "Providers Location"
 * status 1..1
 * telecom 0..* MS
 * telecom ^definition =
-    "Sri Lanka team to provide motivation for supporting this slice."
+    "reason(s) why this should be supported."
 * address 0..1 MS
 * address ^definition =
-    "Sri Lanka team to provide motivation for supporting this slice."
+    "reason(s) why this should be supported."
 * managingOrganization 1..1
 
 Profile: NotifiableDiseasesNotified
@@ -96,7 +95,7 @@ Description: "Notifiable Diseases Notified"
 * encounter 1..1
 * sent 0..1 MS
 * sent ^definition =
-    "Sri Lanka team to provide motivation for supporting this slice."
+    "reason(s) why this should be supported."
 
 Profile: HIMSPatient
 Parent: HHIMSPatient
@@ -125,7 +124,7 @@ Description:
 * identifier[PPN].type.text = "Passport number"
 
 * identifier[Drivers] ^definition =
-    "Sri Lanka team to provide motivation for supporting this slice."
+    "reason(s) why this should be supported."
 * identifier[Drivers].extension contains MultipleValuesForPatientIdentifier named DriversID 1..*
 * identifier[Drivers].value 1..1
 * identifier[Drivers].value = "A patient may have multiple drivers license numbers."
@@ -135,7 +134,7 @@ Description:
 * identifier[Drivers].type.text = "Driver's license number"
 
 * identifier[SCN] ^definition =
-    "Sri Lanka team to provide motivation for supporting this slice."
+    "reason(s) why this should be supported."
 * identifier[SCN].extension contains MultipleValuesForPatientIdentifier named SCNID 1..*
 * identifier[SCN].value 1..1
 * identifier[SCN].value = "A patient may have multiple senior citizen numbers."
@@ -170,7 +169,7 @@ Description: "Is used to document demographics and other administrative informat
     PHN 1..1
 
 * identifier[NIC] ^definition =
-    "Sri Lanka team to provide motivation for supporting this slice."
+    "reason(s) why this should be supported."
 * identifier[NIC].extension contains MultipleValuesForPatientIdentifier named NICID 1..*
 * identifier[NIC].value 1..1
 * identifier[NIC].value = "A patient may have multiple national identity numbers."
@@ -192,7 +191,7 @@ Description: "Is used to document demographics and other administrative informat
 * birthDate 1..1
 * address 0..* MS
 * address ^definition =
-    "Sri Lanka team to provide motivation for supporting this element."
+    "reason(s) why this should be supported."
 * address.city 1..1
 * address.line 1..*
 * address.district 1..1
@@ -200,7 +199,7 @@ Description: "Is used to document demographics and other administrative informat
 * address.country 1..1
 * telecom 0..* MS
 * telecom ^definition =
-    "Sri Lanka team to provide motivation for supporting this element."
+    "reason(s) why this should be supported."
 
 Profile: RiskBehaviourPhysicalActivity
 Parent: Observation
@@ -257,7 +256,7 @@ Description: "Represents the patient's blood pressure."
     Diastolic 0..1 MS
 
 * component[Systolic] ^definition =
-    "Sri Lanka team to provide motivation for supporting this slice."
+    "reason(s) why this should be supported."
 * component[Systolic].code = $LNC#8480-6
 * component[Systolic].valueQuantity.value 1..1
 * component[Systolic].valueQuantity.unit = "mmHg"
@@ -265,7 +264,7 @@ Description: "Represents the patient's blood pressure."
 * component[Systolic].valueQuantity.code = #mm[Hg]
 
 * component[Diastolic] ^definition =
-    "Sri Lanka team to provide motivation for supporting this slice."
+    "reason(s) why this should be supported."
 * component[Diastolic].code = $LNC#8462-4
 * component[Diastolic].valueQuantity.value 1..1
 * component[Diastolic].valueQuantity.unit = "mmHg"
@@ -352,10 +351,10 @@ Description: "Represents the patient's RBS results."
 * performer 1..*
 * interpretation 0..* MS
 * interpretation ^definition =
-    "Sri Lanka team to provide motivation for supporting this element."
+    "reason(s) why this should be supported."
 * referenceRange 0..* MS
 * referenceRange ^definition =
-    "Sri Lanka team to provide motivation for supporting this element."
+    "reason(s) why this should be supported."
 
 Profile: FastingBloodSugar
 Parent: Observation
@@ -375,10 +374,10 @@ Description: "Represents the patient's FBS results."
 * performer 1..*
 * interpretation 0..* MS
 * interpretation ^definition =
-    "Sri Lanka team to provide motivation for supporting this element."
+    "reason(s) why this should be supported."
 * referenceRange 0..* MS
 * referenceRange ^definition =
-    "Sri Lanka team to provide motivation for supporting this element."
+    "reason(s) why this should be supported."
 
 Profile: TotalCholesterol
 Parent: Observation
@@ -398,36 +397,22 @@ Description: "Represents the patient's total cholesterol results."
 * performer 1..*
 * interpretation 0..* MS
 * interpretation ^definition =
-    "Sri Lanka team to provide motivation for supporting this element."
+    "reason(s) why this should be supported."
 * referenceRange 0..* MS
 * referenceRange ^definition =
-    "Sri Lanka team to provide motivation for supporting this element."
+    "reason(s) why this should be supported."
 
 Profile: CVDRiskCategory
 Parent: RiskAssessment
 Id: cvd-risk-category
 Title: "Cardiovascular Risk Category"
 Description: "Cardiovascular Risk Category"
-* identifier 1..*
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "system"
-* identifier ^slicing.rules = #open
-* identifier ^slicing.ordered = false
-* identifier ^slicing.description = "Slice based on the type of identifier."
-* identifier contains
-    CVD 1..1
-* identifier[CVD].value 1..1
-* identifier[CVD].system = "http://openhie.org/fhir/sri-lanka/identifier/CVD-risk-category"
-* identifier[CVD].type.coding.code = #FILL
-* identifier[CVD].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[CVD].type.text = "CVD risk category identifier"
 * status 1..1
 * subject 1..1
 * subject only Reference(Patient)
 * encounter 1..1
 * occurrenceDateTime 1..1
 * performer 1..1
-* performer only Reference(Practitioner or PractitionerRole)
 * basis 1..*
 * prediction 1..*
 * prediction.outcome 1..1
@@ -435,25 +420,22 @@ Description: "Cardiovascular Risk Category"
 * prediction.qualitativeRisk 1..1
 * prediction.qualitativeRisk from VSCVDRiskCategory (required)
 * prediction.probabilityDecimal ^definition =
-    "Sri Lanka team to provide motivation for supporting this element."
+    "reason(s) why this should be supported."
 * prediction.whenRange 1..1
 
 Profile: ReferralTask
 Parent: Task
 Id: referral-task
 Title: "Referral Task"
-Description: "Referral Task"
-* identifier 0..* MS
-* identifier ^definition =
-    "Sri Lanka team to provide motivation for supporting this element."
+Description: "Is primarily used to track the progress of a patient's referral."
 * status 1..1
 * intent 1..1
 * priority 0..1 MS
 * priority ^definition =
-    "Sri Lanka team to provide motivation for supporting this element."
+    "reason(s) why this should be supported."
 * description 0..1 MS
 * description ^definition =
-    "Sri Lanka team to provide motivation for supporting this element."
+    "reason(s) why this should be supported."
 * for 1..1
 * for only Reference(Patient)
 * focus 1..1
@@ -468,22 +450,6 @@ Parent: ServiceRequest
 Id: general-referral-request
 Title: "General Referral Request"
 Description: "General Referral Request"
-* identifier 1..*
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "system"
-* identifier ^slicing.rules = #open
-* identifier ^slicing.ordered = false
-* identifier ^slicing.description = "Slice based on the type of identifier."
-* identifier contains
-    PLAC 0..1 MS
-* identifier[PLAC] ^definition =
-    "Sri Lanka team to provide motivation for supporting this slice."
-* identifier[PLAC].value 1..1
-* identifier[PLAC].system = "http://openhie.org/fhir/sri-lanka/identifier/referral-request"
-* identifier[PLAC].type.coding.code = #PLAC
-* identifier[PLAC].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[PLAC].type.coding.display = "Placer Identifier"
-* identifier[PLAC].type.text = "Referral request identifier"
 * status 1..1
 * intent 1..1
 * code 1..1
@@ -493,10 +459,9 @@ Description: "General Referral Request"
 * subject only Reference(Patient)
 * encounter 1..1
 * requester 1..1
-* requester only Reference (Practitioner or PractitionerRole or Organization)
 * locationReference 0..* MS
 * locationReference ^definition =
-    "Sri Lanka team to provide motivation for supporting this slice."
+    "reason(s) why this should be supported."
 * occurrenceDateTime 1..1
 
 Profile: FollowUpPlanServiceRequest
@@ -504,22 +469,6 @@ Parent: ServiceRequest
 Id: follow-up-plan
 Title: "Referral Request For Follow-up Plan"
 Description: "Referral Request For Follow-up Plan"
-* identifier 1..*
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "system"
-* identifier ^slicing.rules = #open
-* identifier ^slicing.ordered = false
-* identifier ^slicing.description = "Slice based on the type of identifier."
-* identifier contains
-    PLAC 0..1 MS
-* identifier[PLAC] ^definition =
-    "Sri Lanka team to provide motivation for supporting this slice."
-* identifier[PLAC].value 1..1
-* identifier[PLAC].system = "http://openhie.org/fhir/sri-lanka/identifier/referral-request"
-* identifier[PLAC].type.coding.code = #PLAC
-* identifier[PLAC].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[PLAC].type.coding.display = "Placer Identifier"
-* identifier[PLAC].type.text = "Referral request identifier"
 * status 1..1
 * intent 1..1
 * code 1..1
@@ -528,14 +477,13 @@ Description: "Referral Request For Follow-up Plan"
 * subject only Reference(Patient)
 * encounter 1..1
 * requester 1..1
-* requester only Reference (Practitioner or PractitionerRole or Organization)
 * reasonCode 0..* MS
 * reasonCode ^definition =
-    "Sri Lanka team to provide motivation for supporting this element."
+    "reason(s) why this should be supported."
 * reasonCode from VSFollowUpReasons (extensible)
 * locationReference 0..* MS
 * locationReference ^definition =
-    "Sri Lanka team to provide motivation for supporting this slice."
+    "reason(s) why this should be supported."
 * occurrenceDateTime 1..1
 
 Profile: FollowUpAtHLC 
@@ -543,9 +491,6 @@ Parent: CarePlan
 Id: follow-up-at-hlc
 Title: "Follow-up at HLC"
 Description: "Follow-up at HLC"
-* identifier 0..* MS
-* identifier ^definition =
-    "Sri Lanka team to provide motivation for supporting this slice."
 * status 1..1
 * intent 1..1
 * subject 1..1
@@ -553,7 +498,6 @@ Description: "Follow-up at HLC"
 * encounter 1..1
 * period 1..1
 * contributor 1..*
-* contributor only Reference (Practitioner or PractitionerRole or Organization)
 * activity 1..* 
 * activity.reference 1..1
 * activity.reference only Reference (ServiceRequest)
@@ -563,11 +507,6 @@ Parent: Composition
 Id: hims-composition
 Title: "HIMS Composition"
 Description: "Logically groups all resources into a single document structure."
-* identifier 0..1 MS
-* identifier ^definition =
-    "Sri Lanka team to provide motivation for supporting this slice."
-* identifier.value 1..1
-* identifier.system = "http://openhie.org/fhir/sri-lanka/identifier/document"
 * status 1..1
 * subject 1..1
 * encounter 1..1
@@ -605,16 +544,13 @@ Parent: Condition
 Id: medical-history
 Title: "Medical History"
 Description: "Represents previous, pre-existing and new conditions."
-* identifier 0..* MS
-* identifier ^definition =
-    "Sri Lanka team to provide motivation for supporting this slice."
 * clinicalStatus 1..1
 * verificationStatus 0..1 MS
 * verificationStatus ^definition =
-    "Sri Lanka team to provide motivation for supporting this element."
+    "reason(s) why this should be supported."
 * category 0..*
 * category ^definition =
-    "Sri Lanka team to provide motivation for supporting this element."
+    "reason(s) why this should be supported."
 * code 1..1
 * code from VSMedicalConditions (extensible)
 * subject 1..1
@@ -622,12 +558,10 @@ Description: "Represents previous, pre-existing and new conditions."
 * encounter 1..1
 * recorder 0..1 MS
 * recorder ^definition =
-    "Sri Lanka team to provide motivation for supporting this element."
-* recorder only Reference(Practitioner or PractitionerRole)
+    "reason(s) why this should be supported."
 * asserter 0..1 MS
 * asserter ^definition =
-    "Sri Lanka team to provide motivation for supporting this element."
-* asserter only Reference(Practitioner or PractitionerRole)
+    "reason(s) why this should be supported."
 * recordedDate 1..1
 
 Profile: Allergies
@@ -638,7 +572,7 @@ Description: "Allergy Intolerance"
 * encounter 1..1
 * code 0..1 MS
 * code ^definition =
-    "Sri Lanka team to provide motivation for supporting this element."
+    "reason(s) why this should be supported."
 * code.text 1..1
 * code from VSAllergyIntoleranceSubstanceCondition (preferred)
 * code ^binding.extension[+].extension[+].url = "purpose"
@@ -668,15 +602,64 @@ Description: "Allergy Intolerance"
 
 * clinicalStatus 0..1 MS
 * clinicalStatus ^definition =
-    "Sri Lanka team to provide motivation for supporting this element."
+    "reason(s) why this should be supported."
 * verificationStatus 0..1 MS
 * verificationStatus ^definition =
-    "Sri Lanka team to provide motivation for supporting this element."
+    "reason(s) why this should be supported."
 * patient 1..1
 * onsetDateTime 0..1 MS
 * onsetDateTime ^definition =
-    "Sri Lanka team to provide motivation for supporting this element."
+    "reason(s) why this should be supported."
 * recorder 0..1 MS
 * recorder ^definition =
-    "Sri Lanka team to provide motivation for supporting this element."
+    "reason(s) why this should be supported."
 * type 1..1
+
+Profile: Procedures
+Parent: Procedure
+Id: procedure
+Title: "Procedures"
+Description: "Procedures"
+* basedOn 0..* MS
+* basedOn ^definition =
+    "reason(s) why this should be supported."
+* status 1..1
+* category 0..1 MS
+* category ^definition =
+    "reason(s) why this should be supported."
+* code 1..1
+* code from VSProcedures (extensible)
+* subject 1..1
+* subject only Reference(Patient)
+* encounter 1..1
+* performedDateTime 1..1
+* recorder 0..1 MS
+* recorder ^definition =
+    "reason(s) why this should be supported."
+* asserter 0..1 MS
+* asserter ^definition =
+    "reason(s) why this should be supported."
+* performer 1..*
+* performer.actor 1..1
+* location 0..1 MS
+* location ^definition =
+    "reason(s) why this should be supported."
+
+Profile: Injections
+Parent: MedicationAdministration
+Id: injection
+Title: "Injections"
+Description: "Injections"
+* status 1..1
+* medicationCodeableConcept 1..1
+* medicationCodeableConcept from VSInjections (extensible)
+* subject 1..1
+* context 1..1
+* effectiveDateTime 1..1
+* performer 1..*
+* performer.actor 1..1
+* dosage 1..1
+* dosage.dose 1..1
+* dosage.route 1..1
+* dosage.route from http://hl7.org/fhir/ValueSet/route-codes (example)
+* dosage.route.text 1..1
