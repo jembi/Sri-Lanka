@@ -445,34 +445,15 @@ Description: "Is primarily used to track the progress of a patient's referral."
 * requester 1..1
 * location 1..1
 
-Profile: GeneralReferralServiceRequest
+Profile: GenericServiceRequest
 Parent: ServiceRequest
-Id: general-referral-request
-Title: "General Referral Request"
-Description: "General Referral Request"
+Id: generic-service-request
+Title: "Generic Service Request"
+Description: "Generic Service Request"
 * status 1..1
 * intent 1..1
 * code 1..1
-* code from http://hl7.org/fhir/ValueSet/procedure-code (extensible)
-* code = $SCT#3457005
-* subject 1..1
-* subject only Reference(Patient)
-* encounter 1..1
-* requester 1..1
-* locationReference 0..* MS
-* locationReference ^definition =
-    "reason(s) why this should be supported."
-* occurrenceDateTime 1..1
-
-Profile: FollowUpPlanServiceRequest
-Parent: ServiceRequest
-Id: follow-up-plan
-Title: "Referral Request For Follow-up Plan"
-Description: "Referral Request For Follow-up Plan"
-* status 1..1
-* intent 1..1
-* code 1..1
-* code from VSFollowUpPlan (required)
+* code from http://hl7.org/fhir/ValueSet/procedure-code (example)
 * subject 1..1
 * subject only Reference(Patient)
 * encounter 1..1
@@ -480,11 +461,26 @@ Description: "Referral Request For Follow-up Plan"
 * reasonCode 0..* MS
 * reasonCode ^definition =
     "reason(s) why this should be supported."
-* reasonCode from VSFollowUpReasons (extensible)
 * locationReference 0..* MS
 * locationReference ^definition =
     "reason(s) why this should be supported."
 * occurrenceDateTime 1..1
+
+Profile: GeneralReferralServiceRequest
+Parent: GenericServiceRequest
+Id: general-referral-request
+Title: "General Referral Request"
+Description: "General Referral Request"
+* code from http://hl7.org/fhir/ValueSet/procedure-code (extensible)
+* code = $SCT#3457005
+
+Profile: FollowUpPlanServiceRequest
+Parent: GenericServiceRequest
+Id: follow-up-plan
+Title: "Referral Request For Follow-up Plan"
+Description: "Referral Request For Follow-up Plan"
+* code from VSFollowUpPlan (required)
+* reasonCode from VSFollowUpReasons (extensible)
 
 Profile: FollowUpAtHLC 
 Parent: CarePlan

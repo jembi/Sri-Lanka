@@ -476,6 +476,21 @@ Description: "General Referral Request"
 * requester = Reference(GeneralPractitionerExample)
 * locationReference[+] = Reference(ProvidersLocationExample)
 
+Instance: GenericServiceRequestExample
+InstanceOf: GenericServiceRequest
+Usage: #example
+Title: "Generic Service Request"
+Description: "Generic Service Reques"
+* status = #completed
+* intent = #order
+* code = $SCT#3457005
+* code.text = "Patient referral"
+* subject = Reference(HHIMSPatientExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* occurrenceDateTime = "2023-10-06T13:28:17-05:00"
+* requester = Reference(GeneralPractitionerExample)
+* locationReference[+] = Reference(ProvidersLocationExample)
+
 Instance: FollowUpAtHLCExample
 InstanceOf: FollowUpAtHLC
 Usage: #example
