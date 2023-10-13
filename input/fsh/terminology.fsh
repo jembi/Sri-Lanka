@@ -1920,3 +1920,35 @@ Title: "Reason For Encounter"
 Description: "Encounter reasons."
 * ^experimental = false
 * include codes from system CSReasonForEncounter
+
+CodeSystem: CSProcedures
+Id: cs-procedure
+Title: "Procedures"
+Description: "Procedures"
+* ^experimental = false
+* ^caseSensitive = true
+* #dummy-1 "Dummy 1" "Sri Lanka team to provide defitinion for this coded value"
+* #dummy-2 "Dummy 2" "Sri Lanka team to provide defitinion for this coded value"
+
+ValueSet: VSProcedures
+Id: vs-procedure
+Title: "Procedures"
+Description: "Procedures"
+* ^experimental = false
+* include codes from system CSProcedures
+
+CodeSystem: CSInjections
+Id: cs-injection
+Title: "Injections"
+Description: "Injections"
+* ^experimental = false
+* ^caseSensitive = true
+* #dummy-1 "Dummy 1" "Sri Lanka team to provide defitinion for this coded value"
+* #dummy-2 "Dummy 2" "Sri Lanka team to provide defitinion for this coded value"
+
+ValueSet: VSInjections
+Id: vs-injection
+Title: "Injections"
+Description: "Injections"
+* ^experimental = false
+* include codes from system CSProcedures
