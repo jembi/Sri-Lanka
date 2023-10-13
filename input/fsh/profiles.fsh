@@ -612,8 +612,61 @@ Description: "Allergy Intolerance"
     "reason(s) why this should be supported."
 * recorder 0..1 MS
 * recorder ^definition =
-    "reason(s) why this should be supported."
+    "Sri Lanka team to provide motivation for supporting this element."
 * type 1..1
+
+Profile: Prescriptions
+Parent: MedicationRequest
+Id: medication-request
+Title: "Prescription Request"
+Description: "This is to record a patient's medication prescription request"
+* authoredOn 1..1
+* identifier 1..*
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.ordered = false
+* identifier ^slicing.description = "Slice based on the type of identifier."
+* identifier contains
+    PrescriptionID 1..1
+* identifier[PrescriptionID].value 1..1
+* identifier[PrescriptionID].system = "http://openhie.org/fhir/sri-lanka/identifier/prescription"
+* identifier[PrescriptionID].type.coding.code = #FILL
+* identifier[PrescriptionID].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[PrescriptionID].type.coding.display = "Filler Identifier"
+* identifier[PrescriptionID].type.text = "Prescription identifier"
+
+* status 1..1
+* intent 1..1
+* subject 1..1
+* encounter 1..1
+* medicationCodeableConcept 1..1
+* medicationCodeableConcept from http://hl7.org/fhir/ValueSet/medication-codes (example)
+* dosageInstruction.doseAndRate.doseQuantity 1..1
+* dosageInstruction.timing.repeat.count 1..1
+* dosageInstruction.timing.repeat.duration 1..1
+* dosageInstruction.timing.repeat.durationUnit 1..1
+* dosageInstruction.timing.repeat.period 1..1
+* dosageInstruction.timing.repeat.periodUnit 1..1
+* dosageInstruction.timing.repeat.frequency 1..1
+* dosageInstruction.timing.code 0..1 MS
+* dosageInstruction.timing.code ^definition =
+    "reason(s) why this should be supported."
+* note 0..* MS
+* note ^definition =
+    "reason(s) why this should be supported."
+* dispenseRequest.quantity 0..1 MS
+* dispenseRequest.quantity ^definition =
+    "reason(s) why this should be supported."
+* requester 0..1 MS
+* requester ^definition =
+    "reason(s) why this should be supported."
+* performer 0..1 MS
+* performer ^definition =
+    "reason(s) why this should be supported."
+* recorder 0..1 MS
+* recorder ^definition =
+    "reason(s) why this should be supported."
 
 Profile: Procedures
 Parent: Procedure
