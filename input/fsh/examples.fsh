@@ -699,15 +699,15 @@ Description: "This is to record a patient's medication prescription request"
 * encounter = Reference(TargetFacilityEncounterExample)
 * medicationCodeableConcept = $SCT#261000
 * medicationCodeableConcept.text = "Medication"
-* dosageInstruction.doseAndRate.doseQuantity.value = 3
-* dosageInstruction.timing.repeat.period = 3.00
-* dosageInstruction.timing.repeat.count = 2
-* dosageInstruction.timing.repeat.frequency = 2
-* dosageInstruction.timing.repeat.periodUnit = #d
-* dosageInstruction.timing.repeat.duration = 2.00
-* dosageInstruction.timing.repeat.durationUnit = #d
-* dosageInstruction.timing.code.coding.code = #BID
-* dosageInstruction.timing.code.coding.system = "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
+* dosageInstruction[+].doseAndRate[+].doseQuantity.value = 3.0
+* dosageInstruction[=].timing.repeat.period = 3.0
+* dosageInstruction[=].timing.repeat.count = 2
+* dosageInstruction[=].timing.repeat.frequency = 2
+* dosageInstruction[=].timing.repeat.periodUnit = #d
+* dosageInstruction[=].timing.repeat.duration = 2.0
+* dosageInstruction[=].timing.repeat.durationUnit = #d
+* dosageInstruction[=].timing.code.coding.code = #BID
+* dosageInstruction[=].timing.code.coding.system = "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
 * dispenseRequest.quantity.value = 5
 * note.text = "Additional information regarding the patient's medication prescription"
 * note.authorReference = Reference(OrganizationExample)
