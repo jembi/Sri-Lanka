@@ -438,7 +438,7 @@ Description: "Cardiovascular Risk Category"
     "Sri Lanka team to provide motivation for supporting this element."
 * prediction.whenRange 1..1
 
-/*Profile: ReferralTask
+Profile: ReferralTask
 Parent: Task
 Id: referral-task
 Title: "Referral Task"
@@ -461,25 +461,13 @@ Description: "Referral Task"
 * encounter 1..1
 * authoredOn 1..1
 * requester 1..1
-* location 1..1*/
-
-Invariant: Boolean-Status-true
-Description: "If ServiceRequest.status is completed, then ServiceRequest.status.extension:BoolStatus must be true"
-Expression: "status.exists() and status = 'completed' implies status.extension.exists(value = true)"
-Severity: #error
-
-Invariant: Boolean-Status-false
-Description: "If ServiceRequest.status is NOT completed, then ServiceRequest.status.extension:BoolStatus must be false"
-Expression: "status.exists() and status != 'completed' implies status.extension.exists(value = false)"
-Severity: #error
+* location 1..1
 
 Profile: GeneralReferralServiceRequest
 Parent: ServiceRequest
 Id: general-referral-request
 Title: "General Referral Request"
 Description: "General Referral Request"
-* obeys Boolean-Status-true
-* obeys Boolean-Status-false
 * identifier 1..*
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
@@ -497,7 +485,6 @@ Description: "General Referral Request"
 * identifier[PLAC].type.coding.display = "Placer Identifier"
 * identifier[PLAC].type.text = "Referral request identifier"
 * status 1..1
-* status.extension contains ReferredOrNot named BoolStatus 0..1 MS
 * intent 1..1
 * code 1..1
 * code from http://hl7.org/fhir/ValueSet/procedure-code (extensible)
@@ -510,19 +497,7 @@ Description: "General Referral Request"
 * locationReference 0..* MS
 * locationReference ^definition =
     "Sri Lanka team to provide motivation for supporting this slice."
-
-Extension: ReferredOrNot
-Id: referred-or-not
-Title: "Referred or Not"
-Description: "Extension for indicating whether the patient was referred or not."
-* value[x] 1..
-* value[x] only boolean
-* ^context[+].type = #element
-* ^context[=].expression = "ServiceRequest.status"
-* ^purpose = 
-    "This extension is defined to represent a patient's referral status in a boolean format. If the ServiceRequest.status has a value of completed then this extension value should be true else false."
-* . ^definition = "true means \"Referred\" while false means \" Not Referred\""
-* . ^short = "true | false"
+* occurrenceDateTime 1..1
 
 Profile: FollowUpPlanServiceRequest
 Parent: ServiceRequest
@@ -561,6 +536,7 @@ Description: "Referral Request For Follow-up Plan"
 * locationReference 0..* MS
 * locationReference ^definition =
     "Sri Lanka team to provide motivation for supporting this slice."
+* occurrenceDateTime 1..1
 
 Profile: FollowUpAtHLC 
 Parent: CarePlan
