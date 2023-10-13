@@ -681,6 +681,41 @@ Description: "Example where only a text value is used to represent an allergy"
 * recorder = Reference(GeneralPractitionerExample)
 * type = #allergy
 
+Instance: PrescriptionsExample
+InstanceOf: Prescriptions
+Usage: #example
+Title: "Prescription Request"
+Description: "This is to record a patient's medication prescription request"
+* identifier[PrescriptionID].value = "prescription-12345"
+* identifier[PrescriptionID].system = "http://openhie.org/fhir/sri-lanka/identifier/prescription"
+* identifier[PrescriptionID].type.coding.code = #FILL
+* identifier[PrescriptionID].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[PrescriptionID].type.coding.display = "Filler Identifier"
+* identifier[PrescriptionID].type.text = "Prescription identifier"
+* authoredOn = "2023-10-11T17:21:33-08:00"
+* status = #completed
+* intent = #order
+* subject = Reference(HHIMSPatientExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* medicationCodeableConcept = $SCT#261000
+* medicationCodeableConcept.text = "Medication"
+* dosageInstruction.doseAndRate.doseQuantity.value = 3
+* dosageInstruction.timing.repeat.period = 3.00
+* dosageInstruction.timing.repeat.count = 2
+* dosageInstruction.timing.repeat.frequency = 2
+* dosageInstruction.timing.repeat.periodUnit = #d
+* dosageInstruction.timing.repeat.duration = 2.00
+* dosageInstruction.timing.repeat.durationUnit = #d
+* dosageInstruction.timing.code.coding.code = #BID
+* dosageInstruction.timing.code.coding.system = "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
+* dispenseRequest.quantity.value = 5
+* note.text = "Additional information regarding the patient's medication prescription"
+* note.authorReference = Reference(OrganizationExample)
+* note.time = "2023-10-11T17:21:33-08:00"
+* requester = Reference(GeneralPractitionerExample)
+* performer = Reference(GeneralPractitionerExample)
+* recorder = Reference(GeneralPractitionerExample)
+
 Instance: ProceduresExample
 InstanceOf: Procedures
 Usage: #example
