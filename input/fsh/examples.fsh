@@ -682,3 +682,26 @@ Description: "Example where only a text value is used to represent an allergy"
 * onsetDateTime = "2023-10-11T17:21:33-08:00"
 * recorder = Reference(GeneralPractitionerExample)
 * type = #allergy
+
+Instance: PrescriptionRequestExample
+InstanceOf: PrescriptionRequest
+Usage: #example
+Title: "PrescriptionRequestExample"
+Description: "This is to record a patient's medication prescription request"
+* authoredOn = "2023-10-11T17:21:33-08:00"
+* identifier.value = "PRES00212321"
+* identifier.system = "http://openhie.org/fhir/sri-lanka/identifier/prescription-request"
+* status = #completed
+* intent = #order
+* subject = Reference(HHIMSPatientExample)
+* medicationCodeableConcept = $SCT#261000
+* medicationCodeableConcept.text = "Patient Prescription"
+* dosageInstruction.doseAndRate.doseQuantity.value = 3
+* dosageInstruction.timing.repeat.period = 3.00
+* dosageInstruction.timing.repeat.periodUnit = #d
+* dosageInstruction.timing.repeat.duration = 2.00
+* dosageInstruction.timing.repeat.durationUnit = #d
+* note.text = "Additional information regarding the patient's medication prescription"
+* note.authorReference = Reference(OrganizationExample)
+* note.time = "2023-10-11T17:21:33-08:00"
+* dispenseRequest.quantity.value = 5

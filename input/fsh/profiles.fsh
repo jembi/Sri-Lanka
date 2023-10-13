@@ -680,3 +680,24 @@ Description: "Allergy Intolerance"
 * recorder ^definition =
     "Sri Lanka team to provide motivation for supporting this element."
 * type 1..1
+
+Profile: PrescriptionRequest
+Parent: MedicationRequest
+Id: prescription-request
+Title: "Prescription Request"
+Description: "This is to record a patient's medication prescription request"
+* authoredOn 1..1
+* identifier 1..1
+* status 1..1
+* intent 1..1
+* subject 1..1
+* medicationCodeableConcept 1..1
+* medicationCodeableConcept from http://hl7.org/fhir/ValueSet/medication-codes (example)
+* medicationCodeableConcept = $SCT#261000
+* dosageInstruction.doseAndRate.doseQuantity 1..1
+* dosageInstruction.timing.repeat.duration 1..1
+* dosageInstruction.timing.repeat.durationUnit 1..1
+* dosageInstruction.timing.repeat.period 1..1
+* dosageInstruction.timing.repeat.periodUnit 1..1
+* note 0..*
+* dispenseRequest.quantity 0..1
