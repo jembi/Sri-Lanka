@@ -712,3 +712,24 @@ Description: "Injections"
 * dosage.route 1..1
 * dosage.route from http://hl7.org/fhir/ValueSet/route-codes (example)
 * dosage.route.text 1..1
+
+
+Profile: DrugDispensation
+Parent: MedicationDispense
+Id: drug-dispensation
+Title: "Drug Dispensation"
+Description: "Drug Dispensation"
+* status 1..1
+* subject 1..
+* context 1..1
+* performer 0..1 MS
+* performer ^definition =
+    "reason(s) why this should be supported."
+* location 0..1 MS
+* location ^definition =
+    "reason(s) why this should be supported."
+* authorizingPrescription 1..*
+* whenHandedOver 1..1
+* receiver 1..*
+* medicationCodeableConcept 1..1
+* medicationCodeableConcept from http://hl7.org/fhir/ValueSet/medication-codes (example)

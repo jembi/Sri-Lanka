@@ -723,7 +723,7 @@ Title: "Procedures"
 Description: "Procedures"
 * status = #in-progress
 * category = $SCT#409073007
-* code.coding.code = #dummy-1
+* code.coding.code = #ARV-0.1ml-2-sites
 * code.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-procedure"
 * subject = Reference(HHIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
@@ -764,3 +764,18 @@ Description: "Example where only a text value is used to represent the route of 
 * dosage.dose.value = 12
 * dosage.route.text = "Intravenous route"
 
+Instance: DrugDispensationExample
+InstanceOf: DrugDispensation
+Usage: #example
+Title: "Drug Dispensation"
+Description: "Drug Dispensation"
+* status = #completed
+* subject = Reference(HHIMSPatientExample)
+* context = Reference(TargetFacilityEncounterExample)
+* performer[+].actor = Reference(GeneralPractitionerExample)
+* location = Reference(ProvidersLocationExample)
+* authorizingPrescription[+] = Reference(PrescriptionsExample)
+* whenHandedOver = "2023-10-11T17:21:33-08:00"
+* receiver[+] = Reference(HHIMSPatientExample)
+* medicationCodeableConcept = $SCT#261000
+* medicationCodeableConcept.text = "Medication"
