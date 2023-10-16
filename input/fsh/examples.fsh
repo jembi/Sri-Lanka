@@ -829,3 +829,54 @@ Description: "Is primarily used to track the progress of an investigations reque
 * location = Reference(ProvidersLocationExample)
 * executionPeriod.start = "2023-10-06T13:28:17-05:00"
 * executionPeriod.end = "2023-10-09T16:28:17-05:00"
+
+Instance: ImagingServiceRequestExample
+InstanceOf: ImagingServiceRequest
+Usage: #example
+Title: "Imaging Request"
+Description: "Imaging Request"
+* status = #completed
+* intent = #order
+* code.coding.code = #X-Ray
+* code.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-imaging"
+* code.text = "Imaging requested"
+* subject = Reference(HHIMSPatientExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* occurrenceDateTime = "2023-10-06T13:28:17-05:00"
+* requester = Reference(GeneralPractitionerExample)
+* locationReference[+] = Reference(ProvidersLocationExample)
+
+Instance: ImagingTaskExample
+InstanceOf: ImagingTask
+Usage: #example
+Title: "Imaging Task"
+Description: "Is primarily used to track the progress of an imaging request."
+* status = #completed
+* intent = #order
+* priority = #routine
+* description = "some information regarding the need for the imaging request, if any."
+* for = Reference(HHIMSPatientExample)
+* focus = Reference(GeneralReferralServiceRequestExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* authoredOn = "2023-10-06T13:28:17-05:00"
+* requester = Reference(GeneralPractitionerExample)
+* location = Reference(ProvidersLocationExample)
+* executionPeriod.start = "2023-10-06T13:28:17-05:00"
+* executionPeriod.end = "2023-10-09T16:28:17-05:00"
+
+Instance: ImagingExample
+InstanceOf: Imaging
+Usage: #example
+Title: "Imaging Study"
+Description: "Imaging Study"
+* status = #registered
+* subject = Reference(HHIMSPatientExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* started = "2023-10-06T13:28:17-05:00"
+* basedOn[+] = Reference(ImagingServiceRequestExample)
+* referrer = Reference(GeneralPractitionerExample)
+* description = "Imaging Description"
+* location = Reference(ProvidersLocationExample)
+* series.uid = "89c0c298-6c30-11ee-b962-0242ac120002"
+* series.modality = $DICOM#XA
+* series.performer[+].actor = Reference(GeneralPractitionerExample)
