@@ -758,3 +758,45 @@ Description: "Is primarily used to track the progress of an investigations reque
 * description ^definition =
     "reason(s) why this should be supported."
 * executionPeriod 1..1
+
+Profile: ImagingServiceRequest
+Parent: GenericServiceRequest
+Id: imaging-request
+Title: "Imaging Request"
+Description: "Imaging Request"
+* code from VSImaging (extensible)
+
+Profile: ImagingTask
+Parent: GenericTask
+Id: imaging-task
+Title: "Imaging Task"
+Description: "Is primarily used to track the progress of an imaging request."
+* priority 0..1 MS
+* priority ^definition =
+    "reason(s) why this should be supported."
+* description 0..1 MS
+* description ^definition =
+    "reason(s) why this should be supported."
+* executionPeriod 1..1
+
+Profile: HHIMSImaging
+Parent: ImagingStudy
+Id: hhims-imaging
+Title: "HHIMS Imaging"
+Description: "HHIMS Imaging"
+* status 1..1
+* subject 1..1
+* encounter 1..1
+* started 0..1 MS
+* started ^definition =
+    "reason(s) why this should be supported."
+* basedOn 1..1
+* referrer 0..1 MS
+* referrer ^definition =
+    "reason(s) why this should be supported."
+* procedureReference 0..1 MS
+* procedureReference ^definition =
+    "reason(s) why this should be supported."
+* description 0..1 MS
+* description ^definition =
+    "reason(s) why this should be supported."

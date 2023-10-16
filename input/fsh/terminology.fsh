@@ -2283,3 +2283,31 @@ Title: "Medication Names"
 Description: "Medication Names"
 * ^experimental = false
 * include codes from system CSMedicationNames
+
+CodeSystem: CSImaging
+Id: cs-imaging
+Title: "Imaging"
+Description: "Imaging"
+* ^experimental = false
+* ^caseSensitive = true
+* #X-Ray "X-Ray" "Needs definition"
+* #MRI "MRI" "Needs definition"
+* #Ultrasound "Ultrasound" "Needs definition"
+* #CT "CT" "Needs definition"
+* #Fluoroscopy "Fluoroscopy" "Needs definition"
+* #Angiography "Angiography" "Needs definition"
+* #Mammography "Mammography" "Needs definition"
+* #Breast-Tomosynthesis "Breast Tomosynthesis" "Needs definition"
+* #PET "PET" "Needs definition"
+* #SPECT "SPECT" "Needs definition"
+* #Endoscopy "Endoscopy" "Needs definition"
+* #Microscopy "Microscopy" "Needs definition"
+* #Whole-Slide-Imaging "Whole Slide Imaging" "Needs definition"
+* #OCT "OCT" "Needs definition"
+
+ValueSet: VSImaging
+Id: vs-imaging
+Title: "Imaging"
+Description: "Imaging"
+* ^experimental = false
+* include codes from system CSImaging
