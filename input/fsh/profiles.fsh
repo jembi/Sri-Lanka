@@ -643,7 +643,7 @@ Description: "This is to record a patient's medication prescription request"
 * subject 1..1
 * encounter 1..1
 * medicationCodeableConcept 1..1
-* medicationCodeableConcept from http://hl7.org/fhir/ValueSet/medication-codes (example)
+* medicationCodeableConcept from VSMedicationNames (extensible)
 * dosageInstruction.doseAndRate.doseQuantity 1..1
 * dosageInstruction.timing.repeat.count 1..1
 * dosageInstruction.timing.repeat.duration 1..1
@@ -737,7 +737,7 @@ Description: "Drug Dispensation"
 * whenHandedOver 1..1
 * receiver 1..*
 * medicationCodeableConcept 1..1
-* medicationCodeableConcept from http://hl7.org/fhir/ValueSet/medication-codes (example)
+* medicationCodeableConcept from VSMedicationNames (extensible)
 
 Profile: InvestigationsServiceRequest
 Parent: GenericServiceRequest
