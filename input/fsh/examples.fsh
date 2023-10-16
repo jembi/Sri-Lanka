@@ -648,6 +648,20 @@ Description: "Indicates the outcome of a patient's referral."
 * requester = Reference(GeneralPractitionerExample)
 * location = Reference(ProvidersLocationExample)
 
+Instance: GenericTaskExample
+InstanceOf: GenericTask
+Usage: #example
+Title: "Generic Task"
+Description: "Is primarily used to track the progress of a patient's service request such as referrals and lab orders etc."
+* status = #completed
+* intent = #order
+* for = Reference(HHIMSPatientExample)
+* focus = Reference(GeneralReferralServiceRequestExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* authoredOn = "2023-10-06T13:28:17-05:00"
+* requester = Reference(GeneralPractitionerExample)
+* location = Reference(ProvidersLocationExample)
+
 Instance: AllergiesExample
 InstanceOf: Allergies
 Usage: #example

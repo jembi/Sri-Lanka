@@ -423,19 +423,13 @@ Description: "Cardiovascular Risk Category"
     "reason(s) why this should be supported."
 * prediction.whenRange 1..1
 
-Profile: ReferralTask
+Profile: GenericTask
 Parent: Task
-Id: referral-task
-Title: "Referral Task"
-Description: "Is primarily used to track the progress of a patient's referral."
+Id: generic-task
+Title: "Generic Task"
+Description: "Is primarily used to track the progress of a patient's service request such as referrals and lab orders etc."
 * status 1..1
 * intent 1..1
-* priority 0..1 MS
-* priority ^definition =
-    "reason(s) why this should be supported."
-* description 0..1 MS
-* description ^definition =
-    "reason(s) why this should be supported."
 * for 1..1
 * for only Reference(Patient)
 * focus 1..1
@@ -444,6 +438,18 @@ Description: "Is primarily used to track the progress of a patient's referral."
 * authoredOn 1..1
 * requester 1..1
 * location 1..1
+
+Profile: ReferralTask
+Parent: GenericTask
+Id: referral-task
+Title: "Referral Task"
+Description: "Is primarily used to track the progress of a patient's referral."
+* priority 0..1 MS
+* priority ^definition =
+    "reason(s) why this should be supported."
+* description 0..1 MS
+* description ^definition =
+    "reason(s) why this should be supported."
 
 Profile: GenericServiceRequest
 Parent: ServiceRequest
@@ -712,7 +718,6 @@ Description: "Injections"
 * dosage.route 1..1
 * dosage.route from http://hl7.org/fhir/ValueSet/route-codes (example)
 * dosage.route.text 1..1
-
 
 Profile: DrugDispensation
 Parent: MedicationDispense
