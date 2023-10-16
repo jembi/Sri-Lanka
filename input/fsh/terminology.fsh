@@ -1,6 +1,7 @@
 Alias: $LNC = http://loinc.org
 Alias: $SCT = http://snomed.info/sct
 Alias: $SCT_or_SCTINT = http://snomed.info/sct|http://snomed.info/sct/900000000000207008
+Alias: $DICOM = http://dicom.nema.org/resources/ontology/DCM
 
 CodeSystem: CSRiskBehaviourPhysicalActivity
 Id: cs-risk-behaviour-physical-activity
@@ -1961,7 +1962,7 @@ Id: vs-injection
 Title: "Injections"
 Description: "Injections"
 * ^experimental = false
-* include codes from system CSProcedures
+* include codes from system CSInjections
 
 CodeSystem: CSInvestigations
 Id: cs-investigation

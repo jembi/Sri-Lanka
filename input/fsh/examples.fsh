@@ -864,16 +864,19 @@ Description: "Is primarily used to track the progress of an imaging request."
 * executionPeriod.start = "2023-10-06T13:28:17-05:00"
 * executionPeriod.end = "2023-10-09T16:28:17-05:00"
 
-Instance: HHIMSImagingExample
-InstanceOf: HHIMSImaging
+Instance: ImagingExample
+InstanceOf: Imaging
 Usage: #example
-Title: "HHIMS Imaging Example"
-Description: "HHIMS Imaging Example"
+Title: "Imaging Study"
+Description: "Imaging Study"
 * status = #registered
 * subject = Reference(HHIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
 * started = "2023-10-06T13:28:17-05:00"
-* basedOn = Reference(ImagingServiceRequestExample)
+* basedOn[+] = Reference(ImagingServiceRequestExample)
 * referrer = Reference(GeneralPractitionerExample)
-* procedureReference = Reference(ProceduresExample)
 * description = "Imaging Description"
+* location = Reference(ProvidersLocationExample)
+* series.uid = "89c0c298-6c30-11ee-b962-0242ac120002"
+* series.modality = $DICOM#XA
+* series.performer[+].actor = Reference(GeneralPractitionerExample)
