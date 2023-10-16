@@ -711,7 +711,8 @@ Description: "This is to record a patient's medication prescription request"
 * intent = #order
 * subject = Reference(HHIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
-* medicationCodeableConcept = $SCT#261000
+* medicationCodeableConcept.coding.code = #Vitamin-A-&-D
+* medicationCodeableConcept.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-medication-name"
 * medicationCodeableConcept.text = "Medication"
 * dosageInstruction[+].doseAndRate[+].doseQuantity.value = 3.0
 * dosageInstruction[=].timing.repeat.period = 3.0
@@ -791,7 +792,8 @@ Description: "Drug Dispensation"
 * authorizingPrescription[+] = Reference(PrescriptionsExample)
 * whenHandedOver = "2023-10-11T17:21:33-08:00"
 * receiver[+] = Reference(HHIMSPatientExample)
-* medicationCodeableConcept = $SCT#261000
+* medicationCodeableConcept.coding.code = #Vitamin-A-&-D
+* medicationCodeableConcept.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-medication-name"
 * medicationCodeableConcept.text = "Medication"
 
 Instance: InvestigationsServiceRequestExample
