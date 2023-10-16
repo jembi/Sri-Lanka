@@ -738,3 +738,23 @@ Description: "Drug Dispensation"
 * receiver 1..*
 * medicationCodeableConcept 1..1
 * medicationCodeableConcept from http://hl7.org/fhir/ValueSet/medication-codes (example)
+
+Profile: InvestigationsServiceRequest
+Parent: GenericServiceRequest
+Id: investigations-request
+Title: "Investigations Request"
+Description: "Investigations Request"
+* code from VSInvestigations (extensible)
+
+Profile: InvestigationsTask
+Parent: GenericTask
+Id: investigations-task
+Title: "Investigations Task"
+Description: "Is primarily used to track the progress of an investigations request."
+* priority 0..1 MS
+* priority ^definition =
+    "reason(s) why this should be supported."
+* description 0..1 MS
+* description ^definition =
+    "reason(s) why this should be supported."
+* executionPeriod 1..1

@@ -793,3 +793,37 @@ Description: "Drug Dispensation"
 * receiver[+] = Reference(HHIMSPatientExample)
 * medicationCodeableConcept = $SCT#261000
 * medicationCodeableConcept.text = "Medication"
+
+Instance: InvestigationsServiceRequestExample
+InstanceOf: InvestigationsServiceRequest
+Usage: #example
+Title: "Investigations Request"
+Description: "Investigations Request"
+* status = #completed
+* intent = #order
+* code.coding.code = #FBC-WBC-th/uL
+* code.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-investigation"
+* code.text = "Investigation requested"
+* subject = Reference(HHIMSPatientExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* occurrenceDateTime = "2023-10-06T13:28:17-05:00"
+* requester = Reference(GeneralPractitionerExample)
+* locationReference[+] = Reference(ProvidersLocationExample)
+
+Instance: InvestigationsTaskExample
+InstanceOf: InvestigationsTask
+Usage: #example
+Title: "Investigations Task"
+Description: "Is primarily used to track the progress of an investigations request."
+* status = #completed
+* intent = #order
+* priority = #routine
+* description = "some information regarding the need for the investigations request, if any."
+* for = Reference(HHIMSPatientExample)
+* focus = Reference(GeneralReferralServiceRequestExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* authoredOn = "2023-10-06T13:28:17-05:00"
+* requester = Reference(GeneralPractitionerExample)
+* location = Reference(ProvidersLocationExample)
+* executionPeriod.start = "2023-10-06T13:28:17-05:00"
+* executionPeriod.end = "2023-10-09T16:28:17-05:00"
