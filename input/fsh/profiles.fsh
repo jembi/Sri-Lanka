@@ -423,19 +423,13 @@ Description: "Cardiovascular Risk Category"
     "reason(s) why this should be supported."
 * prediction.whenRange 1..1
 
-Profile: ReferralTask
+Profile: GenericTask
 Parent: Task
-Id: referral-task
-Title: "Referral Task"
-Description: "Is primarily used to track the progress of a patient's referral."
+Id: generic-task
+Title: "Generic Task"
+Description: "Is primarily used to track the progress of a patient's service request such as referrals and lab orders etc."
 * status 1..1
 * intent 1..1
-* priority 0..1 MS
-* priority ^definition =
-    "reason(s) why this should be supported."
-* description 0..1 MS
-* description ^definition =
-    "reason(s) why this should be supported."
 * for 1..1
 * for only Reference(Patient)
 * focus 1..1
@@ -445,34 +439,27 @@ Description: "Is primarily used to track the progress of a patient's referral."
 * requester 1..1
 * location 1..1
 
-Profile: GeneralReferralServiceRequest
-Parent: ServiceRequest
-Id: general-referral-request
-Title: "General Referral Request"
-Description: "General Referral Request"
-* status 1..1
-* intent 1..1
-* code 1..1
-* code from http://hl7.org/fhir/ValueSet/procedure-code (extensible)
-* code = $SCT#3457005
-* subject 1..1
-* subject only Reference(Patient)
-* encounter 1..1
-* requester 1..1
-* locationReference 0..* MS
-* locationReference ^definition =
+Profile: ReferralTask
+Parent: GenericTask
+Id: referral-task
+Title: "Referral Task"
+Description: "Is primarily used to track the progress of a patient's referral."
+* priority 0..1 MS
+* priority ^definition =
     "reason(s) why this should be supported."
-* occurrenceDateTime 1..1
+* description 0..1 MS
+* description ^definition =
+    "reason(s) why this should be supported."
 
-Profile: FollowUpPlanServiceRequest
+Profile: GenericServiceRequest
 Parent: ServiceRequest
-Id: follow-up-plan
-Title: "Referral Request For Follow-up Plan"
-Description: "Referral Request For Follow-up Plan"
+Id: generic-service-request
+Title: "Generic Service Request"
+Description: "Generic Service Request"
 * status 1..1
 * intent 1..1
 * code 1..1
-* code from VSFollowUpPlan (required)
+* code from http://hl7.org/fhir/ValueSet/procedure-code (example)
 * subject 1..1
 * subject only Reference(Patient)
 * encounter 1..1
@@ -480,11 +467,26 @@ Description: "Referral Request For Follow-up Plan"
 * reasonCode 0..* MS
 * reasonCode ^definition =
     "reason(s) why this should be supported."
-* reasonCode from VSFollowUpReasons (extensible)
 * locationReference 0..* MS
 * locationReference ^definition =
     "reason(s) why this should be supported."
 * occurrenceDateTime 1..1
+
+Profile: GeneralReferralServiceRequest
+Parent: GenericServiceRequest
+Id: general-referral-request
+Title: "General Referral Request"
+Description: "General Referral Request"
+* code from http://hl7.org/fhir/ValueSet/procedure-code (extensible)
+* code = $SCT#3457005
+
+Profile: FollowUpPlanServiceRequest
+Parent: GenericServiceRequest
+Id: follow-up-plan
+Title: "Referral Request For Follow-up Plan"
+Description: "Referral Request For Follow-up Plan"
+* code from VSFollowUpPlan (required)
+* reasonCode from VSFollowUpReasons (extensible)
 
 Profile: FollowUpAtHLC 
 Parent: CarePlan
@@ -716,3 +718,43 @@ Description: "Injections"
 * dosage.route 1..1
 * dosage.route from http://hl7.org/fhir/ValueSet/route-codes (example)
 * dosage.route.text 1..1
+
+Profile: DrugDispensation
+Parent: MedicationDispense
+Id: drug-dispensation
+Title: "Drug Dispensation"
+Description: "Drug Dispensation"
+* status 1..1
+* subject 1..
+* context 1..1
+* performer 0..1 MS
+* performer ^definition =
+    "reason(s) why this should be supported."
+* location 0..1 MS
+* location ^definition =
+    "reason(s) why this should be supported."
+* authorizingPrescription 1..*
+* whenHandedOver 1..1
+* receiver 1..*
+* medicationCodeableConcept 1..1
+* medicationCodeableConcept from http://hl7.org/fhir/ValueSet/medication-codes (example)
+
+Profile: InvestigationsServiceRequest
+Parent: GenericServiceRequest
+Id: investigations-request
+Title: "Investigations Request"
+Description: "Investigations Request"
+* code from VSInvestigations (extensible)
+
+Profile: InvestigationsTask
+Parent: GenericTask
+Id: investigations-task
+Title: "Investigations Task"
+Description: "Is primarily used to track the progress of an investigations request."
+* priority 0..1 MS
+* priority ^definition =
+    "reason(s) why this should be supported."
+* description 0..1 MS
+* description ^definition =
+    "reason(s) why this should be supported."
+* executionPeriod 1..1

@@ -476,6 +476,21 @@ Description: "General Referral Request"
 * requester = Reference(GeneralPractitionerExample)
 * locationReference[+] = Reference(ProvidersLocationExample)
 
+Instance: GenericServiceRequestExample
+InstanceOf: GenericServiceRequest
+Usage: #example
+Title: "Generic Service Request"
+Description: "Generic Service Reques"
+* status = #completed
+* intent = #order
+* code = $SCT#3457005
+* code.text = "Patient referral"
+* subject = Reference(HHIMSPatientExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* occurrenceDateTime = "2023-10-06T13:28:17-05:00"
+* requester = Reference(GeneralPractitionerExample)
+* locationReference[+] = Reference(ProvidersLocationExample)
+
 Instance: FollowUpAtHLCExample
 InstanceOf: FollowUpAtHLC
 Usage: #example
@@ -633,6 +648,20 @@ Description: "Indicates the outcome of a patient's referral."
 * requester = Reference(GeneralPractitionerExample)
 * location = Reference(ProvidersLocationExample)
 
+Instance: GenericTaskExample
+InstanceOf: GenericTask
+Usage: #example
+Title: "Generic Task"
+Description: "Is primarily used to track the progress of a patient's service request such as referrals and lab orders etc."
+* status = #completed
+* intent = #order
+* for = Reference(HHIMSPatientExample)
+* focus = Reference(GeneralReferralServiceRequestExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* authoredOn = "2023-10-06T13:28:17-05:00"
+* requester = Reference(GeneralPractitionerExample)
+* location = Reference(ProvidersLocationExample)
+
 Instance: AllergiesExample
 InstanceOf: Allergies
 Usage: #example
@@ -684,15 +713,15 @@ Description: "This is to record a patient's medication prescription request"
 * encounter = Reference(TargetFacilityEncounterExample)
 * medicationCodeableConcept = $SCT#261000
 * medicationCodeableConcept.text = "Medication"
-* dosageInstruction.doseAndRate.doseQuantity.value = 3
-* dosageInstruction.timing.repeat.period = 3.00
-* dosageInstruction.timing.repeat.count = 2
-* dosageInstruction.timing.repeat.frequency = 2
-* dosageInstruction.timing.repeat.periodUnit = #d
-* dosageInstruction.timing.repeat.duration = 2.00
-* dosageInstruction.timing.repeat.durationUnit = #d
-* dosageInstruction.timing.code.coding.code = #BID
-* dosageInstruction.timing.code.coding.system = "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
+* dosageInstruction[+].doseAndRate[+].doseQuantity.value = 3.0
+* dosageInstruction[=].timing.repeat.period = 3.0
+* dosageInstruction[=].timing.repeat.count = 2
+* dosageInstruction[=].timing.repeat.frequency = 2
+* dosageInstruction[=].timing.repeat.periodUnit = #d
+* dosageInstruction[=].timing.repeat.duration = 2.0
+* dosageInstruction[=].timing.repeat.durationUnit = #d
+* dosageInstruction[=].timing.code.coding.code = #BID
+* dosageInstruction[=].timing.code.coding.system = "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
 * dispenseRequest.quantity.value = 5
 * note.text = "Additional information regarding the patient's medication prescription"
 * note.authorReference = Reference(OrganizationExample)
@@ -708,7 +737,7 @@ Title: "Procedures"
 Description: "Procedures"
 * status = #in-progress
 * category = $SCT#409073007
-* code.coding.code = #dummy-1
+* code.coding.code = #ARV-0.1ml-2-sites
 * code.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-procedure"
 * subject = Reference(HHIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
@@ -749,3 +778,52 @@ Description: "Example where only a text value is used to represent the route of 
 * dosage.dose.value = 12
 * dosage.route.text = "Intravenous route"
 
+Instance: DrugDispensationExample
+InstanceOf: DrugDispensation
+Usage: #example
+Title: "Drug Dispensation"
+Description: "Drug Dispensation"
+* status = #completed
+* subject = Reference(HHIMSPatientExample)
+* context = Reference(TargetFacilityEncounterExample)
+* performer[+].actor = Reference(GeneralPractitionerExample)
+* location = Reference(ProvidersLocationExample)
+* authorizingPrescription[+] = Reference(PrescriptionsExample)
+* whenHandedOver = "2023-10-11T17:21:33-08:00"
+* receiver[+] = Reference(HHIMSPatientExample)
+* medicationCodeableConcept = $SCT#261000
+* medicationCodeableConcept.text = "Medication"
+
+Instance: InvestigationsServiceRequestExample
+InstanceOf: InvestigationsServiceRequest
+Usage: #example
+Title: "Investigations Request"
+Description: "Investigations Request"
+* status = #completed
+* intent = #order
+* code.coding.code = #FBC-WBC-th/uL
+* code.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-investigation"
+* code.text = "Investigation requested"
+* subject = Reference(HHIMSPatientExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* occurrenceDateTime = "2023-10-06T13:28:17-05:00"
+* requester = Reference(GeneralPractitionerExample)
+* locationReference[+] = Reference(ProvidersLocationExample)
+
+Instance: InvestigationsTaskExample
+InstanceOf: InvestigationsTask
+Usage: #example
+Title: "Investigations Task"
+Description: "Is primarily used to track the progress of an investigations request."
+* status = #completed
+* intent = #order
+* priority = #routine
+* description = "some information regarding the need for the investigations request, if any."
+* for = Reference(HHIMSPatientExample)
+* focus = Reference(GeneralReferralServiceRequestExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* authoredOn = "2023-10-06T13:28:17-05:00"
+* requester = Reference(GeneralPractitionerExample)
+* location = Reference(ProvidersLocationExample)
+* executionPeriod.start = "2023-10-06T13:28:17-05:00"
+* executionPeriod.end = "2023-10-09T16:28:17-05:00"
