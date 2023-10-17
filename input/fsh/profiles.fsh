@@ -665,7 +665,8 @@ Title: "Injections"
 Description: "Injections"
 * status 1..1
 * medicationCodeableConcept 1..1
-* medicationCodeableConcept from VSInjections (extensible)
+* medicationCodeableConcept from http://hl7.org/fhir/ValueSet/medication-codes (example)
+* medicationCodeableConcept.text 1..1
 * subject 1..1
 * context 1..1
 * effectiveDateTime 1..1

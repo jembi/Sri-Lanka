@@ -768,8 +768,8 @@ Usage: #example
 Title: "Injections"
 Description: "Example where a code is used to represent the route of drug admninistration"
 * status = #completed
-* medicationCodeableConcept.coding.code = #dummy-1
-* medicationCodeableConcept.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-injection"
+* medicationCodeableConcept = $SCT#2571007
+* medicationCodeableConcept.text = "Busulfan"
 * subject = Reference(HHIMSPatientExample)
 * context = Reference(TargetFacilityEncounterExample)
 * effectiveDateTime = "2023-10-11T17:21:33-08:00"
@@ -784,8 +784,7 @@ Usage: #example
 Title: "Injections"
 Description: "Example where only a text value is used to represent the route of drug admninistration"
 * status = #completed
-* medicationCodeableConcept.coding.code = #dummy-1
-* medicationCodeableConcept.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-injection"
+* medicationCodeableConcept.text = "Busulfan"
 * subject = Reference(HHIMSPatientExample)
 * context = Reference(TargetFacilityEncounterExample)
 * effectiveDateTime = "2023-10-11T17:21:33-08:00"

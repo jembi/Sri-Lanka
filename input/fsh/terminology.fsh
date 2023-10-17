@@ -1949,7 +1949,7 @@ Description: "Other Procedures"
 * include codes from system CSProcedures
 * include codes from system CSImagingProcedures
 
-CodeSystem: CSInjections
+/*CodeSystem: CSInjections
 Id: cs-injection
 Title: "Injections"
 Description: "Injections"
@@ -1963,7 +1963,7 @@ Id: vs-injection
 Title: "Injections"
 Description: "Injections"
 * ^experimental = false
-* include codes from system CSInjections
+* include codes from system CSInjections*/
 
 CodeSystem: CSInvestigations
 Id: cs-investigation
