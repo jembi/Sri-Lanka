@@ -752,8 +752,8 @@ Title: "Procedures"
 Description: "Procedures"
 * status = #in-progress
 * category = $SCT#409073007
-* code.coding.code = #ARV-0.1ml-2-sites
-* code.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-procedure"
+* code.coding.code = #X-Ray
+* code.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-procedure-imaging"
 * subject = Reference(HHIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
 * performedDateTime = "2023-10-11T17:21:33-08:00"
@@ -852,7 +852,7 @@ Description: "Imaging Request"
 * status = #completed
 * intent = #order
 * code.coding.code = #X-Ray
-* code.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-imaging"
+* code.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-procedure-imaging"
 * code.text = "Imaging requested"
 * subject = Reference(HHIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
@@ -894,3 +894,4 @@ Description: "Imaging Study"
 * series.uid = "89c0c298-6c30-11ee-b962-0242ac120002"
 * series.modality = $DICOM#XA
 * series.performer[+].actor = Reference(GeneralPractitionerExample)
+* procedureReference = Reference(ProceduresExample)
