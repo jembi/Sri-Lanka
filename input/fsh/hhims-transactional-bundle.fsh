@@ -25,10 +25,10 @@ Description: "HHIMS FULL Transactional Bundle"
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Observation/GenericObservationExample"
 
-* entry[+].fullUrl = "GenericObservation/WeightExample"
+* entry[+].fullUrl = "Observation/WeightExample"
 * entry[=].resource = WeightExample
 * entry[=].request.method = #PUT
-* entry[=].request.url = "GenericObservation/WeightExample"
+* entry[=].request.url = "Observation/WeightExample"
 
 * entry[+].fullUrl = "Location/ProvidersLocationExample"
 * entry[=].resource = ProvidersLocationExample
@@ -45,20 +45,20 @@ Description: "HHIMS FULL Transactional Bundle"
 * entry[=].request.method = #PUT
 * entry[=].request.url = "ServiceRequest/GenericServiceRequestExample"
 
-* entry[+].fullUrl = "GenericServiceRequest/GeneralReferralServiceRequestExample"
+* entry[+].fullUrl = "ServiceRequest/GeneralReferralServiceRequestExample"
 * entry[=].resource = GeneralReferralServiceRequestExample
 * entry[=].request.method = #PUT
-* entry[=].request.url = "GenericServiceRequest/GeneralReferralServiceRequestExample"
+* entry[=].request.url = "ServiceRequest/GeneralReferralServiceRequestExample"
 
 * entry[+].fullUrl = "Task/GenericTaskExample"
 * entry[=].resource = GenericTaskExample
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Task/GenericTaskExample"
 
-* entry[+].fullUrl = "GenericTask/HHIMSReferralTaskExample"
+* entry[+].fullUrl = "Task/HHIMSReferralTaskExample"
 * entry[=].resource = HHIMSReferralTaskExample
 * entry[=].request.method = #PUT
-* entry[=].request.url = "GenericTask/HHIMSReferralTaskExample"
+* entry[=].request.url = "Task/HHIMSReferralTaskExample"
 
 * entry[+].fullUrl = "AllergyIntolerance/AllergiesExample"
 * entry[=].resource = AllergiesExample
@@ -70,10 +70,10 @@ Description: "HHIMS FULL Transactional Bundle"
 * entry[=].request.method = #PUT
 * entry[=].request.url = "AllergyIntolerance/AllergiesNoCodeExample"
 
-* entry[+].fullUrl = "AllergyIntolerance/PrescriptionsExample"
+* entry[+].fullUrl = "MedicationRequest/PrescriptionsExample"
 * entry[=].resource = PrescriptionsExample
 * entry[=].request.method = #PUT
-* entry[=].request.url = "AllergyIntolerance/PrescriptionsExample"
+* entry[=].request.url = "MedicationRequest/PrescriptionsExample"
 
 * entry[+].fullUrl = "Procedure/ProceduresExample"
 * entry[=].resource = ProceduresExample
@@ -95,25 +95,25 @@ Description: "HHIMS FULL Transactional Bundle"
 * entry[=].request.method = #PUT
 * entry[=].request.url = "MedicationDispense/DrugDispensationExample"
 
-* entry[+].fullUrl = "GenericServiceRequest/InvestigationsServiceRequestExample"
+* entry[+].fullUrl = "ServiceRequest/InvestigationsServiceRequestExample"
 * entry[=].resource = InvestigationsServiceRequestExample
 * entry[=].request.method = #PUT
-* entry[=].request.url = "GenericServiceRequest/InvestigationsServiceRequestExample"
+* entry[=].request.url = "ServiceRequest/InvestigationsServiceRequestExample"
 
-* entry[+].fullUrl = "GenericTask/InvestigationsTaskExample"
+* entry[+].fullUrl = "Task/InvestigationsTaskExample"
 * entry[=].resource = InvestigationsTaskExample
 * entry[=].request.method = #PUT
-* entry[=].request.url = "GenericTask/InvestigationsTaskExample"
+* entry[=].request.url = "Task/InvestigationsTaskExample"
 
-* entry[+].fullUrl = "GenericServiceRequest/ImagingServiceRequestExample"
+* entry[+].fullUrl = "ServiceRequest/ImagingServiceRequestExample"
 * entry[=].resource = ImagingServiceRequestExample
 * entry[=].request.method = #PUT
-* entry[=].request.url = "GenericServiceRequest/ImagingServiceRequestExample"
+* entry[=].request.url = "ServiceRequest/ImagingServiceRequestExample"
 
-* entry[+].fullUrl = "GenericTask/ImagingTaskExample"
+* entry[+].fullUrl = "Task/ImagingTaskExample"
 * entry[=].resource = ImagingTaskExample
 * entry[=].request.method = #PUT
-* entry[=].request.url = "GenericTask/ImagingTaskExample"
+* entry[=].request.url = "Task/ImagingTaskExample"
 
 * entry[+].fullUrl = "ImagingStudy/ImagingExample"
 * entry[=].resource = ImagingExample
