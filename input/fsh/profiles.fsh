@@ -438,6 +438,9 @@ Description: "Is primarily used to track the progress of a patient's service req
 * authoredOn 1..1
 * requester 1..1
 * location 1..1
+* executionPeriod 0..1 MS
+* executionPeriod ^definition =
+    "reason(s) why this should be supported."
 
 Profile: ReferralTask
 Parent: GenericTask
@@ -764,7 +767,7 @@ Parent: GenericServiceRequest
 Id: imaging-request
 Title: "Imaging Request"
 Description: "Imaging Request"
-* code from VSImaging (extensible)
+* code from VSImagingProcedures (extensible)
 
 Profile: ImagingTask
 Parent: GenericTask
@@ -811,3 +814,4 @@ Description: "Imaging Study"
     "reason(s) why this should be supported."
 * series.performer 1..*
 * series.performer.actor 1..1
+* procedureReference 1..1

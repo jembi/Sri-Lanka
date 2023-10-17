@@ -1925,7 +1925,7 @@ Description: "Encounter reasons."
 CodeSystem: CSProcedures
 Id: cs-procedure
 Title: "Procedures"
-Description: "Procedures"
+Description: "Other Procedures"
 * ^experimental = false
 * ^caseSensitive = true
 * #ARV-0.1ml-2-sites "ARV 0.1 ml ID x 2 Sites" "Needs definition"
@@ -1944,9 +1944,10 @@ Description: "Procedures"
 ValueSet: VSProcedures
 Id: vs-procedure
 Title: "Procedures"
-Description: "Procedures"
+Description: "Other Procedures"
 * ^experimental = false
 * include codes from system CSProcedures
+* include codes from system CSImagingProcedures
 
 CodeSystem: CSInjections
 Id: cs-injection
@@ -2285,10 +2286,10 @@ Description: "Medication Names"
 * ^experimental = false
 * include codes from system CSMedicationNames
 
-CodeSystem: CSImaging
-Id: cs-imaging
-Title: "Imaging"
-Description: "Imaging"
+CodeSystem: CSImagingProcedures
+Id: cs-procedure-imaging
+Title: "Procedures"
+Description: "Imaging Procedures"
 * ^experimental = false
 * ^caseSensitive = true
 * #X-Ray "X-Ray" "Needs definition"
@@ -2306,9 +2307,9 @@ Description: "Imaging"
 * #Whole-Slide-Imaging "Whole Slide Imaging" "Needs definition"
 * #OCT "OCT" "Needs definition"
 
-ValueSet: VSImaging
-Id: vs-imaging
-Title: "Imaging"
-Description: "Imaging"
+ValueSet: VSImagingProcedures
+Id: vs-procedure-imaging
+Title: "Procedures"
+Description: "Imaging Procedures"
 * ^experimental = false
-* include codes from system CSImaging
+* include codes from system CSImagingProcedures
