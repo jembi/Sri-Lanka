@@ -178,6 +178,20 @@ Description: "Notifiable Diseases Notified"
 * encounter = Reference(TargetFacilityEncounterExample)
 * sent = "2023-10-06T13:28:17-05:00"
 
+Instance: GenericObservationExample
+InstanceOf: GenericObservation
+Usage: #example
+Title: "Generic Observation"
+Description: "Generic Observation"
+* status = #final
+* code = $LNC#10000-8
+* code.text = "Generic Observation"
+* subject = Reference(HIMSPatientExample)
+* encounter = Reference(TargetFacilityEncounterExample)
+* effectiveDateTime = "2022-11-30"
+* performer[+] = Reference(OrganizationExample)
+* performer[+] = Reference(GeneralPractitionerExample)
+
 Instance: RiskBehaviourPhysicalActivityExample
 InstanceOf: RiskBehaviourPhysicalActivity
 Usage: #example
