@@ -53,7 +53,7 @@ Profile: ProvidersLocation
 Parent: Location
 Id: providers-location
 Title: "Providers Location"
-Description: "Providers Location"
+Description: "Represents the physical location of the provider"
 * identifier 0..*
 * identifier ^definition =
     "reason(s) why this should be supported."
@@ -88,7 +88,7 @@ Profile: NotifiableDiseasesNotified
 Parent: Communication
 Id: notifiable-diseases-notified
 Title: "Notifiable Diseases Notified"
-Description: "Notifiable Diseases Notified"
+Description: "Represents a message communicated to the practitioner about a patient's encounter."
 * status 1..1
 * subject 1..1
 * encounter 1..1
@@ -273,7 +273,7 @@ Description: "Represents the patient's blood pressure."
 Profile: Weight
 Parent: GenericObservation
 Id: weight
-Title: "Patient Weight"
+Title: "Patient Weight Observation"
 Description: "Represents the patient's weight."
 * category 1..1
 * category.coding.code = #vital-signs
@@ -288,7 +288,7 @@ Description: "Represents the patient's weight."
 Profile: Height
 Parent: GenericObservation
 Id: height
-Title: "Patient Height"
+Title: "Patient Height Observation"
 Description: "Represents the patient's height."
 * category 1..1
 * category.coding.code = #vital-signs
@@ -303,7 +303,7 @@ Description: "Represents the patient's height."
 Profile: BMI
 Parent: GenericObservation
 Id: bmi
-Title: "Patient BMI"
+Title: "Patient BMI Observation"
 Description: "Represents the patient's BMI."
 * category 1..1
 * category.coding.code = #vital-signs
@@ -355,7 +355,7 @@ Description: "Represents the patient's FBS results."
 Profile: TotalCholesterol
 Parent: GenericObservation
 Id: total-cholesterol
-Title: "Total Cholesterol"
+Title: "Total Cholesterol Observation"
 Description: "Represents the patient's total cholesterol results."
 * code = $LNC#2093-3
 * code.text = "Cholesterol"
@@ -374,7 +374,7 @@ Profile: CVDRiskCategory
 Parent: RiskAssessment
 Id: cvd-risk-category
 Title: "Cardiovascular Risk Category"
-Description: "Cardiovascular Risk Category"
+Description: "Represents the patient's Risk Category for Cardiovascular"
 * status 1..1
 * subject 1..1
 * encounter 1..1
@@ -423,7 +423,7 @@ Profile: GenericServiceRequest
 Parent: ServiceRequest
 Id: generic-service-request
 Title: "Generic Service Request"
-Description: "Generic Service Request"
+Description: "Used to record the initial request for service to be rendered."
 * status 1..1
 * intent 1..1
 * code 1..1
@@ -452,7 +452,7 @@ Profile: FollowUpPlanServiceRequest
 Parent: GenericServiceRequest
 Id: follow-up-plan
 Title: "Referral Request For Follow-up Plan"
-Description: "Referral Request For Follow-up Plan"
+Description: "Used to record a referral request  for a patient's Follow-up Plan"
 * code from VSFollowUpPlan (required)
 * reasonCode from VSFollowUpReasons (extensible)
 
@@ -460,7 +460,7 @@ Profile: FollowUpAtHLC
 Parent: CarePlan
 Id: follow-up-at-hlc
 Title: "Follow-up at HLC"
-Description: "Follow-up at HLC"
+Description: "Used to reprent the follow-up event for the patient at HLC"
 * status 1..1
 * intent 1..1
 * subject 1..1
@@ -488,7 +488,7 @@ Description: "Logically groups all resources into a single document structure."
 Profile: Hypertension
 Parent: GenericObservation
 Id: hypertension
-Title: "Hypertension"
+Title: "Hypertension Observation"
 Description: "Patient is diagnosed with Hypertension due to high blood pressure."
 * code = $SCT#38341003
 * code.text = "Hypertension"
@@ -530,7 +530,7 @@ Profile: Allergies
 Parent: AllergyIntolerance
 Id: allergy-intolerance
 Title: "Allergy Intolerance"
-Description: "Allergy Intolerance"
+Description: "Used to represent the patient's allergy intolerance."
 * encounter 1..1
 * code 0..1 MS
 * code ^definition =
@@ -634,7 +634,7 @@ Profile: Procedures
 Parent: Procedure
 Id: procedure
 Title: "Procedures"
-Description: "Procedures"
+Description: "This represents the procedure that was performed on a patient."
 * basedOn 0..* MS
 * basedOn ^definition =
     "reason(s) why this should be supported."
@@ -663,7 +663,7 @@ Profile: Injections
 Parent: MedicationAdministration
 Id: injection
 Title: "Injections"
-Description: "Injections"
+Description: "Used to represent the medication injected into a patient."
 * status 1..1
 * medicationCodeableConcept 1..1
 * medicationCodeableConcept from http://hl7.org/fhir/ValueSet/medication-codes (example)
@@ -683,7 +683,7 @@ Profile: DrugDispensation
 Parent: MedicationDispense
 Id: drug-dispensation
 Title: "Drug Dispensation"
-Description: "Drug Dispensation"
+Description: "Used to represent dispensed medication for a patient."
 * status 1..1
 * subject 1..
 * context 1..1
@@ -703,7 +703,7 @@ Profile: InvestigationsServiceRequest
 Parent: GenericServiceRequest
 Id: investigations-request
 Title: "Investigations Request"
-Description: "Investigations Request"
+Description: "Used to initiate the request for a lab test to be done."
 * code from VSInvestigations (extensible)
 
 Profile: InvestigationsTask
@@ -723,7 +723,7 @@ Profile: ImagingServiceRequest
 Parent: GenericServiceRequest
 Id: imaging-request
 Title: "Imaging Request"
-Description: "Imaging Request"
+Description: "Used to initiate the request for imaging to be done."
 * code from VSImagingProcedures (extensible)
 
 Profile: ImagingTask
@@ -743,7 +743,7 @@ Profile: Imaging
 Parent: ImagingStudy
 Id: imaging-study
 Title: "Imaging Study"
-Description: "Imaging Study"
+Description: "Used to represent the content or results of a imaging study."
 * status 1..1
 * subject 1..1
 * encounter 1..1
