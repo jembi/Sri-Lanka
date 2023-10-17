@@ -254,7 +254,7 @@ Description: "Represents the patient's blood pressure."
 
 * component[Systolic] ^definition =
     "reason(s) why this should be supported."
-* component[Systolic].text = "Systolic blood pressure"
+* component[Systolic].code.text = "Systolic blood pressure"
 * component[Systolic].code = $LNC#8480-6
 * component[Systolic].valueQuantity.value 1..1
 * component[Systolic].valueQuantity.unit = "mmHg"
@@ -263,7 +263,7 @@ Description: "Represents the patient's blood pressure."
 
 * component[Diastolic] ^definition =
     "reason(s) why this should be supported."
-* component[Diastolic].text = "Diastolic blood pressure"
+* component[Diastolic].code.text = "Diastolic blood pressure"
 * component[Diastolic].code = $LNC#8462-4
 * component[Diastolic].valueQuantity.value 1..1
 * component[Diastolic].valueQuantity.unit = "mmHg"
