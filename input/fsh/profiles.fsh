@@ -767,7 +767,7 @@ Parent: GenericServiceRequest
 Id: imaging-request
 Title: "Imaging Request"
 Description: "Imaging Request"
-* code from VSImaging (extensible)
+* code from VSImagingProcedures (extensible)
 
 Profile: ImagingTask
 Parent: GenericTask
@@ -814,3 +814,4 @@ Description: "Imaging Study"
     "reason(s) why this should be supported."
 * series.performer 1..*
 * series.performer.actor 1..1
+* procedureReference 1..1
