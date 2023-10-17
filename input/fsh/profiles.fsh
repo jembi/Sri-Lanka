@@ -91,7 +91,6 @@ Title: "Notifiable Diseases Notified"
 Description: "Notifiable Diseases Notified"
 * status 1..1
 * subject 1..1
-* subject only Reference(Patient)
 * encounter 1..1
 * sent 0..1 MS
 * sent ^definition =
@@ -255,6 +254,7 @@ Description: "Represents the patient's blood pressure."
 
 * component[Systolic] ^definition =
     "reason(s) why this should be supported."
+* component[Systolic].text = "Systolic blood pressure"
 * component[Systolic].code = $LNC#8480-6
 * component[Systolic].valueQuantity.value 1..1
 * component[Systolic].valueQuantity.unit = "mmHg"
@@ -263,6 +263,7 @@ Description: "Represents the patient's blood pressure."
 
 * component[Diastolic] ^definition =
     "reason(s) why this should be supported."
+* component[Diastolic].text = "Diastolic blood pressure"
 * component[Diastolic].code = $LNC#8462-4
 * component[Diastolic].valueQuantity.value 1..1
 * component[Diastolic].valueQuantity.unit = "mmHg"
@@ -376,7 +377,6 @@ Title: "Cardiovascular Risk Category"
 Description: "Cardiovascular Risk Category"
 * status 1..1
 * subject 1..1
-* subject only Reference(Patient)
 * encounter 1..1
 * occurrenceDateTime 1..1
 * performer 1..1
@@ -398,9 +398,7 @@ Description: "Is primarily used to track the progress of a patient's service req
 * status 1..1
 * intent 1..1
 * for 1..1
-* for only Reference(Patient)
 * focus 1..1
-* focus only Reference(ServiceRequest)
 * encounter 1..1
 * authoredOn 1..1
 * requester 1..1
@@ -431,7 +429,6 @@ Description: "Generic Service Request"
 * code 1..1
 * code from http://hl7.org/fhir/ValueSet/procedure-code (example)
 * subject 1..1
-* subject only Reference(Patient)
 * encounter 1..1
 * requester 1..1
 * reasonCode 0..* MS
@@ -449,6 +446,7 @@ Title: "General Referral Request"
 Description: "General Referral Request"
 * code from http://hl7.org/fhir/ValueSet/procedure-code (extensible)
 * code = $SCT#3457005
+* code.text = "Patient referral"
 
 Profile: FollowUpPlanServiceRequest
 Parent: GenericServiceRequest
@@ -466,13 +464,11 @@ Description: "Follow-up at HLC"
 * status 1..1
 * intent 1..1
 * subject 1..1
-* subject only Reference(Patient)
 * encounter 1..1
 * period 1..1
 * contributor 1..*
 * activity 1..* 
 * activity.reference 1..1
-* activity.reference only Reference (ServiceRequest)
 
 Profile: HIMSComposition
 Parent: Composition
@@ -504,7 +500,6 @@ Description: "Patient is diagnosed with Hypertension due to high blood pressure.
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #mm[Hg]
 * derivedFrom 1..*
-* derivedFrom only Reference(Observation)
 
 Profile: MedicalHistory
 Parent: Condition
@@ -521,7 +516,6 @@ Description: "Represents previous, pre-existing and new conditions."
 * code 1..1
 * code from VSMedicalConditions (extensible)
 * subject 1..1
-* subject only Reference(Patient)
 * encounter 1..1
 * recorder 0..1 MS
 * recorder ^definition =
@@ -650,7 +644,6 @@ Description: "Procedures"
 * code 1..1
 * code from VSProcedures (extensible)
 * subject 1..1
-* subject only Reference(Patient)
 * encounter 1..1
 * performedDateTime 1..1
 * recorder 0..1 MS
