@@ -469,6 +469,7 @@ Description: "Follow-up at HLC"
 * contributor 1..*
 * activity 1..* 
 * activity.reference 1..1
+* activity.reference only Reference(FollowUpPlanServiceRequest)
 
 Profile: HIMSComposition
 Parent: Composition
