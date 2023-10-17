@@ -201,50 +201,48 @@ Description: "Is used to document demographics and other administrative informat
 * telecom ^definition =
     "reason(s) why this should be supported."
 
-Profile: RiskBehaviourPhysicalActivity
+Profile: GenericObservation
 Parent: Observation
+Id: generic-observation
+Title: "Generic Observation"
+Description: "Generic Observation"
+* status 1..1
+* code 1..1
+* subject 1..1
+* encounter 1..1
+* effectiveDateTime 1..1
+* performer 1..*
+
+Profile: RiskBehaviourPhysicalActivity
+Parent: GenericObservation
 Id: risk-behaviour-physical-activity
 Title: "Physical Activity Status Observation"
 Description: "Represents the physical status of the patient."
-* status 1..1
 * code = $SCT#106020009
 * code.text = "Physical Activity"
-* subject 1..1
-* encounter 1..1
-* effectiveDateTime 1..1
 * valueCodeableConcept 1..1
 * valueCodeableConcept from VSRiskBehaviourPhysicalActivity (required)
-* performer 1..*
 
 Profile: RiskBehaviourTobaccoSmoker
-Parent: Observation
+Parent: GenericObservation
 Id: risk-behaviour-tobacco-smoker
 Title: "Tobacco Smoker Observation"
 Description: "Represents the tobacco smoking status of the patient."
-* status 1..1
 * code = $LNC#72166-2
 * code.text = "Tobacco smoking"
-* subject 1..1
-* encounter 1..1
-* effectiveDateTime 1..1
 * valueCodeableConcept 1..1
 * valueCodeableConcept from VSRiskBehaviourTobaccoSmoker (required)
-* performer 1..*
 
 Profile: BloodPressure
-Parent: Observation
+Parent: GenericObservation
 Id: blood-pressure
 Title: "Blood Pressure Observation"
 Description: "Represents the patient's blood pressure."
-* status 1..1
 * code = $LNC#85354-9
 * code.text = "Blood Pressure"
 * category 1..1
 * category.coding.code = #vital-signs
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* subject 1..1
-* encounter 1..1
-* effectiveDateTime 1..1
 * component 1..*
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
@@ -270,85 +268,64 @@ Description: "Represents the patient's blood pressure."
 * component[Diastolic].valueQuantity.unit = "mmHg"
 * component[Diastolic].valueQuantity.system = "http://unitsofmeasure.org"
 * component[Diastolic].valueQuantity.code = #mm[Hg]
-* performer 1..*
 
 Profile: Weight
-Parent: Observation
+Parent: GenericObservation
 Id: weight
 Title: "Patient Weight"
 Description: "Represents the patient's weight."
-* status 1..1
 * category 1..1
 * category.coding.code = #vital-signs
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * code = $LNC#29463-7
 * code.text = "Body Weight"
-* subject 1..1
-* encounter 1..1
-* effectiveDateTime 1..1
 * valueQuantity.value 1..1
 * valueQuantity.unit = "kg"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #kg
-* performer 1..*
 
 Profile: Height
-Parent: Observation
+Parent: GenericObservation
 Id: height
 Title: "Patient Height"
 Description: "Represents the patient's height."
-* status 1..1
 * category 1..1
 * category.coding.code = #vital-signs
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * code = $LNC#8302-2
 * code.text = "Body Height"
-* subject 1..1
-* encounter 1..1
-* effectiveDateTime 1..1
 * valueQuantity.value 1..1
 * valueQuantity.unit = "cm"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #cm
-* performer 1..*
 
 Profile: BMI
-Parent: Observation
+Parent: GenericObservation
 Id: bmi
 Title: "Patient BMI"
 Description: "Represents the patient's BMI."
-* status 1..1
 * category 1..1
 * category.coding.code = #vital-signs
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * code = $LNC#39156-5
 * code.text = "Body mass index (BMI)"
-* subject 1..1
-* encounter 1..1
-* effectiveDateTime 1..1
 * valueQuantity.value 1..1
 * valueQuantity.unit = "kg/m2"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #kg/m2
-* performer 1..*
 * derivedFrom 0..*
 
 Profile: RandomBloodSugar
-Parent: Observation
+Parent: GenericObservation
 Id: random-blood-sugar
 Title: "Random Blood Sugar Observation"
 Description: "Represents the patient's RBS results."
-* status 1..1
 * code = $LNC#15074-8
 * code.text = "Glucose"
-* subject 1..1
-* encounter 1..1
-* effectiveDateTime 1..1
 * valueQuantity.value 1..1
 * valueQuantity.unit = "mmol/l"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #mmol/l
-* performer 1..*
 * interpretation 0..* MS
 * interpretation ^definition =
     "reason(s) why this should be supported."
@@ -357,21 +334,16 @@ Description: "Represents the patient's RBS results."
     "reason(s) why this should be supported."
 
 Profile: FastingBloodSugar
-Parent: Observation
+Parent: GenericObservation
 Id: fasting-blood-sugar
 Title: "Fasting Blood Sugar Observation"
 Description: "Represents the patient's FBS results."
-* status 1..1
 * code = $LNC#76629-5
 * code.text = "Fasting glucose"
-* subject 1..1
-* encounter 1..1
-* effectiveDateTime 1..1
 * valueQuantity.value 1..1
 * valueQuantity.unit = "mmol/l"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #mmol/l
-* performer 1..*
 * interpretation 0..* MS
 * interpretation ^definition =
     "reason(s) why this should be supported."
@@ -380,21 +352,16 @@ Description: "Represents the patient's FBS results."
     "reason(s) why this should be supported."
 
 Profile: TotalCholesterol
-Parent: Observation
+Parent: GenericObservation
 Id: total-cholesterol
 Title: "Total Cholesterol"
 Description: "Represents the patient's total cholesterol results."
-* status 1..1
 * code = $LNC#2093-3
 * code.text = "Cholesterol"
-* subject 1..1
-* encounter 1..1
-* effectiveDateTime 1..1
 * valueQuantity.value 1..1
 * valueQuantity.unit = "mmol/l"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #mmol/l
-* performer 1..*
 * interpretation 0..* MS
 * interpretation ^definition =
     "reason(s) why this should be supported."
@@ -519,25 +486,20 @@ Description: "Logically groups all resources into a single document structure."
 * section 1..*
 
 Profile: Hypertension
-Parent: Observation
+Parent: GenericObservation
 Id: hypertension
 Title: "Hypertension"
 Description: "Patient is diagnosed with Hypertension due to high blood pressure."
-* status 1..1
 * code = $SCT#38341003
 * code.text = "Hypertension"
 * category 1..1
 * category.coding.code = #vital-signs
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* subject 1..1
-* encounter 1..1
-* effectiveDateTime 1..1
 * valueQuantity 1..1
 * valueQuantity.value 1..1
 * valueQuantity.unit = "mmHg"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #mm[Hg]
-* performer 1..*
 * derivedFrom 1..*
 * derivedFrom only Reference(Observation)
 
