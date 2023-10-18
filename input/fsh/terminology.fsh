@@ -100,22 +100,16 @@ Description: "Cardiovascular Risk Category Probability Percentage Ranges"
 * ^experimental = false
 * include codes from system CSCVDRiskCategory
 
-CodeSystem: CSMedicalConditions
-Id: cs-medical-conditions
-Title: "Conditions"
-Description: "Represents previous, pre-existing and new conditions."
-* ^experimental = false
-* ^caseSensitive = true
-* #Bronchial-asthma "Bronchial Asthma" "Needs definition"
-* #Diabetes "Diabetes" "Needs definition"
-* #Cerebrovascular-Accident "Cerebrovascular Accident" "Needs definition"
-
 ValueSet: VSMedicalConditions
 Id: vs-medical-conditions
 Title: "Conditions"
 Description: "Represents previous, pre-existing and new conditions."
 * ^experimental = false
-* include codes from system CSMedicalConditions
+* $SCT#38341003 "Hypertension"
+* $SCT#195967001 "Asthma"
+* $SCT#230690007 "Cerebrovascular accident"
+* include codes from system $SCT
+    where concept descendent-of #73211009
 
 ValueSet: VSAllergyIntoleranceSubstanceCondition
 Id: vs-allergy-intolerance-substance-condition

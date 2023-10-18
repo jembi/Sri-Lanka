@@ -485,23 +485,6 @@ Description: "Logically groups all resources into a single document structure."
 * title 1..1
 * section 1..*
 
-Profile: Hypertension
-Parent: GenericObservation
-Id: hypertension
-Title: "Hypertension"
-Description: "Patient is diagnosed with Hypertension due to high blood pressure."
-* code = $SCT#38341003
-* code.text = "Hypertension"
-* category 1..1
-* category.coding.code = #vital-signs
-* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* valueQuantity 1..1
-* valueQuantity.value 1..1
-* valueQuantity.unit = "mmHg"
-* valueQuantity.system = "http://unitsofmeasure.org"
-* valueQuantity.code = #mm[Hg]
-* derivedFrom 1..*
-
 Profile: MedicalHistory
 Parent: Condition
 Id: medical-history
