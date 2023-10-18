@@ -80,11 +80,6 @@ Description: "HIMS FULL Transactional Bundle"
 * entry[=].request.method = #PUT
 * entry[=].request.url = "CarePlan/FollowUpAtHLCExample"
 
-* entry[+].fullUrl = "Observation/HypertensionExample"
-* entry[=].resource = HypertensionExample
-* entry[=].request.method = #PUT
-* entry[=].request.url = "Observation/HypertensionExample"
-
 * entry[+].fullUrl = "Condition/MedicalHistoryExample"
 * entry[=].resource = MedicalHistoryExample
 * entry[=].request.method = #PUT
