@@ -3,37 +3,41 @@ Alias: $SCT = http://snomed.info/sct
 Alias: $SCT_or_SCTINT = http://snomed.info/sct|http://snomed.info/sct/900000000000207008
 Alias: $DICOM = http://dicom.nema.org/resources/ontology/DCM
 
-CodeSystem: CSRiskBehaviourPhysicalActivity
+/*CodeSystem: CSRiskBehaviourPhysicalActivity
 Id: cs-risk-behaviour-physical-activity
 Title: "Risk Assessment - Physical Activity"
 Description: "Risk Assessment - Physical Activity"
 * ^experimental = false
 * ^caseSensitive = true
 * #Physically-active "Physically active" "Needs definition"
-* #Physically-not-active "Physically not active" "Needs definition"
+* #Physically-not-active "Physically not active" "Needs definition"*/
 
 ValueSet: VSRiskBehaviourPhysicalActivity
 Id: vs-risk-behaviour-physical-activity
 Title: "Risk Assessment - Physical Activity"
 Description: "Risk Assessment - Physical Activity"
 * ^experimental = false
-* include codes from system CSRiskBehaviourPhysicalActivity
+//* include codes from system CSRiskBehaviourPhysicalActivity
+* include codes from system $SCT
+    where concept descendent-of #68130003
 
-CodeSystem: CSRiskBehaviourTobaccoSmoker
+/*CodeSystem: CSRiskBehaviourTobaccoSmoker
 Id: cs-risk-behaviour-tobacco-smoker
 Title: "Risk Assessment - Tobacco Smoker"
 Description: "Risk Assessment - Tobacco Smoker"
 * ^experimental = false
 * ^caseSensitive = true
 * #Non-User "Non-User" "Needs definition"
-* #User "User" "Needs definition"
+* #User "User" "Needs definition"*/
 
 ValueSet: VSRiskBehaviourTobaccoSmoker
 Id: vs-risk-behaviour-tobacco-smoker
 Title: "Risk Assessment - Tobacco Smoker"
 Description: "Risk Assessment - Tobacco Smoker"
 * ^experimental = false
-* include codes from system CSRiskBehaviourTobaccoSmoker
+//* include codes from system CSRiskBehaviourTobaccoSmoker
+* include codes from system $SCT
+    where concept descendent-of #365980008
 
 CodeSystem: CSIdentifierTypes
 Id: cs-identifier-types
@@ -1942,22 +1946,6 @@ Description: "Other Procedures"
 * ^experimental = false
 * include codes from system CSProcedures
 * include codes from system CSImagingProcedures
-
-/*CodeSystem: CSInjections
-Id: cs-injection
-Title: "Injections"
-Description: "Injections"
-* ^experimental = false
-* ^caseSensitive = true
-* #dummy-1 "Dummy 1" "Needs definition"
-* #dummy-2 "Dummy 2" "Needs definition"
-
-ValueSet: VSInjections
-Id: vs-injection
-Title: "Injections"
-Description: "Injections"
-* ^experimental = false
-* include codes from system CSInjections*/
 
 CodeSystem: CSInvestigations
 Id: cs-investigation
