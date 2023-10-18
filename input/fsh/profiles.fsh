@@ -227,7 +227,7 @@ Description: "Represents the physical status of the patient."
 * code = $SCT#106020009
 * code.text = "Physical Activity"
 * valueCodeableConcept 1..1
-* valueCodeableConcept from VSRiskBehaviourPhysicalActivity (required)
+* valueCodeableConcept from VSRiskBehaviourPhysicalActivity (extensible)
 
 Profile: RiskBehaviourTobaccoSmoker
 Parent: GenericObservation
@@ -237,7 +237,7 @@ Description: "Represents the tobacco smoking status of the patient."
 * code = $LNC#72166-2
 * code.text = "Tobacco smoking"
 * valueCodeableConcept 1..1
-* valueCodeableConcept from VSRiskBehaviourTobaccoSmoker (required)
+* valueCodeableConcept from VSRiskBehaviourTobaccoSmoker (extensible)
 
 Profile: BloodPressure
 Parent: GenericObservation

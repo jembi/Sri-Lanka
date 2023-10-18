@@ -203,8 +203,8 @@ Description: "Represents the physical status of the patient."
 * subject = Reference(HIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
 * effectiveDateTime = "2022-11-30"
-* valueCodeableConcept.coding.code = #Physically-active
-* valueCodeableConcept.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-physical-activity"
+* valueCodeableConcept = $SCT#9011000175102
+* valueCodeableConcept.text = "Physically not active"
 * performer[+] = Reference(OrganizationExample)
 * performer[+] = Reference(GeneralPractitionerExample)
 
@@ -219,8 +219,8 @@ Description: "Represents the tobacco smoking status of the patient."
 * subject = Reference(HIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
 * effectiveDateTime = "2022-11-30"
-* valueCodeableConcept.coding.code = #User
-* valueCodeableConcept.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-tobacco-smoker"
+* valueCodeableConcept = $SCT#160604004
+* valueCodeableConcept.text = "Moderate cigarette smoker (10-19 cigs/day)"
 * performer[+] = Reference(OrganizationExample)
 * performer[+] = Reference(GeneralPractitionerExample)
 

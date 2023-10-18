@@ -5,11 +5,6 @@ Title: "HHIMS FULL Transactional Bundle"
 Description: "HHIMS FULL Transactional Bundle"
 * type = #transaction
 
-* entry[+].fullUrl = "Patient/HIMSPatientExample"
-* entry[=].resource = HIMSPatientExample
-* entry[=].request.method = #PUT
-* entry[=].request.url = "Patient/HIMSPatientExample"
-
 * entry[+].fullUrl = "Patient/HHIMSPatientExample"
 * entry[=].resource = HHIMSPatientExample
 * entry[=].request.method = #PUT
@@ -35,20 +30,15 @@ Description: "HHIMS FULL Transactional Bundle"
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Communication/NotifiableDiseasesNotifiedExample"
 
-* entry[+].fullUrl = "ServiceRequest/GenericServiceRequestExample"
-* entry[=].resource = GenericServiceRequestExample
-* entry[=].request.method = #PUT
-* entry[=].request.url = "ServiceRequest/GenericServiceRequestExample"
-
 * entry[+].fullUrl = "ServiceRequest/GeneralReferralServiceRequestExample"
 * entry[=].resource = GeneralReferralServiceRequestExample
 * entry[=].request.method = #PUT
 * entry[=].request.url = "ServiceRequest/GeneralReferralServiceRequestExample"
 
-* entry[+].fullUrl = "Task/GenericTaskExample"
-* entry[=].resource = GenericTaskExample
+* entry[+].fullUrl = "Practitioner/GeneralPractitionerExample"
+* entry[=].resource = GeneralPractitionerExample
 * entry[=].request.method = #PUT
-* entry[=].request.url = "Task/GenericTaskExample"
+* entry[=].request.url = "Practitioner/GeneralPractitionerExample"
 
 * entry[+].fullUrl = "Task/HHIMSReferralTaskExample"
 * entry[=].resource = HHIMSReferralTaskExample
@@ -59,11 +49,6 @@ Description: "HHIMS FULL Transactional Bundle"
 * entry[=].resource = AllergiesExample
 * entry[=].request.method = #PUT
 * entry[=].request.url = "AllergyIntolerance/AllergiesExample"
-
-* entry[+].fullUrl = "AllergyIntolerance/AllergiesNoCodeExample"
-* entry[=].resource = AllergiesNoCodeExample
-* entry[=].request.method = #PUT
-* entry[=].request.url = "AllergyIntolerance/AllergiesNoCodeExample"
 
 * entry[+].fullUrl = "MedicationRequest/PrescriptionsExample"
 * entry[=].resource = PrescriptionsExample
@@ -79,11 +64,6 @@ Description: "HHIMS FULL Transactional Bundle"
 * entry[=].resource = InjectionsExample
 * entry[=].request.method = #PUT
 * entry[=].request.url = "MedicationAdministration/InjectionsExample"
-
-* entry[+].fullUrl = "MedicationAdministration/InjectionsNoCodeExample"
-* entry[=].resource = InjectionsNoCodeExample
-* entry[=].request.method = #PUT
-* entry[=].request.url = "MedicationAdministration/InjectionsNoCodeExample"
 
 * entry[+].fullUrl = "MedicationDispense/DrugDispensationExample"
 * entry[=].resource = DrugDispensationExample
