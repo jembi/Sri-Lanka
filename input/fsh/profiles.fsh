@@ -437,7 +437,7 @@ Description: "Generic Service Request"
 * locationReference 0..* MS
 * locationReference ^definition =
     "reason(s) why this should be supported."
-* occurrenceDateTime 1..1
+
 
 Profile: GeneralReferralServiceRequest
 Parent: GenericServiceRequest
@@ -447,14 +447,20 @@ Description: "General Referral Request"
 * code from http://hl7.org/fhir/ValueSet/procedure-code (extensible)
 * code = $SCT#3457005
 * code.text = "Patient referral"
+* occurrenceDateTime 1..1
 
 Profile: FollowUpPlanServiceRequest
 Parent: GenericServiceRequest
 Id: follow-up-plan
 Title: "Referral Request For Follow-up Plan"
 Description: "Referral Request For Follow-up Plan"
-* code from VSFollowUpPlan (required)
+* code from VSFollowUpPlan (extensible)
 * reasonCode from VSFollowUpReasons (extensible)
+* occurrenceTiming 1..1
+* occurrenceTiming.repeat.duration 1..1
+* occurrenceTiming.repeat.durationUnit 1..1
+* occurrenceTiming.repeat.count 1..1
+* occurrenceTiming.repeat.count = 1
 
 Profile: FollowUpAtHLC 
 Parent: CarePlan
@@ -688,6 +694,7 @@ Id: investigations-request
 Title: "Investigations Request"
 Description: "Investigations Request"
 * code from VSInvestigations (extensible)
+* occurrenceDateTime 1..1
 
 Profile: InvestigationsTask
 Parent: GenericTask
@@ -708,6 +715,7 @@ Id: imaging-request
 Title: "Imaging Request"
 Description: "Imaging Request"
 * code from VSImagingProcedures (extensible)
+* occurrenceDateTime 1..1
 
 Profile: ImagingTask
 Parent: GenericTask
