@@ -437,7 +437,7 @@ Description: "Used to record the initial request for service to be rendered."
 * locationReference 0..* MS
 * locationReference ^definition =
     "reason(s) why this should be supported."
-* occurrenceDateTime 1..1
+
 
 Profile: GeneralReferralServiceRequest
 Parent: GenericServiceRequest
@@ -447,14 +447,20 @@ Description: "General Referral Request"
 * code from http://hl7.org/fhir/ValueSet/procedure-code (extensible)
 * code = $SCT#3457005
 * code.text = "Patient referral"
+* occurrenceDateTime 1..1
 
 Profile: FollowUpPlanServiceRequest
 Parent: GenericServiceRequest
 Id: follow-up-plan
 Title: "Referral Request For Follow-up Plan"
-Description: "Used to record a referral request  for a patient's Follow-up Plan"
-* code from VSFollowUpPlan (required)
+Description: "Referral Request For Follow-up Plan"
+* code from VSFollowUpPlan (extensible)
 * reasonCode from VSFollowUpReasons (extensible)
+* occurrenceTiming 1..1
+* occurrenceTiming.repeat.duration 1..1
+* occurrenceTiming.repeat.durationUnit 1..1
+* occurrenceTiming.repeat.count 1..1
+* occurrenceTiming.repeat.count = 1
 
 Profile: FollowUpAtHLC 
 Parent: CarePlan
@@ -484,23 +490,6 @@ Description: "Logically groups all resources into a single document structure."
 * author 1..*
 * title 1..1
 * section 1..*
-
-Profile: Hypertension
-Parent: GenericObservation
-Id: hypertension
-Title: "Hypertension Observation"
-Description: "Patient is diagnosed with Hypertension due to high blood pressure."
-* code = $SCT#38341003
-* code.text = "Hypertension"
-* category 1..1
-* category.coding.code = #vital-signs
-* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* valueQuantity 1..1
-* valueQuantity.value 1..1
-* valueQuantity.unit = "mmHg"
-* valueQuantity.system = "http://unitsofmeasure.org"
-* valueQuantity.code = #mm[Hg]
-* derivedFrom 1..*
 
 Profile: MedicalHistory
 Parent: Condition
@@ -705,6 +694,7 @@ Id: investigations-request
 Title: "Investigations Request"
 Description: "Used to initiate the request for a lab test to be done."
 * code from VSInvestigations (extensible)
+* occurrenceDateTime 1..1
 
 Profile: InvestigationsTask
 Parent: GenericTask
@@ -725,6 +715,7 @@ Id: imaging-request
 Title: "Imaging Request"
 Description: "Used to initiate the request for imaging to be done."
 * code from VSImagingProcedures (extensible)
+* occurrenceDateTime 1..1
 
 Profile: ImagingTask
 Parent: GenericTask

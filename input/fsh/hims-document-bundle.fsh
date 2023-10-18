@@ -62,8 +62,5 @@ Description: "HIMS Document Bundle"
 * entry[+].fullUrl = "CarePlan/FollowUpAtHLCExample"
 * entry[=].resource = FollowUpAtHLCExample
 
-* entry[+].fullUrl = "Observation/HypertensionExample"
-* entry[=].resource = HypertensionExample
-
 * entry[+].fullUrl = "Condition/MedicalHistoryExample"
 * entry[=].resource = MedicalHistoryExample
