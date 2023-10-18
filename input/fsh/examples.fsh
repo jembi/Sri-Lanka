@@ -468,12 +468,14 @@ Description: "Referral Request For Follow-up Plan"
 * code.text = "Follow up at HLC"
 * subject = Reference(HIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
-* occurrenceDateTime = "2023-10-06T13:28:17-05:00"
 * requester = Reference(GeneralPractitionerExample)
 * reasonCode[+].coding.code = #Followed-in-6-months-at-hlc
 * reasonCode[=].coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-reasons"
 * reasonCode[=].text = "Followed in 6 months at HLC"
 * locationReference[+] = Reference(ProvidersLocationExample)
+* occurrenceTiming.repeat.duration = 3
+* occurrenceTiming.repeat.durationUnit = #mo
+* occurrenceTiming.repeat.count = 1
 
 Instance: GeneralReferralServiceRequestExample
 InstanceOf: GeneralReferralServiceRequest
