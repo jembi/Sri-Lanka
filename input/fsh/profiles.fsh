@@ -453,7 +453,7 @@ Parent: GenericServiceRequest
 Id: follow-up-plan
 Title: "Referral Request For Follow-up Plan"
 Description: "Referral Request For Follow-up Plan"
-* code from VSFollowUpPlan (required)
+* code from VSFollowUpPlan (extensible)
 * reasonCode from VSFollowUpReasons (extensible)
 
 Profile: FollowUpAtHLC 
