@@ -463,13 +463,12 @@ Title: "Referral Request For Follow-up Plan"
 Description: "Referral Request For Follow-up Plan"
 * status = #completed
 * intent = #order
-* code.coding.code = #Follow-up-at-hlc
-* code.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-plan"
+* code = $SCT#410321003
 * code.text = "Follow up at HLC"
 * subject = Reference(HIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
 * requester = Reference(GeneralPractitionerExample)
-* reasonCode[+].coding.code = #Followed-in-6-months-at-hlc
+* reasonCode[+].coding.code = #Followed-in-3-years-at-hlc
 * reasonCode[=].coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-reasons"
 * reasonCode[=].text = "Followed in 6 months at HLC"
 * locationReference[+] = Reference(ProvidersLocationExample)

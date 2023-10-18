@@ -48,7 +48,7 @@ Description: "Patient Business Identifier Types"
 * #SCN "Senior Citizen Number" "Needs definition"
 * #PHN "Personal Health Number" "Needs definition"
 
-CodeSystem: CSFollowUpPlan
+/*CodeSystem: CSFollowUpPlan
 Id: cs-follow-up-plan
 Title: "Follow-up plan"
 Description: "Follow-up plan"
@@ -58,14 +58,20 @@ Description: "Follow-up plan"
 * #Referred-to-specialised-clinic "Referred to specialised clinic" "Needs definition"
 * #Follow-up-at-hlc "Follow up at HLC" "Needs definition"
 * #Referred-to-dental-clinic "Referred to Dental Clinic" "Needs definition"
-* #Referred-to-wwc "Referred to WWC" "Needs definition"
+* #Referred-to-wwc "Referred to WWC" "Needs definition"*/
 
 ValueSet: VSFollowUpPlan
 Id: vs-follow-up-plan
 Title: "Follow-up plan"
 Description: "Follow-up plan"
 * ^experimental = false
-* include codes from system CSFollowUpPlan
+* include codes from system $SCT
+    where concept descendent-of #183851006
+* include codes from system $SCT
+    where concept descendent-of #772071006
+* $SCT#410321003 "Wellness health education, guidance, and counseling"
+* $SCT#306110004 "Referral to medical service"
+//* include codes from system CSFollowUpPlan
 
 CodeSystem: CSFollowUpReasons
 Id: cs-follow-up-reasons
@@ -73,9 +79,9 @@ Title: "Follow up at HLC"
 Description: "Follow up at HLC"
 * ^experimental = false
 * ^caseSensitive = true
-* #Followed-in-3-months-at-hlc "Followed in 3 months at HLC" "Needs definition"
-* #Followed-in-6-months-at-hlc "Followed in 6 months at HLC" "Needs definition"
-* #Followed-in-1-year-at-hlc "Followed in 1 year at HLC" "Needs definition"
+//* #Followed-in-3-months-at-hlc "Followed in 3 months at HLC" "Needs definition"
+//* #Followed-in-6-months-at-hlc "Followed in 6 months at HLC" "Needs definition"
+//* #Followed-in-1-year-at-hlc "Followed in 1 year at HLC" "Needs definition"
 * #Followed-in-3-years-at-hlc "Followed in 3 years at HLC" "Needs definition"
 
 ValueSet: VSFollowUpReasons
@@ -83,6 +89,8 @@ Id: vs-follow-up-reasons
 Title: "Follow up at HLC"
 Description: "Follow up at HLC"
 * ^experimental = false
+* include codes from system $SCT
+    where concept descendent-of #183616001
 * include codes from system CSFollowUpReasons
 
 CodeSystem: CSCVDRiskCategory
