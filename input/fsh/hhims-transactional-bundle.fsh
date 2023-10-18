@@ -5,6 +5,11 @@ Title: "HHIMS FULL Transactional Bundle"
 Description: "HHIMS FULL Transactional Bundle"
 * type = #transaction
 
+* entry[+].fullUrl = "Patient/HIMSPatientExample"
+* entry[=].resource = HIMSPatientExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Patient/HIMSPatientExample"
+
 * entry[+].fullUrl = "Patient/HHIMSPatientExample"
 * entry[=].resource = HHIMSPatientExample
 * entry[=].request.method = #PUT
