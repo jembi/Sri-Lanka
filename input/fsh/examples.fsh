@@ -444,7 +444,7 @@ Description: "Represents the patient's CVD risk score."
 * prediction[=].outcome.text = "Risk of heart attack"
 * prediction[=].probabilityDecimal = 0.02
 
-* prediction[=].qualitativeRisk.coding.code = #greater-than-or-equal-to-30
+* prediction[=].qualitativeRisk.coding.code = #Critical
 * prediction[=].qualitativeRisk.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-cvd-risk-category"
 * prediction[=].qualitativeRisk.text = "Risk Category"
 
@@ -660,8 +660,8 @@ InstanceOf: Allergies
 Usage: #example
 Title: "Allergy Intolerance"
 Description: "Example where a code is used to represent an allergy"
-* code = $SCT#28647000
-* code.text = "Meat"
+* code = $SCT#414285001
+* code.text = "Allergy to food"
 * encounter = Reference(TargetFacilityEncounterExample)
 * clinicalStatus.coding.code = #active
 * clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
@@ -677,7 +677,7 @@ InstanceOf: Allergies
 Usage: #example
 Title: "Allergy Intolerance"
 Description: "Example where only a text value is used to represent an allergy"
-* code.text = "Meat"
+* code.text = "Allergy to food"
 * encounter = Reference(TargetFacilityEncounterExample)
 * clinicalStatus.coding.code = #active
 * clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
