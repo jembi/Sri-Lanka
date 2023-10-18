@@ -425,9 +425,11 @@ Description: "Represents the patient's total cholesterol results."
 Instance: CVDRiskCategoryExample
 InstanceOf: CVDRiskCategory
 Usage: #example
-Title: "Cardiovascular Risk Category"
-Description: "Cardiovascular Risk Category"
+Title: "Cardiovascular Risk Assessment"
+Description: "Represents the patient's CVD risk score."
 * status = #final
+* code = $SCT#441829007
+* code.text = "Assessment for risk of cardiovascular disease"
 * subject = Reference(HIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
 * occurrenceDateTime = "2023-10-06T13:28:17-05:00"

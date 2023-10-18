@@ -380,12 +380,14 @@ Description: "Represents the patient's total cholesterol results."
 Profile: CVDRiskCategory
 Parent: RiskAssessment
 Id: cvd-risk-category
-Title: "Cardiovascular Risk Category"
-Description: "Represents the patient's Risk Category for Cardiovascular"
+Title: "Cardiovascular Risk Assessment"
+Description: "Represents the patient's CVD risk score."
 * status 1..1
 * subject 1..1
 * encounter 1..1
 * occurrenceDateTime 1..1
+* code 1..1
+* code = $SCT#441829007
 * performer 1..1
 * basis 1..*
 * prediction 1..*
