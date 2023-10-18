@@ -10,20 +10,10 @@ Description: "HHIMS FULL Transactional Bundle"
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Patient/HHIMSPatientExample"
 
-* entry[+].fullUrl = "Practitioner/GeneralPractitionerExample"
-* entry[=].resource = GeneralPractitionerExample
-* entry[=].request.method = #PUT
-* entry[=].request.url = "Practitioner/GeneralPractitionerExample"
-
 * entry[+].fullUrl = "Encounter/TargetFacilityEncounterExample"
 * entry[=].resource = TargetFacilityEncounterExample
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Encounter/TargetFacilityEncounterExample"
-
-* entry[+].fullUrl = "Observation/GenericObservationExample"
-* entry[=].resource = GenericObservationExample
-* entry[=].request.method = #PUT
-* entry[=].request.url = "Observation/GenericObservationExample"
 
 * entry[+].fullUrl = "Observation/WeightExample"
 * entry[=].resource = WeightExample
