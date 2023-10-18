@@ -1943,22 +1943,6 @@ Description: "Other Procedures"
 * include codes from system CSProcedures
 * include codes from system CSImagingProcedures
 
-/*CodeSystem: CSInjections
-Id: cs-injection
-Title: "Injections"
-Description: "Injections"
-* ^experimental = false
-* ^caseSensitive = true
-* #dummy-1 "Dummy 1" "Needs definition"
-* #dummy-2 "Dummy 2" "Needs definition"
-
-ValueSet: VSInjections
-Id: vs-injection
-Title: "Injections"
-Description: "Injections"
-* ^experimental = false
-* include codes from system CSInjections*/
-
 CodeSystem: CSInvestigations
 Id: cs-investigation
 Title: "Investigations"
