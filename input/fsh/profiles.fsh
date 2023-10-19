@@ -60,7 +60,7 @@ Profile: ProvidersLocation
 Parent: Location
 Id: providers-location
 Title: "Providers Location"
-Description: "Represents the physical location of the provider"
+Description: "Represents the physical location of the provider."
 * identifier 0..*
 * identifier ^definition =
     "reason(s) why this should be supported."
@@ -211,7 +211,7 @@ Profile: GenericObservation
 Parent: Observation
 Id: generic-observation
 Title: "Generic Observation"
-Description: "Generic Observation"
+Description: "Base Observation elements that are inherited by other Observations resources."
 * status 1..1
 * code 1..1
 * subject 1..1
@@ -403,7 +403,7 @@ Profile: GenericTask
 Parent: Task
 Id: generic-task
 Title: "Generic Task"
-Description: "Is primarily used to track the progress of a patient's service request such as referrals and lab orders etc."
+Description: "Base Task elements that are inherited by other Task resources."
 * status 1..1
 * intent 1..1
 * for 1..1
@@ -432,7 +432,7 @@ Profile: GenericServiceRequest
 Parent: ServiceRequest
 Id: generic-service-request
 Title: "Generic Service Request"
-Description: "Used to record the initial request for service to be rendered."
+Description: "Base ServiceRequest elements that are inherited by other ServiceRequest resources."
 * status 1..1
 * intent 1..1
 * code 1..1
@@ -452,7 +452,7 @@ Profile: GeneralReferralServiceRequest
 Parent: GenericServiceRequest
 Id: general-referral-request
 Title: "General Referral Request"
-Description: "General Referral Request"
+Description: "Used to initiate a request for a referral."
 * code 1..1
 * code from http://hl7.org/fhir/ValueSet/procedure-code (extensible)
 * code = $SCT#3457005
@@ -463,7 +463,7 @@ Profile: FollowUpPlanServiceRequest
 Parent: GenericServiceRequest
 Id: follow-up-plan
 Title: "Referral Request For Follow-up Plan"
-Description: "Referral Request For Follow-up Plan"
+Description: "Used to initiate a referral request for a Follow-up Plan."
 * code 1..1
 * code from VSFollowUpPlan (extensible)
 * reasonCode from VSFollowUpReasons (extensible)
@@ -477,7 +477,7 @@ Profile: FollowUpAtHLC
 Parent: CarePlan
 Id: follow-up-at-hlc
 Title: "Follow-up at HLC"
-Description: "Used to reprent the follow-up event for the patient at HLC"
+Description: "Used to record the follow-up event for the patient at HLC."
 * status 1..1
 * intent 1..1
 * subject 1..1
@@ -530,7 +530,7 @@ Profile: Allergies
 Parent: AllergyIntolerance
 Id: allergy-intolerance
 Title: "Allergy Intolerance"
-Description: "Used to represent the patient's allergy intolerance."
+Description: "Used to represent the patient's allergies."
 * encounter 1..1
 * code 0..1 MS
 * code ^definition =
@@ -549,7 +549,7 @@ Description: "Used to represent the patient's allergy intolerance."
     "reason(s) why this should be supported."
 * recorder 0..1 MS
 * recorder ^definition =
-    "Sri Lanka team to provide motivation for supporting this element."
+    "reason(s) why this should be supported."
 * type 1..1
 
 Profile: Prescriptions
@@ -638,7 +638,7 @@ Profile: Injections
 Parent: MedicationAdministration
 Id: injection
 Title: "Injections"
-Description: "Used to represent the medication injected into a patient."
+Description: "Used to represent medication that is administered intravenously."
 * status 1..1
 * medicationCodeableConcept 1..1
 * medicationCodeableConcept from http://hl7.org/fhir/ValueSet/medication-codes (example)
@@ -678,7 +678,7 @@ Profile: InvestigationsServiceRequest
 Parent: GenericServiceRequest
 Id: investigations-request
 Title: "Investigations Request"
-Description: "Used to initiate the request for a lab test to be done."
+Description: "Used to initiate a request for an investigation."
 * code from VSInvestigations (extensible)
 * occurrenceDateTime 1..1
 

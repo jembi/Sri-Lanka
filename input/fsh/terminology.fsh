@@ -14,8 +14,8 @@ Description: "Risk Assessment - Physical Activity"
 
 ValueSet: VSRiskBehaviourPhysicalActivity
 Id: vs-risk-behaviour-physical-activity
-Title: "Risk Assessment - Physical Activity"
-Description: "Risk Assessment - Physical Activity"
+Title: "Physical Activity"
+Description: "Physical Activity Status"
 * ^experimental = false
 //* include codes from system CSRiskBehaviourPhysicalActivity
 * include codes from system $SCT
@@ -32,8 +32,8 @@ Description: "Risk Assessment - Tobacco Smoker"
 
 ValueSet: VSRiskBehaviourTobaccoSmoker
 Id: vs-risk-behaviour-tobacco-smoker
-Title: "Risk Assessment - Tobacco Smoker"
-Description: "Risk Assessment - Tobacco Smoker"
+Title: "Tobacco Smoker"
+Description: "Tobacco Smoker Status"
 * ^experimental = false
 //* include codes from system CSRiskBehaviourTobaccoSmoker
 * include codes from system $SCT
@@ -75,7 +75,7 @@ Description: "Follow-up plan"
 CodeSystem: CSFollowUpReasons
 Id: cs-follow-up-reasons
 Title: "Follow up at HLC"
-Description: "Follow up at HLC"
+Description: "Follow up at Healthy Lifestyle Center"
 * ^experimental = false
 * ^caseSensitive = true
 //* #Followed-in-3-months-at-hlc "Followed in 3 months at HLC" "Needs definition"
@@ -86,7 +86,7 @@ Description: "Follow up at HLC"
 ValueSet: VSFollowUpReasons
 Id: vs-follow-up-reasons
 Title: "Follow up at HLC"
-Description: "Follow up at HLC"
+Description: "Follow up at Healthy Lifestyle Center"
 * ^experimental = false
 * include codes from system $SCT
     where concept descendent-of #183616001

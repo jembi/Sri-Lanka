@@ -81,7 +81,7 @@ Description: "Is used to document demographics and other administrative informat
 Instance: HHIMSPatientExample
 InstanceOf: HHIMSPatient
 Usage: #example
-Title: "HHIMS PatientExample"
+Title: "HHIMS Patient"
 Description: "Is used to document demographics and other administrative information about an HHIMS individual receiving care or other health-related services."
 * identifier[NIC][+].value = "A patient may have multiple national identity numbers."
 * identifier[NIC][=].extension[NICID][+].valueString = "National identity number-1"
@@ -141,7 +141,7 @@ Instance: ProvidersLocationExample
 InstanceOf: ProvidersLocation
 Usage: #example
 Title: "Providers Location"
-Description: "Providers Location"
+Description: "Represents the physical location of the provider."
 * identifier[LocationID][+].value = "A provider's location may be associated with multiple identifiers."
 * identifier[LocationID][=].extension[LocID][+].valueString = "Location-ID-1"
 * identifier[LocationID][=].extension[LocID][+].valueString = "Location-ID-2"
@@ -172,7 +172,7 @@ Instance: NotifiableDiseasesNotifiedExample
 InstanceOf: NotifiableDiseasesNotified
 Usage: #example
 Title: "Notifiable Diseases Notified"
-Description: "Notifiable Diseases Notified"
+Description: "Represents a message communicated to the practitioner about a patient's encounter."
 * status = #completed
 * subject = Reference(HHIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
@@ -182,7 +182,7 @@ Instance: GenericObservationExample
 InstanceOf: GenericObservation
 Usage: #example
 Title: "Generic Observation"
-Description: "Generic Observation"
+Description: "Base Observation elements that are inherited by other Observations resources."
 * status = #final
 * code = $LNC#10000-8
 * code.text = "Generic Observation"
@@ -255,7 +255,7 @@ Description: "Represents the Systolic and Diastolic blood pressure for the patie
 Instance: WeightExample
 InstanceOf: Weight
 Usage: #example
-Title: "Patient Weight"
+Title: "Patient Weight Observation"
 Description: "Represents the patient's weight."
 * status = #final
 * category.coding.code = #vital-signs
@@ -275,7 +275,7 @@ Description: "Represents the patient's weight."
 Instance: HeightExample
 InstanceOf: Height
 Usage: #example
-Title: "Patient Height"
+Title: "Patient Height Observation"
 Description: "Represents the patient's height."
 * status = #final
 * category.coding.code = #vital-signs
@@ -295,7 +295,7 @@ Description: "Represents the patient's height."
 Instance: BMIExample
 InstanceOf: BMI
 Usage: #example
-Title: "Patient BMI"
+Title: "Patient BMI Observation"
 Description: "Represents the patient's BMI."
 * status = #final
 * category.coding.code = #vital-signs
@@ -398,7 +398,7 @@ Description:
 Instance: TotalCholesterolExample
 InstanceOf: TotalCholesterol
 Usage: #example
-Title: "Total Cholesterol"
+Title: "Total Cholesterol Observation"
 Description: "Represents the patient's total cholesterol results."
 * status = #final
 * code = $LNC#2093-3
@@ -462,7 +462,7 @@ Instance: FollowUpPlanServiceRequestExample
 InstanceOf: FollowUpPlanServiceRequest
 Usage: #example
 Title: "Referral Request For Follow-up Plan"
-Description: "Referral Request For Follow-up Plan"
+Description: "Used to initiate a referral request for a Follow-up Plan."
 * status = #completed
 * intent = #order
 * code = $SCT#410321003
@@ -482,7 +482,7 @@ Instance: GeneralReferralServiceRequestExample
 InstanceOf: GeneralReferralServiceRequest
 Usage: #example
 Title: "General Referral Request"
-Description: "General Referral Request"
+Description: "Used to initiate a request for a referral."
 * status = #completed
 * intent = #order
 * code = $SCT#3457005
@@ -497,7 +497,7 @@ Instance: GenericServiceRequestExample
 InstanceOf: GenericServiceRequest
 Usage: #example
 Title: "Generic Service Request"
-Description: "Generic Service Reques"
+Description: "Base ServiceRequest elements that are inherited by other ServiceRequest resources."
 * status = #completed
 * intent = #order
 * code = $SCT#3457005
@@ -512,7 +512,7 @@ Instance: FollowUpAtHLCExample
 InstanceOf: FollowUpAtHLC
 Usage: #example
 Title: "Follow-up at HLC"
-Description: "Follow-up at HLC"
+Description: "Used to record the follow-up event for the patient at HLC."
 * status = #active
 * intent = #order
 * subject = Reference(HIMSPatientExample)
@@ -628,8 +628,8 @@ Description: "Represents previous, pre-existing and new conditions."
 Instance: HHIMSReferralTaskExample
 InstanceOf: ReferralTask
 Usage: #example
-Title: "HHIMS Referral Task"
-Description: "Indicates the outcome of a patient's referral."
+Title: "Referral Task"
+Description: "Is primarily used to track the progress of a patient's referral."
 * status = #completed
 * intent = #order
 * priority = #routine
@@ -645,7 +645,7 @@ Instance: GenericTaskExample
 InstanceOf: GenericTask
 Usage: #example
 Title: "Generic Task"
-Description: "Is primarily used to track the progress of a patient's service request such as referrals and lab orders etc."
+Description: "Base Task elements that are inherited by other Task resources."
 * status = #completed
 * intent = #order
 * for = Reference(HHIMSPatientExample)
@@ -727,7 +727,7 @@ Instance: ProceduresExample
 InstanceOf: Procedures
 Usage: #example
 Title: "Procedures"
-Description: "Procedures"
+Description: "This represents the procedure that was performed on a patient."
 * status = #in-progress
 * category = $SCT#409073007
 * code.coding.code = #X-Ray
@@ -744,7 +744,7 @@ Instance: InjectionsExample
 InstanceOf: Injections
 Usage: #example
 Title: "Injections"
-Description: "Example where a code is used to represent the route of drug admninistration"
+Description: "Used to represent medication that is administered intravenously."
 * status = #completed
 * medicationCodeableConcept = $SCT#2571007
 * medicationCodeableConcept.text = "Busulfan"
@@ -774,7 +774,7 @@ Instance: DrugDispensationExample
 InstanceOf: DrugDispensation
 Usage: #example
 Title: "Drug Dispensation"
-Description: "Drug Dispensation"
+Description: "Used to represent dispensed medication for a patient."
 * status = #completed
 * subject = Reference(HHIMSPatientExample)
 * context = Reference(TargetFacilityEncounterExample)
@@ -791,7 +791,7 @@ Instance: InvestigationsServiceRequestExample
 InstanceOf: InvestigationsServiceRequest
 Usage: #example
 Title: "Investigations Request"
-Description: "Investigations Request"
+Description: "Used to initiate a request for an investigation."
 * status = #completed
 * intent = #order
 * code.coding.code = #FBC-WBC-th/uL
@@ -825,7 +825,7 @@ Instance: ImagingServiceRequestExample
 InstanceOf: ImagingServiceRequest
 Usage: #example
 Title: "Imaging Request"
-Description: "Imaging Request"
+Description: "Used to initiate the request for imaging to be done."
 * status = #completed
 * intent = #order
 * code.coding.code = #X-Ray
@@ -859,7 +859,7 @@ Instance: ImagingExample
 InstanceOf: Imaging
 Usage: #example
 Title: "Imaging Study"
-Description: "Imaging Study"
+Description: "Used to represent the content or results of a imaging study."
 * status = #registered
 * subject = Reference(HHIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
