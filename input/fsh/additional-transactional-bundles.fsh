@@ -204,3 +204,168 @@ Description: "HIMS CVS Risk Factor Bundle"
 * entry[=].resource = FastingBloodSugarExample
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Observation/FastingBloodSugarExample"
+
+Instance: HIMS-Follow-Up-Plan-Bundle
+InstanceOf: Bundle
+Usage: #example
+Title: "HIMS Follow-up Plan Bundle"
+Description: "HIMS Follow-up Plan Bundle"
+* type = #transaction
+
+* entry[+].fullUrl = "ServiceRequest/FollowUpPlanServiceRequestExample"
+* entry[=].resource = FollowUpPlanServiceRequestExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "ServiceRequest/FollowUpPlanServiceRequestExample"
+
+* entry[+].fullUrl = "Patient/HIMSPatientExample"
+* entry[=].resource = HIMSPatientExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Patient/HIMSPatientExample"
+
+* entry[+].fullUrl = "Encounter/TargetFacilityEncounterExample"
+* entry[=].resource = TargetFacilityEncounterExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Encounter/TargetFacilityEncounterExample"
+
+* entry[+].fullUrl = "Practitioner/GeneralPractitionerExample"
+* entry[=].resource = GeneralPractitionerExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Practitioner/GeneralPractitionerExample"
+
+* entry[+].fullUrl = "Location/ProvidersLocationExample"
+* entry[=].resource = ProvidersLocationExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Location/ProvidersLocationExample"
+
+Instance: HIMS-OPD-Encounter-1-Bundle
+InstanceOf: Bundle
+Usage: #example
+Title: "OPD Encounter Bundle"
+Description: "OPD Encounter Bundle (Encounter Reason, Location, Doctor)"
+* type = #transaction
+
+* entry[+].fullUrl = "Encounter/TargetFacilityEncounterExample"
+* entry[=].resource = TargetFacilityEncounterExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Encounter/TargetFacilityEncounterExample"
+
+* entry[+].fullUrl = "Patient/HHIMSPatientExample"
+* entry[=].resource = HHIMSPatientExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Patient/HHIMSPatientExample"
+
+* entry[+].fullUrl = "Location/ProvidersLocationExample"
+* entry[=].resource = ProvidersLocationExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Location/ProvidersLocationExample"
+
+* entry[+].fullUrl = "Practitioner/GeneralPractitionerExample"
+* entry[=].resource = GeneralPractitionerExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Practitioner/GeneralPractitionerExample"
+
+Instance: HIMS-OPD-Encounter-2-Bundle
+InstanceOf: Bundle
+Usage: #example
+Title: "OPD Encounter Bundle"
+Description: "OPD Encounter Bundle (Encounter Reason, Location, Doctor, Disease Notified, Patient Referred)"
+* type = #transaction
+
+* entry[+].fullUrl = "Encounter/TargetFacilityEncounterExample"
+* entry[=].resource = TargetFacilityEncounterExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Encounter/TargetFacilityEncounterExample"
+
+* entry[+].fullUrl = "Patient/HHIMSPatientExample"
+* entry[=].resource = HHIMSPatientExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Patient/HHIMSPatientExample"
+
+* entry[+].fullUrl = "Location/ProvidersLocationExample"
+* entry[=].resource = ProvidersLocationExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Location/ProvidersLocationExample"
+
+* entry[+].fullUrl = "Practitioner/GeneralPractitionerExample"
+* entry[=].resource = GeneralPractitionerExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Practitioner/GeneralPractitionerExample"
+
+* entry[+].fullUrl = "Communication/NotifiableDiseasesNotifiedExample"
+* entry[=].resource = NotifiableDiseasesNotifiedExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Communication/NotifiableDiseasesNotifiedExample"
+
+* entry[+].fullUrl = "ServiceRequest/GeneralReferralServiceRequestExample"
+* entry[=].resource = GeneralReferralServiceRequestExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "ServiceRequest/GeneralReferralServiceRequestExample"
+
+* entry[+].fullUrl = "Task/GenericTaskExample"
+* entry[=].resource = GenericTaskExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Task/GenericTaskExample"
+
+Instance: HIMS-OPD-Prescription-Bundle
+InstanceOf: Bundle
+Usage: #example
+Title: "OPD Prescription Bundle"
+Description: "OPD Encounter Bundle (Medication name, Dosage, Frequency, Duration)"
+* type = #transaction
+
+* entry[+].fullUrl = "MedicationRequest/PrescriptionsExample"
+* entry[=].resource = PrescriptionsExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "MedicationRequest/PrescriptionsExample"
+
+* entry[+].fullUrl = "Encounter/TargetFacilityEncounterExample"
+* entry[=].resource = TargetFacilityEncounterExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Encounter/TargetFacilityEncounterExample"
+
+* entry[+].fullUrl = "Patient/HHIMSPatientExample"
+* entry[=].resource = HHIMSPatientExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Patient/HHIMSPatientExample"
+
+* entry[+].fullUrl = "Practitioner/GeneralPractitionerExample"
+* entry[=].resource = GeneralPractitionerExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Practitioner/GeneralPractitionerExample"
+
+Instance: HIMS-OPD-Prescription-Dispenses-Bundle
+InstanceOf: Bundle
+Usage: #example
+Title: "OPD Prescription Dispensed Bundle"
+Description: "OPD Prescription Dispensed Bundle (Medication name, Dosage, Frequency, Duration, Dispensation)"
+* type = #transaction
+
+* entry[+].fullUrl = "MedicationRequest/PrescriptionsExample"
+* entry[=].resource = PrescriptionsExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "MedicationRequest/PrescriptionsExample"
+
+* entry[+].fullUrl = "Encounter/TargetFacilityEncounterExample"
+* entry[=].resource = TargetFacilityEncounterExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Encounter/TargetFacilityEncounterExample"
+
+* entry[+].fullUrl = "Patient/HHIMSPatientExample"
+* entry[=].resource = HHIMSPatientExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Patient/HHIMSPatientExample"
+
+* entry[+].fullUrl = "Practitioner/GeneralPractitionerExample"
+* entry[=].resource = GeneralPractitionerExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Practitioner/GeneralPractitionerExample"
+
+* entry[+].fullUrl = "MedicationDispense/DrugDispensationExample"
+* entry[=].resource = DrugDispensationExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "MedicationDispense/DrugDispensationExample"
+
+* entry[+].fullUrl = "Location/ProvidersLocationExample"
+* entry[=].resource = ProvidersLocationExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Location/ProvidersLocationExample"
