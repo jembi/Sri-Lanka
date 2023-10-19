@@ -649,7 +649,6 @@ Description: "Is primarily used to track the progress of a patient's service req
 * status = #completed
 * intent = #order
 * for = Reference(HHIMSPatientExample)
-* focus = Reference(GeneralReferralServiceRequestExample)
 * encounter = Reference(TargetFacilityEncounterExample)
 * authoredOn = "2023-10-06T13:28:17-05:00"
 * requester = Reference(GeneralPractitionerExample)
@@ -814,7 +813,7 @@ Description: "Is primarily used to track the progress of an investigations reque
 * priority = #routine
 * description = "some information regarding the need for the investigations request, if any."
 * for = Reference(HHIMSPatientExample)
-* focus = Reference(GeneralReferralServiceRequestExample)
+* basedOn[+] = Reference(InvestigationsServiceRequestExample)
 * encounter = Reference(TargetFacilityEncounterExample)
 * authoredOn = "2023-10-06T13:28:17-05:00"
 * requester = Reference(GeneralPractitionerExample)
@@ -848,7 +847,7 @@ Description: "Is primarily used to track the progress of an imaging request."
 * priority = #routine
 * description = "some information regarding the need for the imaging request, if any."
 * for = Reference(HHIMSPatientExample)
-* focus = Reference(GeneralReferralServiceRequestExample)
+* basedOn[+] = Reference(ImagingServiceRequestExample)
 * encounter = Reference(TargetFacilityEncounterExample)
 * authoredOn = "2023-10-06T13:28:17-05:00"
 * requester = Reference(GeneralPractitionerExample)

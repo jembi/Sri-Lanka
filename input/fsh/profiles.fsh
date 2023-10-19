@@ -407,7 +407,6 @@ Description: "Is primarily used to track the progress of a patient's service req
 * status 1..1
 * intent 1..1
 * for 1..1
-* focus 1..1
 * encounter 1..1
 * authoredOn 1..1
 * requester 1..1
@@ -421,6 +420,7 @@ Parent: GenericTask
 Id: referral-task
 Title: "Referral Task"
 Description: "Is primarily used to track the progress of a patient's referral."
+* focus 1..1
 * priority 0..1 MS
 * priority ^definition =
     "reason(s) why this should be supported."
@@ -687,6 +687,7 @@ Parent: GenericTask
 Id: investigations-task
 Title: "Investigations Task"
 Description: "Is primarily used to track the progress of an investigations request."
+* basedOn 1..*
 * priority 0..1 MS
 * priority ^definition =
     "reason(s) why this should be supported."
@@ -708,6 +709,7 @@ Parent: GenericTask
 Id: imaging-task
 Title: "Imaging Task"
 Description: "Is primarily used to track the progress of an imaging request."
+* basedOn 1..*
 * priority 0..1 MS
 * priority ^definition =
     "reason(s) why this should be supported."
