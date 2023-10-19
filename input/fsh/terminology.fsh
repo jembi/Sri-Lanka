@@ -67,8 +67,7 @@ Description: "Follow-up plan"
 * ^experimental = false
 * include codes from system $SCT
     where concept descendent-of #183851006
-* include codes from system $SCT
-    where concept descendent-of #772071006
+* $SCT#772071006 "Referral to dentist"
 * $SCT#410321003 "Wellness health education, guidance, and counseling"
 * $SCT#306110004 "Referral to medical service"
 //* include codes from system CSFollowUpPlan
