@@ -453,6 +453,7 @@ Parent: GenericServiceRequest
 Id: general-referral-request
 Title: "General Referral Request"
 Description: "General Referral Request"
+* code 1..1
 * code from http://hl7.org/fhir/ValueSet/procedure-code (extensible)
 * code = $SCT#3457005
 * code.text = "Patient referral"
@@ -463,6 +464,7 @@ Parent: GenericServiceRequest
 Id: follow-up-plan
 Title: "Referral Request For Follow-up Plan"
 Description: "Referral Request For Follow-up Plan"
+* code 1..1
 * code from VSFollowUpPlan (extensible)
 * reasonCode from VSFollowUpReasons (extensible)
 * occurrenceTiming 1..1
