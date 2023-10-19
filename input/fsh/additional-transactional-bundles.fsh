@@ -237,7 +237,7 @@ Description: "HIMS Follow-up Plan Bundle"
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Location/ProvidersLocationExample"
 
-Instance: HIMS-OPD-Encounter-1-Bundle
+Instance: HHIMS-OPD-Encounter-1-Bundle
 InstanceOf: Bundle
 Usage: #example
 Title: "OPD Encounter Bundle"
@@ -264,7 +264,7 @@ Description: "OPD Encounter Bundle (Encounter Reason, Location, Doctor)"
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Practitioner/GeneralPractitionerExample"
 
-Instance: HIMS-OPD-Encounter-2-Bundle
+Instance: HHIMS-OPD-Encounter-2-Bundle
 InstanceOf: Bundle
 Usage: #example
 Title: "OPD Encounter Bundle"
@@ -306,7 +306,7 @@ Description: "OPD Encounter Bundle (Encounter Reason, Location, Doctor, Disease 
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Task/GenericTaskExample"
 
-Instance: HIMS-OPD-Prescription-Bundle
+Instance: HHIMS-OPD-Prescription-Bundle
 InstanceOf: Bundle
 Usage: #example
 Title: "OPD Prescription Bundle"
@@ -333,7 +333,7 @@ Description: "OPD Encounter Bundle (Medication name, Dosage, Frequency, Duration
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Practitioner/GeneralPractitionerExample"
 
-Instance: HIMS-OPD-Prescription-Dispenses-Bundle
+Instance: HHIMS-OPD-Prescription-Dispenses-Bundle
 InstanceOf: Bundle
 Usage: #example
 Title: "OPD Prescription Dispensed Bundle"
@@ -369,3 +369,109 @@ Description: "OPD Prescription Dispensed Bundle (Medication name, Dosage, Freque
 * entry[=].resource = ProvidersLocationExample
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Location/ProvidersLocationExample"
+
+Instance: HHIMS-Procedure-Bundle
+InstanceOf: Bundle
+Usage: #example
+Title: "Procedure Bundle"
+Description: "Procedure Bundle"
+* type = #transaction
+
+* entry[+].fullUrl = "Procedure/ProceduresExample"
+* entry[=].resource = ProceduresExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Procedure/ProceduresExample"
+
+* entry[+].fullUrl = "Encounter/TargetFacilityEncounterExample"
+* entry[=].resource = TargetFacilityEncounterExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Encounter/TargetFacilityEncounterExample"
+
+* entry[+].fullUrl = "Patient/HHIMSPatientExample"
+* entry[=].resource = HHIMSPatientExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Patient/HHIMSPatientExample"
+
+* entry[+].fullUrl = "Practitioner/GeneralPractitionerExample"
+* entry[=].resource = GeneralPractitionerExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Practitioner/GeneralPractitionerExample"
+
+* entry[+].fullUrl = "Location/ProvidersLocationExample"
+* entry[=].resource = ProvidersLocationExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Location/ProvidersLocationExample"
+
+Instance: HHIMS-Investigation-Requests-Bundle
+InstanceOf: Bundle
+Usage: #example
+Title: "Investigation Requests Bundle"
+Description: "Investigation Requests Bundle"
+* type = #transaction
+
+* entry[+].fullUrl = "ServiceRequest/InvestigationsServiceRequestExample"
+* entry[=].resource = InvestigationsServiceRequestExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "ServiceRequest/InvestigationsServiceRequestExample"
+
+* entry[+].fullUrl = "Encounter/TargetFacilityEncounterExample"
+* entry[=].resource = TargetFacilityEncounterExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Encounter/TargetFacilityEncounterExample"
+
+* entry[+].fullUrl = "Patient/HHIMSPatientExample"
+* entry[=].resource = HHIMSPatientExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Patient/HHIMSPatientExample"
+
+* entry[+].fullUrl = "Practitioner/GeneralPractitionerExample"
+* entry[=].resource = GeneralPractitionerExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Practitioner/GeneralPractitionerExample"
+
+* entry[+].fullUrl = "Location/ProvidersLocationExample"
+* entry[=].resource = ProvidersLocationExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Location/ProvidersLocationExample"
+
+* entry[+].fullUrl = "Task/InvestigationsTaskExample"
+* entry[=].resource = InvestigationsTaskExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Task/InvestigationsTaskExample"
+
+Instance: HHIMS-Imaging-Bundle
+InstanceOf: Bundle
+Usage: #example
+Title: "Imaging Bundle"
+Description: "Imaging Bundle"
+* type = #transaction
+
+* entry[+].fullUrl = "ServiceRequest/ImagingServiceRequestExample"
+* entry[=].resource = ImagingServiceRequestExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "ServiceRequest/ImagingServiceRequestExample"
+
+* entry[+].fullUrl = "Encounter/TargetFacilityEncounterExample"
+* entry[=].resource = TargetFacilityEncounterExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Encounter/TargetFacilityEncounterExample"
+
+* entry[+].fullUrl = "Patient/HHIMSPatientExample"
+* entry[=].resource = HHIMSPatientExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Patient/HHIMSPatientExample"
+
+* entry[+].fullUrl = "Practitioner/GeneralPractitionerExample"
+* entry[=].resource = GeneralPractitionerExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Practitioner/GeneralPractitionerExample"
+
+* entry[+].fullUrl = "Location/ProvidersLocationExample"
+* entry[=].resource = ProvidersLocationExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Location/ProvidersLocationExample"
+
+* entry[+].fullUrl = "Task/ImagingTaskExample"
+* entry[=].resource = ImagingTaskExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Task/ImagingTaskExample"
