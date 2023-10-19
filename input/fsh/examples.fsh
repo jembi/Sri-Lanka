@@ -425,9 +425,11 @@ Description: "Represents the patient's total cholesterol results."
 Instance: CVDRiskCategoryExample
 InstanceOf: CVDRiskCategory
 Usage: #example
-Title: "Cardiovascular Risk Category"
-Description: "Cardiovascular Risk Category"
+Title: "Cardiovascular Risk Assessment"
+Description: "Represents the patient's CVD risk score."
 * status = #final
+* code = $SCT#441829007
+* code.text = "Assessment for risk of cardiovascular disease"
 * subject = Reference(HIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
 * occurrenceDateTime = "2023-10-06T13:28:17-05:00"
@@ -442,7 +444,7 @@ Description: "Cardiovascular Risk Category"
 * prediction[=].outcome.text = "Risk of heart attack"
 * prediction[=].probabilityDecimal = 0.02
 
-* prediction[=].qualitativeRisk.coding.code = #greater-than-or-equal-to-30
+* prediction[=].qualitativeRisk.coding.code = #Critical
 * prediction[=].qualitativeRisk.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-cvd-risk-category"
 * prediction[=].qualitativeRisk.text = "Risk Category"
 
@@ -463,13 +465,12 @@ Title: "Referral Request For Follow-up Plan"
 Description: "Referral Request For Follow-up Plan"
 * status = #completed
 * intent = #order
-* code.coding.code = #Follow-up-at-hlc
-* code.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-plan"
+* code = $SCT#410321003
 * code.text = "Follow up at HLC"
 * subject = Reference(HIMSPatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
 * requester = Reference(GeneralPractitionerExample)
-* reasonCode[+].coding.code = #Followed-in-6-months-at-hlc
+* reasonCode[+].coding.code = #Followed-in-3-years-at-hlc
 * reasonCode[=].coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-reasons"
 * reasonCode[=].text = "Followed in 6 months at HLC"
 * locationReference[+] = Reference(ProvidersLocationExample)
@@ -659,8 +660,8 @@ InstanceOf: Allergies
 Usage: #example
 Title: "Allergy Intolerance"
 Description: "Example where a code is used to represent an allergy"
-* code = $SCT#28647000
-* code.text = "Meat"
+* code = $SCT#414285001
+* code.text = "Allergy to food"
 * encounter = Reference(TargetFacilityEncounterExample)
 * clinicalStatus.coding.code = #active
 * clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
@@ -676,7 +677,7 @@ InstanceOf: Allergies
 Usage: #example
 Title: "Allergy Intolerance"
 Description: "Example where only a text value is used to represent an allergy"
-* code.text = "Meat"
+* code.text = "Allergy to food"
 * encounter = Reference(TargetFacilityEncounterExample)
 * clinicalStatus.coding.code = #active
 * clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
