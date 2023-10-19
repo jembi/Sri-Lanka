@@ -81,7 +81,7 @@ Description: "Is used to document demographics and other administrative informat
 Instance: HHIMSPatientExample
 InstanceOf: HHIMSPatient
 Usage: #example
-Title: "HHIMS PatientExample"
+Title: "HHIMS Patient"
 Description: "Is used to document demographics and other administrative information about an HHIMS individual receiving care or other health-related services."
 * identifier[NIC][+].value = "A patient may have multiple national identity numbers."
 * identifier[NIC][=].extension[NICID][+].valueString = "National identity number-1"
@@ -182,7 +182,7 @@ Instance: GenericObservationExample
 InstanceOf: GenericObservation
 Usage: #example
 Title: "Generic Observation"
-Description: "Used to record an observation event for the patient."
+Description: "Base Observation elements that are inherited by other Observations resources."
 * status = #final
 * code = $LNC#10000-8
 * code.text = "Generic Observation"
@@ -497,7 +497,7 @@ Instance: GenericServiceRequestExample
 InstanceOf: GenericServiceRequest
 Usage: #example
 Title: "Generic Service Request"
-Description: "Used to initiate a request for service to be performed."
+Description: "Base ServiceRequest elements that are inherited by other ServiceRequest resources."
 * status = #completed
 * intent = #order
 * code = $SCT#3457005
@@ -628,8 +628,8 @@ Description: "Represents previous, pre-existing and new conditions."
 Instance: HHIMSReferralTaskExample
 InstanceOf: ReferralTask
 Usage: #example
-Title: "HHIMS Referral Task"
-Description: "Indicates the outcome of a patient's referral."
+Title: "Referral Task"
+Description: "Is primarily used to track the progress of a patient's referral."
 * status = #completed
 * intent = #order
 * priority = #routine
@@ -645,7 +645,7 @@ Instance: GenericTaskExample
 InstanceOf: GenericTask
 Usage: #example
 Title: "Generic Task"
-Description: "Is primarily used to track the progress of a patient's service request such as referrals and lab orders etc."
+Description: "Base Task elements that are inherited by other Task resources."
 * status = #completed
 * intent = #order
 * for = Reference(HHIMSPatientExample)
@@ -744,7 +744,7 @@ Instance: InjectionsExample
 InstanceOf: Injections
 Usage: #example
 Title: "Injections"
-Description: "Example where a code is used to represent the route of drug admninistration"
+Description: "Used to represent medication that is administered intravenously."
 * status = #completed
 * medicationCodeableConcept = $SCT#2571007
 * medicationCodeableConcept.text = "Busulfan"
@@ -791,7 +791,7 @@ Instance: InvestigationsServiceRequestExample
 InstanceOf: InvestigationsServiceRequest
 Usage: #example
 Title: "Investigations Request"
-Description: "Used to initiate the request for a lab test to be done."
+Description: "Used to initiate a request for an investigation."
 * status = #completed
 * intent = #order
 * code.coding.code = #FBC-WBC-th/uL

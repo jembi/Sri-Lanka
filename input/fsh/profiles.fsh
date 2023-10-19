@@ -211,7 +211,7 @@ Profile: GenericObservation
 Parent: Observation
 Id: generic-observation
 Title: "Generic Observation"
-Description: "Used to record an observation event for the patient."
+Description: "Base Observation elements that are inherited by other Observations resources."
 * status 1..1
 * code 1..1
 * subject 1..1
@@ -403,7 +403,7 @@ Profile: GenericTask
 Parent: Task
 Id: generic-task
 Title: "Generic Task"
-Description: "Is primarily used to track the progress of a patient's service request such as referrals and lab orders etc."
+Description: "Base Task elements that are inherited by other Task resources."
 * status 1..1
 * intent 1..1
 * for 1..1
@@ -432,7 +432,7 @@ Profile: GenericServiceRequest
 Parent: ServiceRequest
 Id: generic-service-request
 Title: "Generic Service Request"
-Description: "Used to initiate a request for service to be performed."
+Description: "Base ServiceRequest elements that are inherited by other ServiceRequest resources."
 * status 1..1
 * intent 1..1
 * code 1..1
@@ -638,7 +638,7 @@ Profile: Injections
 Parent: MedicationAdministration
 Id: injection
 Title: "Injections"
-Description: "Used to represent the medication injected into a patient."
+Description: "Used to represent medication that is administered intravenously."
 * status 1..1
 * medicationCodeableConcept 1..1
 * medicationCodeableConcept from http://hl7.org/fhir/ValueSet/medication-codes (example)
@@ -678,7 +678,7 @@ Profile: InvestigationsServiceRequest
 Parent: GenericServiceRequest
 Id: investigations-request
 Title: "Investigations Request"
-Description: "Used to initiate the request for a lab test to be done."
+Description: "Used to initiate a request for an investigation."
 * code from VSInvestigations (extensible)
 * occurrenceDateTime 1..1
 
