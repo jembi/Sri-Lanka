@@ -8,7 +8,7 @@ Description: "HIMS Blood Pressure Bundle"
 * entry[+].fullUrl = "Observation/BloodPressureExample"
 * entry[=].resource = BloodPressureExample
 * entry[=].request.method = #PUT
-* entry[=].request.url = "Patient/BloodPressureExample"
+* entry[=].request.url = "Observation/BloodPressureExample"
 
 * entry[+].fullUrl = "Encounter/TargetFacilityEncounterExample"
 * entry[=].resource = TargetFacilityEncounterExample
@@ -35,12 +35,12 @@ Description: "HIMS Weight and Height Bundle"
 * entry[+].fullUrl = "Observation/WeightExample"
 * entry[=].resource = WeightExample
 * entry[=].request.method = #PUT
-* entry[=].request.url = "Patient/WeightExample"
+* entry[=].request.url = "Observation/WeightExample"
 
 * entry[+].fullUrl = "Observation/HeightExample"
 * entry[=].resource = HeightExample
 * entry[=].request.method = #PUT
-* entry[=].request.url = "Patient/HeightExample"
+* entry[=].request.url = "Observation/HeightExample"
 
 * entry[+].fullUrl = "Encounter/TargetFacilityEncounterExample"
 * entry[=].resource = TargetFacilityEncounterExample
@@ -94,12 +94,12 @@ Description: "HIMS Risk Behaviour (Physical Activity, Tobacco Smoking)"
 * entry[+].fullUrl = "Observation/RiskBehaviourPhysicalActivityExample"
 * entry[=].resource = RiskBehaviourPhysicalActivityExample
 * entry[=].request.method = #PUT
-* entry[=].request.url = "Patient/RiskBehaviourPhysicalActivityExample"
+* entry[=].request.url = "Observation/RiskBehaviourPhysicalActivityExample"
 
 * entry[+].fullUrl = "Observation/RiskBehaviourTobaccoSmokerExample"
 * entry[=].resource = RiskBehaviourTobaccoSmokerExample
 * entry[=].request.method = #PUT
-* entry[=].request.url = "Patient/RiskBehaviourTobaccoSmokerExample"
+* entry[=].request.url = "Observation/RiskBehaviourTobaccoSmokerExample"
 
 * entry[+].fullUrl = "Encounter/TargetFacilityEncounterExample"
 * entry[=].resource = TargetFacilityEncounterExample
@@ -115,3 +115,15 @@ Description: "HIMS Risk Behaviour (Physical Activity, Tobacco Smoking)"
 * entry[=].resource = GeneralPractitionerExample
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Practitioner/GeneralPractitionerExample"
+
+Instance: HIMS-Investigations-Bundle
+InstanceOf: Bundle
+Usage: #example
+Title: "HIMS Investigations Bundle"
+Description: "HIMS Investigations Bundle (FBS, RBS, Total Cholestrol)"
+* type = #transaction
+
+* entry[+].fullUrl = "Observation/RandomBloodSugarExample"
+* entry[=].resource = RandomBloodSugarExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Observation/RandomBloodSugarExample"
