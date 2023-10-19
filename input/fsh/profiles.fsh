@@ -60,7 +60,7 @@ Profile: ProvidersLocation
 Parent: Location
 Id: providers-location
 Title: "Providers Location"
-Description: "Represents the physical location of the provider"
+Description: "Represents the physical location of the provider."
 * identifier 0..*
 * identifier ^definition =
     "reason(s) why this should be supported."
@@ -211,7 +211,7 @@ Profile: GenericObservation
 Parent: Observation
 Id: generic-observation
 Title: "Generic Observation"
-Description: "Generic Observation"
+Description: "Used to record an observation event for the patient."
 * status 1..1
 * code 1..1
 * subject 1..1
@@ -432,7 +432,7 @@ Profile: GenericServiceRequest
 Parent: ServiceRequest
 Id: generic-service-request
 Title: "Generic Service Request"
-Description: "Used to record the initial request for service to be rendered."
+Description: "Used to initiate a request for service to be performed."
 * status 1..1
 * intent 1..1
 * code 1..1
@@ -452,7 +452,7 @@ Profile: GeneralReferralServiceRequest
 Parent: GenericServiceRequest
 Id: general-referral-request
 Title: "General Referral Request"
-Description: "General Referral Request"
+Description: "Used to initiate a request for a referral."
 * code from http://hl7.org/fhir/ValueSet/procedure-code (extensible)
 * code = $SCT#3457005
 * code.text = "Patient referral"
@@ -462,7 +462,7 @@ Profile: FollowUpPlanServiceRequest
 Parent: GenericServiceRequest
 Id: follow-up-plan
 Title: "Referral Request For Follow-up Plan"
-Description: "Referral Request For Follow-up Plan"
+Description: "Used to initiate a referral request for a Follow-up Plan."
 * code from VSFollowUpPlan (extensible)
 * reasonCode from VSFollowUpReasons (extensible)
 * occurrenceTiming 1..1
@@ -475,7 +475,7 @@ Profile: FollowUpAtHLC
 Parent: CarePlan
 Id: follow-up-at-hlc
 Title: "Follow-up at HLC"
-Description: "Used to reprent the follow-up event for the patient at HLC"
+Description: "Used to record the follow-up event for the patient at HLC."
 * status 1..1
 * intent 1..1
 * subject 1..1
@@ -528,7 +528,7 @@ Profile: Allergies
 Parent: AllergyIntolerance
 Id: allergy-intolerance
 Title: "Allergy Intolerance"
-Description: "Used to represent the patient's allergy intolerance."
+Description: "Used to represent the patient's allergies."
 * encounter 1..1
 * code 0..1 MS
 * code ^definition =
@@ -547,7 +547,7 @@ Description: "Used to represent the patient's allergy intolerance."
     "reason(s) why this should be supported."
 * recorder 0..1 MS
 * recorder ^definition =
-    "Sri Lanka team to provide motivation for supporting this element."
+    "reason(s) why this should be supported."
 * type 1..1
 
 Profile: Prescriptions
