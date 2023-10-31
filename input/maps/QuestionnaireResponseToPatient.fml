@@ -5,8 +5,8 @@ uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/RegisterPatientDataD
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" as target
 uses "http://hl7.org/fhir/StructureDefinition/Patient" as target
 
-imports "http://smart.who.int/ig/smart-immunizations-measles/StructureMap/IMMZCQRToLM"
-imports "http://smart.who.int/ig/smart-immunizations-measles/StructureMap/IMMZCLMToPatient"
+imports "http://openhie.org/fhir/sri-lanka/StructureMap/QuestionnaireResponseToLogicalModel"
+imports "http://openhie.org/fhir/sri-lanka/StructureMap/LogicalModelToPatient"
 
 group QRestToIMMZC (
   source qr : QResp,
