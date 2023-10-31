@@ -16,33 +16,49 @@ Usage: #example
 Title: "HIMS Patient"
 Description: "Is used to document demographics and other administrative information about an individual receiving care or other health-related services. In addition to the profiled data elements, this profile includes all data elements from the HHIMS Patient profile."
 
-* identifier[PPN][+].value = "A patient can have multiple passport IDs."
-* identifier[PPN][=].extension[PASSID][+].valueString = "Passport-1"
-* identifier[PPN][=].extension[PASSID][+].valueString = "Passport-2"
+* identifier[PPN][+].value = "Passport-1"
 * identifier[PPN][=].system = "http://openhie.org/fhir/sri-lanka/identifier/passport"
 * identifier[PPN][=].type.coding.code = #PPN
 * identifier[PPN][=].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[PPN][=].type.text = "Passport number"
 
-* identifier[Drivers][+].value = "A patient may have multiple drivers license numbers."
-* identifier[Drivers][=].extension[DriversID][+].valueString = "Drivers license-1"
-* identifier[Drivers][=].extension[DriversID][+].valueString = "Drivers license-2"
+* identifier[PPN][+].value = "Passport-2"
+* identifier[PPN][=].system = "http://openhie.org/fhir/sri-lanka/identifier/passport"
+* identifier[PPN][=].type.coding.code = #PPN
+* identifier[PPN][=].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[PPN][=].type.text = "Passport number"
+
+* identifier[Drivers][+].value = "Drivers license-1"
 * identifier[Drivers][=].system = "http://openhie.org/fhir/sri-lanka/identifier/drivers"
 * identifier[Drivers][=].type.coding.code = #DL
 * identifier[Drivers][=].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[Drivers][=].type.text = "Driver's license number"
 
-* identifier[NIC][+].value = "A patient may have multiple national identity numbers."
-* identifier[NIC][=].extension[NICID][+].valueString = "National identity number-1"
-* identifier[NIC][=].extension[NICID][+].valueString = "National identity number-2"
+* identifier[Drivers][+].value = "Drivers license-2"
+* identifier[Drivers][=].system = "http://openhie.org/fhir/sri-lanka/identifier/drivers"
+* identifier[Drivers][=].type.coding.code = #DL
+* identifier[Drivers][=].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[Drivers][=].type.text = "Driver's license number"
+
+* identifier[NIC][+].value = "National identity number-1"
 * identifier[NIC][=].system = "http://openhie.org/fhir/sri-lanka/identifier/nic"
 * identifier[NIC][=].type.coding.code = #NNLKA
 * identifier[NIC][=].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[NIC][=].type.text = "National identity number"
 
-* identifier[SCN][+].value = "A patient may have multiple senior citizen numbers."
-* identifier[SCN][=].extension[SCNID][+].valueString = "Senior citizen number-1"
-* identifier[SCN][=].extension[SCNID][+].valueString = "Senior citizen number-2"
+* identifier[NIC][+].value = "National identity number-2"
+* identifier[NIC][=].system = "http://openhie.org/fhir/sri-lanka/identifier/nic"
+* identifier[NIC][=].type.coding.code = #NNLKA
+* identifier[NIC][=].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[NIC][=].type.text = "National identity number"
+
+* identifier[SCN][+].value = "Senior citizen number-1"
+* identifier[SCN][=].system = "http://openhie.org/fhir/sri-lanka/identifier/scn"
+* identifier[SCN][=].type.coding.code = #SCN
+* identifier[SCN][=].type.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-identifier-types"
+* identifier[SCN][=].type.text = "Senior Citizen Number"
+
+* identifier[SCN][+].value = "Senior citizen number-2"
 * identifier[SCN][=].system = "http://openhie.org/fhir/sri-lanka/identifier/scn"
 * identifier[SCN][=].type.coding.code = #SCN
 * identifier[SCN][=].type.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-identifier-types"
@@ -83,9 +99,13 @@ InstanceOf: HHIMSPatient
 Usage: #example
 Title: "HHIMS Patient"
 Description: "Is used to document demographics and other administrative information about an HHIMS individual receiving care or other health-related services."
-* identifier[NIC][+].value = "A patient may have multiple national identity numbers."
-* identifier[NIC][=].extension[NICID][+].valueString = "National identity number-1"
-* identifier[NIC][=].extension[NICID][+].valueString = "National identity number-2"
+* identifier[NIC][+].value = "National identity number-1"
+* identifier[NIC][=].system = "http://openhie.org/fhir/sri-lanka/identifier/nic"
+* identifier[NIC][=].type.coding.code = #NNLKA
+* identifier[NIC][=].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[NIC][=].type.text = "National identity number"
+
+* identifier[NIC][+].value = "National identity number-2"
 * identifier[NIC][=].system = "http://openhie.org/fhir/sri-lanka/identifier/nic"
 * identifier[NIC][=].type.coding.code = #NNLKA
 * identifier[NIC][=].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
@@ -142,13 +162,17 @@ InstanceOf: ProvidersLocation
 Usage: #example
 Title: "Providers Location"
 Description: "Represents the physical location of the provider."
-* identifier[LocationID][+].value = "A provider's location may be associated with multiple identifiers."
-* identifier[LocationID][=].extension[LocID][+].valueString = "Location-ID-1"
-* identifier[LocationID][=].extension[LocID][+].valueString = "Location-ID-2"
+* identifier[LocationID][+].value = "Location-ID-1"
 * identifier[LocationID][=].system = "http://openhie.org/fhir/sri-lanka/identifier/provider-location"
 * identifier[LocationID][=].type.coding.code = #PIN
 * identifier[LocationID][=].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[LocationID].type.text = "Provider location identifier"
+* identifier[LocationID][=].type.text = "Provider location identifier"
+
+* identifier[LocationID][+].value = "Location-ID-2"
+* identifier[LocationID][=].system = "http://openhie.org/fhir/sri-lanka/identifier/provider-location"
+* identifier[LocationID][=].type.coding.code = #PIN
+* identifier[LocationID][=].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[LocationID][=].type.text = "Provider location identifier"
 * name = "Name for the location"
 * status = #active
 * address[+].country = "Sri Lanka"
