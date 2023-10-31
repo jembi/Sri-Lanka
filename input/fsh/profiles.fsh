@@ -70,13 +70,13 @@ Description: "Represents the physical location of the provider."
 * identifier ^slicing.ordered = false
 * identifier ^slicing.description = "Slice based on the type of identifier."
 * identifier contains
-    LocationID 0..1 MS
+    LocationID 0..* MS
 
 * identifier[LocationID] ^definition =
     "reason(s) why this should be supported."
-* identifier[LocationID].extension contains MultipleValuesForPatientIdentifier named LocID 1..*
+//* identifier[LocationID].extension contains MultipleValuesForPatientIdentifier named LocID 1..*
 * identifier[LocationID].value 1..1
-* identifier[LocationID].value = "A provider's location may be associated with multiple identifiers."
+//* identifier[LocationID].value = "A provider's location may be associated with multiple identifiers."
 * identifier[LocationID].system = "http://openhie.org/fhir/sri-lanka/identifier/provider-location"
 * identifier[LocationID].type.coding.code = #PIN
 * identifier[LocationID].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
@@ -117,13 +117,13 @@ Description:
 * identifier ^slicing.ordered = false
 * identifier ^slicing.description = "Slice based on the type of identifier."
 * identifier contains
-    PPN 1..1 and
-    Drivers 0..1 MS and
-    SCN 0..1 MS
+    PPN 1..* and
+    Drivers 0..* MS and
+    SCN 0..* MS
 
-* identifier[PPN].extension contains MultipleValuesForPatientIdentifier named PASSID 1..*
+//* identifier[PPN].extension contains MultipleValuesForPatientIdentifier named PASSID 1..*
 * identifier[PPN].value 1..1
-* identifier[PPN].value = "A patient can have multiple passport IDs."
+//* identifier[PPN].value = "A patient can have multiple passport IDs."
 * identifier[PPN].system = "http://openhie.org/fhir/sri-lanka/identifier/passport"
 * identifier[PPN].type.coding.code = #PPN
 * identifier[PPN].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
@@ -131,9 +131,9 @@ Description:
 
 * identifier[Drivers] ^definition =
     "reason(s) why this should be supported."
-* identifier[Drivers].extension contains MultipleValuesForPatientIdentifier named DriversID 1..*
+//* identifier[Drivers].extension contains MultipleValuesForPatientIdentifier named DriversID 1..*
 * identifier[Drivers].value 1..1
-* identifier[Drivers].value = "A patient may have multiple drivers license numbers."
+//* identifier[Drivers].value = "A patient may have multiple drivers license numbers."
 * identifier[Drivers].system = "http://openhie.org/fhir/sri-lanka/identifier/drivers"
 * identifier[Drivers].type.coding.code = #DL
 * identifier[Drivers].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
@@ -141,15 +141,15 @@ Description:
 
 * identifier[SCN] ^definition =
     "reason(s) why this should be supported."
-* identifier[SCN].extension contains MultipleValuesForPatientIdentifier named SCNID 1..*
+//* identifier[SCN].extension contains MultipleValuesForPatientIdentifier named SCNID 1..*
 * identifier[SCN].value 1..1
-* identifier[SCN].value = "A patient may have multiple senior citizen numbers."
+//* identifier[SCN].value = "A patient may have multiple senior citizen numbers."
 * identifier[SCN].system = "http://openhie.org/fhir/sri-lanka/identifier/scn"
 * identifier[SCN].type.coding.code = #SCN
 * identifier[SCN].type.coding.system = "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-identifier-types"
 * identifier[SCN].type.text = "Senior Citizen Number"
 
-Extension: MultipleValuesForPatientIdentifier
+/*Extension: MultipleValuesForPatientIdentifier
 Id: multiple-values-for-patient-identifier
 Title: "Extension For Patient Idenitifiers Needing Multiple Values"
 Description: "This extension can be used by those patient identifiers where multiple values need to be associated with a single identifier slice."
@@ -157,7 +157,7 @@ Description: "This extension can be used by those patient identifiers where mult
 * ^context[+].type = #element
 * ^context[=].expression = "Patient.identifier"
 * ^context[+].type = #element
-* ^context[=].expression = "Location.identifier"
+* ^context[=].expression = "Location.identifier"*/
 
 Profile: HHIMSPatient
 Parent: Patient
@@ -171,14 +171,14 @@ Description: "Is used to document demographics and other administrative informat
 * identifier ^slicing.ordered = false
 * identifier ^slicing.description = "Slice based on the type of identifier."
 * identifier contains
-    NIC 0..1 MS and
+    NIC 0..* MS and
     PHN 1..1
 
 * identifier[NIC] ^definition =
     "reason(s) why this should be supported."
-* identifier[NIC].extension contains MultipleValuesForPatientIdentifier named NICID 1..*
+//* identifier[NIC].extension contains MultipleValuesForPatientIdentifier named NICID 1..*
 * identifier[NIC].value 1..1
-* identifier[NIC].value = "A patient may have multiple national identity numbers."
+//* identifier[NIC].value = "A patient may have multiple national identity numbers."
 * identifier[NIC].system = "http://openhie.org/fhir/sri-lanka/identifier/nic"
 * identifier[NIC].type.coding.code = #NNLKA
 * identifier[NIC].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
