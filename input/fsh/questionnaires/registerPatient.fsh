@@ -7,7 +7,7 @@ Usage: #definition
 * status = #draft
 * subjectType = #Patient
 * language = #en
-* contained[+] = RegisterPatientCodes.RP9
+//* contained[+] = RegisterPatientCodes.RP9
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
 * extension[=].valueCanonical = "http://openhie.org/fhir/sri-lanka/StructureMap/QuestionnaireResponseToPatient"
 
