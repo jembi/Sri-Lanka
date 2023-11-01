@@ -38,6 +38,9 @@ group LogicalModelToPatient (
   immzc.patientName as patient -> patient.name as pName
     then NameToHumanName( patient, pName ) "SetPatientNames";
 
+ immzc.patientName as patientName -> patient.name as hname 
+    then NameToHumanName( patientName, hname ) "SetPatientNames";
+
  /* immzc.phone as phone -> patient.telecom as telecom then {
     phone as content -> telecom.value = content, telecom.system = 'phone' "SetPhoneValue";
   } "SetPhone";*/
@@ -56,7 +59,7 @@ group NameToHumanName (
   source name,
   target hname
 ) {
-  name.name as fullName -> pName.text = fullName "SetFullName";
-  name.firstName as firstName -> pName.given = firstName "SetFirstName";
-  name.familyName as surname -> pName.family = surname "SetFamilyName";
+  name.fullName as fullName -> hname.text = fullName "SetFullName";
+  name.firstName as firstName -> hname.given = firstName "SetFirstName";
+  name.surname as surname -> hname.family = surname "SetFamilyName";
 }

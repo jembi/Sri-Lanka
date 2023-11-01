@@ -26,16 +26,16 @@ group QRespToIMMZC ( source qr : QResp, target immzc : IMMZC) {
       answer.value as content -> immzc.seniorCitizenNumber = content  "SetSeniorCitizenNumber";
     } "FirstAnswerForSCN";
 
-    item.answer as patient where item.linkId = 'patient' -> immzc.patient as pat 
-      then FullNameToIMMZC( patient, pat ) "SetPatientNames";
+    item.answer as patientName where item.linkId = 'patientName' -> immzc.patientName as pat 
+      then FullNameToIMMZC( patientName, pat ) "SetPatientNames";
 
-    item.answer first as answer where item.linkId = 'firstName' then {
+    /*item.answer first as answer where item.linkId = 'firstName' then {
       answer.value as content -> immzc.firstName = content "SetFirstName";
-    } "FirstAnswerForFirstName";
+    } "FirstAnswerForFirstName";*/
 
-    item.answer first as answer where item.linkId = 'surname' then {
+    /*item.answer first as answer where item.linkId = 'surname' then {
      answer.value as content -> immzc.surname = content "SetSurname";
-    } "FirstAnswerForSurname";
+    } "FirstAnswerForSurname";*/
   
     item.answer first as answer where item.linkId = 'sex' then {
       answer.value as coding then {
