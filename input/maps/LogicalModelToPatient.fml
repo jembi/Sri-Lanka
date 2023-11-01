@@ -9,24 +9,24 @@ group DataDictToPatient (
   target patient: Patient
 ) {
 
-  immzc.personalHealthNumber as id -> patient.identifier as identifier then {
-    id -> identifier.value = id "SetPersonalHealthNumberValue";
+  immzc.personalHealthNumber as id1 -> patient.identifier as identifier then {
+    id1 -> identifier.value = id1 "SetPersonalHealthNumberValue";
   } "SetPHN";
 
-   immzc.nationalIdentityCard as id -> patient.identifier as identifier then {
-    id -> identifier.value = id "SetNationalIdentityCardNumberValue";
+  immzc.nationalIdentityCard as id2 -> patient.identifier as identifier then {
+    id2 -> identifier.value = id2 "SetNationalIdentityCardNumberValue";
   } "SetNIC";
 
-   immzc.pasport as id -> patient.identifier as identifier then {
-    id -> identifier.value = id "SetPassportNumberValue";
+  immzc.pasport as id3 -> patient.identifier as identifier then {
+    id3 -> identifier.value = id3 "SetPassportNumberValue";
   } "SetPassport";
 
-   immzc.drivingLicense as id -> patient.identifier as identifier then {
-    id -> identifier.value = id "SetDrivingLicenseNumberValue";
+  immzc.drivingLicense as id4 -> patient.identifier as identifier then {
+    id4 -> identifier.value = id4 "SetDrivingLicenseNumberValue";
   } "SetDL";
 
-   immzc.seniorCitizenNumber as id -> patient.identifier as identifier then {
-    id -> identifier.value = id "SetSeniorCitizenNumberValue";
+  immzc.seniorCitizenNumber as id5 -> patient.identifier as identifier then {
+    id5 -> identifier.value = id5 "SetSeniorCitizenNumberValue";
   } "SetSCN";
   
   //immzc -> patient.name as pname then NameToHumanName( immzc, pname ) "SetName";
@@ -38,8 +38,14 @@ group DataDictToPatient (
   //immzc.patientName as patient -> patient.name as pName
     //then NameToHumanName( patient, pName ) "SetPatientNames";
 
- immzc.patientName as patientName -> patient.name as hname 
+  immzc.patientName as patientName -> patient.name as hname 
     then NameToHumanName( patientName, hname ) "SetPatientNames";
+
+  immzc.address as address -> patient.address as haddy 
+    then AddyToAddress( address, haddy ) "SetAddresses";
+
+  immzc.contactDetails as contactDetails -> patient.telecom as hcontact 
+    then ContactDetailsToContactPoint( contactDetails, hcontact ) "SetContactDetails";
 
  /* immzc.phone as phone -> patient.telecom as telecom then {
     phone as content -> telecom.value = content, telecom.system = 'phone' "SetPhoneValue";
@@ -62,4 +68,23 @@ group NameToHumanName (
   name.fullName as fullName -> hname.text = fullName "SetFullName";
   name.firstName as firstName -> hname.given = firstName "SetFirstName";
   name.surname as surname -> hname.family = surname "SetFamilyName";
+}
+
+group AddyToAddress (
+  source address,
+  target haddy
+) {
+  address.streetNameAndNr as streetNameAndNr -> haddy.line = streetNameAndNr "SetStreetNameAndNr";
+  address.city as city -> haddy.city = city "SetCity";
+  address.state as state -> haddy.state = state "SetState";
+  address.country as country -> haddy.country = country "SetCountry";
+  address.postalCode as postalCode -> haddy.postalCode = postalCode "SetPostalCode";
+}
+
+group ContactDetailsToContactPoint (
+  source contact,
+  target hcontact
+) {
+  contact.mobileNumber as mobileNumber -> hcontact.value = mobileNumber "SetMobileNumber";
+  contact.landline as landline -> hcontact.value = landline "SetLandline";
 }
