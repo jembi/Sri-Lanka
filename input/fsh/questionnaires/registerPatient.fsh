@@ -69,32 +69,32 @@ Usage: #definition
   * code[+] = $SCT#184097001 "Patient address"
 
   * insert Question(streetNameAndNr, Street name and number,string,false,false)
-    * item[=]
-      * code[+] = RegisterPatientCodes#RP11
-      * code[+] = $LNC#56799-0 "Address"
-      * code[+] = $SCT#184097001 "Patient address"
+  * item[=]
+    * code[+] = RegisterPatientCodes#RP11
+    * code[+] = $LNC#56799-0 "Address"
+    * code[+] = $SCT#184097001 "Patient address"
 
   * insert Question(city, Address city,string,false,false)
-    * item[=]
-      * code[+] = RegisterPatientCodes#RP10
-      * code[+] = $LNC#LP117862-5 "City"
-      * code[+] = $SCT#433178008 "City of residence"
+  * item[=]
+    * code[+] = RegisterPatientCodes#RP10
+    * code[+] = $LNC#LP117862-5 "City"
+    * code[+] = $SCT#433178008 "City of residence"
 
   * insert Question(state, Address state,string,false,false)
-    * item[=]
-      * code[+] = RegisterPatientCodes#RP12
-      * code[+] = $LNC#46499-0 "State of residence"
+  * item[=]
+    * code[+] = RegisterPatientCodes#RP12
+    * code[+] = $LNC#46499-0 "State of residence"
 
   * insert Question(country, Address country,string,false,false)
-    * item[=]
-      * code[+] = RegisterPatientCodes#RP13
-      * code[+] = $SCT#416647007 "Country of residence"
+  * item[=]
+    * code[+] = RegisterPatientCodes#RP13
+    * code[+] = $SCT#416647007 "Country of residence"
 
   * insert Question(postalCode, Address postal code,string,false,false)
-    * item[=]
-      * code[+] = RegisterPatientCodes#RP14
-      * code[+] = $LNC#45401-7 "Postal code"
-      * code[+] = $SCT#184102003 "Patient postal code"
+  * item[=]
+    * code[+] = RegisterPatientCodes#RP14
+    * code[+] = $LNC#45401-7 "Postal code"
+    * code[+] = $SCT#184102003 "Patient postal code"
 
 * insert Question(birthDate, Birth Date,date,false,false)
 * item[=]

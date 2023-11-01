@@ -35,8 +35,8 @@ group DataDictToPatient (
 
   immzc.birthDate as birthDate -> patient.birthDate = birthDate "SetBirthDate";
 
-  immzc.patientName as patient -> patient.name as pName
-    then NameToHumanName( patient, pName ) "SetPatientNames";
+  //immzc.patientName as patient -> patient.name as pName
+    //then NameToHumanName( patient, pName ) "SetPatientNames";
 
  immzc.patientName as patientName -> patient.name as hname 
     then NameToHumanName( patientName, hname ) "SetPatientNames";

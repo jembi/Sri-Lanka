@@ -26,16 +26,16 @@ group QRespToIMMZC ( source qr : QResp, target immzc : IMMZC) {
       answer.value as content -> immzc.seniorCitizenNumber = content  "SetSeniorCitizenNumber";
     } "FirstAnswerForSCN";
 
-    //item.answer as patientName where item.linkId = 'patientName' -> immzc.patientName as pat 
-      //then FullNameToIMMZC( patientName, pat ) "SetPatientNames";
+    item.answer as patientName where item.linkId = 'patientName' -> immzc.patientName as pat 
+      then FullNameToIMMZC( patientName, pat ) "SetPatientNames";
 
-    item.answer first as answer where item.linkId = 'firstName' then {
-      answer.value as content -> immzc.firstName = content "SetFirstName";
-    } "FirstAnswerForFirstName";
+    //item.answer first as answer where item.linkId = 'firstName' then {
+    //  answer.value as content -> immzc.firstName = content "SetFirstName";
+    //} "FirstAnswerForFirstName";
 
-    item.answer first as answer where item.linkId = 'surname' then {
-     answer.value as content -> immzc.surname = content "SetSurname";
-    } "FirstAnswerForSurname";
+    //item.answer first as answer where item.linkId = 'surname' then {
+    // answer.value as content -> immzc.surname = content "SetSurname";
+    //} "FirstAnswerForSurname";
   
     item.answer first as answer where item.linkId = 'sex' then {
       answer.value as coding then {
@@ -54,7 +54,7 @@ group QRespToIMMZC ( source qr : QResp, target immzc : IMMZC) {
 
     /*item.answer first as answer where item.linkId = 'phone' then {
        answer.value as content -> immzc.phone = content  "SetPhone";
-     } "FirstAnswerForPhone";*/
+    } "FirstAnswerForPhone";*/
   } "processItems";
 } "QRespToIMMZC";
 
