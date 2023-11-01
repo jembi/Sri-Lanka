@@ -18,7 +18,7 @@ group QRestToIMMZC (
     create("http://openhie.org/fhir/sri-lanka/StructureDefinition/RegisterPatientDataDictionary") as model
       then{
         qr -> model then QRespToIMMZC( qr, model) "QRtoLM";
-        qr -> patient then IMMZCToPatient( model, patient ) "LMtoPatient";
+        qr -> patient then LogicalModelToPatient( model, patient ) "LMtoPatient";
         qr -> patient.active = true "rulePatientActive";
       } "QRtoPatient";
 }
