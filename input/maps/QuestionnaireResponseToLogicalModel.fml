@@ -27,13 +27,13 @@ group QRespToIMMZC ( source qr : QResp, target immzc : IMMZC) {
     } "FirstAnswerForSCN";
 
     //item.answer as patientName where item.linkId = 'patientName' -> immzc.patientName as pat 
-      then FullNameToIMMZC( patientName, pat ) "SetPatientNames";
+      //then FullNameToIMMZC( patientName, pat ) "SetPatientNames";
 
     item.answer first as answer where item.linkId = 'firstName' then {
       answer.value as content -> immzc.firstName = content "SetFirstName";
-    } "FirstAnswerForFirstName";*/
+    } "FirstAnswerForFirstName";
 
-    /*item.answer first as answer where item.linkId = 'surname' then {
+    item.answer first as answer where item.linkId = 'surname' then {
      answer.value as content -> immzc.surname = content "SetSurname";
     } "FirstAnswerForSurname";
   
@@ -56,7 +56,7 @@ group QRespToIMMZC ( source qr : QResp, target immzc : IMMZC) {
        answer.value as content -> immzc.phone = content  "SetPhone";
      } "FirstAnswerForPhone";*/
   } "processItems";
-}
+} "QRespToIMMZC";
 
 group FullNameToIMMZC( source name, target immzc) {
   name.item as item then 
@@ -72,4 +72,4 @@ group FullNameToIMMZC( source name, target immzc) {
       } "set";
     } "FirstAnswerForFullName";
   } "processNameItems";
-}
+} "FullNameToIMMZC";
