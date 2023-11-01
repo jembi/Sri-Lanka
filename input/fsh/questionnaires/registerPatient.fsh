@@ -14,19 +14,22 @@ Usage: #definition
 * insert Question(personalHealthNumber, Unique identifier for the patient,string,true,false)
 * item[=]
   * code[+] = RegisterPatientCodes#RP1
+
 * insert Question(nationalIdentityCard, Unique identifier for the patient,string,true,false)
 * item[=]
   * code[+] = RegisterPatientCodes#RP2
+
 * insert Question(pasport, Unique identifier for the patient,string,true,false)
 * item[=]
   * code[+] = RegisterPatientCodes#RP3
+
 * insert Question(drivingLicense, Unique identifier for the patient,string,true,false)
 * item[=]
   * code[+] = RegisterPatientCodes#RP4
+
 * insert Question(seniorCitizenNumber, Unique identifier for the patient,string,true,false)
 * item[=]
   * code[+] = RegisterPatientCodes#RP5
-
 
 * insert Question(patientName, Patient name, group, false,false)
 * item[=]
