@@ -31,7 +31,7 @@ Usage: #definition
 * item[=]
   * code[+] = CSRegisterPatientCodes#RP5
 
-* insert Question(patientName, Names, group, false,false)
+* insert Question(patientName, Name, group, false,false)
 * item[=]
   * code[+] = CSRegisterPatientCodes#RP18
   * code[+] = $LNC#54125-0 "Patient name"
@@ -62,7 +62,7 @@ Usage: #definition
   * code[+] = $LNC#46098-0	"Sex"
   * code[+] = $SCT#184100006 "Patient sex"
 
-* insert Question(address, Addresses, group, false,false)
+* insert Question(address, Address, group, false,false)
 * item[=]
   * code[+] = CSRegisterPatientCodes#RP19
   * code[+] = $LNC#56799-0 "Address"
@@ -74,23 +74,23 @@ Usage: #definition
     * code[+] = $LNC#56799-0 "Address"
     * code[+] = $SCT#184097001 "Patient address"
 
-  * insert Question(city, Address city,string,false,false)
+  * insert Question(city, City,string,false,false)
   * item[=]
     * code[+] = CSRegisterPatientCodes#RP10
     * code[+] = $LNC#LP117862-5 "City"
     * code[+] = $SCT#433178008 "City of residence"
 
-  * insert Question(state, Address state,string,false,false)
+  * insert Question(state, State,string,false,false)
   * item[=]
     * code[+] = CSRegisterPatientCodes#RP12
     * code[+] = $LNC#46499-0 "State of residence"
 
-  * insert Question(country, Address country,string,false,false)
+  * insert Question(country, Country,string,false,false)
   * item[=]
     * code[+] = CSRegisterPatientCodes#RP13
     * code[+] = $SCT#416647007 "Country of residence"
 
-  * insert Question(postalCode, Address postal code,string,false,false)
+  * insert Question(postalCode, Postal code,string,false,false)
   * item[=]
     * code[+] = CSRegisterPatientCodes#RP14
     * code[+] = $LNC#45401-7 "Postal code"
