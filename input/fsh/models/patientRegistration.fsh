@@ -53,10 +53,10 @@ Description:  "Data elements for the Register Patient Data Dictionary."
   * ^code[+] = CSRegisterPatientCodes#RP20
   * mobileNumber 0..1  string "Mobile phone number" "Patient's mobile phone number"
     * ^code[+] = CSRegisterPatientCodes#RP16
-    * ^code[+] = http://hl7.org/fhir/contact-point-system#phone
+    //* ^code[+] = http://hl7.org/fhir/contact-point-system#phone
   * landline 0..1  string "Landline phone number" "Patient's landline phone number"
     * ^code[+] = CSRegisterPatientCodes#RP17
-    * ^code[+] = http://hl7.org/fhir/contact-point-system#phone
+    //* ^code[+] = http://hl7.org/fhir/contact-point-system#phone
 
 Mapping: RegisterPatientDataDictionary-to-Patient
 Source: RegisterPatientDataDictionary

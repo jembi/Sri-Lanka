@@ -1430,13 +1430,13 @@ Description:  "CodeSystem for Register Patient Data Elements"
 * #RP23 "Unknown" "Client's biological sex is unknown"
 * #RP24 "Other" "Client's biological sex is other"
 
-ValueSet: VSRegisterPatientCodes
+/*ValueSet: VSRegisterPatientCodes
 Id: vs-register-patient-codes
 Title:        "Register Patient ValueSet for Data Elements"
 Description:  "ValueSet for Register Patient Data Elements"
 * ^experimental = false
 * ^status = #active
-* include codes from system CSRegisterPatientCodes
+* include codes from system CSRegisterPatientCodes*/
 
 ValueSet: VSSex
 Id: vs-sex
@@ -1444,6 +1444,7 @@ Title:        "Sex ValueSet for Data Elements"
 Description:  "ValueSet for Sex"
 * ^experimental = false
 * ^status = #active
+
 * CSRegisterPatientCodes#RP21 "Male"
 * CSRegisterPatientCodes#RP22 "Female"
 * CSRegisterPatientCodes#RP23 "Unknown"
