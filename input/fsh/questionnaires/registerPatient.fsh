@@ -106,12 +106,12 @@ Usage: #definition
 * item[=]
   * code[+] = CSRegisterPatientCodes#RP20
 
-  * insert Question(mobileNumber, Patient mobile number,string,true,false)
+  * insert Question(mobileNumber, Patient mobile number,string,false,false)
   * item[=]
     * code[+] = CSRegisterPatientCodes#RP16
     * code[+] = $SCT#428481002 "Patient mobile telephone number"
 
-  * insert Question(landline, Patient landline number,string,true,false)
+  * insert Question(landline, Patient landline number,string,false,false)
   * item[=]
     * code[+] = CSRegisterPatientCodes#RP17
     * code[+] = $SCT#429697006 "Patient home telephone number"
