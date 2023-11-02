@@ -15,19 +15,19 @@ Usage: #definition
 * item[=]
   * code[+] = CSRegisterPatientCodes#RP1
 
-* insert Question(nationalIdentityCard, National identity card,string,true,false)
+* insert Question(nationalIdentityCard, National identity card,string,false,false)
 * item[=]
   * code[+] = CSRegisterPatientCodes#RP2
 
-* insert Question(pasport, Passport,string,true,false)
+* insert Question(pasport, Passport,string,false,false)
 * item[=]
   * code[+] = CSRegisterPatientCodes#RP3
 
-* insert Question(drivingLicense, Driving license,string,true,false)
+* insert Question(drivingLicense, Driving license,string,false,false)
 * item[=]
   * code[+] = CSRegisterPatientCodes#RP4
 
-* insert Question(seniorCitizenNumber, Senior citizen number,string,true,false)
+* insert Question(seniorCitizenNumber, Senior citizen number,string,false,false)
 * item[=]
   * code[+] = CSRegisterPatientCodes#RP5
 
