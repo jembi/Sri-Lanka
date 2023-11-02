@@ -21,7 +21,7 @@ Description:  "Data elements for the Register Patient Data Dictionary."
 * seniorCitizenNumber 0..* SU  string "Senior citizen number" "Unique identifier for the patient, according to the policies applicable to each country."
   * ^code[+] = CSRegisterPatientCodes#RP5
 
-* patientName 0..*  BackboneElement "Name" "Names"
+* patientName 0..*  BackboneElement "Name" "Name"
   * ^code[+] = CSRegisterPatientCodes#RP18
   * fullName 0..1  string "Full name" "Patient's full name"
     * obeys RegisterPatient-name-1
@@ -35,17 +35,17 @@ Description:  "Data elements for the Register Patient Data Dictionary."
 * sex 1..1 code "Sex" "Documentation of a specific instance of sex information for the patient"
   * ^code[+] = CSRegisterPatientCodes#RP9
 * sex from VSSex (required)
-* address 0..*  BackboneElement "Address" "Addresses"
+* address 0..*  BackboneElement "Address" "Address"
   * ^code[+] = CSRegisterPatientCodes#RP19
-  * streetNameAndNr 0..1  string "Street name and number" "Address street name and number"
+  * streetNameAndNr 0..1  string "Street name and number" "Street name and number"
     * ^code[+] = CSRegisterPatientCodes#RP11
-  * city 0..1  string "City" "Address city"
+  * city 0..1  string "City" "City"
     * ^code[+] = CSRegisterPatientCodes#RP10
-  * state 0..1  string "State" "Address state"
+  * state 0..1  string "State" "State"
     * ^code[+] = CSRegisterPatientCodes#RP12
-  * country 0..1  string "Country" "Address country"
+  * country 0..1  string "Country" "Country"
     * ^code[+] = CSRegisterPatientCodes#RP13
-  * postalCode 0..1  string "Postal code" "Address postal code"
+  * postalCode 0..1  string "Postal code" "Postal code"
     * ^code[+] = CSRegisterPatientCodes#RP14
 * birthDate 1..1 date "Date of birth" "Patient's date of birth (DOB) if known; if unknown, use assigned DOB for administrative purposes"
   * ^code[+] = CSRegisterPatientCodes#RP15
