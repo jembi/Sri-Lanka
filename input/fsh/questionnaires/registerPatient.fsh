@@ -7,7 +7,7 @@ Usage: #definition
 * status = #draft
 * subjectType = #Patient
 * language = #en
-* contained[+] = VSSex
+//* contained[+] = VSSex
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
 * extension[=].valueCanonical = "http://openhie.org/fhir/sri-lanka/StructureMap/QuestionnaireResponseToPatient"
 
@@ -57,7 +57,7 @@ Usage: #definition
 
 * insert Question(sex, Sex,choice,true,false)
 * item[=]
-  * answerValueSet = "#vs-sex"
+  * answerValueSet = Canonical(VSSex)
   * code[+] = CSRegisterPatientCodes#RP9
   * code[+] = $LNC#46098-0	"Sex"
   * code[+] = $SCT#184100006 "Patient sex"
