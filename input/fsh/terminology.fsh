@@ -2,7 +2,7 @@ Alias: $LNC = http://loinc.org
 Alias: $SCT = http://snomed.info/sct
 Alias: $SCT_or_SCTINT = http://snomed.info/sct|http://snomed.info/sct/900000000000207008
 Alias: $DICOM = http://dicom.nema.org/resources/ontology/DCM
-Alias: $GENDER = http://hl7.org/fhir/administrative-gender
+//Alias: $GENDER = http://hl7.org/fhir/administrative-gender
 
 /*CodeSystem: CSRiskBehaviourPhysicalActivity
 Id: cs-risk-behaviour-physical-activity
@@ -1423,10 +1423,10 @@ Description:  "CodeSystem for Register Patient Data Elements"
 * #RP18 "Name (Multiple)" "Patient names"
 * #RP19 "Address (Multiple)" "Patient addresses"
 * #RP20 "Contact details (Multiple)" "Patient contact details"
-* #RP21 "Male" "Client's biological sex is male"
-* #RP22 "Female" "Client's biological sex is female"
-* #RP23 "Unknown" "Client's biological sex is unknown"
-* #RP24 "Other" "Client's biological sex is other"
+//* #RP21 "Male" "Patient's biological sex is male"
+//* #RP22 "Female" "Patient's biological sex is female"
+//* #RP23 "Unknown" "Patient's biological sex is unknown"
+//* #RP24 "Other" "Patient's biological sex is other"
 
 /*ValueSet: VSRegisterPatientCodes
 Id: vs-register-patient-codes
@@ -1436,7 +1436,8 @@ Description:  "ValueSet for Register Patient Data Elements"
 * ^status = #active
 * include codes from system CSRegisterPatientCodes*/
 
-ValueSet: VSSex
+
+/*ValueSet: VSSex
 Id: vs-sex
 Title:        "Sex ValueSet for Data Elements"
 Description:  "ValueSet for Sex"
@@ -1444,4 +1445,4 @@ Description:  "ValueSet for Sex"
 * CSRegisterPatientCodes#RP21 "Male"
 * CSRegisterPatientCodes#RP22 "Female"
 * CSRegisterPatientCodes#RP23 "Unknown"
-* CSRegisterPatientCodes#RP24 "Other"
+* CSRegisterPatientCodes#RP24 "Other"*/

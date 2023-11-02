@@ -57,7 +57,7 @@ Usage: #definition
 
 * insert Question(sex, Sex,choice,true,false)
 * item[=]
-  * answerValueSet = Canonical(VSSex)
+  * answerValueSet = Canonical(http://hl7.org/fhir/ValueSet/administrative-gender)
   * code[+] = CSRegisterPatientCodes#RP9
   * code[+] = $LNC#46098-0	"Sex"
   * code[+] = $SCT#184100006 "Patient sex"
