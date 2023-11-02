@@ -3,6 +3,9 @@ map "http://openhie.org/fhir/sri-lanka/StructureMap/QuestionnaireResponseToLogic
 uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias QResp as source
 uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/RegisterPatientDataDictionary" alias IMMZC as target
 
+name = "Questionnaire Response To Logical Model"
+description = "Maps the Questionnaire Response to the Logical Model data elements."
+
 group QRespToIMMZC ( source qr : QResp, target immzc : IMMZC) {
   qr.item as item then {
 

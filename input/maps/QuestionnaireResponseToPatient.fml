@@ -8,6 +8,9 @@ uses "http://hl7.org/fhir/StructureDefinition/Patient" as target
 imports "http://openhie.org/fhir/sri-lanka/StructureMap/QuestionnaireResponseToLogicalModel"
 imports "http://openhie.org/fhir/sri-lanka/StructureMap/LogicalModelToPatient"
 
+name = "Questionnaire Response To Patient"
+description = "Maps the Questionnaire Response to the Patient resource data elements."
+
 group QRestToIMMZC (
   source qr : QResp,
   target bundle: Bundle

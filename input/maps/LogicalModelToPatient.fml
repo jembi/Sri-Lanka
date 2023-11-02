@@ -4,6 +4,9 @@ uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/RegisterPatientDataD
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias Bundle as target
 uses "http://hl7.org/fhir/StructureDefinition/Patient" alias Patient as target
 
+name = "Logical Model To Patient"
+description = "Maps the logical model data elements to the Patient resource data elements."
+
 group DataDictToPatient (
   source immzc : IMMZC,
   target patient: Patient
