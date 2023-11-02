@@ -62,7 +62,7 @@ group QRespToIMMZC ( source qr : QResp, target immzc : IMMZC) {
     item.answer as contactDetails where item.linkId = 'contactDetails' -> immzc.contactDetails as contact 
       then ContactDetailsIMMZC( contactDetails, contact ) "SetContactDetails";
   } "processItems";
-}
+} "processQRespToIMMZC";
 
 group FullNameToIMMZC( source name, target immzc) {
   name.item as item then 
