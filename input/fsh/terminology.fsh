@@ -1403,7 +1403,6 @@ Title:        "Register Patient CodeSystem for Data Elements"
 Description:  "CodeSystem for Register Patient Data Elements"
 * ^experimental = false
 * ^caseSensitive = false
-* ^name = "RegisterPatientCodes"
 * #RP1 "Personal health number" "Unique identifier for the patient, according to the policies applicable to each country."
 * #RP2 "National identity card" "Unique identifier for the patient, according to the policies applicable to each country."
 * #RP3 "Passport" "Unique identifier for the patient, according to the policies applicable to each country."
@@ -1424,7 +1423,6 @@ Description:  "CodeSystem for Register Patient Data Elements"
 * #RP18 "Name (Multiple)" "Patient names"
 * #RP19 "Address (Multiple)" "Patient addresses"
 * #RP20 "Contact details (Multiple)" "Patient contact details"
-
 * #RP21 "Male" "Client's biological sex is male"
 * #RP22 "Female" "Client's biological sex is female"
 * #RP23 "Unknown" "Client's biological sex is unknown"
@@ -1443,8 +1441,6 @@ Id: vs-sex
 Title:        "Sex ValueSet for Data Elements"
 Description:  "ValueSet for Sex"
 * ^experimental = false
-* ^status = #active
-
 * CSRegisterPatientCodes#RP21 "Male"
 * CSRegisterPatientCodes#RP22 "Female"
 * CSRegisterPatientCodes#RP23 "Unknown"
