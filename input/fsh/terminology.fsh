@@ -2,6 +2,7 @@ Alias: $LNC = http://loinc.org
 Alias: $SCT = http://snomed.info/sct
 Alias: $SCT_or_SCTINT = http://snomed.info/sct|http://snomed.info/sct/900000000000207008
 Alias: $DICOM = http://dicom.nema.org/resources/ontology/DCM
+Alias: $GENDER = http://hl7.org/fhir/administrative-gender
 
 /*CodeSystem: CSRiskBehaviourPhysicalActivity
 Id: cs-risk-behaviour-physical-activity
@@ -1396,13 +1397,13 @@ Description: "Imaging Procedures"
 * ^experimental = false
 * include codes from system CSImagingProcedures
 
-CodeSystem:   RegisterPatientCodes
+CodeSystem:   CSRegisterPatientCodes
+Id: cs-register-patient-codes
 Title:        "Register Patient CodeSystem for Data Elements"
 Description:  "CodeSystem for Register Patient Data Elements"
-
 * ^experimental = false
 * ^caseSensitive = false
-* ^name = "IMMZ_C"
+* ^name = "RegisterPatientCodes"
 * #RP1 "Personal health number" "Unique identifier for the patient, according to the policies applicable to each country."
 * #RP2 "National identity card" "Unique identifier for the patient, according to the policies applicable to each country."
 * #RP3 "Passport" "Unique identifier for the patient, according to the policies applicable to each country."
@@ -1423,3 +1424,27 @@ Description:  "CodeSystem for Register Patient Data Elements"
 * #RP18 "Name (Multiple)" "Patient names"
 * #RP19 "Address (Multiple)" "Patient addresses"
 * #RP20 "Contact details (Multiple)" "Patient contact details"
+
+* #RP21 "Male" "Client's biological sex is male"
+* #RP22 "Female" "Client's biological sex is female"
+* #RP23 "Unknown" "Client's biological sex is unknown"
+* #RP24 "Other" "Client's biological sex is other"
+
+ValueSet: VSRegisterPatientCodes
+Id: vs-register-patient-codes
+Title:        "Register Patient ValueSet for Data Elements"
+Description:  "ValueSet for Register Patient Data Elements"
+* ^experimental = false
+* ^status = #active
+* include codes from system CSRegisterPatientCodes
+
+ValueSet: VSSex
+Id: vs-sex
+Title:        "Sex ValueSet for Data Elements"
+Description:  "ValueSet for Sex"
+* ^experimental = false
+* ^status = #active
+* CSRegisterPatientCodes#RP21 "Male"
+* CSRegisterPatientCodes#RP22 "Female"
+* CSRegisterPatientCodes#RP23 "Unknown"
+* CSRegisterPatientCodes#RP24 "Other"
