@@ -24,4 +24,4 @@ group QRestToIMMZC (
         qr -> patient then DataDictToPatient( model, patient ) "LMtoPatient";
         qr -> patient.active = true "rulePatientActive";
       } "QRtoPatient";
-} //"processQRestToIMMZC";
+} "processQRestToIMMZC";
