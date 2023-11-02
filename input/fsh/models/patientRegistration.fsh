@@ -21,7 +21,7 @@ Description:  "Data elements for the Register Patient Data Dictionary."
 * seniorCitizenNumber 0..* SU  string "Senior citizen number" "Unique identifier for the patient, according to the policies applicable to each country."
   * ^code[+] = CSRegisterPatientCodes#RP5
 
-* patientName 0..*  BackboneElement "Name" "Patient's names"
+* patientName 0..*  BackboneElement "Name" "Names"
   * ^code[+] = CSRegisterPatientCodes#RP18
   * fullName 0..1  string "Full name" "Patient's full name"
     * obeys RegisterPatient-name-1
@@ -35,7 +35,7 @@ Description:  "Data elements for the Register Patient Data Dictionary."
 * sex 1..1 code "Sex" "Documentation of a specific instance of sex information for the patient"
   * ^code[+] = CSRegisterPatientCodes#RP9
 * sex from VSSex (required)
-* address 0..*  BackboneElement "Address" "Patient's addresses"
+* address 0..*  BackboneElement "Address" "Addresses"
   * ^code[+] = CSRegisterPatientCodes#RP19
   * streetNameAndNr 0..1  string "Street name and number" "Address street name and number"
     * ^code[+] = CSRegisterPatientCodes#RP11
@@ -49,7 +49,7 @@ Description:  "Data elements for the Register Patient Data Dictionary."
     * ^code[+] = CSRegisterPatientCodes#RP14
 * birthDate 1..1 date "Date of birth" "Patient's date of birth (DOB) if known; if unknown, use assigned DOB for administrative purposes"
   * ^code[+] = CSRegisterPatientCodes#RP15
-* contactDetails 0..*  BackboneElement "Contact details" "Patient's contact details"
+* contactDetails 0..*  BackboneElement "Contact details" "Contact details"
   * ^code[+] = CSRegisterPatientCodes#RP20
   * mobileNumber 0..1  string "Mobile phone number" "Patient's mobile phone number"
     * ^code[+] = CSRegisterPatientCodes#RP16

@@ -11,33 +11,33 @@ Usage: #definition
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
 * extension[=].valueCanonical = "http://openhie.org/fhir/sri-lanka/StructureMap/QuestionnaireResponseToPatient"
 
-* insert Question(personalHealthNumber, Unique identifier for the patient,string,true,false)
+* insert Question(personalHealthNumber, Personal health number,string,true,false)
 * item[=]
   * code[+] = CSRegisterPatientCodes#RP1
 
-* insert Question(nationalIdentityCard, Unique identifier for the patient,string,true,false)
+* insert Question(nationalIdentityCard, National identity card,string,true,false)
 * item[=]
   * code[+] = CSRegisterPatientCodes#RP2
 
-* insert Question(pasport, Unique identifier for the patient,string,true,false)
+* insert Question(pasport, Passport,string,true,false)
 * item[=]
   * code[+] = CSRegisterPatientCodes#RP3
 
-* insert Question(drivingLicense, Unique identifier for the patient,string,true,false)
+* insert Question(drivingLicense, Driving license,string,true,false)
 * item[=]
   * code[+] = CSRegisterPatientCodes#RP4
 
-* insert Question(seniorCitizenNumber, Unique identifier for the patient,string,true,false)
+* insert Question(seniorCitizenNumber, Senior citizen number,string,true,false)
 * item[=]
   * code[+] = CSRegisterPatientCodes#RP5
 
-* insert Question(patientName, Patient name, group, false,false)
+* insert Question(patientName, Names, group, false,false)
 * item[=]
   * code[+] = CSRegisterPatientCodes#RP18
   * code[+] = $LNC#54125-0 "Patient name"
   * code[+] = $SCT#371484003 "Patient name"
   
-  * insert Question(fullName, Patient full name,string,false,false)
+  * insert Question(fullName, Full name,string,false,false)
   * item[=]
     * code[+] = CSRegisterPatientCodes#RP6
     * code[+] = $LNC#54125-0 "Patient name"
@@ -62,7 +62,7 @@ Usage: #definition
   * code[+] = $LNC#46098-0	"Sex"
   * code[+] = $SCT#184100006 "Patient sex"
 
-* insert Question(address, Patient address, group, false,false)
+* insert Question(address, Addresses, group, false,false)
 * item[=]
   * code[+] = CSRegisterPatientCodes#RP19
   * code[+] = $LNC#56799-0 "Address"
@@ -102,16 +102,16 @@ Usage: #definition
   * code[+] = $LNC#21112-8	"Birth date"
   * code[+] = $SCT#184099003 "Date of birth"
 
-* insert Question(contactDetails, Patient contact details, group, false,false)
+* insert Question(contactDetails, Contact details, group, false,false)
 * item[=]
   * code[+] = CSRegisterPatientCodes#RP20
 
-  * insert Question(mobileNumber, Patient mobile number,string,false,false)
+  * insert Question(mobileNumber, Mobile number,string,false,false)
   * item[=]
     * code[+] = CSRegisterPatientCodes#RP16
     * code[+] = $SCT#428481002 "Patient mobile telephone number"
 
-  * insert Question(landline, Patient landline number,string,false,false)
+  * insert Question(landline, Landline number,string,false,false)
   * item[=]
     * code[+] = CSRegisterPatientCodes#RP17
     * code[+] = $SCT#429697006 "Patient home telephone number"
