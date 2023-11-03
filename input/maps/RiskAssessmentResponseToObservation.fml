@@ -22,6 +22,6 @@ group QRestToIMMZC (
       then{
         qr -> model then QRespToIMMZC( qr, model) "QRtoLM";
         qr -> observation then DataDictToObservation( model, observation ) "LMtoObservation";
-        qr -> observation.status = registered "ruleObservationStatus";
+        qr -> observation.status = final "ruleObservationStatus";
       } "QRtoObservation";
 } "processQRestToIMMZC";

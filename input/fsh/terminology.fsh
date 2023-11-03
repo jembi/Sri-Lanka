@@ -1455,3 +1455,11 @@ Description:  "CodeSystem for Risk Assessment Data Elements"
 * ^caseSensitive = false
 * #RA1 "Physical activity" "Physical activity status for the patient."
 * #RA2 "Tobacco smoking" "Tobacco smoking status for the patient."
+
+
+ValueSet: VSSex
+Id: vs-sex
+Title:        "Sex ValueSet for Data Elements"
+Description:  "ValueSet for Sex"
+* ^experimental = false
+* include codes from system $GENDER

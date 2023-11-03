@@ -11,6 +11,18 @@ group DataDictToObservation (
   source immzc : IMMZC,
   target observation: Observation
 ) {
-  immzc.physicalActivity as physicalActivity -> observation.valueCodeableConcept = physicalActivity "SetPhysicalActivity";
-  immzc.tobaccoSmoking as tobaccoSmoking -> observation.valueCodeableConcept = tobaccoSmoking "SetTobaccoSmoking";
+  //immzc.physicalActivity as physicalActivity -> observation.valueCodeableConcept = physicalActivity "SetPhysicalActivity";
+  //observation.code = $SCT#106020009 "SetPhysicalActivityCode";
+  //immzc.tobaccoSmoking as tobaccoSmoking -> observation.valueCodeableConcept = tobaccoSmoking "SetTobaccoSmoking";
+  //observation.code = $SCT#365981007 "SetTobaccoSmokingCode";
+
+  immzc.physicalActivity as physicalActivity -> observation as obs then {
+    physicalActivity -> observation.valueCodeableConcept = physicalActivity "SetPhysicalActivityValue";
+    observation.code = $SCT#106020009 "SetPhysicalActivityCode";
+  } "SetPhysicalActivity";
+
+  immzc.tobaccoSmoking as tobaccoSmoking -> observation as obs then {
+    tobaccoSmoking -> observation.valueCodeableConcept = tobaccoSmoking "SetTobaccoSmokingValue";
+    observation.code = $SCT#365981007 "SetTobaccoSmokingCode";
+  } "SetTobaccoSmoking";
 }
