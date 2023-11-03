@@ -1,0 +1,23 @@
+map "http://openhie.org/fhir/sri-lanka/StructureMap/RiskAssessmentQuestionnaireResponseToLogicalModel" = "RiskAssessmentQuestionnaireResponseToLogicalModel"
+
+uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias QResp as source
+uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/RiskAssessmentDataDictionary" alias IMMZC as target
+
+name = "Risk Assessment Questionnaire Response To Logical Model"
+description = "Maps the Risk Assessment Questionnaire Response to the Logical Model data elements."
+
+group QRespToIMMZC ( source qr : QResp, target immzc : IMMZC) {
+  qr.item as item then {
+    item.answer first as answer where item.linkId = 'physicalActivity' then {
+      answer.value as coding then {
+        coding.code as content -> immzc.physicalActivity = content "SetPhysicalActivity";
+      } "ProcessCoding";
+    } "FirstAnswerForPhysicalActivity";
+
+    item.answer first as answer where item.linkId = 'tobaccoSmoking' then {
+      answer.value as coding then {
+        coding.code as content -> immzc.tobaccoSmoking = content "SetTobaccoSmoking";
+      } "ProcessCoding";
+    } "FirstAnswerForTobaccoSmoking";
+  } "processItems";
+} "processQRespToIMMZC";

@@ -1446,3 +1446,12 @@ Description:  "ValueSet for Sex"
 * CSRegisterPatientCodes#RP22 "Female"
 * CSRegisterPatientCodes#RP23 "Unknown"
 * CSRegisterPatientCodes#RP24 "Other"*/
+
+CodeSystem:   CSRiskAssessmentCodes
+Id: cs-risk-assessment-codes
+Title:        "Risk Assessment CodeSystem for Data Elements"
+Description:  "CodeSystem for Risk Assessment Data Elements"
+* ^experimental = false
+* ^caseSensitive = false
+* #RA1 "Physical activity" "Physical activity status for the patient."
+* #RA2 "Tobacco smoking" "Tobacco smoking status for the patient."

@@ -7,7 +7,6 @@ Logical:      RegisterPatientDataDictionary
 Title:        "Register Patient"
 Description:  "Data elements for the Register Patient Data Dictionary."
 * ^extension[http://hl7.org/fhir/tools/StructureDefinition/logical-target].valueBoolean = true
-* ^name = "RegisterPatient"
 * ^status = #active
 
 * personalHealthNumber 1..1 SU string "Personal health number" "Unique identifier for the patient, according to the policies applicable to each country."
