@@ -1,4 +1,4 @@
-/*Instance:     DataDictionarySexToAdministrativeGender
+Instance:     DataDictionarySexToAdministrativeGender
 InstanceOf:   ConceptMap
 Description:  "Mapping to and from data dictionary sex coding to FHIR Administrative Gender."
 Usage:        #definition
@@ -25,4 +25,3 @@ Usage:        #definition
   * insert ElementMap(unknown, RP23, equivalent)
   * insert ElementMap(other, RP24, equivalent)
   * element[=].target[=].comment = "The source concept is more specific than the target"
-  */
