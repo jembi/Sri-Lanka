@@ -1,7 +1,7 @@
 map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSQuestionnaireResponseToPatient" = "HIMSQuestionnaireResponseToPatient"
 
 uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias QResp as source
-uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSPatientRegistrationDataElements" alias IMMZC as source
+uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSPatientRegistrationDataDictionary" alias IMMZC as source
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" as target
 uses "http://hl7.org/fhir/StructureDefinition/Patient" as target
 
@@ -18,7 +18,7 @@ group QRestToIMMZC (
   qr -> bundle.id = uuid() "ruleBundleId";
   qr -> bundle.type = 'collection' "ruleBundleType";
   qr -> bundle.entry as entry, entry.resource = create('Patient') as patient,
-    create("http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSPatientRegistrationDataElements") as model
+    create("http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSPatientRegistrationDataDictionary") as model
       then{
         qr -> model then QRespToIMMZC( qr, model) "QRtoLM";
         qr -> patient then DataDictToPatient( model, patient ) "LMtoPatient";

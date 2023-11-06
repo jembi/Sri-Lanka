@@ -3,9 +3,9 @@ Description:  "Only letters and special characters (period, dash) allowed."
 Expression:   "$this.matches('[A-Za-z-.]*')"
 Severity:     #error
 
-Logical:      HIMSDataDictionary
-Title:        "HIMS Master"
-Description:  "Data elements for the HIMS Data Dictionary."
+Logical:      HIMSPatientRegistrationDataDictionary
+Title:        "Patient Registration"
+Description:  "Data elements for the HIMS Patient Registration Data Dictionary."
 * ^extension[http://hl7.org/fhir/tools/StructureDefinition/logical-target].valueBoolean = true
 * ^status = #active
 
@@ -56,16 +56,9 @@ Description:  "Data elements for the HIMS Data Dictionary."
   * landline 0..1  string "Landline phone number" "Patient's landline phone number"
     * ^code[+] = CSRegisterPatientCodes#RP17
     * ^code[+] = http://hl7.org/fhir/contact-point-system#phone
-* riskBehaviour 0..1  BackboneElement "Risk Behaviour" "Risk Behaviour"
-  * physicalActivity 0..1 string "Physical activity" "Physical activity status for the patient."
-    * ^code[+] = CSRiskBehaviourCodes#RA1
-  * physicalActivity from VSRiskBehaviourPhysicalActivity (extensible)
-  * tobaccoSmoking 0..1 string "Tobacco smoking" "Tobacco smoking status for the patient."
-    * ^code[+] = CSRiskBehaviourCodes#RA2
-  * tobaccoSmoking from VSRiskBehaviourTobaccoSmoker (extensible)
 
-Mapping: HIMSDataDictionary-to-Patient
-Source: HIMSDataDictionary
+Mapping: HIMSPatientRegistrationDataDictionary-to-Patient
+Source: HIMSPatientRegistrationDataDictionary
 Target: "Patient"
 * -> "Patient"
 * personalHealthNumber -> "Patient.identifier.value"
@@ -88,6 +81,3 @@ Target: "Patient"
 * contactDetails -> "Patient.telecom"
 * contactDetails.mobileNumber -> "Patient.telecom.value"
 * contactDetails.landline -> "Patient.telecom.value"
-* -> "Observation"
-* riskBehaviour.physicalActivity -> "Observation.valueCodeableConcept"
-* riskBehaviour.tobaccoSmoking -> "Observation.valueCodeableConcept"

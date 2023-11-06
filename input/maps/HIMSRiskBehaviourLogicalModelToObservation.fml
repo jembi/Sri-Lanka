@@ -1,6 +1,6 @@
 map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourLogicalModelToObservation" = "HIMSRiskBehaviourLogicalModelToObservation"
 
-uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSRiskBehaviourDataElements" alias IMMZC as source
+uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSRiskBehaviourDataDictionary" alias IMMZC as source
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias Bundle as target
 uses "http://hl7.org/fhir/StructureDefinition/Observation" alias Observation as target
 
@@ -11,12 +11,12 @@ group DataDictToObservation (
   source immzc : IMMZC,
   target observation: Observation
 ) {
-  immzc.riskBehaviour.physicalActivity as physicalActivity -> observation as obs then {
+  immzc.physicalActivity as physicalActivity -> observation as obs then {
     physicalActivity -> observation.valueCodeableConcept = physicalActivity "SetPhysicalActivityValue";
     observation.code = $SCT#106020009 "SetPhysicalActivityCode";
   } "SetPhysicalActivity";
 
-  immzc.riskBehaviour.tobaccoSmoking as tobaccoSmoking -> observation as obs then {
+  immzc.tobaccoSmoking as tobaccoSmoking -> observation as obs then {
     tobaccoSmoking -> observation.valueCodeableConcept = tobaccoSmoking "SetTobaccoSmokingValue";
     observation.code = $SCT#365981007 "SetTobaccoSmokingCode";
   } "SetTobaccoSmoking";
