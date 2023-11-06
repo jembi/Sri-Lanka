@@ -4,7 +4,7 @@ Expression:   "$this.matches('[A-Za-z-.]*')"
 Severity:     #error
 
 Logical:      HIMSPatientRegistrationDataDictionary
-Title:        "Patient Registration"
+Title:        "HIMS Patient Registration"
 Description:  "Data elements for the HIMS Patient Registration Data Dictionary."
 * ^extension[http://hl7.org/fhir/tools/StructureDefinition/logical-target].valueBoolean = true
 * ^status = #active

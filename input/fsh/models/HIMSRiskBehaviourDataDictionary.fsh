@@ -1,5 +1,5 @@
 Logical:      HIMSRiskBehaviourDataDictionary
-Title:        "Risk Behaviour"
+Title:        "HIMS Risk Behaviour"
 Description:  "Data elements for the HIMS Risk Behaviour Data Dictionary."
 * ^extension[http://hl7.org/fhir/tools/StructureDefinition/logical-target].valueBoolean = true
 * ^status = #active
