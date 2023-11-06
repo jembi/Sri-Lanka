@@ -1,11 +1,11 @@
-Invariant:    RegisterPatient-name-1
+Invariant:    HIMS-name-1
 Description:  "Only letters and special characters (period, dash) allowed."
 Expression:   "$this.matches('[A-Za-z-.]*')"
 Severity:     #error
 
-Logical:      RegisterPatientDataDictionary
-Title:        "Register Patient"
-Description:  "Data elements for the Register Patient Data Dictionary."
+Logical:      HIMSDataDictionary
+Title:        "HIMS Master"
+Description:  "Data elements for the HIMS Data Dictionary."
 * ^extension[http://hl7.org/fhir/tools/StructureDefinition/logical-target].valueBoolean = true
 * ^status = #active
 
@@ -13,7 +13,7 @@ Description:  "Data elements for the Register Patient Data Dictionary."
   * ^code[+] = CSRegisterPatientCodes#RP1
 * nationalIdentityCard 0..* SU  string "National identity card" "Unique identifier for the patient, according to the policies applicable to each country."
   * ^code[+] = CSRegisterPatientCodes#RP2
-* pasport 0..* SU  string "Passport" "Unique identifier for the patient, according to the policies applicable to each country."
+* passport 0..* SU  string "Passport" "Unique identifier for the patient, according to the policies applicable to each country."
   * ^code[+] = CSRegisterPatientCodes#RP3
 * drivingLicense 0..* SU  string "Driving license" "Unique identifier for the patient, according to the policies applicable to each country."
   * ^code[+] = CSRegisterPatientCodes#RP4
@@ -23,13 +23,13 @@ Description:  "Data elements for the Register Patient Data Dictionary."
 * patientName 0..*  BackboneElement "Name" "Name"
   * ^code[+] = CSRegisterPatientCodes#RP18
   * fullName 0..1  string "Full name" "Patient's full name"
-    * obeys RegisterPatient-name-1
+    * obeys HIMS-name-1
     * ^code[+] = CSRegisterPatientCodes#RP6
   * firstName 0..1  string "First name" "Patient's first name or given name"
-    * obeys RegisterPatient-name-1
+    * obeys HIMS-name-1
     * ^code[+] = CSRegisterPatientCodes#RP7
   * surname 0..1  string "Last name" "Patient's family name or last name"
-    * obeys RegisterPatient-name-1
+    * obeys HIMS-name-1
     * ^code[+] = CSRegisterPatientCodes#RP8
 * sex 1..1 code "Sex" "Documentation of a specific instance of sex information for the patient"
   * ^code[+] = CSRegisterPatientCodes#RP9
@@ -56,14 +56,21 @@ Description:  "Data elements for the Register Patient Data Dictionary."
   * landline 0..1  string "Landline phone number" "Patient's landline phone number"
     * ^code[+] = CSRegisterPatientCodes#RP17
     * ^code[+] = http://hl7.org/fhir/contact-point-system#phone
+* riskBehaviour 0..1  BackboneElement "Risk Behaviour" "Risk Behaviour"
+  * physicalActivity 0..1 string "Physical activity" "Physical activity status for the patient."
+    * ^code[+] = CSRiskBehaviourCodes#RA1
+  * physicalActivity from VSRiskBehaviourPhysicalActivity (extensible)
+  * tobaccoSmoking 0..1 string "Tobacco smoking" "Tobacco smoking status for the patient."
+    * ^code[+] = CSRiskBehaviourCodes#RA2
+  * tobaccoSmoking from VSRiskBehaviourTobaccoSmoker (extensible)
 
-Mapping: RegisterPatientDataDictionary-to-Patient
-Source: RegisterPatientDataDictionary
+Mapping: HIMSDataDictionary-to-Patient
+Source: HIMSDataDictionary
 Target: "Patient"
 * -> "Patient"
 * personalHealthNumber -> "Patient.identifier.value"
 * nationalIdentityCard -> "Patient.identifier.value"
-* pasport -> "Patient.identifier.value"
+* passport -> "Patient.identifier.value"
 * drivingLicense -> "Patient.identifier.value"
 * seniorCitizenNumber -> "Patient.identifier.value"
 * patientName -> "Patient.name"
@@ -81,3 +88,6 @@ Target: "Patient"
 * contactDetails -> "Patient.telecom"
 * contactDetails.mobileNumber -> "Patient.telecom.value"
 * contactDetails.landline -> "Patient.telecom.value"
+* -> "Observation"
+* riskBehaviour.physicalActivity -> "Observation.valueCodeableConcept"
+* riskBehaviour.tobaccoSmoking -> "Observation.valueCodeableConcept"

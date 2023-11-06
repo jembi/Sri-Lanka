@@ -1399,7 +1399,7 @@ Description: "Imaging Procedures"
 
 CodeSystem:   CSRegisterPatientCodes
 Id: cs-register-patient-codes
-Title:        "Register Patient CodeSystem for Data Elements"
+Title:        "Register Patient"
 Description:  "CodeSystem for Register Patient Data Elements"
 * ^experimental = false
 * ^caseSensitive = false
@@ -1447,15 +1447,15 @@ Description:  "ValueSet for Sex"
 * CSRegisterPatientCodes#RP23 "Unknown"
 * CSRegisterPatientCodes#RP24 "Other"*/
 
-CodeSystem:   CSRiskAssessmentCodes
-Id: cs-risk-assessment-codes
-Title:        "Risk Assessment CodeSystem for Data Elements"
-Description:  "CodeSystem for Risk Assessment Data Elements"
+CodeSystem:   CSRiskBehaviourCodes
+Id: cs-risk-behaviour-codes
+Title:        "Risk Behaviour"
+Description:  "CodeSystem for Risk Behaviour Data Elements"
 * ^experimental = false
 * ^caseSensitive = false
 * #RA1 "Physical activity" "Physical activity status for the patient."
 * #RA2 "Tobacco smoking" "Tobacco smoking status for the patient."
-
+//* #RA3 "Risk behaviour" "Patient's risk behaviour"
 
 /*ValueSet: VSSex
 Id: vs-sex

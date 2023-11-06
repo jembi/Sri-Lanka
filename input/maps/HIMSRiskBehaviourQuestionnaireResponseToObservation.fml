@@ -1,0 +1,27 @@
+map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourQuestionnaireResponseToObservation" = "HIMSRiskBehaviourQuestionnaireResponseToObservation"
+
+uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias QResp as source
+uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSRiskBehaviourDataElements" alias IMMZC as source
+uses "http://hl7.org/fhir/StructureDefinition/Bundle" as target
+uses "http://hl7.org/fhir/StructureDefinition/Observation" as target
+
+imports "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourQuestionnaireResponseToLogicalModel"
+imports "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourLogicalModelToObservation"
+
+name = "HIMS Risk Behaviour Questionnaire Response To Observation"
+description = "Maps the Risk Behaviour Questionnaire Response to the HIMS Observation resource data elements."
+
+group QRestToIMMZC (
+  source qr : QResp,
+  target bundle: Bundle
+) {
+  qr -> bundle.id = uuid() "ruleBundleId";
+  qr -> bundle.type = 'collection' "ruleBundleType";
+  qr -> bundle.entry as entry, entry.resource = create('Observation') as observation,
+    create("http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSRiskBehaviourDataElements") as model
+      then{
+        qr -> model then QRespToIMMZC( qr, model) "QRtoLM";
+        qr -> observation then DataDictToObservation( model, observation ) "LMtoObservation";
+        qr -> observation.status = final "ruleObservationStatus";
+      } "QRtoObservation";
+} "processQRestToIMMZC";

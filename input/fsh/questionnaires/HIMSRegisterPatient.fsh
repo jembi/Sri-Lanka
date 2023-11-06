@@ -1,15 +1,14 @@
-Instance: RegisterPatientQuestionnaire
+Instance: HIMSRegisterPatientQuestionnaire
 InstanceOf: sdc-questionnaire-extr-smap
-Title: "Patient Registration Questionnaire"
-Description: "Patient Registration Questionnaire"
+Title: "HIMS Patient Registration Questionnaire"
+Description: "Questionnaire using the HIMS data elements for the patient."
 Usage: #definition
 * version = "2023"
 * status = #draft
 * subjectType = #Patient
 * language = #en
-//* contained[+] = VSSex
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
-* extension[=].valueCanonical = "http://openhie.org/fhir/sri-lanka/StructureMap/QuestionnaireResponseToPatient"
+* extension[=].valueCanonical = "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSQuestionnaireResponseToPatient"
 
 * insert Question(personalHealthNumber, Personal health number,string,true,false)
 * item[=]

@@ -1,10 +1,10 @@
-map "http://openhie.org/fhir/sri-lanka/StructureMap/QuestionnaireResponseToLogicalModel" = "QuestionnaireResponseToLogicalModel"
+map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSPatientQuestionnaireResponseToLogicalModel" = "HIMSPatientQuestionnaireResponseToLogicalModel"
 
 uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias QResp as source
-uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/RegisterPatientDataDictionary" alias IMMZC as target
+uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSPatientRegistrationDataElements" alias IMMZC as target
 
-name = "Questionnaire Response To Logical Model"
-description = "Maps the Questionnaire Response to the Logical Model data elements."
+name = "Questionnaire Response To HIMS Logical Model For Patient Registration"
+description = "Maps the Patient Registration Questionnaire Response to the HIMS Logical Model data elements."
 
 group QRespToIMMZC ( source qr : QResp, target immzc : IMMZC) {
   qr.item as item then {
@@ -17,8 +17,8 @@ group QRespToIMMZC ( source qr : QResp, target immzc : IMMZC) {
       answer.value as content -> immzc.nationalIdentityCard = content  "SetNationalIdentityCardNumber";
     } "FirstAnswerForNIC";
 
-     item.answer first as answer where item.linkId = 'pasport' then {
-      answer.value as content -> immzc.pasport = content  "SetPassportNumber";
+     item.answer first as answer where item.linkId = 'passport' then {
+      answer.value as content -> immzc.passport = content  "SetPassportNumber";
     } "FirstAnswerForPassport";
 
      item.answer first as answer where item.linkId = 'drivingLicense' then {
@@ -46,21 +46,12 @@ group QRespToIMMZC ( source qr : QResp, target immzc : IMMZC) {
       } "ProcessCoding";
     } "FirstAnswerForSex";
 
-   /*  item.answer first as answer where item.linkId = 'address' then {
-      answer.value as content -> immzc.address = content  "SetAddress";
-    } "FirstAnswerForAddress";*/
-
     item.answer as address where item.linkId = 'address' -> immzc.address as addy 
       then AddressToIMMZC( address, addy ) "SetAddresses";
   
     item.answer first as answer where item.linkId = 'birthDate' then {
       answer.value as content -> immzc.birthDate = content "SetBirthDate";
     } "FirstAnswerForBirthDate";
-
-
-    /*item.answer first as answer where item.linkId = 'phone' then {
-       answer.value as content -> immzc.phone = content  "SetPhone";
-    } "FirstAnswerForPhone";*/
 
     item.answer as contactDetails where item.linkId = 'contactDetails' -> immzc.contactDetails as contact 
       then ContactDetailsIMMZC( contactDetails, contact ) "SetContactDetails";

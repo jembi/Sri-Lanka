@@ -751,3 +751,37 @@ Description: "Used to represent the content or results of a imaging study."
 * series.performer 1..*
 * series.performer.actor 1..1
 * procedureReference 1..1
+
+Profile: HIMSPatientRegistrationDataElements
+Parent: HIMSDataDictionary
+Id: hims-patient-registration-data-elements
+Title: "HIMS Patient Registration"
+Description: "Patient Registration HIMS Data Elements"
+* personalHealthNumber 1..1
+* nationalIdentityCard 0..* MS
+* passport 0..* MS
+* drivingLicense 0..* MS
+* seniorCitizenNumber 0..* MS
+* patientName 0..* MS
+* patientName.fullName 0..1 MS
+* patientName.firstName 0..1 MS
+* patientName.surname 0..1 MS
+* sex 1..1
+* address 0..* MS
+* address.streetNameAndNr 0..1 MS
+* address.city 0..1 MS
+* address.state 0..1 MS
+* address.country 0..1 MS
+* address.postalCode 0..1 MS
+* birthDate 1..1
+* contactDetails 0..* MS
+* contactDetails.mobileNumber 0..1 MS
+* contactDetails.landline 0..1 MS
+
+Profile: HIMSRiskBehaviourDataElements
+Parent: HIMSDataDictionary
+Id: hims-risk-behaviour-data-elements
+Title: "HIMS Risk Behaviour"
+Description: "Risk Behaviour HIMS Data Elements"
+* riskBehaviour.physicalActivity 0..1 MS
+* riskBehaviour.tobaccoSmoking 0..1 MS

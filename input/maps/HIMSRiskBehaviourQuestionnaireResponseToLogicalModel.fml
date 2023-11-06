@@ -1,10 +1,10 @@
-map "http://openhie.org/fhir/sri-lanka/StructureMap/RiskAssessmentQuestionnaireResponseToLogicalModel" = "RiskAssessmentQuestionnaireResponseToLogicalModel"
+map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourQuestionnaireResponseToLogicalModel" = "HIMSRiskBehaviourQuestionnaireResponseToLogicalModel"
 
 uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias QResp as source
-uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/RiskAssessmentDataDictionary" alias IMMZC as target
+uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSRiskBehaviourDataElements" alias IMMZC as target
 
-name = "Risk Assessment Questionnaire Response To Logical Model"
-description = "Maps the Risk Assessment Questionnaire Response to the Logical Model data elements."
+name = "Risk Behaviour Questionnaire Response To HIMS Logical Model"
+description = "Maps the Risk Behaviour Questionnaire Response to the HIMS Logical Model data elements."
 
 group QRespToIMMZC ( source qr : QResp, target immzc : IMMZC) {
   qr.item as item then {
