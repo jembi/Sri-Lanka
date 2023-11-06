@@ -2,7 +2,7 @@ Alias: $LNC = http://loinc.org
 Alias: $SCT = http://snomed.info/sct
 Alias: $SCT_or_SCTINT = http://snomed.info/sct|http://snomed.info/sct/900000000000207008
 Alias: $DICOM = http://dicom.nema.org/resources/ontology/DCM
-Alias: $GENDER = http://hl7.org/fhir/administrative-gender
+//Alias: $GENDER = http://hl7.org/fhir/administrative-gender
 
 /*CodeSystem: CSRiskBehaviourPhysicalActivity
 Id: cs-risk-behaviour-physical-activity
@@ -1457,9 +1457,9 @@ Description:  "CodeSystem for Risk Assessment Data Elements"
 * #RA2 "Tobacco smoking" "Tobacco smoking status for the patient."
 
 
-ValueSet: VSSex
+/*ValueSet: VSSex
 Id: vs-sex
 Title:        "Sex ValueSet for Data Elements"
 Description:  "ValueSet for Sex"
 * ^experimental = false
-* include codes from system $GENDER
+* include codes from system $GENDER*/

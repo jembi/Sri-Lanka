@@ -33,7 +33,7 @@ Description:  "Data elements for the Register Patient Data Dictionary."
     * ^code[+] = CSRegisterPatientCodes#RP8
 * sex 1..1 code "Sex" "Documentation of a specific instance of sex information for the patient"
   * ^code[+] = CSRegisterPatientCodes#RP9
-* sex from VSSex (required)
+* sex from http://hl7.org/fhir/ValueSet/administrative-gender (required)
 * address 0..*  BackboneElement "Address" "Address"
   * ^code[+] = CSRegisterPatientCodes#RP19
   * streetNameAndNr 0..1  string "Street name and number" "Street name and number"
@@ -52,10 +52,10 @@ Description:  "Data elements for the Register Patient Data Dictionary."
   * ^code[+] = CSRegisterPatientCodes#RP20
   * mobileNumber 0..1  string "Mobile phone number" "Patient's mobile phone number"
     * ^code[+] = CSRegisterPatientCodes#RP16
-    //* ^code[+] = http://hl7.org/fhir/contact-point-system#phone
+    * ^code[+] = http://hl7.org/fhir/contact-point-system#phone
   * landline 0..1  string "Landline phone number" "Patient's landline phone number"
     * ^code[+] = CSRegisterPatientCodes#RP17
-    //* ^code[+] = http://hl7.org/fhir/contact-point-system#phone
+    * ^code[+] = http://hl7.org/fhir/contact-point-system#phone
 
 Mapping: RegisterPatientDataDictionary-to-Patient
 Source: RegisterPatientDataDictionary
