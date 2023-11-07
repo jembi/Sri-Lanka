@@ -18,7 +18,7 @@ Usage: #definition
 * item[=]
   * code[+] = CSRegisterPatientCodes#RP2
 
-* insert Question(pasport, Passport,string,false,false)
+* insert Question(passport, Passport,string,false,false)
 * item[=]
   * code[+] = CSRegisterPatientCodes#RP3
 
