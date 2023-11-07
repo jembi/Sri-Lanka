@@ -1,0 +1,19 @@
+map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourLogicalModelToObservation-PhysicalActivity" = "HIMSRiskBehaviourLogicalModelToObservation-PhysicalActivity"
+
+//Maps the HIMS logical model data elements to the Observation resource data elements.
+
+uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSRiskBehaviourDataDictionary" alias IMMZC as source
+uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias Bundle as target
+uses "http://hl7.org/fhir/StructureDefinition/Observation" alias Observation as target
+
+/*name = "HIMS Logical Model To Observation"
+description = "Maps the HIMS logical model data elements to the Observation resource data elements."*/
+
+group DataDictToObservation (
+  source immzc : IMMZC,
+  target observation: Observation
+) {
+  immzc.physicalActivity as physicalActivity -> observation as obs then {
+    physicalActivity -> obs.valueCodeableConcept = physicalActivity "SetPhysicalActivityValue";
+  } "SetPhysicalActivity";
+}

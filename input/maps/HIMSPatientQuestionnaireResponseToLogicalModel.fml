@@ -1,10 +1,12 @@
 map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSPatientQuestionnaireResponseToLogicalModel" = "HIMSPatientQuestionnaireResponseToLogicalModel"
 
+// Maps the Patient Registration Questionnaire Response to the HIMS Logical Model data elements
+
 uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias QResp as source
 uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSPatientRegistrationDataDictionary" alias IMMZC as target
 
-name = "Questionnaire Response To HIMS Logical Model For Patient Registration"
-description = "Maps the Patient Registration Questionnaire Response to the HIMS Logical Model data elements."
+/*name = "Questionnaire Response To HIMS Logical Model For Patient Registration"
+description = "Maps the Patient Registration Questionnaire Response to the HIMS Logical Model data elements."*/
 
 group QRespToIMMZC ( source qr : QResp, target immzc : IMMZC) {
   qr.item as item then {
@@ -56,7 +58,7 @@ group QRespToIMMZC ( source qr : QResp, target immzc : IMMZC) {
     item.answer as contactDetails where item.linkId = 'contactDetails' -> immzc.contactDetails as contact 
       then ContactDetailsIMMZC( contactDetails, contact ) "SetContactDetails";
   } "processItems";
-} "processQRespToIMMZC";
+}
 
 group FullNameToIMMZC( source name, target immzc) {
   name.item as item then 
@@ -68,8 +70,8 @@ group FullNameToIMMZC( source name, target immzc) {
         item.answer first as answer2 where item.linkId = 'surname' then 
         {
           answer2.value as surname -> immzc.fullName = append(firstName, " ", surname) "SetName";
-        } 
-      } 
+        } "set";
+      } "set";
     } "FirstAnswerForFullName";
   } "processNameItems";
 } 

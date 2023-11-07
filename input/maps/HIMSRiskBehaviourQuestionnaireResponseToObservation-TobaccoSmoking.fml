@@ -1,15 +1,19 @@
-map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourQuestionnaireResponseToObservation" = "HIMSRiskBehaviourQuestionnaireResponseToObservation"
+map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourQuestionnaireResponseToObservation-TobaccoSmoking" = "HIMSRiskBehaviourQuestionnaireResponseToObservation-TobaccoSmoking"
+
+// Maps the Risk Behaviour Questionnaire Response to the HIMS Observation resource data elements.
 
 uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias QResp as source
 uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSRiskBehaviourDataDictionary" alias IMMZC as source
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" as target
 uses "http://hl7.org/fhir/StructureDefinition/Observation" as target
 
-imports "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourQuestionnaireResponseToLogicalModel"
-imports "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourLogicalModelToObservation"
+imports "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourQuestionnaireResponseToLogicalModel-TobaccoSmoking"
+imports "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourLogicalModelToObservation-TobaccoSmoking"
 
-name = "HIMS Risk Behaviour Questionnaire Response To Observation"
-description = "Maps the Risk Behaviour Questionnaire Response to the HIMS Observation resource data elements."
+
+
+/*name = "HIMS Risk Behaviour Questionnaire Response To Observation"
+description = "Maps the Risk Behaviour Questionnaire Response to the HIMS Observation resource data elements."*/
 
 group QRestToIMMZC (
   source qr : QResp,
@@ -23,5 +27,11 @@ group QRestToIMMZC (
         qr -> model then QRespToIMMZC( qr, model) "QRtoLM";
         qr -> observation then DataDictToObservation( model, observation ) "LMtoObservation";
         qr -> observation.status = final "ruleObservationStatus";
+        qr -> observation.code = create('CodeableConcept') as code then 
+        {      
+          
+          //code.coding.system = "http://snomed.info/sct"
+          //code.coding.code = #365981007
+        } "SetCode";
       } "QRtoObservation";
-} "processQRestToIMMZC";
+}
