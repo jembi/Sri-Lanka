@@ -17,4 +17,5 @@ group QRespToIMMZC ( source qr : QResp, target immzc : IMMZC) {
         coding.code as content -> immzc.physicalActivity = content "SetPhysicalActivity";
       } "ProcessCoding";
     } "FirstAnswerForPhysicalActivity";
+  } "processItems";
 }
