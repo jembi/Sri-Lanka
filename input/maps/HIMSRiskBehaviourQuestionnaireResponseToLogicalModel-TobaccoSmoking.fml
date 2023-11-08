@@ -1,8 +1,7 @@
 map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourQuestionnaireResponseToLogicalModel-TobaccoSmoking" = "HIMSRiskBehaviourQuestionnaireResponseToLogicalModel-TobaccoSmoking"
+// Maps the Risk Behaviour Questionnaire Response to the HIMS Logical Model data elements.
 uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias QResp as source
 uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSRiskBehaviourDataDictionary" alias IMMZC as target
-
-// Maps the Risk Behaviour Questionnaire Response to the HIMS Logical Model data elements.
 
 group QRespToIMMZC ( source qr : QResp, target immzc : IMMZC) {
   qr.item as item then {

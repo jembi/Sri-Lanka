@@ -1,9 +1,8 @@
 map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSLogicalModelToPatientRegistration" = "HIMSLogicalModelToPatientRegistration"
+// Maps the HIMS logical model data elements to the Patient resource data elements
 uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSPatientRegistrationDataDictionary" alias IMMZC as source
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias Bundle as target
 uses "http://hl7.org/fhir/StructureDefinition/Patient" alias Patient as target
-
-// Maps the HIMS logical model data elements to the Patient resource data elements
 
 group DataDictToPatient (
   source immzc : IMMZC,
