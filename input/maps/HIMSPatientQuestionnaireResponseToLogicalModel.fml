@@ -1,12 +1,8 @@
-map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSPatientQuestionnaireResponseToLogicalModel" = "HIMSPatientQuestionnaireResponseToLogicalModel"
-
-// Maps the Patient Registration Questionnaire Response to the HIMS Logical Model data elements
-
+map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSPatientQuestionnaireResponseToLogicalModel" = HIMSPatientQuestionnaireResponseToLogicalModel
 uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias QResp as source
 uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSPatientRegistrationDataDictionary" alias IMMZC as target
 
-/*name = "Questionnaire Response To HIMS Logical Model For Patient Registration"
-description = "Maps the Patient Registration Questionnaire Response to the HIMS Logical Model data elements."*/
+// Maps the Patient Registration Questionnaire Response to the HIMS Logical Model data elements
 
 group QRespToIMMZC ( source qr : QResp, target immzc : IMMZC) {
   qr.item as item then {

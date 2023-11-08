@@ -1,6 +1,4 @@
-map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourQuestionnaireResponseToObservation-PhysicalActivity" = "HIMSRiskBehaviourQuestionnaireResponseToObservation-PhysicalActivity"
-
-// Maps the Risk Behaviour Questionnaire Response to the HIMS Observation resource data elements.
+map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourQuestionnaireResponseToObservation-PhysicalActivity" = HIMSRiskBehaviourQuestionnaireResponseToObservation-PhysicalActivity
 
 uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias QResp as source
 uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSRiskBehaviourDataDictionary" alias IMMZC as source
@@ -10,10 +8,7 @@ uses "http://hl7.org/fhir/StructureDefinition/Observation" as target
 imports "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourQuestionnaireResponseToLogicalModel-PhysicalActivity"
 imports "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourLogicalModelToObservation-PhysicalActivity"
 
-
-
-/*name = "HIMS Risk Behaviour Questionnaire Response To Observation"
-description = "Maps the Risk Behaviour Questionnaire Response to the HIMS Observation resource data elements."*/
+// Maps the Risk Behaviour Questionnaire Response to the HIMS Observation resource data elements.
 
 group QRestToIMMZC (
   source qr : QResp,

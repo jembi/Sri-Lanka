@@ -1,7 +1,4 @@
-map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSQuestionnaireResponseToPatient" = "HIMSQuestionnaireResponseToPatient"
-
-// Maps the Questionnaire Response to the HIMS Patient resource data elements.
-
+map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSQuestionnaireResponseToPatient" = HIMSQuestionnaireResponseToPatient
 uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias QResp as source
 uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSPatientRegistrationDataDictionary" alias IMMZC as source
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" as target
@@ -10,10 +7,7 @@ uses "http://hl7.org/fhir/StructureDefinition/Patient" as target
 imports "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSPatientQuestionnaireResponseToLogicalModel"
 imports "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSLogicalModelToPatient"
 
-
-
-/*name = "HIMS Questionnaire Response To Patient"
-description = "Maps the Questionnaire Response to the HIMS Patient resource data elements."*/
+// Maps the Questionnaire Response to the HIMS Patient resource data elements.
 
 group QRestToIMMZC (
   source qr : QResp,
