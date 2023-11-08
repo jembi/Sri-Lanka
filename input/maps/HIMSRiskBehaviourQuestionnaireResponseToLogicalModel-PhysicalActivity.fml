@@ -1,4 +1,4 @@
-map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourQuestionnaireResponseToLogicalModel-PhysicalActivity" = HIMSRiskBehaviourQuestionnaireResponseToLogicalModel-PhysicalActivity
+map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourQuestionnaireResponseToLogicalModel-PhysicalActivity" = "HIMSRiskBehaviourQuestionnaireResponseToLogicalModel-PhysicalActivity"
 uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias QResp as source
 uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSRiskBehaviourDataDictionary" alias IMMZC as target
 

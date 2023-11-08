@@ -1,4 +1,4 @@
-map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourLogicalModelToObservation-PhysicalActivity" = HIMSRiskBehaviourLogicalModelToObservation-PhysicalActivity
+map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourLogicalModelToObservation-PhysicalActivity" = "HIMSRiskBehaviourLogicalModelToObservation-PhysicalActivity"
 uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSRiskBehaviourDataDictionary" alias IMMZC as source
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias Bundle as target
 uses "http://hl7.org/fhir/StructureDefinition/Observation" alias Observation as target
