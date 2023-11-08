@@ -27,11 +27,8 @@ group QRestToIMMZC (
         qr -> model then QRespToIMMZC( qr, model) "QRtoLM";
         qr -> observation then DataDictToObservation( model, observation ) "LMtoObservation";
         qr -> observation.status = final "ruleObservationStatus";
-        qr -> observation.code = create('CodeableConcept') as code then 
-        {      
-          
-          //code.coding.system = "http://snomed.info/sct"
-          //code.coding.code = #365981007
-        } "SetCode";
+        qr -> observation.code = create('CodeableConcept') as coding, 
+          c.system = "http://snomed.info/sct", 
+          c.code = '365981007' "SetObsCode";
       } "QRtoObservation";
 }
