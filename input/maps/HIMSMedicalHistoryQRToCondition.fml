@@ -1,0 +1,24 @@
+map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSMedicalHistoryQRToCondition" = "HIMSMedicalHistoryQRToCondition"
+// Maps the Medical History Questionnaire Response to the HIMS Condition resource data elements.
+uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias QResp as source
+uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSMedicalHistoryDataDictionary" alias IMMZC as source
+uses "http://hl7.org/fhir/StructureDefinition/Bundle" as target
+uses "http://hl7.org/fhir/StructureDefinition/Condition" as target
+
+imports "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSMedicalHistoryQRToLM"
+imports "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSMedicalHistoryLMToCondition"
+
+group QRestToIMMZC (
+  source qr : QResp,
+  target bundle: Bundle
+) {
+  qr -> bundle.id = uuid() "ruleBundleId";
+  qr -> bundle.type = 'collection' "ruleBundleType";
+  qr -> bundle.entry as entry, entry.resource = create('Condition') as condition,
+    create("http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSMedicalHistoryDataDictionary") as model
+      then{
+        qr -> model then QRespToIMMZC( qr, model) "QRtoLM";
+        qr -> condition then DataDictToCondition( model, condition ) "LMtoCondition";
+        qr -> condition.code = create('CodeableConcept') as code then {      } "SetCode";
+      } "QRtoCondition";
+}

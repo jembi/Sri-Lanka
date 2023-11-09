@@ -983,18 +983,27 @@ Usage: #example
     * text = "Landline number"
     * answer.valueString = "+27218527865"
 
-Instance: HIMSRiskBehaviourQuestionnaireResponse
+Instance: HIMSRiskBehaviourQuestionnaireResponse-PhysicalActivity
 InstanceOf: QuestionnaireResponse
 Title: "HIMS Risk Behaviour Questionnaire Response"
-Description: "Questionnaire Response using the HIMS data elements for risk behaviour."
+Description: "Questionnaire Response using the HIMS data elements for physical activity risk behaviour."
 Usage: #example
 * status = #completed
 * authored = "2023-11-07T19:20:20.913Z"
-* questionnaire = Canonical(HIMSRiskBehaviourQuestionnaire)
+* questionnaire = Canonical(HIMSRiskBehaviourQuestionnaire-PhysicalActivity)
 * item[+]
   * linkId = "physicalActivity"
   * text = "Physical activity"
   * answer.valueCoding = $SCT#86047003 "Active physical exercise"
+
+Instance: HIMSRiskBehaviourQuestionnaireResponse-TobaccoSmoking
+InstanceOf: QuestionnaireResponse
+Title: "HIMS Risk Behaviour Questionnaire Response"
+Description: "Questionnaire Response using the HIMS data elements for tobacco smoking risk behaviour."
+Usage: #example
+* status = #completed
+* authored = "2023-11-07T19:20:20.913Z"
+* questionnaire = Canonical(HIMSRiskBehaviourQuestionnaire-TobaccoSmoking)
 * item[+]
   * linkId = "tobaccoSmoking"
   * text = "Tobacco smoking"

@@ -1,4 +1,4 @@
-map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourLogicalModelToObservation-TobaccoSmoking" = "HIMSRiskBehaviourLogicalModelToObservation-TobaccoSmoking"
+map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourLMToObs-TobaccoSmoking" = "HIMSRiskBehaviourLMToObs-TobaccoSmoking"
 // Maps the HIMS logical model data elements to the Observation resource data elements.
 uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSRiskBehaviourDataDictionary" alias IMMZC as source
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias Bundle as target

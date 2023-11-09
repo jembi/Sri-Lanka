@@ -1,4 +1,4 @@
-map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourQuestionnaireResponseToLogicalModel-TobaccoSmoking" = "HIMSRiskBehaviourQuestionnaireResponseToLogicalModel-TobaccoSmoking"
+map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourQRToLM-TobaccoSmoking" = "HIMSRiskBehaviourQRToLM-TobaccoSmoking"
 // Maps the Risk Behaviour Questionnaire Response to the HIMS Logical Model data elements.
 uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias QResp as source
 uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSRiskBehaviourDataDictionary" alias IMMZC as target

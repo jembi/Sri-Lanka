@@ -1,0 +1,14 @@
+map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSMedicalHistoryQRToLM" = "HIMSMedicalHistoryQRToLM"
+// Maps the Medical History Questionnaire Response to the HIMS Logical Model data elements.
+uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias QResp as source
+uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSMedicalHistoryDataDictionary" alias IMMZC as target
+
+group QRespToIMMZC ( source qr : QResp, target immzc : IMMZC) {
+  qr.item as item then {
+    item.answer first as answer where item.linkId = 'medicalHistory' then {
+      answer.value as coding then {
+        coding.code as content -> immzc.medicalHistory = content "SetMedicalHistory";
+      } "ProcessCoding";
+    } "FirstAnswerForMedicalHistory";
+  } "processItems";
+}

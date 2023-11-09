@@ -1402,7 +1402,7 @@ Id: cs-register-patient-codes
 Title:        "Register Patient"
 Description:  "CodeSystem for Register Patient Data Elements"
 * ^experimental = false
-* ^caseSensitive = false
+* ^caseSensitive = true
 * #RP1 "Personal health number" "Unique identifier for the patient, according to the policies applicable to each country."
 * #RP2 "National identity card" "Unique identifier for the patient, according to the policies applicable to each country."
 * #RP3 "Passport" "Unique identifier for the patient, according to the policies applicable to each country."
@@ -1452,7 +1452,7 @@ Id: cs-risk-behaviour-codes
 Title:        "Risk Behaviour"
 Description:  "CodeSystem for Risk Behaviour Data Elements"
 * ^experimental = false
-* ^caseSensitive = false
+* ^caseSensitive = true
 * #RA1 "Physical activity" "Physical activity status for the patient."
 * #RA2 "Tobacco smoking" "Tobacco smoking status for the patient."
 //* #RA3 "Risk behaviour" "Patient's risk behaviour"
@@ -1463,3 +1463,11 @@ Title:        "Sex ValueSet for Data Elements"
 Description:  "ValueSet for Sex"
 * ^experimental = false
 * include codes from system $GENDER*/
+
+CodeSystem:   CSMedicalHistoryCodes
+Id: cs-medical-history-codes
+Title:        "Medical History"
+Description:  "CodeSystem for Medical History Data Elements"
+* ^experimental = false
+* ^caseSensitive = true
+* #MH1 "Medical history" "Medical history for the patient."

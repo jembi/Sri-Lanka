@@ -1,0 +1,16 @@
+map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSMedicalHistoryLMToCondition" = "HIMSMedicalHistoryLMToCondition"
+// Maps the HIMS logical model data elements to the Condition resource data elements.
+uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSMedicalHistoryDataDictionary" alias IMMZC as source
+uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias Bundle as target
+uses "http://hl7.org/fhir/StructureDefinition/Condition" alias Condition as target
+
+group DataDictToCondition (
+  source immzc : IMMZC,
+  target condition: Condition
+) {
+  immzc.medicalHistory as medicalHistory -> condition.code as medicalHistoryCode then {
+    medicalHistory.coding first as coding -> medicalHistoryCode then {
+      medicalHistory -> cond.code = medicalHistory "SetMedicalHistoryCode";
+    } "SetMedicalHistoryCodeValue";
+  } "SetMedicalHistory";
+}

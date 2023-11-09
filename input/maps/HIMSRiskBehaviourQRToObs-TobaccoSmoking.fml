@@ -1,12 +1,12 @@
-map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourQuestionnaireResponseToObservation-PhysicalActivity" = "HIMSRiskBehaviourQuestionnaireResponseToObservation-PhysicalActivity"
+map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourQRToObs-TobaccoSmoking" = "HIMSRiskBehaviourQRToObs-TobaccoSmoking"
 // Maps the Risk Behaviour Questionnaire Response to the HIMS Observation resource data elements.
 uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias QResp as source
 uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSRiskBehaviourDataDictionary" alias IMMZC as source
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" as target
 uses "http://hl7.org/fhir/StructureDefinition/Observation" as target
 
-imports "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourQuestionnaireResponseToLogicalModel-PhysicalActivity"
-imports "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourLogicalModelToObservation-PhysicalActivity"
+imports "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourQRToLM-TobaccoSmoking"
+imports "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourLMToObs-TobaccoSmoking"
 
 group QRestToIMMZC (
   source qr : QResp,
@@ -22,6 +22,6 @@ group QRestToIMMZC (
         qr -> observation.status = final "ruleObservationStatus";
         qr -> observation.code = create('CodeableConcept') as coding, 
           c.system = "http://snomed.info/sct", 
-          c.code = '106020009' "SetObsCode";
+          c.code = '365981007' "SetObsCode";
       } "QRtoObservation";
 }

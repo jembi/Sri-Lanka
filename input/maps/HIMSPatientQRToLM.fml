@@ -1,4 +1,4 @@
-map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSPatientQuestionnaireResponseToLogicalModel" = "HIMSPatientQuestionnaireResponseToLogicalModel"
+map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSPatientQRToLM" = "HIMSPatientQRToLM"
 // Maps the Patient Registration Questionnaire Response to the HIMS Logical Model data elements
 uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias QResp as source
 uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSPatientRegistrationDataDictionary" alias IMMZC as target
@@ -28,14 +28,6 @@ group QRespToIMMZC ( source qr : QResp, target immzc : IMMZC) {
 
     item.answer as patientName where item.linkId = 'patientName' -> immzc.patientName as pat 
       then FullNameToIMMZC( patientName, pat ) "SetPatientNames";
-
-    item.answer first as answer where item.linkId = 'firstName' then {
-      answer.value as content -> immzc.firstName = content "SetFirstName";
-    } "FirstAnswerForFirstName";
-
-    item.answer first as answer where item.linkId = 'surname' then {
-      answer.value as content -> immzc.surname = content "SetSurname";
-    } "FirstAnswerForSurname";
   
     item.answer first as answer where item.linkId = 'sex' then {
       answer.value as coding then {
@@ -58,6 +50,14 @@ group QRespToIMMZC ( source qr : QResp, target immzc : IMMZC) {
 group FullNameToIMMZC( source name, target immzc) {
   name.item as item then 
   {
+    item.answer first as answer where item.linkId = 'firstName' then {
+      answer.value as content -> immzc.firstName = content "SetFirstName";
+    } "FirstAnswerForFirstName";
+
+    item.answer first as answer where item.linkId = 'surname' then {
+      answer.value as content -> immzc.surname = content "SetSurname";
+    } "FirstAnswerForSurname";
+
     item.answer first as answer where item.linkId = 'firstName' then 
     {
       answer.value as firstName -> firstName then 
