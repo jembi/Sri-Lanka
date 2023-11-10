@@ -1,0 +1,72 @@
+map "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSLMToPatientRegistration" = "HIMSLMToPatientRegistration"
+// Maps the HIMS logical model data elements to the Patient resource data elements
+uses "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSPatientRegistrationDataDictionary" alias IMMZC as source
+uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias Bundle as target
+uses "http://hl7.org/fhir/StructureDefinition/Patient" alias Patient as target
+
+group DataDictToPatient (
+  source immzc : IMMZC,
+  target patient: Patient
+) {
+
+  immzc.personalHealthNumber as id1 -> patient.identifier as identifier then {
+    id1 -> identifier.value = id1 "SetPersonalHealthNumberValue";
+  } "SetPHN";
+
+  immzc.nationalIdentityCard as id2 -> patient.identifier as identifier then {
+    id2 -> identifier.value = id2 "SetNationalIdentityCardNumberValue";
+  } "SetNIC";
+
+  immzc.passport as id3 -> patient.identifier as identifier then {
+    id3 -> identifier.value = id3 "SetPassportNumberValue";
+  } "SetPassport";
+
+  immzc.drivingLicense as id4 -> patient.identifier as identifier then {
+    id4 -> identifier.value = id4 "SetDrivingLicenseNumberValue";
+  } "SetDL";
+
+  immzc.seniorCitizenNumber as id5 -> patient.identifier as identifier then {
+    id5 -> identifier.value = id5 "SetSeniorCitizenNumberValue";
+  } "SetSCN";
+  
+  immzc.sex as sex -> patient.gender = sex "SetGender";
+  
+  immzc.birthDate as birthDate -> patient.birthDate = birthDate "SetBirthDate";
+
+  immzc.patientName as patientName -> patient.name as hname 
+    then NameToHumanName( patientName, hname ) "SetPatientNames";
+
+  immzc.address as address -> patient.address as haddy 
+    then AddyToAddress( address, haddy ) "SetAddresses";
+
+  immzc.contactDetails as contactDetails -> patient.telecom as hcontact 
+    then ContactDetailsToContactPoint( contactDetails, hcontact ) "SetContactDetails";
+}
+
+group NameToHumanName (
+  source name,
+  target hname
+) {
+  name.fullName as fullName -> hname.text = fullName "SetFullName";
+  name.firstName as firstName -> hname.given = firstName "SetFirstName";
+  name.surname as surname -> hname.family = surname "SetFamilyName";
+}
+
+group AddyToAddress (
+  source address,
+  target haddy
+) {
+  address.streetNameAndNr as streetNameAndNr -> haddy.line = streetNameAndNr "SetStreetNameAndNr";
+  address.city as city -> haddy.city = city "SetCity";
+  address.state as state -> haddy.state = state "SetState";
+  address.country as country -> haddy.country = country "SetCountry";
+  address.postalCode as postalCode -> haddy.postalCode = postalCode "SetPostalCode";
+}
+
+group ContactDetailsToContactPoint (
+  source contact,
+  target hcontact
+) {
+  contact.mobileNumber as mobileNumber -> hcontact.value = mobileNumber "SetMobileNumber";
+  contact.landline as landline -> hcontact.value = landline "SetLandline";
+}

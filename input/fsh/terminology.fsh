@@ -2,6 +2,7 @@ Alias: $LNC = http://loinc.org
 Alias: $SCT = http://snomed.info/sct
 Alias: $SCT_or_SCTINT = http://snomed.info/sct|http://snomed.info/sct/900000000000207008
 Alias: $DICOM = http://dicom.nema.org/resources/ontology/DCM
+Alias: $GENDER = http://hl7.org/fhir/administrative-gender
 
 /*CodeSystem: CSRiskBehaviourPhysicalActivity
 Id: cs-risk-behaviour-physical-activity
@@ -1113,9 +1114,9 @@ Description: "Investigations"
 * #Haemoglobin-HPLC-PLCC "Haemoglobin HPLC - PLCC" "Needs definition"
 * #Haemoglobin-HPLC-PLCR "Haemoglobin HPLC - PLCR" "Needs definition"
 * #ESR-ESR-1st-Hour "ESR - ESR 1st Hour" "Needs definition"
-* #Dengue-Test-NS1-Antigen "Dengue Test - NS1 Antigen" "Needs definition"
-* #Dengue-Test-Dengue-Ig-M "Dengue Test - Dengue Ig M" "Needs definition"
-* #Dengue-Test-Dengue-Ig-G "Dengue Test - Dengue Ig G" "Needs definition"
+* #RPngue-Test-NS1-Antigen "Dengue Test - NS1 Antigen" "Needs definition"
+* #RPngue-Test-Dengue-Ig-M "Dengue Test - Dengue Ig M" "Needs definition"
+* #RPngue-Test-Dengue-Ig-G "Dengue Test - Dengue Ig G" "Needs definition"
 * #Blood-Sugar-FBS "Blood Sugar - FBS" "Needs definition"
 * #HbA1c-HBA1C "HbA1c - HBA1C" "Needs definition"
 * #HbA1c-PPBS "HbA1c - PPBS" "Needs definition"
@@ -1210,8 +1211,8 @@ Description: "Medication Names"
 * #Crepe-Bandage "crepe bandage" "Needs definition"
 * #Dapaglifiozin "Dapaglifiozin" "Needs definition"
 * #Dapoxetine "Dapoxetine" "Needs definition"
-* #Desioratadine "Desioratadine" "Needs definition"
-* #Dexamethasone "dexamethasone" "Needs definition"
+* #RPsioratadine "Desioratadine" "Needs definition"
+* #RPxamethasone "dexamethasone" "Needs definition"
 * #Diamicron "Diamicron" "Needs definition"
 * #Diazepam "diazepam" "Needs definition"
 * #Diclofenac-Na "diclofenac-Na" "Needs definition"
@@ -1395,3 +1396,78 @@ Title: "Procedures"
 Description: "Imaging Procedures"
 * ^experimental = false
 * include codes from system CSImagingProcedures
+
+CodeSystem:   CSRegisterPatientCodes
+Id: cs-register-patient-codes
+Title:        "Register Patient"
+Description:  "CodeSystem for Register Patient Data Elements"
+* ^experimental = false
+* ^caseSensitive = true
+* #RP1 "Personal health number" "Unique identifier for the patient, according to the policies applicable to each country."
+* #RP2 "National identity card" "Unique identifier for the patient, according to the policies applicable to each country."
+* #RP3 "Passport" "Unique identifier for the patient, according to the policies applicable to each country."
+* #RP4 "Driving license" "Unique identifier for the patient, according to the policies applicable to each country."
+* #RP5 "Senior citizen number" "Unique identifier for the patient, according to the policies applicable to each country."
+* #RP6 "Name" "The full name of the patient"
+* #RP7 "First name" "Patient's first name or given name"
+* #RP8 "Family name" "Patient's family name or last name"
+* #RP9 "Sex" "Documentation of a specific instance of sex information for the patient"
+* #RP10 "City" "Address city"
+* #RP11 "Street name and number" "Address street name and number"
+* #RP12 "State" "Address state"
+* #RP13 "Country" "Address country"
+* #RP14 "Postal code" "Address postal code"
+* #RP15 "Date of birth" "Patient's date of birth (DOB) if known; if unknown, use assigned DOB for administrative purposes"
+* #RP16 "Mobile phone number" "Patient's mobile phone number"
+* #RP17 "Landline phone number" "Patient's landline phone number"
+* #RP18 "Name (Multiple)" "Patient names"
+* #RP19 "Address (Multiple)" "Patient addresses"
+* #RP20 "Contact details (Multiple)" "Patient contact details"
+//* #RP21 "Male" "Patient's biological sex is male"
+//* #RP22 "Female" "Patient's biological sex is female"
+//* #RP23 "Unknown" "Patient's biological sex is unknown"
+//* #RP24 "Other" "Patient's biological sex is other"
+
+/*ValueSet: VSRegisterPatientCodes
+Id: vs-register-patient-codes
+Title:        "Register Patient ValueSet for Data Elements"
+Description:  "ValueSet for Register Patient Data Elements"
+* ^experimental = false
+* ^status = #active
+* include codes from system CSRegisterPatientCodes*/
+
+
+/*ValueSet: VSSex
+Id: vs-sex
+Title:        "Sex ValueSet for Data Elements"
+Description:  "ValueSet for Sex"
+* ^experimental = false
+* CSRegisterPatientCodes#RP21 "Male"
+* CSRegisterPatientCodes#RP22 "Female"
+* CSRegisterPatientCodes#RP23 "Unknown"
+* CSRegisterPatientCodes#RP24 "Other"*/
+
+CodeSystem:   CSRiskBehaviourCodes
+Id: cs-risk-behaviour-codes
+Title:        "Risk Behaviour"
+Description:  "CodeSystem for Risk Behaviour Data Elements"
+* ^experimental = false
+* ^caseSensitive = true
+* #RA1 "Physical activity" "Physical activity status for the patient."
+* #RA2 "Tobacco smoking" "Tobacco smoking status for the patient."
+//* #RA3 "Risk behaviour" "Patient's risk behaviour"
+
+/*ValueSet: VSSex
+Id: vs-sex
+Title:        "Sex ValueSet for Data Elements"
+Description:  "ValueSet for Sex"
+* ^experimental = false
+* include codes from system $GENDER*/
+
+CodeSystem:   CSMedicalHistoryCodes
+Id: cs-medical-history-codes
+Title:        "Medical History"
+Description:  "CodeSystem for Medical History Data Elements"
+* ^experimental = false
+* ^caseSensitive = true
+* #MH1 "Medical history" "Medical history for the patient."

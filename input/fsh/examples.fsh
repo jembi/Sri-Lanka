@@ -896,3 +896,115 @@ Description: "Used to represent the content or results of a imaging study."
 * series.modality = $DICOM#XA
 * series.performer[+].actor = Reference(GeneralPractitionerExample)
 * procedureReference = Reference(ProceduresExample)
+
+Instance: HIMSRegisterPatientQuestionnaireResponse
+InstanceOf: QuestionnaireResponse
+Title: "HIMS Patient Registration Questionnaire Response"
+Description: "Questionnaire Response using the HIMS data elements for patient registration."
+Usage: #example
+* status = #completed
+* authored = "2023-11-07T19:20:20.913Z"
+* questionnaire = Canonical(HIMSRegisterPatientQuestionnaire)
+* item[+]
+  * linkId = "personalHealthNumber"
+  * text = "Personal health number"
+  * answer.valueString = "PHN-123456"
+* item[+]
+  * linkId = "nationalIdentityCard"
+  * text = "National identity card"
+  * answer.valueString = "NIC-123456"
+* item[+]
+  * linkId = "passport"
+  * text = "Passport"
+  * answer.valueString = "PASS-123456"
+* item[+]
+  * linkId = "drivingLicense"
+  * text = "Driving license"
+  * answer.valueString = "DL-123456"
+* item[+]
+  * linkId = "seniorCitizenNumber"
+  * text = "Senior citizen number"
+  * answer.valueString = "SCN-123456"
+* item[+]
+  * linkId = "patientName"
+  * .text = "Name"
+  * item[+]
+    * linkId = "fullName"
+    * text = "Full name"
+    * answer.valueString = "Tom Jones"
+  * item[+]
+    * linkId = "firstName"
+    * text = "First or given name"
+    * answer.valueString = "Tom"
+  * item[+]
+    * linkId = "surname"
+    * text = "Family name"
+    * answer.valueString = "Jones"
+* item[+]
+  * linkId = "sex"
+  * text = "Sex"
+  * answer.valueCoding = $GENDER#male "Male"
+* item[+]
+  * linkId = "address"
+  * text = "Address"
+  * item[+]
+    * linkId = "streetNameAndNr"
+    * text = "Street name and number"
+    * answer.valueString = "15 Sesame Street"
+  * item[+]
+    * linkId = "city"
+    * text = "City"
+    * answer.valueString = "Cape Town"
+  * item[+]
+    * linkId = "state"
+    * text = "State"
+    * answer.valueString = "Western Cape"
+  * item[+]
+    * linkId = "country"
+    * text = "Country"
+    * answer.valueString = "South Africa"
+  * item[+]
+    * linkId = "postalCode"
+    * text = "Postal code"
+    * answer.valueString = "7140"
+* item[+]
+  * linkId = "birthDate"
+  * text = "Birth Date"
+  * answer.valueDate = "1983-05-22"
+* item[+]
+  * linkId = "contactDetails"
+  * text = "Contact details"
+  * item[+]
+    * linkId = "mobileNumber"
+    * text = "Mobile number"
+    * answer.valueString = "+27832791573"
+  * item[+]
+    * linkId = "landline"
+    * text = "Landline number"
+    * answer.valueString = "+27218527865"
+
+Instance: HIMSRiskBehaviourQuestionnaireResponse-PhysicalActivity
+InstanceOf: QuestionnaireResponse
+Title: "HIMS Risk Behaviour Questionnaire Response"
+Description: "Questionnaire Response using the HIMS data elements for physical activity risk behaviour."
+Usage: #example
+* status = #completed
+* authored = "2023-11-07T19:20:20.913Z"
+* questionnaire = Canonical(HIMSRiskBehaviourQuestionnaire-PhysicalActivity)
+* item[+]
+  * linkId = "physicalActivity"
+  * text = "Physical activity"
+  * answer.valueCoding = $SCT#86047003 "Active physical exercise"
+
+Instance: HIMSRiskBehaviourQuestionnaireResponse-TobaccoSmoking
+InstanceOf: QuestionnaireResponse
+Title: "HIMS Risk Behaviour Questionnaire Response"
+Description: "Questionnaire Response using the HIMS data elements for tobacco smoking risk behaviour."
+Usage: #example
+* status = #completed
+* authored = "2023-11-07T19:20:20.913Z"
+* questionnaire = Canonical(HIMSRiskBehaviourQuestionnaire-TobaccoSmoking)
+* item[+]
+  * linkId = "tobaccoSmoking"
+  * text = "Tobacco smoking"
+  * answer.valueCoding = $SCT#8392000 "Non-smoker"
