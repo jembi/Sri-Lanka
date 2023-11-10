@@ -8,7 +8,7 @@ Description:  "Data elements for the HIMS Medical History Data Dictionary."
   * ^code[+] = CSMedicalHistoryCodes#MH1
 * medicalHistory from VSMedicalConditions (extensible)
 
-Mapping: HIMSMedicalHistoryDataDictionary-to-Patient
+Mapping: HIMSMedicalHistoryDataDictionary-to-Condition
 Source: HIMSMedicalHistoryDataDictionary
 Target: "Condition"
 * -> "Condition"

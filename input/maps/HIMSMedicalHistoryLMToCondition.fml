@@ -8,9 +8,7 @@ group DataDictToCondition (
   source immzc : IMMZC,
   target condition: Condition
 ) {
-  immzc.medicalHistory as medicalHistory -> condition.code as medicalHistoryCode then {
-    medicalHistory.coding first as coding -> medicalHistoryCode then {
-      medicalHistory -> cond.code = medicalHistory "SetMedicalHistoryCode";
-    } "SetMedicalHistoryCodeValue";
+  immzc.medicalHistory as medicalHistory -> condition as cond then {
+    medicalHistory -> cond.code = medicalHistory "SetMedicalHistoryValue";
   } "SetMedicalHistory";
 }
