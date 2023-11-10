@@ -10,7 +10,7 @@ Usage: #definition
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
 * extension[=].valueCanonical = "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSMedicalHistoryQRToCondition"
 
-* insert Question(medicalHistory, Medical history,choice,true,false)
+* insert Question(medicalHistory, Medical history,choice,false,true)
 * item[=]
   * answerValueSet = Canonical(VSMedicalConditions)
   * code[+] = CSMedicalHistoryCodes#MH1
