@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-cvd-risk-category"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include all codes defined in <a href="CodeSystem-cs-cvd-risk-category.html"><code>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-cvd-risk-category</code></a></li></ul></div>
+  </text>
+  <url value="http://openhie.org/fhir/sri-lanka/ValueSet/vs-cvd-risk-category"/>
+  <version value="0.1.0"/>
+  <name value="VSCVDRiskCategory"/>
+  <title value="Cardiovascular Risk Category Probability Percentage Ranges"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2023-10-11T19:33:00+00:00"/>
+  <publisher value="Jembi Health Systems"/>
+  <contact>
+    <name value="Jembi Health Systems"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.jembi.org"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@jembi.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Richard Langford"/>
+    <telecom>
+      <system value="email"/>
+      <value value="richard.langford@jembi.org"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Cardiovascular Risk Category Probability Percentage Ranges"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-cvd-risk-category"/>
+    </include>
+  </compose>
+</ValueSet>

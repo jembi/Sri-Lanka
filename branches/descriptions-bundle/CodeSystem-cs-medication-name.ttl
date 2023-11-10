@@ -1,0 +1,790 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openhie.org/fhir/sri-lanka/CodeSystem/cs-medication-name> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cs-medication-name"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-sensitive code system <code>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-medication-name</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">Alpha-Chole-Calciferol<a name=\"cs-medication-name-Alpha-Chole-Calciferol\"> </a></td><td>Alpha Chole Calciferol</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Acarbose<a name=\"cs-medication-name-Acarbose\"> </a></td><td>Acarbose</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Aciclovir<a name=\"cs-medication-name-Aciclovir\"> </a></td><td>aciclovir</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Alendronate<a name=\"cs-medication-name-Alendronate\"> </a></td><td>Alendronate</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Allopurinol<a name=\"cs-medication-name-Allopurinol\"> </a></td><td>Allopurinol</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Alprazolam<a name=\"cs-medication-name-Alprazolam\"> </a></td><td>Alprazolam</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Amiodarone<a name=\"cs-medication-name-Amiodarone\"> </a></td><td>Amiodarone</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Amitriptyline<a name=\"cs-medication-name-Amitriptyline\"> </a></td><td>amitriptyline</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Amlodipine<a name=\"cs-medication-name-Amlodipine\"> </a></td><td>Amlodipine</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Amoxycillin<a name=\"cs-medication-name-Amoxycillin\"> </a></td><td>Amoxycillin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Ascorbic-Acid<a name=\"cs-medication-name-Ascorbic-Acid\"> </a></td><td>Ascorbic acid</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Aspirin<a name=\"cs-medication-name-Aspirin\"> </a></td><td>aspirin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Atorvastatin<a name=\"cs-medication-name-Atorvastatin\"> </a></td><td>atorvastatin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Cetrizine<a name=\"cs-medication-name-Cetrizine\"> </a></td><td>Cetrizine</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Chloramphenicol<a name=\"cs-medication-name-Chloramphenicol\"> </a></td><td>chloramphenicol</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Chlorpheniramine<a name=\"cs-medication-name-Chlorpheniramine\"> </a></td><td>chlorpheniramine</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Chlorpromazine<a name=\"cs-medication-name-Chlorpromazine\"> </a></td><td>chlorpromazine</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Cilnidipine<a name=\"cs-medication-name-Cilnidipine\"> </a></td><td>Cilnidipine</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Ciprofloxacin<a name=\"cs-medication-name-Ciprofloxacin\"> </a></td><td>ciprofloxacin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Clarythromycin<a name=\"cs-medication-name-Clarythromycin\"> </a></td><td>clarythromycin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Clinidipine<a name=\"cs-medication-name-Clinidipine\"> </a></td><td>clinidipine</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Clobazam<a name=\"cs-medication-name-Clobazam\"> </a></td><td>Clobazam</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Clonazepam<a name=\"cs-medication-name-Clonazepam\"> </a></td><td>clonazepam</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Clopidogrel<a name=\"cs-medication-name-Clopidogrel\"> </a></td><td>clopidogrel</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Clotrimazole<a name=\"cs-medication-name-Clotrimazole\"> </a></td><td>Clotrimazole</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Cloxacillin<a name=\"cs-medication-name-Cloxacillin\"> </a></td><td>Cloxacillin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Co-Q-Enzyme<a name=\"cs-medication-name-Co-Q-Enzyme\"> </a></td><td>Co - Q enzyme</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Co-Amoxiclav<a name=\"cs-medication-name-Co-Amoxiclav\"> </a></td><td>Co-amoxiclav</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Co-Careldopa-Carbidopa-Bp+Levodopa-Bp<a name=\"cs-medication-name-Co-Careldopa-Carbidopa-Bp.43Levodopa-Bp\"> </a></td><td>Co-Careldopa (Carbidopa BP + Levodopa BP)</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Concer<a name=\"cs-medication-name-Concer\"> </a></td><td>concer</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Cotrimoxazole<a name=\"cs-medication-name-Cotrimoxazole\"> </a></td><td>cotrimoxazole</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Crepe-Bandage<a name=\"cs-medication-name-Crepe-Bandage\"> </a></td><td>crepe bandage</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Dapaglifiozin<a name=\"cs-medication-name-Dapaglifiozin\"> </a></td><td>Dapaglifiozin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Dapoxetine<a name=\"cs-medication-name-Dapoxetine\"> </a></td><td>Dapoxetine</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Desioratadine<a name=\"cs-medication-name-Desioratadine\"> </a></td><td>Desioratadine</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Dexamethasone<a name=\"cs-medication-name-Dexamethasone\"> </a></td><td>dexamethasone</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Diamicron<a name=\"cs-medication-name-Diamicron\"> </a></td><td>Diamicron</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Diazepam<a name=\"cs-medication-name-Diazepam\"> </a></td><td>diazepam</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Diclofenac-Na<a name=\"cs-medication-name-Diclofenac-Na\"> </a></td><td>diclofenac-Na</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Diethylcarbamazine-Hetrazan<a name=\"cs-medication-name-Diethylcarbamazine-Hetrazan\"> </a></td><td>diethylcarbamazine (Hetrazan)</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Digoxin<a name=\"cs-medication-name-Digoxin\"> </a></td><td>digoxin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Diltiazem<a name=\"cs-medication-name-Diltiazem\"> </a></td><td>Diltiazem</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Domperidone<a name=\"cs-medication-name-Domperidone\"> </a></td><td>Domperidone</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Donepezil<a name=\"cs-medication-name-Donepezil\"> </a></td><td>Donepezil</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Doxycycline<a name=\"cs-medication-name-Doxycycline\"> </a></td><td>Doxycycline</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Asthalin<a name=\"cs-medication-name-Asthalin\"> </a></td><td>Asthalin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Beclate<a name=\"cs-medication-name-Beclate\"> </a></td><td>Beclate</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Beclomethazone-Diproprionate<a name=\"cs-medication-name-Beclomethazone-Diproprionate\"> </a></td><td>Beclomethazone diproprionate</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Dp-Haler<a name=\"cs-medication-name-Dp-Haler\"> </a></td><td>DP Haler</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Salmetrol+Fluticazone<a name=\"cs-medication-name-Salmetrol.43Fluticazone\"> </a></td><td>Salmetrol + Fluticazone</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Ecosprin<a name=\"cs-medication-name-Ecosprin\"> </a></td><td>Ecosprin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Empagliflozin<a name=\"cs-medication-name-Empagliflozin\"> </a></td><td>Empagliflozin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Enalapril<a name=\"cs-medication-name-Enalapril\"> </a></td><td>enalapril</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Erythromycin<a name=\"cs-medication-name-Erythromycin\"> </a></td><td>erythromycin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Erythropoietin<a name=\"cs-medication-name-Erythropoietin\"> </a></td><td>Erythropoietin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Ezetimibe<a name=\"cs-medication-name-Ezetimibe\"> </a></td><td>Ezetimibe</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Famotidine<a name=\"cs-medication-name-Famotidine\"> </a></td><td>Famotidine</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Fenofibrate<a name=\"cs-medication-name-Fenofibrate\"> </a></td><td>Fenofibrate</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Ferrous-Fumarate<a name=\"cs-medication-name-Ferrous-Fumarate\"> </a></td><td>ferrous fumarate</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Ferrous-Sulphate<a name=\"cs-medication-name-Ferrous-Sulphate\"> </a></td><td>ferrous sulphate</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Finasteride<a name=\"cs-medication-name-Finasteride\"> </a></td><td>Finasteride</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Flucloxacillin<a name=\"cs-medication-name-Flucloxacillin\"> </a></td><td>FLUCLOXACILLIN</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Flunarizine<a name=\"cs-medication-name-Flunarizine\"> </a></td><td>Flunarizine</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Fluoxetine<a name=\"cs-medication-name-Fluoxetine\"> </a></td><td>Fluoxetine</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Folic-Acid<a name=\"cs-medication-name-Folic-Acid\"> </a></td><td>folic acid</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Frisium<a name=\"cs-medication-name-Frisium\"> </a></td><td>frisium</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Frusemide<a name=\"cs-medication-name-Frusemide\"> </a></td><td>frusemide</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Furazolidone<a name=\"cs-medication-name-Furazolidone\"> </a></td><td>furazolidone</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Fusigel<a name=\"cs-medication-name-Fusigel\"> </a></td><td>FUSIGEL</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Gabapentin<a name=\"cs-medication-name-Gabapentin\"> </a></td><td>Gabapentin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Glibenclamide-Diaonil<a name=\"cs-medication-name-Glibenclamide-Diaonil\"> </a></td><td>glibenclamide (Diaonil)</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Gliclazide<a name=\"cs-medication-name-Gliclazide\"> </a></td><td>gliclazide</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Glimepride<a name=\"cs-medication-name-Glimepride\"> </a></td><td>Glimepride</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Glucophage<a name=\"cs-medication-name-Glucophage\"> </a></td><td>Glucophage</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Glycery/Trinitrate-Gtn-Sublingual<a name=\"cs-medication-name-Glycery.47Trinitrate-Gtn-Sublingual\"> </a></td><td>glycery/trinitrate (GTN) sublingual</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Glycomet<a name=\"cs-medication-name-Glycomet\"> </a></td><td>Glycomet</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Griseofulvin<a name=\"cs-medication-name-Griseofulvin\"> </a></td><td>griseofulvin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Hydrochlorothiazide<a name=\"cs-medication-name-Hydrochlorothiazide\"> </a></td><td>hydrochlorothiazide</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Hydrocortisone<a name=\"cs-medication-name-Hydrocortisone\"> </a></td><td>Hydrocortisone</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Hyosine-Butylbromide-Buscopan<a name=\"cs-medication-name-Hyosine-Butylbromide-Buscopan\"> </a></td><td>Hyosine butylbromide (Buscopan)</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Ibuprofen<a name=\"cs-medication-name-Ibuprofen\"> </a></td><td>ibuprofen</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Imipramine<a name=\"cs-medication-name-Imipramine\"> </a></td><td>imipramine</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Indapamide<a name=\"cs-medication-name-Indapamide\"> </a></td><td>Indapamide</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Indomethacin<a name=\"cs-medication-name-Indomethacin\"> </a></td><td>indomethacin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Insulin<a name=\"cs-medication-name-Insulin\"> </a></td><td>insulin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Irbesartan<a name=\"cs-medication-name-Irbesartan\"> </a></td><td>irbesartan</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Isosorbide-Dinitrate-Isdn<a name=\"cs-medication-name-Isosorbide-Dinitrate-Isdn\"> </a></td><td>isosorbide dinitrate (ISDN)</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Isosorbide-Mononitrate<a name=\"cs-medication-name-Isosorbide-Mononitrate\"> </a></td><td>isosorbide mononitrate</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Ivabradine<a name=\"cs-medication-name-Ivabradine\"> </a></td><td>Ivabradine</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Kcl<a name=\"cs-medication-name-Kcl\"> </a></td><td>KCL</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Lamotrigine<a name=\"cs-medication-name-Lamotrigine\"> </a></td><td>Lamotrigine</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Levetiracetam<a name=\"cs-medication-name-Levetiracetam\"> </a></td><td>Levetiracetam</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Levofloxacin<a name=\"cs-medication-name-Levofloxacin\"> </a></td><td>Levofloxacin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Linagliptin<a name=\"cs-medication-name-Linagliptin\"> </a></td><td>linagliptin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Lithium-Carbonate<a name=\"cs-medication-name-Lithium-Carbonate\"> </a></td><td>lithium carbonate</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Losartan<a name=\"cs-medication-name-Losartan\"> </a></td><td>Losartan</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Methyl-Salicylate<a name=\"cs-medication-name-Methyl-Salicylate\"> </a></td><td>Methyl Salicylate</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Magnesium-Sulphate<a name=\"cs-medication-name-Magnesium-Sulphate\"> </a></td><td>magnesium sulphate</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Manorest<a name=\"cs-medication-name-Manorest\"> </a></td><td>Manorest</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Beclomethasone<a name=\"cs-medication-name-Beclomethasone\"> </a></td><td>Beclomethasone</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Ipravent<a name=\"cs-medication-name-Ipravent\"> </a></td><td>Ipravent</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Salbutamol-Asthalin<a name=\"cs-medication-name-Salbutamol-Asthalin\"> </a></td><td>Salbutamol (Asthalin)</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Salmetrol/Fluticazone<a name=\"cs-medication-name-Salmetrol.47Fluticazone\"> </a></td><td>Salmetrol / Fluticazone</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Seroflo<a name=\"cs-medication-name-Seroflo\"> </a></td><td>Seroflo</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Tiova<a name=\"cs-medication-name-Tiova\"> </a></td><td>Tiova</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Mebendazole<a name=\"cs-medication-name-Mebendazole\"> </a></td><td>Mebendazole</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Metalazone<a name=\"cs-medication-name-Metalazone\"> </a></td><td>Metalazone</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Metaprolol<a name=\"cs-medication-name-Metaprolol\"> </a></td><td>Metaprolol</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Metformin<a name=\"cs-medication-name-Metformin\"> </a></td><td>Metformin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Methotrexate<a name=\"cs-medication-name-Methotrexate\"> </a></td><td>Methotrexate</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Methyl-Prednisolone<a name=\"cs-medication-name-Methyl-Prednisolone\"> </a></td><td>Methyl Prednisolone</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Methyldopa-Aldomet<a name=\"cs-medication-name-Methyldopa-Aldomet\"> </a></td><td>methyldopa (Aldomet)</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Metronidazole<a name=\"cs-medication-name-Metronidazole\"> </a></td><td>metronidazole</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Miconazole<a name=\"cs-medication-name-Miconazole\"> </a></td><td>MICONAZOLE</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Minipress<a name=\"cs-medication-name-Minipress\"> </a></td><td>Minipress</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Montelukast<a name=\"cs-medication-name-Montelukast\"> </a></td><td>Montelukast</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Mycostatin<a name=\"cs-medication-name-Mycostatin\"> </a></td><td>mycostatin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Nebivolol<a name=\"cs-medication-name-Nebivolol\"> </a></td><td>Nebivolol</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Neuroton<a name=\"cs-medication-name-Neuroton\"> </a></td><td>Neuroton</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Nicorandil<a name=\"cs-medication-name-Nicorandil\"> </a></td><td>Nicorandil</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Nifedipine<a name=\"cs-medication-name-Nifedipine\"> </a></td><td>nifedipine</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Nitrocontin<a name=\"cs-medication-name-Nitrocontin\"> </a></td><td>Nitrocontin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Nitrofurantoin<a name=\"cs-medication-name-Nitrofurantoin\"> </a></td><td>Nitrofurantoin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Noklot<a name=\"cs-medication-name-Noklot\"> </a></td><td>Noklot</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Normal-Saline-Nasal-Drops<a name=\"cs-medication-name-Normal-Saline-Nasal-Drops\"> </a></td><td>normal saline nasal drops</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Olanzapine<a name=\"cs-medication-name-Olanzapine\"> </a></td><td>olanzapine</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Omeprazole<a name=\"cs-medication-name-Omeprazole\"> </a></td><td>omeprazole</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Oral-Rehydration-Salts<a name=\"cs-medication-name-Oral-Rehydration-Salts\"> </a></td><td>oral rehydration salts</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Pantaprazole<a name=\"cs-medication-name-Pantaprazole\"> </a></td><td>Pantaprazole</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Paracetamol<a name=\"cs-medication-name-Paracetamol\"> </a></td><td>paracetamol</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Penicillin<a name=\"cs-medication-name-Penicillin\"> </a></td><td>penicillin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Persantin<a name=\"cs-medication-name-Persantin\"> </a></td><td>Persantin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Capsulephenobarbital-Luminal<a name=\"cs-medication-name-Capsulephenobarbital-Luminal\"> </a></td><td>Capsulephenobarbital (Luminal)</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Phenytoin-Sodium<a name=\"cs-medication-name-Phenytoin-Sodium\"> </a></td><td>phenytoin sodium</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Pioglitazone<a name=\"cs-medication-name-Pioglitazone\"> </a></td><td>Pioglitazone</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Potassium-Permanganate<a name=\"cs-medication-name-Potassium-Permanganate\"> </a></td><td>potassium permanganate</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Prazosin<a name=\"cs-medication-name-Prazosin\"> </a></td><td>prazosin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Pregabalin<a name=\"cs-medication-name-Pregabalin\"> </a></td><td>Pregabalin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Prednisolone<a name=\"cs-medication-name-Prednisolone\"> </a></td><td>prednisolone</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Prochlorperazine-Stemetil<a name=\"cs-medication-name-Prochlorperazine-Stemetil\"> </a></td><td>prochlorperazine (Stemetil)</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Promethazine-Phenergan<a name=\"cs-medication-name-Promethazine-Phenergan\"> </a></td><td>promethazine (Phenergan)</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Propranolol<a name=\"cs-medication-name-Propranolol\"> </a></td><td>propranolol</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Propyithiouracil<a name=\"cs-medication-name-Propyithiouracil\"> </a></td><td>Propyithiouracil</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Pulse-Tri-Omega<a name=\"cs-medication-name-Pulse-Tri-Omega\"> </a></td><td>Pulse Tri Omega</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Pyrantel-Pamoate<a name=\"cs-medication-name-Pyrantel-Pamoate\"> </a></td><td>pyrantel pamoate</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Quetiapine<a name=\"cs-medication-name-Quetiapine\"> </a></td><td>Quetiapine</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Ranalazine<a name=\"cs-medication-name-Ranalazine\"> </a></td><td>Ranalazine</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Rifaximin<a name=\"cs-medication-name-Rifaximin\"> </a></td><td>Rifaximin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Risperidone<a name=\"cs-medication-name-Risperidone\"> </a></td><td>risperidone</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Ropinirole<a name=\"cs-medication-name-Ropinirole\"> </a></td><td>Ropinirole</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Rosuvastatin<a name=\"cs-medication-name-Rosuvastatin\"> </a></td><td>Rosuvastatin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Salbutamol<a name=\"cs-medication-name-Salbutamol\"> </a></td><td>salbutamol</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Sertalin<a name=\"cs-medication-name-Sertalin\"> </a></td><td>Sertalin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Sildenafil<a name=\"cs-medication-name-Sildenafil\"> </a></td><td>sildenafil</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Sinemet<a name=\"cs-medication-name-Sinemet\"> </a></td><td>Sinemet</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Sitagliptin<a name=\"cs-medication-name-Sitagliptin\"> </a></td><td>sitagliptin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Sodium-Bicarbonate-Nahco3<a name=\"cs-medication-name-Sodium-Bicarbonate-Nahco3\"> </a></td><td>Sodium Bicarbonate (NaHCO3)</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Sodium-Bicarbonate-Ear-Drops<a name=\"cs-medication-name-Sodium-Bicarbonate-Ear-Drops\"> </a></td><td>sodium bicarbonate ear drops</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Sodium-Valproate<a name=\"cs-medication-name-Sodium-Valproate\"> </a></td><td>sodium valproate</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Soframycin-Cream<a name=\"cs-medication-name-Soframycin-Cream\"> </a></td><td>Soframycin Cream</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Spacer-Device<a name=\"cs-medication-name-Spacer-Device\"> </a></td><td>Spacer Device</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Spironolactone<a name=\"cs-medication-name-Spironolactone\"> </a></td><td>spironolactone</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Stematil<a name=\"cs-medication-name-Stematil\"> </a></td><td>Stematil</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Sulphasalazine<a name=\"cs-medication-name-Sulphasalazine\"> </a></td><td>sulphasalazine</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Syndpa<a name=\"cs-medication-name-Syndpa\"> </a></td><td>Syndpa</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Tamsulosin<a name=\"cs-medication-name-Tamsulosin\"> </a></td><td>tamsulosin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Tazloc<a name=\"cs-medication-name-Tazloc\"> </a></td><td>tazloc</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Telmisartan<a name=\"cs-medication-name-Telmisartan\"> </a></td><td>Telmisartan</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Theophylline<a name=\"cs-medication-name-Theophylline\"> </a></td><td>theophylline</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Thiamin<a name=\"cs-medication-name-Thiamin\"> </a></td><td>Thiamin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Thyroxine<a name=\"cs-medication-name-Thyroxine\"> </a></td><td>thyroxine</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Tolbutamide<a name=\"cs-medication-name-Tolbutamide\"> </a></td><td>tolbutamide</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Topiramate<a name=\"cs-medication-name-Topiramate\"> </a></td><td>Topiramate</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Tramadol<a name=\"cs-medication-name-Tramadol\"> </a></td><td>tramadol</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Trifluoperazine-Stelazine<a name=\"cs-medication-name-Trifluoperazine-Stelazine\"> </a></td><td>trifluoperazine (Stelazine)</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Urimax<a name=\"cs-medication-name-Urimax\"> </a></td><td>Urimax</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Ursodiol<a name=\"cs-medication-name-Ursodiol\"> </a></td><td>Ursodiol</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Verapamil<a name=\"cs-medication-name-Verapamil\"> </a></td><td>verapamil</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Vildagliptin<a name=\"cs-medication-name-Vildagliptin\"> </a></td><td>vildagliptin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Vitamin-A-&amp;-D<a name=\"cs-medication-name-Vitamin-A-.38-D\"> </a></td><td>vitamin A &amp; D</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Vitamin-B<a name=\"cs-medication-name-Vitamin-B\"> </a></td><td>vitamin B</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Vitamin-E<a name=\"cs-medication-name-Vitamin-E\"> </a></td><td>Vitamin E</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Warfarin<a name=\"cs-medication-name-Warfarin\"> </a></td><td>warfarin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Zinc-Sulphate<a name=\"cs-medication-name-Zinc-Sulphate\"> </a></td><td>Zinc Sulphate</td><td>Needs definition</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-medication-name"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "CSMedicationNames"] ; # 
+  fhir:title [ fhir:v "Medication Names"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-10-19T07:28:58+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Jembi Health Systems"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Jembi Health Systems" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.jembi.org" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "info@jembi.org" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Richard Langford" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "richard.langford@jembi.org" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Medication Names"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "184"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "Alpha-Chole-Calciferol" ] ;
+     fhir:display [ fhir:v "Alpha Chole Calciferol" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Acarbose" ] ;
+     fhir:display [ fhir:v "Acarbose" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Aciclovir" ] ;
+     fhir:display [ fhir:v "aciclovir" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Alendronate" ] ;
+     fhir:display [ fhir:v "Alendronate" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Allopurinol" ] ;
+     fhir:display [ fhir:v "Allopurinol" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Alprazolam" ] ;
+     fhir:display [ fhir:v "Alprazolam" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Amiodarone" ] ;
+     fhir:display [ fhir:v "Amiodarone" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Amitriptyline" ] ;
+     fhir:display [ fhir:v "amitriptyline" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Amlodipine" ] ;
+     fhir:display [ fhir:v "Amlodipine" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Amoxycillin" ] ;
+     fhir:display [ fhir:v "Amoxycillin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Ascorbic-Acid" ] ;
+     fhir:display [ fhir:v "Ascorbic acid" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Aspirin" ] ;
+     fhir:display [ fhir:v "aspirin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Atorvastatin" ] ;
+     fhir:display [ fhir:v "atorvastatin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Cetrizine" ] ;
+     fhir:display [ fhir:v "Cetrizine" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Chloramphenicol" ] ;
+     fhir:display [ fhir:v "chloramphenicol" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Chlorpheniramine" ] ;
+     fhir:display [ fhir:v "chlorpheniramine" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Chlorpromazine" ] ;
+     fhir:display [ fhir:v "chlorpromazine" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Cilnidipine" ] ;
+     fhir:display [ fhir:v "Cilnidipine" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Ciprofloxacin" ] ;
+     fhir:display [ fhir:v "ciprofloxacin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Clarythromycin" ] ;
+     fhir:display [ fhir:v "clarythromycin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Clinidipine" ] ;
+     fhir:display [ fhir:v "clinidipine" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Clobazam" ] ;
+     fhir:display [ fhir:v "Clobazam" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Clonazepam" ] ;
+     fhir:display [ fhir:v "clonazepam" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Clopidogrel" ] ;
+     fhir:display [ fhir:v "clopidogrel" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Clotrimazole" ] ;
+     fhir:display [ fhir:v "Clotrimazole" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Cloxacillin" ] ;
+     fhir:display [ fhir:v "Cloxacillin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Co-Q-Enzyme" ] ;
+     fhir:display [ fhir:v "Co - Q enzyme" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Co-Amoxiclav" ] ;
+     fhir:display [ fhir:v "Co-amoxiclav" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Co-Careldopa-Carbidopa-Bp+Levodopa-Bp" ] ;
+     fhir:display [ fhir:v "Co-Careldopa (Carbidopa BP + Levodopa BP)" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Concer" ] ;
+     fhir:display [ fhir:v "concer" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Cotrimoxazole" ] ;
+     fhir:display [ fhir:v "cotrimoxazole" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Crepe-Bandage" ] ;
+     fhir:display [ fhir:v "crepe bandage" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Dapaglifiozin" ] ;
+     fhir:display [ fhir:v "Dapaglifiozin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Dapoxetine" ] ;
+     fhir:display [ fhir:v "Dapoxetine" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Desioratadine" ] ;
+     fhir:display [ fhir:v "Desioratadine" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Dexamethasone" ] ;
+     fhir:display [ fhir:v "dexamethasone" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Diamicron" ] ;
+     fhir:display [ fhir:v "Diamicron" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Diazepam" ] ;
+     fhir:display [ fhir:v "diazepam" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Diclofenac-Na" ] ;
+     fhir:display [ fhir:v "diclofenac-Na" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Diethylcarbamazine-Hetrazan" ] ;
+     fhir:display [ fhir:v "diethylcarbamazine (Hetrazan)" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Digoxin" ] ;
+     fhir:display [ fhir:v "digoxin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Diltiazem" ] ;
+     fhir:display [ fhir:v "Diltiazem" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Domperidone" ] ;
+     fhir:display [ fhir:v "Domperidone" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Donepezil" ] ;
+     fhir:display [ fhir:v "Donepezil" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Doxycycline" ] ;
+     fhir:display [ fhir:v "Doxycycline" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Asthalin" ] ;
+     fhir:display [ fhir:v "Asthalin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Beclate" ] ;
+     fhir:display [ fhir:v "Beclate" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Beclomethazone-Diproprionate" ] ;
+     fhir:display [ fhir:v "Beclomethazone diproprionate" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Dp-Haler" ] ;
+     fhir:display [ fhir:v "DP Haler" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Salmetrol+Fluticazone" ] ;
+     fhir:display [ fhir:v "Salmetrol + Fluticazone" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Ecosprin" ] ;
+     fhir:display [ fhir:v "Ecosprin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Empagliflozin" ] ;
+     fhir:display [ fhir:v "Empagliflozin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Enalapril" ] ;
+     fhir:display [ fhir:v "enalapril" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Erythromycin" ] ;
+     fhir:display [ fhir:v "erythromycin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Erythropoietin" ] ;
+     fhir:display [ fhir:v "Erythropoietin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Ezetimibe" ] ;
+     fhir:display [ fhir:v "Ezetimibe" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Famotidine" ] ;
+     fhir:display [ fhir:v "Famotidine" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Fenofibrate" ] ;
+     fhir:display [ fhir:v "Fenofibrate" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Ferrous-Fumarate" ] ;
+     fhir:display [ fhir:v "ferrous fumarate" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Ferrous-Sulphate" ] ;
+     fhir:display [ fhir:v "ferrous sulphate" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Finasteride" ] ;
+     fhir:display [ fhir:v "Finasteride" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Flucloxacillin" ] ;
+     fhir:display [ fhir:v "FLUCLOXACILLIN" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Flunarizine" ] ;
+     fhir:display [ fhir:v "Flunarizine" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Fluoxetine" ] ;
+     fhir:display [ fhir:v "Fluoxetine" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Folic-Acid" ] ;
+     fhir:display [ fhir:v "folic acid" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Frisium" ] ;
+     fhir:display [ fhir:v "frisium" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Frusemide" ] ;
+     fhir:display [ fhir:v "frusemide" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Furazolidone" ] ;
+     fhir:display [ fhir:v "furazolidone" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Fusigel" ] ;
+     fhir:display [ fhir:v "FUSIGEL" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Gabapentin" ] ;
+     fhir:display [ fhir:v "Gabapentin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Glibenclamide-Diaonil" ] ;
+     fhir:display [ fhir:v "glibenclamide (Diaonil)" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Gliclazide" ] ;
+     fhir:display [ fhir:v "gliclazide" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Glimepride" ] ;
+     fhir:display [ fhir:v "Glimepride" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Glucophage" ] ;
+     fhir:display [ fhir:v "Glucophage" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Glycery/Trinitrate-Gtn-Sublingual" ] ;
+     fhir:display [ fhir:v "glycery/trinitrate (GTN) sublingual" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Glycomet" ] ;
+     fhir:display [ fhir:v "Glycomet" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Griseofulvin" ] ;
+     fhir:display [ fhir:v "griseofulvin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Hydrochlorothiazide" ] ;
+     fhir:display [ fhir:v "hydrochlorothiazide" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Hydrocortisone" ] ;
+     fhir:display [ fhir:v "Hydrocortisone" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Hyosine-Butylbromide-Buscopan" ] ;
+     fhir:display [ fhir:v "Hyosine butylbromide (Buscopan)" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Ibuprofen" ] ;
+     fhir:display [ fhir:v "ibuprofen" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Imipramine" ] ;
+     fhir:display [ fhir:v "imipramine" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Indapamide" ] ;
+     fhir:display [ fhir:v "Indapamide" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Indomethacin" ] ;
+     fhir:display [ fhir:v "indomethacin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Insulin" ] ;
+     fhir:display [ fhir:v "insulin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Irbesartan" ] ;
+     fhir:display [ fhir:v "irbesartan" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Isosorbide-Dinitrate-Isdn" ] ;
+     fhir:display [ fhir:v "isosorbide dinitrate (ISDN)" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Isosorbide-Mononitrate" ] ;
+     fhir:display [ fhir:v "isosorbide mononitrate" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Ivabradine" ] ;
+     fhir:display [ fhir:v "Ivabradine" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Kcl" ] ;
+     fhir:display [ fhir:v "KCL" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Lamotrigine" ] ;
+     fhir:display [ fhir:v "Lamotrigine" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Levetiracetam" ] ;
+     fhir:display [ fhir:v "Levetiracetam" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Levofloxacin" ] ;
+     fhir:display [ fhir:v "Levofloxacin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Linagliptin" ] ;
+     fhir:display [ fhir:v "linagliptin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Lithium-Carbonate" ] ;
+     fhir:display [ fhir:v "lithium carbonate" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Losartan" ] ;
+     fhir:display [ fhir:v "Losartan" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Methyl-Salicylate" ] ;
+     fhir:display [ fhir:v "Methyl Salicylate" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Magnesium-Sulphate" ] ;
+     fhir:display [ fhir:v "magnesium sulphate" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Manorest" ] ;
+     fhir:display [ fhir:v "Manorest" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Beclomethasone" ] ;
+     fhir:display [ fhir:v "Beclomethasone" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Ipravent" ] ;
+     fhir:display [ fhir:v "Ipravent" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Salbutamol-Asthalin" ] ;
+     fhir:display [ fhir:v "Salbutamol (Asthalin)" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Salmetrol/Fluticazone" ] ;
+     fhir:display [ fhir:v "Salmetrol / Fluticazone" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Seroflo" ] ;
+     fhir:display [ fhir:v "Seroflo" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Tiova" ] ;
+     fhir:display [ fhir:v "Tiova" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Mebendazole" ] ;
+     fhir:display [ fhir:v "Mebendazole" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Metalazone" ] ;
+     fhir:display [ fhir:v "Metalazone" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Metaprolol" ] ;
+     fhir:display [ fhir:v "Metaprolol" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Metformin" ] ;
+     fhir:display [ fhir:v "Metformin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Methotrexate" ] ;
+     fhir:display [ fhir:v "Methotrexate" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Methyl-Prednisolone" ] ;
+     fhir:display [ fhir:v "Methyl Prednisolone" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Methyldopa-Aldomet" ] ;
+     fhir:display [ fhir:v "methyldopa (Aldomet)" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Metronidazole" ] ;
+     fhir:display [ fhir:v "metronidazole" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Miconazole" ] ;
+     fhir:display [ fhir:v "MICONAZOLE" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Minipress" ] ;
+     fhir:display [ fhir:v "Minipress" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Montelukast" ] ;
+     fhir:display [ fhir:v "Montelukast" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Mycostatin" ] ;
+     fhir:display [ fhir:v "mycostatin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Nebivolol" ] ;
+     fhir:display [ fhir:v "Nebivolol" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Neuroton" ] ;
+     fhir:display [ fhir:v "Neuroton" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Nicorandil" ] ;
+     fhir:display [ fhir:v "Nicorandil" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Nifedipine" ] ;
+     fhir:display [ fhir:v "nifedipine" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Nitrocontin" ] ;
+     fhir:display [ fhir:v "Nitrocontin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Nitrofurantoin" ] ;
+     fhir:display [ fhir:v "Nitrofurantoin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Noklot" ] ;
+     fhir:display [ fhir:v "Noklot" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Normal-Saline-Nasal-Drops" ] ;
+     fhir:display [ fhir:v "normal saline nasal drops" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Olanzapine" ] ;
+     fhir:display [ fhir:v "olanzapine" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Omeprazole" ] ;
+     fhir:display [ fhir:v "omeprazole" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Oral-Rehydration-Salts" ] ;
+     fhir:display [ fhir:v "oral rehydration salts" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Pantaprazole" ] ;
+     fhir:display [ fhir:v "Pantaprazole" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Paracetamol" ] ;
+     fhir:display [ fhir:v "paracetamol" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Penicillin" ] ;
+     fhir:display [ fhir:v "penicillin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Persantin" ] ;
+     fhir:display [ fhir:v "Persantin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Capsulephenobarbital-Luminal" ] ;
+     fhir:display [ fhir:v "Capsulephenobarbital (Luminal)" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Phenytoin-Sodium" ] ;
+     fhir:display [ fhir:v "phenytoin sodium" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Pioglitazone" ] ;
+     fhir:display [ fhir:v "Pioglitazone" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Potassium-Permanganate" ] ;
+     fhir:display [ fhir:v "potassium permanganate" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Prazosin" ] ;
+     fhir:display [ fhir:v "prazosin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Pregabalin" ] ;
+     fhir:display [ fhir:v "Pregabalin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Prednisolone" ] ;
+     fhir:display [ fhir:v "prednisolone" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Prochlorperazine-Stemetil" ] ;
+     fhir:display [ fhir:v "prochlorperazine (Stemetil)" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Promethazine-Phenergan" ] ;
+     fhir:display [ fhir:v "promethazine (Phenergan)" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Propranolol" ] ;
+     fhir:display [ fhir:v "propranolol" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Propyithiouracil" ] ;
+     fhir:display [ fhir:v "Propyithiouracil" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Pulse-Tri-Omega" ] ;
+     fhir:display [ fhir:v "Pulse Tri Omega" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Pyrantel-Pamoate" ] ;
+     fhir:display [ fhir:v "pyrantel pamoate" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Quetiapine" ] ;
+     fhir:display [ fhir:v "Quetiapine" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Ranalazine" ] ;
+     fhir:display [ fhir:v "Ranalazine" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Rifaximin" ] ;
+     fhir:display [ fhir:v "Rifaximin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Risperidone" ] ;
+     fhir:display [ fhir:v "risperidone" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Ropinirole" ] ;
+     fhir:display [ fhir:v "Ropinirole" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Rosuvastatin" ] ;
+     fhir:display [ fhir:v "Rosuvastatin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Salbutamol" ] ;
+     fhir:display [ fhir:v "salbutamol" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Sertalin" ] ;
+     fhir:display [ fhir:v "Sertalin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Sildenafil" ] ;
+     fhir:display [ fhir:v "sildenafil" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Sinemet" ] ;
+     fhir:display [ fhir:v "Sinemet" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Sitagliptin" ] ;
+     fhir:display [ fhir:v "sitagliptin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Sodium-Bicarbonate-Nahco3" ] ;
+     fhir:display [ fhir:v "Sodium Bicarbonate (NaHCO3)" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Sodium-Bicarbonate-Ear-Drops" ] ;
+     fhir:display [ fhir:v "sodium bicarbonate ear drops" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Sodium-Valproate" ] ;
+     fhir:display [ fhir:v "sodium valproate" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Soframycin-Cream" ] ;
+     fhir:display [ fhir:v "Soframycin Cream" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Spacer-Device" ] ;
+     fhir:display [ fhir:v "Spacer Device" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Spironolactone" ] ;
+     fhir:display [ fhir:v "spironolactone" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Stematil" ] ;
+     fhir:display [ fhir:v "Stematil" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Sulphasalazine" ] ;
+     fhir:display [ fhir:v "sulphasalazine" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Syndpa" ] ;
+     fhir:display [ fhir:v "Syndpa" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Tamsulosin" ] ;
+     fhir:display [ fhir:v "tamsulosin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Tazloc" ] ;
+     fhir:display [ fhir:v "tazloc" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Telmisartan" ] ;
+     fhir:display [ fhir:v "Telmisartan" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Theophylline" ] ;
+     fhir:display [ fhir:v "theophylline" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Thiamin" ] ;
+     fhir:display [ fhir:v "Thiamin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Thyroxine" ] ;
+     fhir:display [ fhir:v "thyroxine" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Tolbutamide" ] ;
+     fhir:display [ fhir:v "tolbutamide" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Topiramate" ] ;
+     fhir:display [ fhir:v "Topiramate" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Tramadol" ] ;
+     fhir:display [ fhir:v "tramadol" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Trifluoperazine-Stelazine" ] ;
+     fhir:display [ fhir:v "trifluoperazine (Stelazine)" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Urimax" ] ;
+     fhir:display [ fhir:v "Urimax" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Ursodiol" ] ;
+     fhir:display [ fhir:v "Ursodiol" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Verapamil" ] ;
+     fhir:display [ fhir:v "verapamil" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Vildagliptin" ] ;
+     fhir:display [ fhir:v "vildagliptin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Vitamin-A-&-D" ] ;
+     fhir:display [ fhir:v "vitamin A & D" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Vitamin-B" ] ;
+     fhir:display [ fhir:v "vitamin B" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Vitamin-E" ] ;
+     fhir:display [ fhir:v "Vitamin E" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Warfarin" ] ;
+     fhir:display [ fhir:v "warfarin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Zinc-Sulphate" ] ;
+     fhir:display [ fhir:v "Zinc Sulphate" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

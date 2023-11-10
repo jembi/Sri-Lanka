@@ -1,0 +1,7 @@
+﻿
+SriLanka : Validation Results
+=========================================
+
+err = 0, warn = 0, info = 0
+IG Publisher Version: 1.4.12
+Generated Mon Oct 09 17:25:42 UTC 2023. FHIR version 4.0.1 for openhie.fhir.sri-lanka#0.1.0 (canonical = http://openhie.org/fhir/sri-lanka)

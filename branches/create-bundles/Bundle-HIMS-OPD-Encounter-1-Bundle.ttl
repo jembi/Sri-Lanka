@@ -1,0 +1,239 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openhie.org/fhir/sri-lanka/Bundle/HIMS-OPD-Encounter-1-Bundle> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "HIMS-OPD-Encounter-1-Bundle"] ; # 
+  fhir:type [ fhir:v "transaction"] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "Encounter/TargetFacilityEncounterExample"^^xsd:anyURI ] ;
+     fhir:resource ( <Encounter/TargetFacilityEncounterExample> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "PUT" ] ;
+       fhir:url [ fhir:v "Encounter/TargetFacilityEncounterExample"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "Patient/HHIMSPatientExample"^^xsd:anyURI ] ;
+     fhir:resource ( <Patient/HHIMSPatientExample> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "PUT" ] ;
+       fhir:url [ fhir:v "Patient/HHIMSPatientExample"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "Location/ProvidersLocationExample"^^xsd:anyURI ] ;
+     fhir:resource ( <Location/ProvidersLocationExample> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "PUT" ] ;
+       fhir:url [ fhir:v "Location/ProvidersLocationExample"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "Practitioner/GeneralPractitionerExample"^^xsd:anyURI ] ;
+     fhir:resource ( <Practitioner/GeneralPractitionerExample> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "PUT" ] ;
+       fhir:url [ fhir:v "Practitioner/GeneralPractitionerExample"^^xsd:anyURI ]
+     ]
+  ] ) . # 
+
+<Encounter/TargetFacilityEncounterExample> a fhir:Encounter ;
+  fhir:id [ fhir:v "TargetFacilityEncounterExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/sri-lanka/StructureDefinition/target-facility-encounter"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/sri-lanka/StructureDefinition/target-facility-encounter>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Encounter</b><a name=\"TargetFacilityEncounterExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Encounter &quot;TargetFacilityEncounterExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-target-facility-encounter.html\">Target Facility Encounter</a></p></div><p><b>status</b>: finished</p><p><b>class</b>: ambulatory (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code AMB = 'ambulatory', stated as 'null')</p><p><b>subject</b>: <a href=\"Patient-HIMSPatientExample.html\">Patient/HIMSPatientExample</a> &quot; SMITH&quot;</p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Individual</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"#Practitioner_GeneralPractitionerExample\">See above (Practitioner/GeneralPractitionerExample)</a></td></tr></table><p><b>period</b>: 2022-12-01 --&gt; 2023-01-20</p><p><b>reasonCode</b>: 140004 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#140004)</span></p><h3>Locations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Location</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"#Location_ProvidersLocationExample\">See above (Location/ProvidersLocationExample)</a></td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "finished"] ; # 
+  fhir:class [
+     fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "AMB" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://openhie.org/fhir/sri-lanka/Patient/HIMSPatientExample> ;
+     fhir:reference [ fhir:v "Patient/HIMSPatientExample" ]
+  ] ; # 
+  fhir:participant ( [
+     fhir:individual [
+       fhir:link <http://openhie.org/fhir/sri-lanka/Practitioner/GeneralPractitionerExample> ;
+       fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+     ]
+  ] ) ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2022-12-01"^^xsd:date ] ;
+     fhir:end [ fhir:v "2023-01-20"^^xsd:date ]
+  ] ; # 
+  fhir:reasonCode ( [
+     fhir:coding ( [
+       a sct:140004 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "140004" ]
+     ] )
+  ] ) ; # 
+  fhir:location ( [
+     fhir:location [
+       fhir:link <http://openhie.org/fhir/sri-lanka/Location/ProvidersLocationExample> ;
+       fhir:reference [ fhir:v "Location/ProvidersLocationExample" ]
+     ]
+  ] ) . # 
+
+<Patient/HHIMSPatientExample> a fhir:Patient ;
+  fhir:id [ fhir:v "HHIMSPatientExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/sri-lanka/StructureDefinition/hhims-patient"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/sri-lanka/StructureDefinition/hhims-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"HHIMSPatientExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;HHIMSPatientExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-hhims-patient.html\">HHIMS Patient</a></p></div><p><b>identifier</b>: Personal Health Number: personal health number, National identity number: A patient may have multiple national identity numbers.</p><p><b>name</b>: Mr. Mike John Smith (OFFICIAL)</p><p><b>telecom</b>: <a href=\"tel:+27829999999\">+27829999999</a>, <a href=\"mailto:someone@something.com\">someone@something.com</a>, <a href=\"mailto:someone2@something.com\">someone2@something.com</a></p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1983-05-22</p><p><b>address</b>: 177 Nawala Road Nugegoda Colombo 32350 Sri Lanka </p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-identifier-types"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PHN" ]
+       ] ) ;
+       fhir:text [ fhir:v "Personal Health Number" ]
+     ] ;
+     fhir:system [ fhir:v "http://openhie.org/fhir/sri-lanka/identifier/phn"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "personal health number" ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://openhie.org/fhir/sri-lanka/StructureDefinition/multiple-values-for-patient-identifier"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "National identity number-1" ]
+     ] [
+       fhir:url [ fhir:v "http://openhie.org/fhir/sri-lanka/StructureDefinition/multiple-values-for-patient-identifier"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "National identity number-2" ]
+     ] ) ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NNLKA" ]
+       ] ) ;
+       fhir:text [ fhir:v "National identity number" ]
+     ] ;
+     fhir:system [ fhir:v "http://openhie.org/fhir/sri-lanka/identifier/nic"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "A patient may have multiple national identity numbers." ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Smith" ] ;
+     fhir:given ( [ fhir:v "Mr." ] [ fhir:v "Mike" ] [ fhir:v "John" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+27829999999" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "someone@something.com" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "someone2@something.com" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1983-05-22"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:type [ fhir:v "postal" ] ;
+     fhir:line ( [ fhir:v "177" ] [ fhir:v "Nawala Road" ] ) ;
+     fhir:city [ fhir:v "Nugegoda" ] ;
+     fhir:district [ fhir:v "Ampara" ] ;
+     fhir:state [ fhir:v "Colombo" ] ;
+     fhir:postalCode [ fhir:v "32350" ] ;
+     fhir:country [ fhir:v "Sri Lanka" ]
+  ] ) . # 
+
+<Location/ProvidersLocationExample> a fhir:Location ;
+  fhir:id [ fhir:v "ProvidersLocationExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/sri-lanka/StructureDefinition/providers-location"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/sri-lanka/StructureDefinition/providers-location>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Location</b><a name=\"ProvidersLocationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Location &quot;ProvidersLocationExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-providers-location.html\">Providers Location</a></p></div><p><b>identifier</b>: Provider location identifier: A provider's location may be associated with multiple identifiers.</p><p><b>status</b>: active</p><p><b>name</b>: Name for the location</p><p><b>telecom</b>: <a href=\"tel:+27829999999\">+27829999999</a>, <a href=\"mailto:someone@something.com\">someone@something.com</a>, <a href=\"mailto:someone2@something.com\">someone2@something.com</a></p><p><b>address</b>: 177 Nawala Road Nugegoda Colombo 32350 Sri Lanka </p><p><b>managingOrganization</b>: <a href=\"Organization-OrganizationExample.html\">Organization/OrganizationExample</a> &quot;Some Health Facility&quot;</p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://openhie.org/fhir/sri-lanka/StructureDefinition/multiple-values-for-patient-identifier"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Location-ID-1" ]
+     ] [
+       fhir:url [ fhir:v "http://openhie.org/fhir/sri-lanka/StructureDefinition/multiple-values-for-patient-identifier"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Location-ID-2" ]
+     ] ) ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PIN" ]
+       ] ) ;
+       fhir:text [ fhir:v "Provider location identifier" ]
+     ] ;
+     fhir:system [ fhir:v "http://openhie.org/fhir/sri-lanka/identifier/provider-location"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "A provider's location may be associated with multiple identifiers." ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:name [ fhir:v "Name for the location"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+27829999999" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "someone@something.com" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "someone2@something.com" ]
+  ] ) ; # 
+  fhir:address [
+     fhir:type [ fhir:v "postal" ] ;
+     fhir:line ( [ fhir:v "177" ] [ fhir:v "Nawala Road" ] ) ;
+     fhir:city [ fhir:v "Nugegoda" ] ;
+     fhir:district [ fhir:v "Ampara" ] ;
+     fhir:state [ fhir:v "Colombo" ] ;
+     fhir:postalCode [ fhir:v "32350" ] ;
+     fhir:country [ fhir:v "Sri Lanka" ]
+  ] ; # 
+  fhir:managingOrganization [
+     fhir:link <http://openhie.org/fhir/sri-lanka/Organization/OrganizationExample> ;
+     fhir:reference [ fhir:v "Organization/OrganizationExample" ]
+  ] . # 
+
+<Practitioner/GeneralPractitionerExample> a fhir:Practitioner ;
+  fhir:id [ fhir:v "GeneralPractitionerExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/sri-lanka/StructureDefinition/practitioner"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/sri-lanka/StructureDefinition/practitioner>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Practitioner</b><a name=\"GeneralPractitionerExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Practitioner &quot;GeneralPractitionerExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-practitioner.html\">Practitioner</a></p></div><p><b>name</b>: Tom Junes Smith </p><p><b>telecom</b>: ph: 27537652509(WORK), <a href=\"mailto:someone@something.org\">someone@something.org</a></p></div>"
+  ] ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Smith" ] ;
+     fhir:given ( [ fhir:v "Tom" ] [ fhir:v "Junes" ] ) ;
+     fhir:prefix ( [ fhir:v "Dr" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "27537652509" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "someone@something.org" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

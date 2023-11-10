@@ -1,0 +1,689 @@
+{
+  "resourceType" : "StructureMap",
+  "id" : "HIMSPatientQuestionnaireResponseToLogicalModel",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre class=\"fml\">\r\n<b>map</b><span style=\"color: navy\"> &quot;</span>http://openhie.org/fhir/sri-lanka/StructureMap/HIMSPatientQuestionnaireResponseToLogicalModel<span style=\"color: navy\">&quot; = &quot;</span>HIMSPatientQuestionnaireResponseToLogicalModel<span style=\"color: navy\">&quot;\r\n\r\n</span><span style=\"color: navy\">// </span><span style=\"color: green\">Maps the Patient Registration Questionnaire Response to the HIMS Logical Model data elements</span>\r\n\r\n<b>uses</b><span style=\"color: navy\"> &quot;</span><a href=\"http://hl7.org/fhir/R4/questionnaireresponse.html\" title=\"QuestionnaireResponse\">http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse</a><span style=\"color: navy\">&quot; </span><b>alias </b>QResp <b>as </b><b>source</b>\r\n<b>uses</b><span style=\"color: navy\"> &quot;</span><a href=\"StructureDefinition-HIMSPatientRegistrationDataDictionary.html\" title=\"HIMS Patient Registration\">http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSPatientRegistrationDataDictionary</a><span style=\"color: navy\">&quot; </span><b>alias </b>IMMZC <b>as </b><b>target</b>\r\n\r\n<b>group </b>QRespToIMMZC<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">qr</span><span style=\"color: navy\"> : </span>QResp, <b>target</b> <span style=\"color: maroon\">immzc</span><span style=\"color: navy\"> : </span>IMMZC<span style=\"color: navy\">)</span><span style=\"color: navy\"> {\r\n</span>  qr.item<b> as </b><span style=\"color: maroon\">item</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    item.answer first<b> as </b><span style=\"color: maroon\">answer</span><b> where </b>item.linkId = 'personalHealthNumber'<b> then</b><span style=\"color: navy\"> {\r\n</span>      answer.value<b> as </b><span style=\"color: maroon\">content</span><span style=\"color: navy\"><b> -&gt; </b></span>immzc.personalHealthNumber = <span style=\"color: maroon\">content</span> <i>&quot;SetPersonalHealthNumber&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;FirstAnswerForPHN&quot;</i><span style=\"color: navy\">;</span>\r\n    item.answer first<b> as </b><span style=\"color: maroon\">answer</span><b> where </b>item.linkId = 'nationalIdentityCard'<b> then</b><span style=\"color: navy\"> {\r\n</span>      answer.value<b> as </b><span style=\"color: maroon\">content</span><span style=\"color: navy\"><b> -&gt; </b></span>immzc.nationalIdentityCard = <span style=\"color: maroon\">content</span> <i>&quot;SetNationalIdentityCardNumber&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;FirstAnswerForNIC&quot;</i><span style=\"color: navy\">;</span>\r\n    item.answer first<b> as </b><span style=\"color: maroon\">answer</span><b> where </b>item.linkId = 'passport'<b> then</b><span style=\"color: navy\"> {\r\n</span>      answer.value<b> as </b><span style=\"color: maroon\">content</span><span style=\"color: navy\"><b> -&gt; </b></span>immzc.passport = <span style=\"color: maroon\">content</span> <i>&quot;SetPassportNumber&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;FirstAnswerForPassport&quot;</i><span style=\"color: navy\">;</span>\r\n    item.answer first<b> as </b><span style=\"color: maroon\">answer</span><b> where </b>item.linkId = 'drivingLicense'<b> then</b><span style=\"color: navy\"> {\r\n</span>      answer.value<b> as </b><span style=\"color: maroon\">content</span><span style=\"color: navy\"><b> -&gt; </b></span>immzc.drivingLicense = <span style=\"color: maroon\">content</span> <i>&quot;SetDrivingLicenseNumber&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;FirstAnswerForDL&quot;</i><span style=\"color: navy\">;</span>\r\n    item.answer first<b> as </b><span style=\"color: maroon\">answer</span><b> where </b>item.linkId = 'seniorCitizenNumber'<b> then</b><span style=\"color: navy\"> {\r\n</span>      answer.value<b> as </b><span style=\"color: maroon\">content</span><span style=\"color: navy\"><b> -&gt; </b></span>immzc.seniorCitizenNumber = <span style=\"color: maroon\">content</span> <i>&quot;SetSeniorCitizenNumber&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;FirstAnswerForSCN&quot;</i><span style=\"color: navy\">;</span>\r\n    item.answer<b> as </b><span style=\"color: maroon\">patientName</span><b> where </b>item.linkId = 'patientName'<span style=\"color: navy\"><b> -&gt; </b></span>immzc.patientName<b> as </b><span style=\"color: maroon\">pat</span><b> then </b>FullNameToIMMZC<span style=\"color: navy\">(</span><span style=\"color: maroon\">patientName</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">pat</span><span style=\"color: navy\">)</span> <i>&quot;SetPatientNames&quot;</i><span style=\"color: navy\">;</span>\r\n    item.answer first<b> as </b><span style=\"color: maroon\">answer</span><b> where </b>item.linkId = 'firstName'<b> then</b><span style=\"color: navy\"> {\r\n</span>      answer.value<b> as </b><span style=\"color: maroon\">content</span><span style=\"color: navy\"><b> -&gt; </b></span>immzc.firstName = <span style=\"color: maroon\">content</span> <i>&quot;SetFirstName&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;FirstAnswerForFirstName&quot;</i><span style=\"color: navy\">;</span>\r\n    item.answer first<b> as </b><span style=\"color: maroon\">answer</span><b> where </b>item.linkId = 'surname'<b> then</b><span style=\"color: navy\"> {\r\n</span>      answer.value<b> as </b><span style=\"color: maroon\">content</span><span style=\"color: navy\"><b> -&gt; </b></span>immzc.surname = <span style=\"color: maroon\">content</span> <i>&quot;SetSurname&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;FirstAnswerForSurname&quot;</i><span style=\"color: navy\">;</span>\r\n    item.answer first<b> as </b><span style=\"color: maroon\">answer</span><b> where </b>item.linkId = 'sex'<b> then</b><span style=\"color: navy\"> {\r\n</span>      answer.value<b> as </b><span style=\"color: maroon\">coding</span><b> then</b><span style=\"color: navy\"> {\r\n</span>        coding.code<b> as </b><span style=\"color: maroon\">content</span><span style=\"color: navy\"><b> -&gt; </b></span>immzc.sex = <span style=\"color: maroon\">content</span> <i>&quot;SetSex&quot;</i><span style=\"color: navy\">;</span>\r\n      <span style=\"color: navy\">}</span> <i>&quot;ProcessCoding&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;FirstAnswerForSex&quot;</i><span style=\"color: navy\">;</span>\r\n    item.answer<b> as </b><span style=\"color: maroon\">address</span><b> where </b>item.linkId = 'address'<span style=\"color: navy\"><b> -&gt; </b></span>immzc.address<b> as </b><span style=\"color: maroon\">addy</span><b> then </b>AddressToIMMZC<span style=\"color: navy\">(</span><span style=\"color: maroon\">address</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">addy</span><span style=\"color: navy\">)</span> <i>&quot;SetAddresses&quot;</i><span style=\"color: navy\">;</span>\r\n    item.answer first<b> as </b><span style=\"color: maroon\">answer</span><b> where </b>item.linkId = 'birthDate'<b> then</b><span style=\"color: navy\"> {\r\n</span>      answer.value<b> as </b><span style=\"color: maroon\">content</span><span style=\"color: navy\"><b> -&gt; </b></span>immzc.birthDate = <span style=\"color: maroon\">content</span> <i>&quot;SetBirthDate&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;FirstAnswerForBirthDate&quot;</i><span style=\"color: navy\">;</span>\r\n    item.answer<b> as </b><span style=\"color: maroon\">contactDetails</span><b> where </b>item.linkId = 'contactDetails'<span style=\"color: navy\"><b> -&gt; </b></span>immzc.contactDetails<b> as </b><span style=\"color: maroon\">contact</span><b> then </b>ContactDetailsIMMZC<span style=\"color: navy\">(</span><span style=\"color: maroon\">contactDetails</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">contact</span><span style=\"color: navy\">)</span> <i>&quot;SetContactDetails&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;processItems&quot;</i><span style=\"color: navy\">;</span>\r\n<span style=\"color: navy\">}\r\n\r\n</span><b>group </b>FullNameToIMMZC<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">name</span>, <b>target</b> <span style=\"color: maroon\">immzc</span><span style=\"color: navy\">)</span><span style=\"color: navy\"> {\r\n</span>  name.item<b> as </b><span style=\"color: maroon\">item</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    item.answer first<b> as </b><span style=\"color: maroon\">answer</span><b> where </b>item.linkId = 'firstName'<b> then</b><span style=\"color: navy\"> {\r\n</span>      answer.value<b> as </b><span style=\"color: maroon\">firstName</span><span style=\"color: navy\"><b> -&gt; </b></span><span style=\"color: maroon\">firstName</span><b> then</b><span style=\"color: navy\"> {\r\n</span>        item.answer first<b> as </b><span style=\"color: maroon\">answer2</span><b> where </b>item.linkId = 'surname'<b> then</b><span style=\"color: navy\"> {\r\n</span>          answer2.value<b> as </b><span style=\"color: maroon\">surname</span><span style=\"color: navy\"><b> -&gt; </b></span>immzc.fullName = <b>append</b><span style=\"color: navy\">(</span><span style=\"color: maroon\">firstName</span><span style=\"color: navy\">, </span><span style=\"color: blue\">' '</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">surname</span><span style=\"color: navy\">)</span> <i>&quot;SetName&quot;</i><span style=\"color: navy\">;</span>\r\n        <span style=\"color: navy\">}</span> <i>&quot;set&quot;</i><span style=\"color: navy\">;</span>\r\n      <span style=\"color: navy\">}</span> <i>&quot;set&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;FirstAnswerForFullName&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;processNameItems&quot;</i><span style=\"color: navy\">;</span>\r\n<span style=\"color: navy\">}\r\n\r\n</span><b>group </b>AddressToIMMZC<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">name</span>, <b>target</b> <span style=\"color: maroon\">immzc</span><span style=\"color: navy\">)</span><span style=\"color: navy\"> {\r\n</span>  name.item<b> as </b><span style=\"color: maroon\">item</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    item.answer first<b> as </b><span style=\"color: maroon\">answer</span><b> where </b>item.linkId = 'streetNameAndNr'<b> then</b><span style=\"color: navy\"> {\r\n</span>      answer.value<b> as </b><span style=\"color: maroon\">content</span><span style=\"color: navy\"><b> -&gt; </b></span>immzc.streetNameAndNr = <span style=\"color: maroon\">content</span> <i>&quot;SetStreetNameAndNr&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;FirstAnswerForStreetNameAndNr&quot;</i><span style=\"color: navy\">;</span>\r\n    item.answer first<b> as </b><span style=\"color: maroon\">answer</span><b> where </b>item.linkId = 'city'<b> then</b><span style=\"color: navy\"> {\r\n</span>      answer.value<b> as </b><span style=\"color: maroon\">content</span><span style=\"color: navy\"><b> -&gt; </b></span>immzc.city = <span style=\"color: maroon\">content</span> <i>&quot;SetCity&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;FirstAnswerForCity&quot;</i><span style=\"color: navy\">;</span>\r\n    item.answer first<b> as </b><span style=\"color: maroon\">answer</span><b> where </b>item.linkId = 'state'<b> then</b><span style=\"color: navy\"> {\r\n</span>      answer.value<b> as </b><span style=\"color: maroon\">content</span><span style=\"color: navy\"><b> -&gt; </b></span>immzc.state = <span style=\"color: maroon\">content</span> <i>&quot;SetState&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;FirstAnswerForState&quot;</i><span style=\"color: navy\">;</span>\r\n    item.answer first<b> as </b><span style=\"color: maroon\">answer</span><b> where </b>item.linkId = 'country'<b> then</b><span style=\"color: navy\"> {\r\n</span>      answer.value<b> as </b><span style=\"color: maroon\">content</span><span style=\"color: navy\"><b> -&gt; </b></span>immzc.country = <span style=\"color: maroon\">content</span> <i>&quot;SetCountry&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;FirstAnswerForCountry&quot;</i><span style=\"color: navy\">;</span>\r\n    item.answer first<b> as </b><span style=\"color: maroon\">answer</span><b> where </b>item.linkId = 'postalCode'<b> then</b><span style=\"color: navy\"> {\r\n</span>      answer.value<b> as </b><span style=\"color: maroon\">content</span><span style=\"color: navy\"><b> -&gt; </b></span>immzc.postalCode = <span style=\"color: maroon\">content</span> <i>&quot;SetPostalCode&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;FirstAnswerForPostalCode&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;processAddressItems&quot;</i><span style=\"color: navy\">;</span>\r\n<span style=\"color: navy\">}\r\n\r\n</span><b>group </b>ContactDetailsIMMZC<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">name</span>, <b>target</b> <span style=\"color: maroon\">immzc</span><span style=\"color: navy\">)</span><span style=\"color: navy\"> {\r\n</span>  name.item<b> as </b><span style=\"color: maroon\">item</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    item.answer first<b> as </b><span style=\"color: maroon\">answer</span><b> where </b>item.linkId = 'mobileNumber'<b> then</b><span style=\"color: navy\"> {\r\n</span>      answer.value<b> as </b><span style=\"color: maroon\">content</span><span style=\"color: navy\"><b> -&gt; </b></span>immzc.mobileNumber = <span style=\"color: maroon\">content</span> <i>&quot;SetMobileNumber&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;FirstAnswerForMobileNumber&quot;</i><span style=\"color: navy\">;</span>\r\n    item.answer first<b> as </b><span style=\"color: maroon\">answer</span><b> where </b>item.linkId = 'landline'<b> then</b><span style=\"color: navy\"> {\r\n</span>      answer.value<b> as </b><span style=\"color: maroon\">content</span><span style=\"color: navy\"><b> -&gt; </b></span>immzc.landline = <span style=\"color: maroon\">content</span> <i>&quot;SetLandline&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;FirstAnswerForLandline&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;processContactDetailsItems&quot;</i><span style=\"color: navy\">;</span>\r\n<span style=\"color: navy\">}\r\n\r\n</span></pre></div>"
+  },
+  "url" : "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSPatientQuestionnaireResponseToLogicalModel",
+  "version" : "0.1.0",
+  "name" : "HIMSPatientQuestionnaireResponseToLogicalModel",
+  "status" : "draft",
+  "date" : "2023-11-08T10:01:28+00:00",
+  "publisher" : "Jembi Health Systems",
+  "contact" : [{
+    "name" : "Jembi Health Systems",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.jembi.org"
+    },
+    {
+      "system" : "email",
+      "value" : "info@jembi.org"
+    }]
+  },
+  {
+    "name" : "Richard Langford",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "richard.langford@jembi.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Maps the Patient Registration Questionnaire Response to the HIMS Logical Model data elements",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "structure" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
+    "mode" : "source",
+    "alias" : "QResp"
+  },
+  {
+    "url" : "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSPatientRegistrationDataDictionary",
+    "mode" : "target",
+    "alias" : "IMMZC"
+  }],
+  "group" : [{
+    "name" : "QRespToIMMZC",
+    "typeMode" : "none",
+    "input" : [{
+      "name" : "qr",
+      "type" : "QResp",
+      "mode" : "source"
+    },
+    {
+      "name" : "immzc",
+      "type" : "IMMZC",
+      "mode" : "target"
+    }],
+    "rule" : [{
+      "name" : "processItems",
+      "source" : [{
+        "context" : "qr",
+        "element" : "item",
+        "variable" : "item"
+      }],
+      "rule" : [{
+        "name" : "FirstAnswerForPHN",
+        "source" : [{
+          "context" : "item",
+          "element" : "answer",
+          "listMode" : "first",
+          "variable" : "answer",
+          "condition" : "item.linkId = 'personalHealthNumber'"
+        }],
+        "rule" : [{
+          "name" : "SetPersonalHealthNumber",
+          "source" : [{
+            "context" : "answer",
+            "element" : "value",
+            "variable" : "content"
+          }],
+          "target" : [{
+            "context" : "immzc",
+            "contextType" : "variable",
+            "element" : "personalHealthNumber",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueId" : "content"
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "FirstAnswerForNIC",
+        "source" : [{
+          "context" : "item",
+          "element" : "answer",
+          "listMode" : "first",
+          "variable" : "answer",
+          "condition" : "item.linkId = 'nationalIdentityCard'"
+        }],
+        "rule" : [{
+          "name" : "SetNationalIdentityCardNumber",
+          "source" : [{
+            "context" : "answer",
+            "element" : "value",
+            "variable" : "content"
+          }],
+          "target" : [{
+            "context" : "immzc",
+            "contextType" : "variable",
+            "element" : "nationalIdentityCard",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueId" : "content"
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "FirstAnswerForPassport",
+        "source" : [{
+          "context" : "item",
+          "element" : "answer",
+          "listMode" : "first",
+          "variable" : "answer",
+          "condition" : "item.linkId = 'passport'"
+        }],
+        "rule" : [{
+          "name" : "SetPassportNumber",
+          "source" : [{
+            "context" : "answer",
+            "element" : "value",
+            "variable" : "content"
+          }],
+          "target" : [{
+            "context" : "immzc",
+            "contextType" : "variable",
+            "element" : "passport",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueId" : "content"
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "FirstAnswerForDL",
+        "source" : [{
+          "context" : "item",
+          "element" : "answer",
+          "listMode" : "first",
+          "variable" : "answer",
+          "condition" : "item.linkId = 'drivingLicense'"
+        }],
+        "rule" : [{
+          "name" : "SetDrivingLicenseNumber",
+          "source" : [{
+            "context" : "answer",
+            "element" : "value",
+            "variable" : "content"
+          }],
+          "target" : [{
+            "context" : "immzc",
+            "contextType" : "variable",
+            "element" : "drivingLicense",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueId" : "content"
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "FirstAnswerForSCN",
+        "source" : [{
+          "context" : "item",
+          "element" : "answer",
+          "listMode" : "first",
+          "variable" : "answer",
+          "condition" : "item.linkId = 'seniorCitizenNumber'"
+        }],
+        "rule" : [{
+          "name" : "SetSeniorCitizenNumber",
+          "source" : [{
+            "context" : "answer",
+            "element" : "value",
+            "variable" : "content"
+          }],
+          "target" : [{
+            "context" : "immzc",
+            "contextType" : "variable",
+            "element" : "seniorCitizenNumber",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueId" : "content"
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "SetPatientNames",
+        "source" : [{
+          "context" : "item",
+          "element" : "answer",
+          "variable" : "patientName",
+          "condition" : "item.linkId = 'patientName'"
+        }],
+        "target" : [{
+          "context" : "immzc",
+          "contextType" : "variable",
+          "element" : "patientName",
+          "variable" : "pat"
+        }],
+        "dependent" : [{
+          "name" : "FullNameToIMMZC",
+          "variable" : ["patientName",
+          "pat"]
+        }]
+      },
+      {
+        "name" : "FirstAnswerForFirstName",
+        "source" : [{
+          "context" : "item",
+          "element" : "answer",
+          "listMode" : "first",
+          "variable" : "answer",
+          "condition" : "item.linkId = 'firstName'"
+        }],
+        "rule" : [{
+          "name" : "SetFirstName",
+          "source" : [{
+            "context" : "answer",
+            "element" : "value",
+            "variable" : "content"
+          }],
+          "target" : [{
+            "context" : "immzc",
+            "contextType" : "variable",
+            "element" : "firstName",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueId" : "content"
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "FirstAnswerForSurname",
+        "source" : [{
+          "context" : "item",
+          "element" : "answer",
+          "listMode" : "first",
+          "variable" : "answer",
+          "condition" : "item.linkId = 'surname'"
+        }],
+        "rule" : [{
+          "name" : "SetSurname",
+          "source" : [{
+            "context" : "answer",
+            "element" : "value",
+            "variable" : "content"
+          }],
+          "target" : [{
+            "context" : "immzc",
+            "contextType" : "variable",
+            "element" : "surname",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueId" : "content"
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "FirstAnswerForSex",
+        "source" : [{
+          "context" : "item",
+          "element" : "answer",
+          "listMode" : "first",
+          "variable" : "answer",
+          "condition" : "item.linkId = 'sex'"
+        }],
+        "rule" : [{
+          "name" : "ProcessCoding",
+          "source" : [{
+            "context" : "answer",
+            "element" : "value",
+            "variable" : "coding"
+          }],
+          "rule" : [{
+            "name" : "SetSex",
+            "source" : [{
+              "context" : "coding",
+              "element" : "code",
+              "variable" : "content"
+            }],
+            "target" : [{
+              "context" : "immzc",
+              "contextType" : "variable",
+              "element" : "sex",
+              "transform" : "copy",
+              "parameter" : [{
+                "valueId" : "content"
+              }]
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "SetAddresses",
+        "source" : [{
+          "context" : "item",
+          "element" : "answer",
+          "variable" : "address",
+          "condition" : "item.linkId = 'address'"
+        }],
+        "target" : [{
+          "context" : "immzc",
+          "contextType" : "variable",
+          "element" : "address",
+          "variable" : "addy"
+        }],
+        "dependent" : [{
+          "name" : "AddressToIMMZC",
+          "variable" : ["address",
+          "addy"]
+        }]
+      },
+      {
+        "name" : "FirstAnswerForBirthDate",
+        "source" : [{
+          "context" : "item",
+          "element" : "answer",
+          "listMode" : "first",
+          "variable" : "answer",
+          "condition" : "item.linkId = 'birthDate'"
+        }],
+        "rule" : [{
+          "name" : "SetBirthDate",
+          "source" : [{
+            "context" : "answer",
+            "element" : "value",
+            "variable" : "content"
+          }],
+          "target" : [{
+            "context" : "immzc",
+            "contextType" : "variable",
+            "element" : "birthDate",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueId" : "content"
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "SetContactDetails",
+        "source" : [{
+          "context" : "item",
+          "element" : "answer",
+          "variable" : "contactDetails",
+          "condition" : "item.linkId = 'contactDetails'"
+        }],
+        "target" : [{
+          "context" : "immzc",
+          "contextType" : "variable",
+          "element" : "contactDetails",
+          "variable" : "contact"
+        }],
+        "dependent" : [{
+          "name" : "ContactDetailsIMMZC",
+          "variable" : ["contactDetails",
+          "contact"]
+        }]
+      }]
+    }]
+  },
+  {
+    "name" : "FullNameToIMMZC",
+    "typeMode" : "none",
+    "input" : [{
+      "name" : "name",
+      "mode" : "source"
+    },
+    {
+      "name" : "immzc",
+      "mode" : "target"
+    }],
+    "rule" : [{
+      "name" : "processNameItems",
+      "source" : [{
+        "context" : "name",
+        "element" : "item",
+        "variable" : "item"
+      }],
+      "rule" : [{
+        "name" : "FirstAnswerForFullName",
+        "source" : [{
+          "context" : "item",
+          "element" : "answer",
+          "listMode" : "first",
+          "variable" : "answer",
+          "condition" : "item.linkId = 'firstName'"
+        }],
+        "rule" : [{
+          "name" : "set",
+          "source" : [{
+            "context" : "answer",
+            "element" : "value",
+            "variable" : "firstName"
+          }],
+          "target" : [{
+            "contextType" : "variable",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueId" : "firstName"
+            }]
+          }],
+          "rule" : [{
+            "name" : "set",
+            "source" : [{
+              "context" : "item",
+              "element" : "answer",
+              "listMode" : "first",
+              "variable" : "answer2",
+              "condition" : "item.linkId = 'surname'"
+            }],
+            "rule" : [{
+              "name" : "SetName",
+              "source" : [{
+                "context" : "answer2",
+                "element" : "value",
+                "variable" : "surname"
+              }],
+              "target" : [{
+                "context" : "immzc",
+                "contextType" : "variable",
+                "element" : "fullName",
+                "transform" : "append",
+                "parameter" : [{
+                  "valueId" : "firstName"
+                },
+                null,
+                {
+                  "valueId" : "surname"
+                }]
+              }]
+            }]
+          }]
+        }]
+      }]
+    }]
+  },
+  {
+    "name" : "AddressToIMMZC",
+    "typeMode" : "none",
+    "input" : [{
+      "name" : "name",
+      "mode" : "source"
+    },
+    {
+      "name" : "immzc",
+      "mode" : "target"
+    }],
+    "rule" : [{
+      "name" : "processAddressItems",
+      "source" : [{
+        "context" : "name",
+        "element" : "item",
+        "variable" : "item"
+      }],
+      "rule" : [{
+        "name" : "FirstAnswerForStreetNameAndNr",
+        "source" : [{
+          "context" : "item",
+          "element" : "answer",
+          "listMode" : "first",
+          "variable" : "answer",
+          "condition" : "item.linkId = 'streetNameAndNr'"
+        }],
+        "rule" : [{
+          "name" : "SetStreetNameAndNr",
+          "source" : [{
+            "context" : "answer",
+            "element" : "value",
+            "variable" : "content"
+          }],
+          "target" : [{
+            "context" : "immzc",
+            "contextType" : "variable",
+            "element" : "streetNameAndNr",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueId" : "content"
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "FirstAnswerForCity",
+        "source" : [{
+          "context" : "item",
+          "element" : "answer",
+          "listMode" : "first",
+          "variable" : "answer",
+          "condition" : "item.linkId = 'city'"
+        }],
+        "rule" : [{
+          "name" : "SetCity",
+          "source" : [{
+            "context" : "answer",
+            "element" : "value",
+            "variable" : "content"
+          }],
+          "target" : [{
+            "context" : "immzc",
+            "contextType" : "variable",
+            "element" : "city",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueId" : "content"
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "FirstAnswerForState",
+        "source" : [{
+          "context" : "item",
+          "element" : "answer",
+          "listMode" : "first",
+          "variable" : "answer",
+          "condition" : "item.linkId = 'state'"
+        }],
+        "rule" : [{
+          "name" : "SetState",
+          "source" : [{
+            "context" : "answer",
+            "element" : "value",
+            "variable" : "content"
+          }],
+          "target" : [{
+            "context" : "immzc",
+            "contextType" : "variable",
+            "element" : "state",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueId" : "content"
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "FirstAnswerForCountry",
+        "source" : [{
+          "context" : "item",
+          "element" : "answer",
+          "listMode" : "first",
+          "variable" : "answer",
+          "condition" : "item.linkId = 'country'"
+        }],
+        "rule" : [{
+          "name" : "SetCountry",
+          "source" : [{
+            "context" : "answer",
+            "element" : "value",
+            "variable" : "content"
+          }],
+          "target" : [{
+            "context" : "immzc",
+            "contextType" : "variable",
+            "element" : "country",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueId" : "content"
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "FirstAnswerForPostalCode",
+        "source" : [{
+          "context" : "item",
+          "element" : "answer",
+          "listMode" : "first",
+          "variable" : "answer",
+          "condition" : "item.linkId = 'postalCode'"
+        }],
+        "rule" : [{
+          "name" : "SetPostalCode",
+          "source" : [{
+            "context" : "answer",
+            "element" : "value",
+            "variable" : "content"
+          }],
+          "target" : [{
+            "context" : "immzc",
+            "contextType" : "variable",
+            "element" : "postalCode",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueId" : "content"
+            }]
+          }]
+        }]
+      }]
+    }]
+  },
+  {
+    "name" : "ContactDetailsIMMZC",
+    "typeMode" : "none",
+    "input" : [{
+      "name" : "name",
+      "mode" : "source"
+    },
+    {
+      "name" : "immzc",
+      "mode" : "target"
+    }],
+    "rule" : [{
+      "name" : "processContactDetailsItems",
+      "source" : [{
+        "context" : "name",
+        "element" : "item",
+        "variable" : "item"
+      }],
+      "rule" : [{
+        "name" : "FirstAnswerForMobileNumber",
+        "source" : [{
+          "context" : "item",
+          "element" : "answer",
+          "listMode" : "first",
+          "variable" : "answer",
+          "condition" : "item.linkId = 'mobileNumber'"
+        }],
+        "rule" : [{
+          "name" : "SetMobileNumber",
+          "source" : [{
+            "context" : "answer",
+            "element" : "value",
+            "variable" : "content"
+          }],
+          "target" : [{
+            "context" : "immzc",
+            "contextType" : "variable",
+            "element" : "mobileNumber",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueId" : "content"
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "FirstAnswerForLandline",
+        "source" : [{
+          "context" : "item",
+          "element" : "answer",
+          "listMode" : "first",
+          "variable" : "answer",
+          "condition" : "item.linkId = 'landline'"
+        }],
+        "rule" : [{
+          "name" : "SetLandline",
+          "source" : [{
+            "context" : "answer",
+            "element" : "value",
+            "variable" : "content"
+          }],
+          "target" : [{
+            "context" : "immzc",
+            "contextType" : "variable",
+            "element" : "landline",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueId" : "content"
+            }]
+          }]
+        }]
+      }]
+    }]
+  }]
+}

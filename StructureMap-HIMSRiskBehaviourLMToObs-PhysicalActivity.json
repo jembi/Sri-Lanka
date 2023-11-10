@@ -1,0 +1,101 @@
+{
+  "resourceType" : "StructureMap",
+  "id" : "HIMSRiskBehaviourLMToObs-PhysicalActivity",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre class=\"fml\">\r\n<b>map</b><span style=\"color: navy\"> &quot;</span>http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourLMToObs-PhysicalActivity<span style=\"color: navy\">&quot; = &quot;</span>HIMSRiskBehaviourLMToObs-PhysicalActivity<span style=\"color: navy\">&quot;\r\n\r\n</span><span style=\"color: navy\">// </span><span style=\"color: green\">Maps the HIMS logical model data elements to the Observation resource data elements.</span>\r\n\r\n<b>uses</b><span style=\"color: navy\"> &quot;</span><a href=\"StructureDefinition-HIMSRiskBehaviourDataDictionary.html\" title=\"HIMS Risk Behaviour\">http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSRiskBehaviourDataDictionary</a><span style=\"color: navy\">&quot; </span><b>alias </b>IMMZC <b>as </b><b>source</b>\r\n<b>uses</b><span style=\"color: navy\"> &quot;</span><a href=\"http://hl7.org/fhir/R4/bundle.html\" title=\"Bundle\">http://hl7.org/fhir/StructureDefinition/Bundle</a><span style=\"color: navy\">&quot; </span><b>alias </b>Bundle <b>as </b><b>target</b>\r\n<b>uses</b><span style=\"color: navy\"> &quot;</span><a href=\"http://hl7.org/fhir/R4/observation.html\" title=\"Observation\">http://hl7.org/fhir/StructureDefinition/Observation</a><span style=\"color: navy\">&quot; </span><b>alias </b>Observation <b>as </b><b>target</b>\r\n\r\n<b>group </b>DataDictToObservation<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">immzc</span><span style=\"color: navy\"> : </span>IMMZC, <b>target</b> <span style=\"color: maroon\">observation</span><span style=\"color: navy\"> : </span>Observation<span style=\"color: navy\">)</span><span style=\"color: navy\"> {\r\n</span>  immzc.physicalActivity<b> as </b><span style=\"color: maroon\">physicalActivity</span><span style=\"color: navy\"><b> -&gt; </b></span><span style=\"color: maroon\">observation</span><b> as </b><span style=\"color: maroon\">obs</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    physicalActivity<span style=\"color: navy\"><b> -&gt; </b></span>obs.valueCodeableConcept = <span style=\"color: maroon\">physicalActivity</span> <i>&quot;SetPhysicalActivityValue&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;SetPhysicalActivity&quot;</i><span style=\"color: navy\">;</span>\r\n<span style=\"color: navy\">}\r\n\r\n</span></pre></div>"
+  },
+  "url" : "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourLMToObs-PhysicalActivity",
+  "version" : "0.1.0",
+  "name" : "HIMSRiskBehaviourLMToObs-PhysicalActivity",
+  "status" : "draft",
+  "date" : "2023-11-10T04:37:53+00:00",
+  "publisher" : "Jembi Health Systems",
+  "contact" : [{
+    "name" : "Jembi Health Systems",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.jembi.org"
+    },
+    {
+      "system" : "email",
+      "value" : "info@jembi.org"
+    }]
+  },
+  {
+    "name" : "Richard Langford",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "richard.langford@jembi.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Maps the HIMS logical model data elements to the Observation resource data elements.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "structure" : [{
+    "url" : "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSRiskBehaviourDataDictionary",
+    "mode" : "source",
+    "alias" : "IMMZC"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/Bundle",
+    "mode" : "target",
+    "alias" : "Bundle"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/Observation",
+    "mode" : "target",
+    "alias" : "Observation"
+  }],
+  "group" : [{
+    "name" : "DataDictToObservation",
+    "typeMode" : "none",
+    "input" : [{
+      "name" : "immzc",
+      "type" : "IMMZC",
+      "mode" : "source"
+    },
+    {
+      "name" : "observation",
+      "type" : "Observation",
+      "mode" : "target"
+    }],
+    "rule" : [{
+      "name" : "SetPhysicalActivity",
+      "source" : [{
+        "context" : "immzc",
+        "element" : "physicalActivity",
+        "variable" : "physicalActivity"
+      }],
+      "target" : [{
+        "contextType" : "variable",
+        "variable" : "obs",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueId" : "observation"
+        }]
+      }],
+      "rule" : [{
+        "name" : "SetPhysicalActivityValue",
+        "source" : [{
+          "context" : "physicalActivity"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "valueCodeableConcept",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueId" : "physicalActivity"
+          }]
+        }]
+      }]
+    }]
+  }]
+}

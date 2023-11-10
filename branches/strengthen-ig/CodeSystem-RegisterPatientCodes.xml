@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="RegisterPatientCodes"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This case-insensitive code system <code>http://openhie.org/fhir/sri-lanka/CodeSystem/RegisterPatientCodes</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">RP1<a name="RegisterPatientCodes-RP1"> </a></td><td>Personal health number</td><td>Unique identifier for the patient, according to the policies applicable to each country.</td></tr><tr><td style="white-space:nowrap">RP2<a name="RegisterPatientCodes-RP2"> </a></td><td>National identity card</td><td>Unique identifier for the patient, according to the policies applicable to each country.</td></tr><tr><td style="white-space:nowrap">RP3<a name="RegisterPatientCodes-RP3"> </a></td><td>Passport</td><td>Unique identifier for the patient, according to the policies applicable to each country.</td></tr><tr><td style="white-space:nowrap">RP4<a name="RegisterPatientCodes-RP4"> </a></td><td>Driving license</td><td>Unique identifier for the patient, according to the policies applicable to each country.</td></tr><tr><td style="white-space:nowrap">RP5<a name="RegisterPatientCodes-RP5"> </a></td><td>Senior citizen number</td><td>Unique identifier for the patient, according to the policies applicable to each country.</td></tr><tr><td style="white-space:nowrap">RP6<a name="RegisterPatientCodes-RP6"> </a></td><td>Name</td><td>The full name of the patient</td></tr><tr><td style="white-space:nowrap">RP7<a name="RegisterPatientCodes-RP7"> </a></td><td>First name</td><td>Patient's first name or given name</td></tr><tr><td style="white-space:nowrap">RP8<a name="RegisterPatientCodes-RP8"> </a></td><td>Family name</td><td>Patient's family name or last name</td></tr><tr><td style="white-space:nowrap">RP9<a name="RegisterPatientCodes-RP9"> </a></td><td>Sex</td><td>Documentation of a specific instance of sex information for the patient</td></tr><tr><td style="white-space:nowrap">RP10<a name="RegisterPatientCodes-RP10"> </a></td><td>City</td><td>Address city</td></tr><tr><td style="white-space:nowrap">RP11<a name="RegisterPatientCodes-RP11"> </a></td><td>Street name and number</td><td>Address street name and number</td></tr><tr><td style="white-space:nowrap">RP12<a name="RegisterPatientCodes-RP12"> </a></td><td>State</td><td>Address state</td></tr><tr><td style="white-space:nowrap">RP13<a name="RegisterPatientCodes-RP13"> </a></td><td>Country</td><td>Address country</td></tr><tr><td style="white-space:nowrap">RP14<a name="RegisterPatientCodes-RP14"> </a></td><td>Postal code</td><td>Address postal code</td></tr><tr><td style="white-space:nowrap">RP15<a name="RegisterPatientCodes-RP15"> </a></td><td>Date of birth</td><td>Patient's date of birth (DOB) if known; if unknown, use assigned DOB for administrative purposes</td></tr><tr><td style="white-space:nowrap">RP16<a name="RegisterPatientCodes-RP16"> </a></td><td>Mobile phone number</td><td>Patient's mobile phone number</td></tr><tr><td style="white-space:nowrap">RP17<a name="RegisterPatientCodes-RP17"> </a></td><td>Landline phone number</td><td>Patient's landline phone number</td></tr><tr><td style="white-space:nowrap">RP18<a name="RegisterPatientCodes-RP18"> </a></td><td>Name (Multiple)</td><td>Patient names</td></tr><tr><td style="white-space:nowrap">RP19<a name="RegisterPatientCodes-RP19"> </a></td><td>Address (Multiple)</td><td>Patient addresses</td></tr><tr><td style="white-space:nowrap">RP20<a name="RegisterPatientCodes-RP20"> </a></td><td>Contact details (Multiple)</td><td>Patient contact details</td></tr></table></div>
+  </text>
+  <url value="http://openhie.org/fhir/sri-lanka/CodeSystem/RegisterPatientCodes"/>
+  <version value="0.1.0"/>
+  <name value="IMMZ_C"/>
+  <title value="Register Patient CodeSystem for Data Elements"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2023-11-02T07:46:50+00:00"/>
+  <publisher value="Jembi Health Systems"/>
+  <contact>
+    <name value="Jembi Health Systems"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.jembi.org"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@jembi.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Richard Langford"/>
+    <telecom>
+      <system value="email"/>
+      <value value="richard.langford@jembi.org"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="CodeSystem for Register Patient Data Elements"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="false"/>
+  <content value="complete"/>
+  <count value="20"/>
+  <concept>
+    <code value="RP1"/>
+    <display value="Personal health number"/>
+    <definition value="Unique identifier for the patient, according to the policies applicable to each country."/>
+  </concept>
+  <concept>
+    <code value="RP2"/>
+    <display value="National identity card"/>
+    <definition value="Unique identifier for the patient, according to the policies applicable to each country."/>
+  </concept>
+  <concept>
+    <code value="RP3"/>
+    <display value="Passport"/>
+    <definition value="Unique identifier for the patient, according to the policies applicable to each country."/>
+  </concept>
+  <concept>
+    <code value="RP4"/>
+    <display value="Driving license"/>
+    <definition value="Unique identifier for the patient, according to the policies applicable to each country."/>
+  </concept>
+  <concept>
+    <code value="RP5"/>
+    <display value="Senior citizen number"/>
+    <definition value="Unique identifier for the patient, according to the policies applicable to each country."/>
+  </concept>
+  <concept>
+    <code value="RP6"/>
+    <display value="Name"/>
+    <definition value="The full name of the patient"/>
+  </concept>
+  <concept>
+    <code value="RP7"/>
+    <display value="First name"/>
+    <definition value="Patient's first name or given name"/>
+  </concept>
+  <concept>
+    <code value="RP8"/>
+    <display value="Family name"/>
+    <definition value="Patient's family name or last name"/>
+  </concept>
+  <concept>
+    <code value="RP9"/>
+    <display value="Sex"/>
+    <definition value="Documentation of a specific instance of sex information for the patient"/>
+  </concept>
+  <concept>
+    <code value="RP10"/>
+    <display value="City"/>
+    <definition value="Address city"/>
+  </concept>
+  <concept>
+    <code value="RP11"/>
+    <display value="Street name and number"/>
+    <definition value="Address street name and number"/>
+  </concept>
+  <concept>
+    <code value="RP12"/>
+    <display value="State"/>
+    <definition value="Address state"/>
+  </concept>
+  <concept>
+    <code value="RP13"/>
+    <display value="Country"/>
+    <definition value="Address country"/>
+  </concept>
+  <concept>
+    <code value="RP14"/>
+    <display value="Postal code"/>
+    <definition value="Address postal code"/>
+  </concept>
+  <concept>
+    <code value="RP15"/>
+    <display value="Date of birth"/>
+    <definition value="Patient's date of birth (DOB) if known; if unknown, use assigned DOB for administrative purposes"/>
+  </concept>
+  <concept>
+    <code value="RP16"/>
+    <display value="Mobile phone number"/>
+    <definition value="Patient's mobile phone number"/>
+  </concept>
+  <concept>
+    <code value="RP17"/>
+    <display value="Landline phone number"/>
+    <definition value="Patient's landline phone number"/>
+  </concept>
+  <concept>
+    <code value="RP18"/>
+    <display value="Name (Multiple)"/>
+    <definition value="Patient names"/>
+  </concept>
+  <concept>
+    <code value="RP19"/>
+    <display value="Address (Multiple)"/>
+    <definition value="Patient addresses"/>
+  </concept>
+  <concept>
+    <code value="RP20"/>
+    <display value="Contact details (Multiple)"/>
+    <definition value="Patient contact details"/>
+  </concept>
+</CodeSystem>

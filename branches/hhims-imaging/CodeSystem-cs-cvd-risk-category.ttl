@@ -1,0 +1,74 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openhie.org/fhir/sri-lanka/CodeSystem/cs-cvd-risk-category> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cs-cvd-risk-category"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-sensitive code system <code>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-cvd-risk-category</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">less-than-5<a name=\"cs-cvd-risk-category-less-than-5\"> </a></td><td>Less than 5%</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">5-to-less-than-10<a name=\"cs-cvd-risk-category-5-to-less-than-10\"> </a></td><td>5% to less than 10%</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">10-to-less-than-20<a name=\"cs-cvd-risk-category-10-to-less-than-20\"> </a></td><td>10% to less than 20%</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">20-to-less-than-30<a name=\"cs-cvd-risk-category-20-to-less-than-30\"> </a></td><td>20% to less than 30%</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">greater-than-or-equal-to-30<a name=\"cs-cvd-risk-category-greater-than-or-equal-to-30\"> </a></td><td>Equal or more than 30%</td><td>Needs definition</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-cvd-risk-category"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "CSCVDRiskCategory"] ; # 
+  fhir:title [ fhir:v "Cardiovascular Risk Category Probability Percentage Ranges"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-10-16T15:06:43+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Jembi Health Systems"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Jembi Health Systems" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.jembi.org" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "info@jembi.org" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Richard Langford" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "richard.langford@jembi.org" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Cardiovascular Risk Category Probability Percentage Ranges"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "5"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "less-than-5" ] ;
+     fhir:display [ fhir:v "Less than 5%" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "5-to-less-than-10" ] ;
+     fhir:display [ fhir:v "5% to less than 10%" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "10-to-less-than-20" ] ;
+     fhir:display [ fhir:v "10% to less than 20%" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "20-to-less-than-30" ] ;
+     fhir:display [ fhir:v "20% to less than 30%" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "greater-than-or-equal-to-30" ] ;
+     fhir:display [ fhir:v "Equal or more than 30%" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

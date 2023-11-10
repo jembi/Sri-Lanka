@@ -1,0 +1,48 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "vs-whoatc",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"http://www.whocc.no/atc\"><code>http://www.whocc.no/atc</code></a></li></ul></div>"
+  },
+  "url" : "http://openhie.org/fhir/sri-lanka/ValueSet/vs-whoatc",
+  "version" : "0.1.0",
+  "name" : "VSWHOATC",
+  "title" : "WHO ATC",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-10-16T06:39:53+00:00",
+  "publisher" : "Jembi Health Systems",
+  "contact" : [{
+    "name" : "Jembi Health Systems",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.jembi.org"
+    },
+    {
+      "system" : "email",
+      "value" : "info@jembi.org"
+    }]
+  },
+  {
+    "name" : "Richard Langford",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "richard.langford@jembi.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "World Health Organization Anatomical Therapeutic Chemical (ATC) classification system. Note: The currently implemented code system and the value set expansion contain only a set of example ATC codes, not the complete code system content.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.whocc.no/atc"
+    }]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "url" : "http://openhie.org/fhir/sri-lanka/ImplementationGuide/openhie.fhir.sri-lanka",
+  "name" : "SriLanka",
+  "package-id" : "openhie.fhir.sri-lanka",
+  "ig-ver" : "0.1.0",
+  "date" : "Fri, 10 Nov, 2023 04:37:53 +0000",
+  "errs" : 29,
+  "warnings" : 15,
+  "hints" : 1,
+  "version" : "4.0.1",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 2562723680
+}

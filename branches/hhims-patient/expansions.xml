@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="8a8cfca8-68a2-4948-8146-9db6fcc16b31"/>
+  <meta>
+    <lastUpdated value="2023-10-09T17:23:13.503+00:00"/>
+  </meta>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="http://openhie.org/fhir/sri-lanka/ValueSet/vs-risk-behaviour-tobacco-smoker"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 2 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-cs-risk-behaviour-tobacco-smoker.html">codesystem Risk Assessment - Tobacco Smoker v0.1.0 (CodeSystem)</a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-sri-lanka-CodeSystem-cs-risk-behaviour-tobacco-smoker-Non-User"> </a>  
+                  <a href="CodeSystem-cs-risk-behaviour-tobacco-smoker.html#cs-risk-behaviour-tobacco-smoker-Non-User">Non-User</a>
+                </td>
+                <td>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-tobacco-smoker</td>
+                <td>Non-User</td>
+                <td>
+                  <div>
+                    <p>Sri Lanka team to provide defitinion for this coded value</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-sri-lanka-CodeSystem-cs-risk-behaviour-tobacco-smoker-User"> </a>  
+                  <a href="CodeSystem-cs-risk-behaviour-tobacco-smoker.html#cs-risk-behaviour-tobacco-smoker-User">User</a>
+                </td>
+                <td>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-tobacco-smoker</td>
+                <td>User</td>
+                <td>
+                  <div>
+                    <p>Sri Lanka team to provide defitinion for this coded value</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://openhie.org/fhir/sri-lanka/ValueSet/vs-risk-behaviour-tobacco-smoker"/>
+        <version value="0.1.0"/>
+        <name value="VSRiskBehaviourTobaccoSmoker"/>
+        <title value="Risk Assessment - Tobacco Smoker"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2023-10-09T17:23:13+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+            <display value="World"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:8b1e709d-3b84-49f2-a8c5-1cb80c871b11"/>
+          <timestamp value="2023-10-09T17:24:13+00:00"/>
+          <total value="2"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-tobacco-smoker|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-tobacco-smoker"/>
+            <code value="Non-User"/>
+            <display value="Non-User"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-tobacco-smoker"/>
+            <code value="User"/>
+            <display value="User"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://openhie.org/fhir/sri-lanka/ValueSet/vs-risk-behaviour-physical-activity"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 2 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-cs-risk-behaviour-physical-activity.html">codesystem Risk Assessment - Physical Activity v0.1.0 (CodeSystem)</a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-sri-lanka-CodeSystem-cs-risk-behaviour-physical-activity-Physically-active"> </a>  
+                  <a href="CodeSystem-cs-risk-behaviour-physical-activity.html#cs-risk-behaviour-physical-activity-Physically-active">Physically-active</a>
+                </td>
+                <td>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-physical-activity</td>
+                <td>Physically active</td>
+                <td>
+                  <div>
+                    <p>Sri Lanka team to provide defitinion for this coded value</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-sri-lanka-CodeSystem-cs-risk-behaviour-physical-activity-Physically-not-active"> </a>  
+                  <a href="CodeSystem-cs-risk-behaviour-physical-activity.html#cs-risk-behaviour-physical-activity-Physically-not-active">Physically-not-active</a>
+                </td>
+                <td>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-physical-activity</td>
+                <td>Physically not active</td>
+                <td>
+                  <div>
+                    <p>Sri Lanka team to provide defitinion for this coded value</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://openhie.org/fhir/sri-lanka/ValueSet/vs-risk-behaviour-physical-activity"/>
+        <version value="0.1.0"/>
+        <name value="VSRiskBehaviourPhysicalActivity"/>
+        <title value="Risk Assessment - Physical Activity"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2023-10-09T17:23:13+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+            <display value="World"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:dadda0f2-11b7-4a6a-afa6-fa70052d857d"/>
+          <timestamp value="2023-10-09T17:24:20+00:00"/>
+          <total value="2"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-physical-activity|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-physical-activity"/>
+            <code value="Physically-active"/>
+            <display value="Physically active"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-physical-activity"/>
+            <code value="Physically-not-active"/>
+            <display value="Physically not active"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://openhie.org/fhir/sri-lanka/ValueSet/vs-follow-up-reasons"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 4 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-cs-follow-up-reasons.html">codesystem Follow up at HLC v0.1.0 (CodeSystem)</a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-sri-lanka-CodeSystem-cs-follow-up-reasons-Followed-in-3-months-at-hlc"> </a>  
+                  <a href="CodeSystem-cs-follow-up-reasons.html#cs-follow-up-reasons-Followed-in-3-months-at-hlc">Followed-in-3-months-at-hlc</a>
+                </td>
+                <td>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-reasons</td>
+                <td>Followed in 3 months at HLC</td>
+                <td>
+                  <div>
+                    <p>Sri Lanka team to provide defitinion for this coded value</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-sri-lanka-CodeSystem-cs-follow-up-reasons-Followed-in-6-months-at-hlc"> </a>  
+                  <a href="CodeSystem-cs-follow-up-reasons.html#cs-follow-up-reasons-Followed-in-6-months-at-hlc">Followed-in-6-months-at-hlc</a>
+                </td>
+                <td>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-reasons</td>
+                <td>Followed in 6 months at HLC</td>
+                <td>
+                  <div>
+                    <p>Sri Lanka team to provide defitinion for this coded value</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-sri-lanka-CodeSystem-cs-follow-up-reasons-Followed-in-1-year-at-hlc"> </a>  
+                  <a href="CodeSystem-cs-follow-up-reasons.html#cs-follow-up-reasons-Followed-in-1-year-at-hlc">Followed-in-1-year-at-hlc</a>
+                </td>
+                <td>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-reasons</td>
+                <td>Followed in 1 year at HLC</td>
+                <td>
+                  <div>
+                    <p>Sri Lanka team to provide defitinion for this coded value</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-sri-lanka-CodeSystem-cs-follow-up-reasons-Followed-in-3-years-at-hlc"> </a>  
+                  <a href="CodeSystem-cs-follow-up-reasons.html#cs-follow-up-reasons-Followed-in-3-years-at-hlc">Followed-in-3-years-at-hlc</a>
+                </td>
+                <td>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-reasons</td>
+                <td>Followed in 3 years at HLC</td>
+                <td>
+                  <div>
+                    <p>Sri Lanka team to provide defitinion for this coded value</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://openhie.org/fhir/sri-lanka/ValueSet/vs-follow-up-reasons"/>
+        <version value="0.1.0"/>
+        <name value="VSFollowUpReasons"/>
+        <title value="Follow up at HLC"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2023-10-09T17:23:13+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+            <display value="World"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:02ae350d-7372-471c-9fbc-f61509a97f8b"/>
+          <timestamp value="2023-10-09T17:24:26+00:00"/>
+          <total value="4"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-reasons|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-reasons"/>
+            <code value="Followed-in-3-months-at-hlc"/>
+            <display value="Followed in 3 months at HLC"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-reasons"/>
+            <code value="Followed-in-6-months-at-hlc"/>
+            <display value="Followed in 6 months at HLC"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-reasons"/>
+            <code value="Followed-in-1-year-at-hlc"/>
+            <display value="Followed in 1 year at HLC"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-reasons"/>
+            <code value="Followed-in-3-years-at-hlc"/>
+            <display value="Followed in 3 years at HLC"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://openhie.org/fhir/sri-lanka/ValueSet/vs-follow-up-plan"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 5 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-cs-follow-up-plan.html">codesystem Follow-up plan v0.1.0 (CodeSystem)</a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-sri-lanka-CodeSystem-cs-follow-up-plan-Reffered-to-medical-clinic-of-same-institute"> </a>  
+                  <a href="CodeSystem-cs-follow-up-plan.html#cs-follow-up-plan-Reffered-to-medical-clinic-of-same-institute">Reffered-to-medical-clinic-of-same-institute</a>
+                </td>
+                <td>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-plan</td>
+                <td>Reffered to medical clinic of same institute</td>
+                <td>
+                  <div>
+                    <p>Sri Lanka team to provide defitinion for this coded value</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-sri-lanka-CodeSystem-cs-follow-up-plan-Referred-to-specialised-clinic"> </a>  
+                  <a href="CodeSystem-cs-follow-up-plan.html#cs-follow-up-plan-Referred-to-specialised-clinic">Referred-to-specialised-clinic</a>
+                </td>
+                <td>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-plan</td>
+                <td>Referred to specialised clinic</td>
+                <td>
+                  <div>
+                    <p>Sri Lanka team to provide defitinion for this coded value</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-sri-lanka-CodeSystem-cs-follow-up-plan-Follow-up-at-hlc"> </a>  
+                  <a href="CodeSystem-cs-follow-up-plan.html#cs-follow-up-plan-Follow-up-at-hlc">Follow-up-at-hlc</a>
+                </td>
+                <td>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-plan</td>
+                <td>Follow up at HLC</td>
+                <td>
+                  <div>
+                    <p>Sri Lanka team to provide defitinion for this coded value</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-sri-lanka-CodeSystem-cs-follow-up-plan-Referred-to-dental-clinic"> </a>  
+                  <a href="CodeSystem-cs-follow-up-plan.html#cs-follow-up-plan-Referred-to-dental-clinic">Referred-to-dental-clinic</a>
+                </td>
+                <td>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-plan</td>
+                <td>Referred to Dental Clinic</td>
+                <td>
+                  <div>
+                    <p>Sri Lanka team to provide defitinion for this coded value</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---openhie.org-fhir-sri-lanka-CodeSystem-cs-follow-up-plan-Referred-to-wwc"> </a>  
+                  <a href="CodeSystem-cs-follow-up-plan.html#cs-follow-up-plan-Referred-to-wwc">Referred-to-wwc</a>
+                </td>
+                <td>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-plan</td>
+                <td>Referred to WWC</td>
+                <td>
+                  <div>
+                    <p>Sri Lanka team to provide defitinion for this coded value</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://openhie.org/fhir/sri-lanka/ValueSet/vs-follow-up-plan"/>
+        <version value="0.1.0"/>
+        <name value="VSFollowUpPlan"/>
+        <title value="Follow-up plan"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2023-10-09T17:23:13+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+            <display value="World"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:96a8cad4-edf5-4d50-a5e7-f38a09cd9075"/>
+          <timestamp value="2023-10-09T17:24:29+00:00"/>
+          <total value="5"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-plan|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-plan"/>
+            <code value="Reffered-to-medical-clinic-of-same-institute"/>
+            <display value="Reffered to medical clinic of same institute"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-plan"/>
+            <code value="Referred-to-specialised-clinic"/>
+            <display value="Referred to specialised clinic"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-plan"/>
+            <code value="Follow-up-at-hlc"/>
+            <display value="Follow up at HLC"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-plan"/>
+            <code value="Referred-to-dental-clinic"/>
+            <display value="Referred to Dental Clinic"/>
+          </contains>
+          <contains>
+            <system value="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-plan"/>
+            <code value="Referred-to-wwc"/>
+            <display value="Referred to WWC"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+</Bundle>

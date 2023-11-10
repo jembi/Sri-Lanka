@@ -1,0 +1,29 @@
+{
+  "resourceType" : "ImagingStudy",
+  "id" : "HHIMSImagingExample",
+  "meta" : {
+    "profile" : ["http://openhie.org/fhir/sri-lanka/StructureDefinition/hhims-imaging"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ImagingStudy</b><a name=\"HHIMSImagingExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ImagingStudy &quot;HHIMSImagingExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-hhims-imaging.html\">HHIMS Imaging</a></p></div><p><b>status</b>: registered</p><p><b>subject</b>: <a href=\"Patient-HHIMSPatientExample.html\">Patient/HHIMSPatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href=\"Encounter-TargetFacilityEncounterExample.html\">Encounter/TargetFacilityEncounterExample</a></p><p><b>started</b>: 2023-10-06 13:28:17-0500</p><p><b>basedOn</b>: <a href=\"ServiceRequest-ImagingServiceRequestExample.html\">ServiceRequest/ImagingServiceRequestExample</a></p><p><b>referrer</b>: <a href=\"Practitioner-GeneralPractitionerExample.html\">Practitioner/GeneralPractitionerExample</a> &quot; SMITH&quot;</p><p><b>procedureReference</b>: <a href=\"Procedure-ProceduresExample.html\">Procedure/ProceduresExample</a></p><p><b>description</b>: Imaging Description</p></div>"
+  },
+  "status" : "registered",
+  "subject" : {
+    "reference" : "Patient/HHIMSPatientExample"
+  },
+  "encounter" : {
+    "reference" : "Encounter/TargetFacilityEncounterExample"
+  },
+  "started" : "2023-10-06T13:28:17-05:00",
+  "basedOn" : [{
+    "reference" : "ServiceRequest/ImagingServiceRequestExample"
+  }],
+  "referrer" : {
+    "reference" : "Practitioner/GeneralPractitionerExample"
+  },
+  "procedureReference" : {
+    "reference" : "Procedure/ProceduresExample"
+  },
+  "description" : "Imaging Description"
+}

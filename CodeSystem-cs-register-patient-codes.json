@@ -1,0 +1,146 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "cs-register-patient-codes",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-sensitive code system <code>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-register-patient-codes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">RP1<a name=\"cs-register-patient-codes-RP1\"> </a></td><td>Personal health number</td><td>Unique identifier for the patient, according to the policies applicable to each country.</td></tr><tr><td style=\"white-space:nowrap\">RP2<a name=\"cs-register-patient-codes-RP2\"> </a></td><td>National identity card</td><td>Unique identifier for the patient, according to the policies applicable to each country.</td></tr><tr><td style=\"white-space:nowrap\">RP3<a name=\"cs-register-patient-codes-RP3\"> </a></td><td>Passport</td><td>Unique identifier for the patient, according to the policies applicable to each country.</td></tr><tr><td style=\"white-space:nowrap\">RP4<a name=\"cs-register-patient-codes-RP4\"> </a></td><td>Driving license</td><td>Unique identifier for the patient, according to the policies applicable to each country.</td></tr><tr><td style=\"white-space:nowrap\">RP5<a name=\"cs-register-patient-codes-RP5\"> </a></td><td>Senior citizen number</td><td>Unique identifier for the patient, according to the policies applicable to each country.</td></tr><tr><td style=\"white-space:nowrap\">RP6<a name=\"cs-register-patient-codes-RP6\"> </a></td><td>Name</td><td>The full name of the patient</td></tr><tr><td style=\"white-space:nowrap\">RP7<a name=\"cs-register-patient-codes-RP7\"> </a></td><td>First name</td><td>Patient's first name or given name</td></tr><tr><td style=\"white-space:nowrap\">RP8<a name=\"cs-register-patient-codes-RP8\"> </a></td><td>Family name</td><td>Patient's family name or last name</td></tr><tr><td style=\"white-space:nowrap\">RP9<a name=\"cs-register-patient-codes-RP9\"> </a></td><td>Sex</td><td>Documentation of a specific instance of sex information for the patient</td></tr><tr><td style=\"white-space:nowrap\">RP10<a name=\"cs-register-patient-codes-RP10\"> </a></td><td>City</td><td>Address city</td></tr><tr><td style=\"white-space:nowrap\">RP11<a name=\"cs-register-patient-codes-RP11\"> </a></td><td>Street name and number</td><td>Address street name and number</td></tr><tr><td style=\"white-space:nowrap\">RP12<a name=\"cs-register-patient-codes-RP12\"> </a></td><td>State</td><td>Address state</td></tr><tr><td style=\"white-space:nowrap\">RP13<a name=\"cs-register-patient-codes-RP13\"> </a></td><td>Country</td><td>Address country</td></tr><tr><td style=\"white-space:nowrap\">RP14<a name=\"cs-register-patient-codes-RP14\"> </a></td><td>Postal code</td><td>Address postal code</td></tr><tr><td style=\"white-space:nowrap\">RP15<a name=\"cs-register-patient-codes-RP15\"> </a></td><td>Date of birth</td><td>Patient's date of birth (DOB) if known; if unknown, use assigned DOB for administrative purposes</td></tr><tr><td style=\"white-space:nowrap\">RP16<a name=\"cs-register-patient-codes-RP16\"> </a></td><td>Mobile phone number</td><td>Patient's mobile phone number</td></tr><tr><td style=\"white-space:nowrap\">RP17<a name=\"cs-register-patient-codes-RP17\"> </a></td><td>Landline phone number</td><td>Patient's landline phone number</td></tr><tr><td style=\"white-space:nowrap\">RP18<a name=\"cs-register-patient-codes-RP18\"> </a></td><td>Name (Multiple)</td><td>Patient names</td></tr><tr><td style=\"white-space:nowrap\">RP19<a name=\"cs-register-patient-codes-RP19\"> </a></td><td>Address (Multiple)</td><td>Patient addresses</td></tr><tr><td style=\"white-space:nowrap\">RP20<a name=\"cs-register-patient-codes-RP20\"> </a></td><td>Contact details (Multiple)</td><td>Patient contact details</td></tr></table></div>"
+  },
+  "url" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-register-patient-codes",
+  "version" : "0.1.0",
+  "name" : "CSRegisterPatientCodes",
+  "title" : "Register Patient",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-11-10T04:37:53+00:00",
+  "publisher" : "Jembi Health Systems",
+  "contact" : [{
+    "name" : "Jembi Health Systems",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.jembi.org"
+    },
+    {
+      "system" : "email",
+      "value" : "info@jembi.org"
+    }]
+  },
+  {
+    "name" : "Richard Langford",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "richard.langford@jembi.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "CodeSystem for Register Patient Data Elements",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 20,
+  "concept" : [{
+    "code" : "RP1",
+    "display" : "Personal health number",
+    "definition" : "Unique identifier for the patient, according to the policies applicable to each country."
+  },
+  {
+    "code" : "RP2",
+    "display" : "National identity card",
+    "definition" : "Unique identifier for the patient, according to the policies applicable to each country."
+  },
+  {
+    "code" : "RP3",
+    "display" : "Passport",
+    "definition" : "Unique identifier for the patient, according to the policies applicable to each country."
+  },
+  {
+    "code" : "RP4",
+    "display" : "Driving license",
+    "definition" : "Unique identifier for the patient, according to the policies applicable to each country."
+  },
+  {
+    "code" : "RP5",
+    "display" : "Senior citizen number",
+    "definition" : "Unique identifier for the patient, according to the policies applicable to each country."
+  },
+  {
+    "code" : "RP6",
+    "display" : "Name",
+    "definition" : "The full name of the patient"
+  },
+  {
+    "code" : "RP7",
+    "display" : "First name",
+    "definition" : "Patient's first name or given name"
+  },
+  {
+    "code" : "RP8",
+    "display" : "Family name",
+    "definition" : "Patient's family name or last name"
+  },
+  {
+    "code" : "RP9",
+    "display" : "Sex",
+    "definition" : "Documentation of a specific instance of sex information for the patient"
+  },
+  {
+    "code" : "RP10",
+    "display" : "City",
+    "definition" : "Address city"
+  },
+  {
+    "code" : "RP11",
+    "display" : "Street name and number",
+    "definition" : "Address street name and number"
+  },
+  {
+    "code" : "RP12",
+    "display" : "State",
+    "definition" : "Address state"
+  },
+  {
+    "code" : "RP13",
+    "display" : "Country",
+    "definition" : "Address country"
+  },
+  {
+    "code" : "RP14",
+    "display" : "Postal code",
+    "definition" : "Address postal code"
+  },
+  {
+    "code" : "RP15",
+    "display" : "Date of birth",
+    "definition" : "Patient's date of birth (DOB) if known; if unknown, use assigned DOB for administrative purposes"
+  },
+  {
+    "code" : "RP16",
+    "display" : "Mobile phone number",
+    "definition" : "Patient's mobile phone number"
+  },
+  {
+    "code" : "RP17",
+    "display" : "Landline phone number",
+    "definition" : "Patient's landline phone number"
+  },
+  {
+    "code" : "RP18",
+    "display" : "Name (Multiple)",
+    "definition" : "Patient names"
+  },
+  {
+    "code" : "RP19",
+    "display" : "Address (Multiple)",
+    "definition" : "Patient addresses"
+  },
+  {
+    "code" : "RP20",
+    "display" : "Contact details (Multiple)",
+    "definition" : "Patient contact details"
+  }]
+}

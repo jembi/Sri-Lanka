@@ -1,0 +1,512 @@
+{
+  "resourceType" : "StructureMap",
+  "id" : "HIMSLMToPatientRegistration",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre class=\"fml\">\r\n<b>map</b><span style=\"color: navy\"> &quot;</span>http://openhie.org/fhir/sri-lanka/StructureMap/HIMSLMToPatientRegistration<span style=\"color: navy\">&quot; = &quot;</span>HIMSLMToPatientRegistration<span style=\"color: navy\">&quot;\r\n\r\n</span><span style=\"color: navy\">// </span><span style=\"color: green\">Maps the HIMS logical model data elements to the Patient resource data elements</span>\r\n\r\n<b>uses</b><span style=\"color: navy\"> &quot;</span><a href=\"StructureDefinition-HIMSPatientRegistrationDataDictionary.html\" title=\"HIMS Patient Registration\">http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSPatientRegistrationDataDictionary</a><span style=\"color: navy\">&quot; </span><b>alias </b>IMMZC <b>as </b><b>source</b>\r\n<b>uses</b><span style=\"color: navy\"> &quot;</span><a href=\"http://hl7.org/fhir/R4/bundle.html\" title=\"Bundle\">http://hl7.org/fhir/StructureDefinition/Bundle</a><span style=\"color: navy\">&quot; </span><b>alias </b>Bundle <b>as </b><b>target</b>\r\n<b>uses</b><span style=\"color: navy\"> &quot;</span><a href=\"http://hl7.org/fhir/R4/patient.html\" title=\"Patient\">http://hl7.org/fhir/StructureDefinition/Patient</a><span style=\"color: navy\">&quot; </span><b>alias </b>Patient <b>as </b><b>target</b>\r\n\r\n<b>group </b>DataDictToPatient<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">immzc</span><span style=\"color: navy\"> : </span>IMMZC, <b>target</b> <span style=\"color: maroon\">patient</span><span style=\"color: navy\"> : </span>Patient<span style=\"color: navy\">)</span><span style=\"color: navy\"> {\r\n</span>  immzc.personalHealthNumber<b> as </b><span style=\"color: maroon\">id1</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.identifier<b> as </b><span style=\"color: maroon\">identifier</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    id1<span style=\"color: navy\"><b> -&gt; </b></span>identifier.value = <span style=\"color: maroon\">id1</span> <i>&quot;SetPersonalHealthNumberValue&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;SetPHN&quot;</i><span style=\"color: navy\">;</span>\r\n  immzc.nationalIdentityCard<b> as </b><span style=\"color: maroon\">id2</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.identifier<b> as </b><span style=\"color: maroon\">identifier</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    id2<span style=\"color: navy\"><b> -&gt; </b></span>identifier.value = <span style=\"color: maroon\">id2</span> <i>&quot;SetNationalIdentityCardNumberValue&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;SetNIC&quot;</i><span style=\"color: navy\">;</span>\r\n  immzc.passport<b> as </b><span style=\"color: maroon\">id3</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.identifier<b> as </b><span style=\"color: maroon\">identifier</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    id3<span style=\"color: navy\"><b> -&gt; </b></span>identifier.value = <span style=\"color: maroon\">id3</span> <i>&quot;SetPassportNumberValue&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;SetPassport&quot;</i><span style=\"color: navy\">;</span>\r\n  immzc.drivingLicense<b> as </b><span style=\"color: maroon\">id4</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.identifier<b> as </b><span style=\"color: maroon\">identifier</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    id4<span style=\"color: navy\"><b> -&gt; </b></span>identifier.value = <span style=\"color: maroon\">id4</span> <i>&quot;SetDrivingLicenseNumberValue&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;SetDL&quot;</i><span style=\"color: navy\">;</span>\r\n  immzc.seniorCitizenNumber<b> as </b><span style=\"color: maroon\">id5</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.identifier<b> as </b><span style=\"color: maroon\">identifier</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    id5<span style=\"color: navy\"><b> -&gt; </b></span>identifier.value = <span style=\"color: maroon\">id5</span> <i>&quot;SetSeniorCitizenNumberValue&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;SetSCN&quot;</i><span style=\"color: navy\">;</span>\r\n  immzc.sex<b> as </b><span style=\"color: maroon\">sex</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.gender = <span style=\"color: maroon\">sex</span> <i>&quot;SetGender&quot;</i><span style=\"color: navy\">;</span>\r\n  immzc.birthDate<b> as </b><span style=\"color: maroon\">birthDate</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.birthDate = <span style=\"color: maroon\">birthDate</span> <i>&quot;SetBirthDate&quot;</i><span style=\"color: navy\">;</span>\r\n  immzc.patientName<b> as </b><span style=\"color: maroon\">patientName</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.name<b> as </b><span style=\"color: maroon\">hname</span><b> then </b>NameToHumanName<span style=\"color: navy\">(</span><span style=\"color: maroon\">patientName</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">hname</span><span style=\"color: navy\">)</span> <i>&quot;SetPatientNames&quot;</i><span style=\"color: navy\">;</span>\r\n  immzc.address<b> as </b><span style=\"color: maroon\">address</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.address<b> as </b><span style=\"color: maroon\">haddy</span><b> then </b>AddyToAddress<span style=\"color: navy\">(</span><span style=\"color: maroon\">address</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">haddy</span><span style=\"color: navy\">)</span> <i>&quot;SetAddresses&quot;</i><span style=\"color: navy\">;</span>\r\n  immzc.contactDetails<b> as </b><span style=\"color: maroon\">contactDetails</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.telecom<b> as </b><span style=\"color: maroon\">hcontact</span><b> then </b>ContactDetailsToContactPoint<span style=\"color: navy\">(</span><span style=\"color: maroon\">contactDetails</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">hcontact</span><span style=\"color: navy\">)</span> <i>&quot;SetContactDetails&quot;</i><span style=\"color: navy\">;</span>\r\n<span style=\"color: navy\">}\r\n\r\n</span><b>group </b>NameToHumanName<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">name</span>, <b>target</b> <span style=\"color: maroon\">hname</span><span style=\"color: navy\">)</span><span style=\"color: navy\"> {\r\n</span>  name.fullName<b> as </b><span style=\"color: maroon\">fullName</span><span style=\"color: navy\"><b> -&gt; </b></span>hname.text = <span style=\"color: maroon\">fullName</span> <i>&quot;SetFullName&quot;</i><span style=\"color: navy\">;</span>\r\n  name.firstName<b> as </b><span style=\"color: maroon\">firstName</span><span style=\"color: navy\"><b> -&gt; </b></span>hname.given = <span style=\"color: maroon\">firstName</span> <i>&quot;SetFirstName&quot;</i><span style=\"color: navy\">;</span>\r\n  name.surname<b> as </b><span style=\"color: maroon\">surname</span><span style=\"color: navy\"><b> -&gt; </b></span>hname.family = <span style=\"color: maroon\">surname</span> <i>&quot;SetFamilyName&quot;</i><span style=\"color: navy\">;</span>\r\n<span style=\"color: navy\">}\r\n\r\n</span><b>group </b>AddyToAddress<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">address</span>, <b>target</b> <span style=\"color: maroon\">haddy</span><span style=\"color: navy\">)</span><span style=\"color: navy\"> {\r\n</span>  address.streetNameAndNr<b> as </b><span style=\"color: maroon\">streetNameAndNr</span><span style=\"color: navy\"><b> -&gt; </b></span>haddy.line = <span style=\"color: maroon\">streetNameAndNr</span> <i>&quot;SetStreetNameAndNr&quot;</i><span style=\"color: navy\">;</span>\r\n  address.city<b> as </b><span style=\"color: maroon\">city</span><span style=\"color: navy\"><b> -&gt; </b></span>haddy.city = <span style=\"color: maroon\">city</span> <i>&quot;SetCity&quot;</i><span style=\"color: navy\">;</span>\r\n  address.state<b> as </b><span style=\"color: maroon\">state</span><span style=\"color: navy\"><b> -&gt; </b></span>haddy.state = <span style=\"color: maroon\">state</span> <i>&quot;SetState&quot;</i><span style=\"color: navy\">;</span>\r\n  address.country<b> as </b><span style=\"color: maroon\">country</span><span style=\"color: navy\"><b> -&gt; </b></span>haddy.country = <span style=\"color: maroon\">country</span> <i>&quot;SetCountry&quot;</i><span style=\"color: navy\">;</span>\r\n  address.postalCode<b> as </b><span style=\"color: maroon\">postalCode</span><span style=\"color: navy\"><b> -&gt; </b></span>haddy.postalCode = <span style=\"color: maroon\">postalCode</span> <i>&quot;SetPostalCode&quot;</i><span style=\"color: navy\">;</span>\r\n<span style=\"color: navy\">}\r\n\r\n</span><b>group </b>ContactDetailsToContactPoint<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">contact</span>, <b>target</b> <span style=\"color: maroon\">hcontact</span><span style=\"color: navy\">)</span><span style=\"color: navy\"> {\r\n</span>  contact.mobileNumber<b> as </b><span style=\"color: maroon\">mobileNumber</span><span style=\"color: navy\"><b> -&gt; </b></span>hcontact.value = <span style=\"color: maroon\">mobileNumber</span> <i>&quot;SetMobileNumber&quot;</i><span style=\"color: navy\">;</span>\r\n  contact.landline<b> as </b><span style=\"color: maroon\">landline</span><span style=\"color: navy\"><b> -&gt; </b></span>hcontact.value = <span style=\"color: maroon\">landline</span> <i>&quot;SetLandline&quot;</i><span style=\"color: navy\">;</span>\r\n<span style=\"color: navy\">}\r\n\r\n</span></pre></div>"
+  },
+  "url" : "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSLMToPatientRegistration",
+  "version" : "0.1.0",
+  "name" : "HIMSLMToPatientRegistration",
+  "status" : "draft",
+  "date" : "2023-11-10T04:37:53+00:00",
+  "publisher" : "Jembi Health Systems",
+  "contact" : [{
+    "name" : "Jembi Health Systems",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.jembi.org"
+    },
+    {
+      "system" : "email",
+      "value" : "info@jembi.org"
+    }]
+  },
+  {
+    "name" : "Richard Langford",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "richard.langford@jembi.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Maps the HIMS logical model data elements to the Patient resource data elements",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "structure" : [{
+    "url" : "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSPatientRegistrationDataDictionary",
+    "mode" : "source",
+    "alias" : "IMMZC"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/Bundle",
+    "mode" : "target",
+    "alias" : "Bundle"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/Patient",
+    "mode" : "target",
+    "alias" : "Patient"
+  }],
+  "group" : [{
+    "name" : "DataDictToPatient",
+    "typeMode" : "none",
+    "input" : [{
+      "name" : "immzc",
+      "type" : "IMMZC",
+      "mode" : "source"
+    },
+    {
+      "name" : "patient",
+      "type" : "Patient",
+      "mode" : "target"
+    }],
+    "rule" : [{
+      "name" : "SetPHN",
+      "source" : [{
+        "context" : "immzc",
+        "element" : "personalHealthNumber",
+        "variable" : "id1"
+      }],
+      "target" : [{
+        "context" : "patient",
+        "contextType" : "variable",
+        "element" : "identifier",
+        "variable" : "identifier"
+      }],
+      "rule" : [{
+        "name" : "SetPersonalHealthNumberValue",
+        "source" : [{
+          "context" : "id1"
+        }],
+        "target" : [{
+          "context" : "identifier",
+          "contextType" : "variable",
+          "element" : "value",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueId" : "id1"
+          }]
+        }]
+      }]
+    },
+    {
+      "name" : "SetNIC",
+      "source" : [{
+        "context" : "immzc",
+        "element" : "nationalIdentityCard",
+        "variable" : "id2"
+      }],
+      "target" : [{
+        "context" : "patient",
+        "contextType" : "variable",
+        "element" : "identifier",
+        "variable" : "identifier"
+      }],
+      "rule" : [{
+        "name" : "SetNationalIdentityCardNumberValue",
+        "source" : [{
+          "context" : "id2"
+        }],
+        "target" : [{
+          "context" : "identifier",
+          "contextType" : "variable",
+          "element" : "value",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueId" : "id2"
+          }]
+        }]
+      }]
+    },
+    {
+      "name" : "SetPassport",
+      "source" : [{
+        "context" : "immzc",
+        "element" : "passport",
+        "variable" : "id3"
+      }],
+      "target" : [{
+        "context" : "patient",
+        "contextType" : "variable",
+        "element" : "identifier",
+        "variable" : "identifier"
+      }],
+      "rule" : [{
+        "name" : "SetPassportNumberValue",
+        "source" : [{
+          "context" : "id3"
+        }],
+        "target" : [{
+          "context" : "identifier",
+          "contextType" : "variable",
+          "element" : "value",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueId" : "id3"
+          }]
+        }]
+      }]
+    },
+    {
+      "name" : "SetDL",
+      "source" : [{
+        "context" : "immzc",
+        "element" : "drivingLicense",
+        "variable" : "id4"
+      }],
+      "target" : [{
+        "context" : "patient",
+        "contextType" : "variable",
+        "element" : "identifier",
+        "variable" : "identifier"
+      }],
+      "rule" : [{
+        "name" : "SetDrivingLicenseNumberValue",
+        "source" : [{
+          "context" : "id4"
+        }],
+        "target" : [{
+          "context" : "identifier",
+          "contextType" : "variable",
+          "element" : "value",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueId" : "id4"
+          }]
+        }]
+      }]
+    },
+    {
+      "name" : "SetSCN",
+      "source" : [{
+        "context" : "immzc",
+        "element" : "seniorCitizenNumber",
+        "variable" : "id5"
+      }],
+      "target" : [{
+        "context" : "patient",
+        "contextType" : "variable",
+        "element" : "identifier",
+        "variable" : "identifier"
+      }],
+      "rule" : [{
+        "name" : "SetSeniorCitizenNumberValue",
+        "source" : [{
+          "context" : "id5"
+        }],
+        "target" : [{
+          "context" : "identifier",
+          "contextType" : "variable",
+          "element" : "value",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueId" : "id5"
+          }]
+        }]
+      }]
+    },
+    {
+      "name" : "SetGender",
+      "source" : [{
+        "context" : "immzc",
+        "element" : "sex",
+        "variable" : "sex"
+      }],
+      "target" : [{
+        "context" : "patient",
+        "contextType" : "variable",
+        "element" : "gender",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueId" : "sex"
+        }]
+      }]
+    },
+    {
+      "name" : "SetBirthDate",
+      "source" : [{
+        "context" : "immzc",
+        "element" : "birthDate",
+        "variable" : "birthDate"
+      }],
+      "target" : [{
+        "context" : "patient",
+        "contextType" : "variable",
+        "element" : "birthDate",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueId" : "birthDate"
+        }]
+      }]
+    },
+    {
+      "name" : "SetPatientNames",
+      "source" : [{
+        "context" : "immzc",
+        "element" : "patientName",
+        "variable" : "patientName"
+      }],
+      "target" : [{
+        "context" : "patient",
+        "contextType" : "variable",
+        "element" : "name",
+        "variable" : "hname"
+      }],
+      "dependent" : [{
+        "name" : "NameToHumanName",
+        "variable" : ["patientName",
+        "hname"]
+      }]
+    },
+    {
+      "name" : "SetAddresses",
+      "source" : [{
+        "context" : "immzc",
+        "element" : "address",
+        "variable" : "address"
+      }],
+      "target" : [{
+        "context" : "patient",
+        "contextType" : "variable",
+        "element" : "address",
+        "variable" : "haddy"
+      }],
+      "dependent" : [{
+        "name" : "AddyToAddress",
+        "variable" : ["address",
+        "haddy"]
+      }]
+    },
+    {
+      "name" : "SetContactDetails",
+      "source" : [{
+        "context" : "immzc",
+        "element" : "contactDetails",
+        "variable" : "contactDetails"
+      }],
+      "target" : [{
+        "context" : "patient",
+        "contextType" : "variable",
+        "element" : "telecom",
+        "variable" : "hcontact"
+      }],
+      "dependent" : [{
+        "name" : "ContactDetailsToContactPoint",
+        "variable" : ["contactDetails",
+        "hcontact"]
+      }]
+    }]
+  },
+  {
+    "name" : "NameToHumanName",
+    "typeMode" : "none",
+    "input" : [{
+      "name" : "name",
+      "mode" : "source"
+    },
+    {
+      "name" : "hname",
+      "mode" : "target"
+    }],
+    "rule" : [{
+      "name" : "SetFullName",
+      "source" : [{
+        "context" : "name",
+        "element" : "fullName",
+        "variable" : "fullName"
+      }],
+      "target" : [{
+        "context" : "hname",
+        "contextType" : "variable",
+        "element" : "text",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueId" : "fullName"
+        }]
+      }]
+    },
+    {
+      "name" : "SetFirstName",
+      "source" : [{
+        "context" : "name",
+        "element" : "firstName",
+        "variable" : "firstName"
+      }],
+      "target" : [{
+        "context" : "hname",
+        "contextType" : "variable",
+        "element" : "given",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueId" : "firstName"
+        }]
+      }]
+    },
+    {
+      "name" : "SetFamilyName",
+      "source" : [{
+        "context" : "name",
+        "element" : "surname",
+        "variable" : "surname"
+      }],
+      "target" : [{
+        "context" : "hname",
+        "contextType" : "variable",
+        "element" : "family",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueId" : "surname"
+        }]
+      }]
+    }]
+  },
+  {
+    "name" : "AddyToAddress",
+    "typeMode" : "none",
+    "input" : [{
+      "name" : "address",
+      "mode" : "source"
+    },
+    {
+      "name" : "haddy",
+      "mode" : "target"
+    }],
+    "rule" : [{
+      "name" : "SetStreetNameAndNr",
+      "source" : [{
+        "context" : "address",
+        "element" : "streetNameAndNr",
+        "variable" : "streetNameAndNr"
+      }],
+      "target" : [{
+        "context" : "haddy",
+        "contextType" : "variable",
+        "element" : "line",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueId" : "streetNameAndNr"
+        }]
+      }]
+    },
+    {
+      "name" : "SetCity",
+      "source" : [{
+        "context" : "address",
+        "element" : "city",
+        "variable" : "city"
+      }],
+      "target" : [{
+        "context" : "haddy",
+        "contextType" : "variable",
+        "element" : "city",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueId" : "city"
+        }]
+      }]
+    },
+    {
+      "name" : "SetState",
+      "source" : [{
+        "context" : "address",
+        "element" : "state",
+        "variable" : "state"
+      }],
+      "target" : [{
+        "context" : "haddy",
+        "contextType" : "variable",
+        "element" : "state",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueId" : "state"
+        }]
+      }]
+    },
+    {
+      "name" : "SetCountry",
+      "source" : [{
+        "context" : "address",
+        "element" : "country",
+        "variable" : "country"
+      }],
+      "target" : [{
+        "context" : "haddy",
+        "contextType" : "variable",
+        "element" : "country",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueId" : "country"
+        }]
+      }]
+    },
+    {
+      "name" : "SetPostalCode",
+      "source" : [{
+        "context" : "address",
+        "element" : "postalCode",
+        "variable" : "postalCode"
+      }],
+      "target" : [{
+        "context" : "haddy",
+        "contextType" : "variable",
+        "element" : "postalCode",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueId" : "postalCode"
+        }]
+      }]
+    }]
+  },
+  {
+    "name" : "ContactDetailsToContactPoint",
+    "typeMode" : "none",
+    "input" : [{
+      "name" : "contact",
+      "mode" : "source"
+    },
+    {
+      "name" : "hcontact",
+      "mode" : "target"
+    }],
+    "rule" : [{
+      "name" : "SetMobileNumber",
+      "source" : [{
+        "context" : "contact",
+        "element" : "mobileNumber",
+        "variable" : "mobileNumber"
+      }],
+      "target" : [{
+        "context" : "hcontact",
+        "contextType" : "variable",
+        "element" : "value",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueId" : "mobileNumber"
+        }]
+      }]
+    },
+    {
+      "name" : "SetLandline",
+      "source" : [{
+        "context" : "contact",
+        "element" : "landline",
+        "variable" : "landline"
+      }],
+      "target" : [{
+        "context" : "hcontact",
+        "contextType" : "variable",
+        "element" : "value",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueId" : "landline"
+        }]
+      }]
+    }]
+  }]
+}

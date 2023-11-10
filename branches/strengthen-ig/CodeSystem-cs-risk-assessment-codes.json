@@ -1,0 +1,56 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "cs-risk-assessment-codes",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-insensitive code system <code>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-assessment-codes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">RA1<a name=\"cs-risk-assessment-codes-RA1\"> </a></td><td>Physical activity</td><td>Physical activity status for the patient.</td></tr><tr><td style=\"white-space:nowrap\">RA2<a name=\"cs-risk-assessment-codes-RA2\"> </a></td><td>Tobacco smoking</td><td>Tobacco smoking status for the patient.</td></tr></table></div>"
+  },
+  "url" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-assessment-codes",
+  "version" : "0.1.0",
+  "name" : "CSRiskAssessmentCodes",
+  "title" : "Risk Assessment CodeSystem for Data Elements",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-11-06T09:30:58+00:00",
+  "publisher" : "Jembi Health Systems",
+  "contact" : [{
+    "name" : "Jembi Health Systems",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.jembi.org"
+    },
+    {
+      "system" : "email",
+      "value" : "info@jembi.org"
+    }]
+  },
+  {
+    "name" : "Richard Langford",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "richard.langford@jembi.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "CodeSystem for Risk Assessment Data Elements",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "caseSensitive" : false,
+  "content" : "complete",
+  "count" : 2,
+  "concept" : [{
+    "code" : "RA1",
+    "display" : "Physical activity",
+    "definition" : "Physical activity status for the patient."
+  },
+  {
+    "code" : "RA2",
+    "display" : "Tobacco smoking",
+    "definition" : "Tobacco smoking status for the patient."
+  }]
+}

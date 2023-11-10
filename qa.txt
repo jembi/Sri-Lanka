@@ -1,0 +1,334 @@
+﻿SriLanka : Validation Results
+=========================================
+
+err = 29, warn = 15, info = 1
+IG Publisher Version: 1.5.2
+Generated Fri Nov 10 04:43:07 UTC 2023. FHIR version 4.0.1 for openhie.fhir.sri-lanka#0.1.0 (canonical = http://openhie.org/fhir/sri-lanka)
+ Build Errors : 19 / 0 / 0
+ /github/workspace/fsh-generated/resources/AllergyIntolerance-AllergiesExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/AllergyIntolerance-AllergiesNoCodeExample : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/Bundle-HHIMS-Imaging-Bundle : 0 / 0 / 13
+ /github/workspace/fsh-generated/resources/Bundle-HHIMS-Investigation-Requests-Bundle : 0 / 0 / 13
+ /github/workspace/fsh-generated/resources/Bundle-HHIMS-OPD-Encounter-1-Bundle : 0 / 0 / 9
+ /github/workspace/fsh-generated/resources/Bundle-HHIMS-OPD-Encounter-2-Bundle : 0 / 0 / 15
+ /github/workspace/fsh-generated/resources/Bundle-HHIMS-OPD-Prescription-Bundle : 0 / 0 / 9
+ /github/workspace/fsh-generated/resources/Bundle-HHIMS-OPD-Prescription-Dispenses-Bundle : 0 / 0 / 13
+ /github/workspace/fsh-generated/resources/Bundle-HHIMS-Procedure-Bundle : 0 / 0 / 11
+ /github/workspace/fsh-generated/resources/Bundle-HHIMS-Transactional-Bundle : 0 / 1 / 39
+ /github/workspace/fsh-generated/resources/Bundle-HIMS-Blood-Pressure-Bundle : 0 / 0 / 11
+ /github/workspace/fsh-generated/resources/Bundle-HIMS-CVS-Risk-Factor-Bundle : 0 / 0 / 21
+ /github/workspace/fsh-generated/resources/Bundle-HIMS-Document-Bundle : 0 / 0 / 47
+ /github/workspace/fsh-generated/resources/Bundle-HIMS-Follow-Up-Plan-Bundle : 0 / 0 / 11
+ /github/workspace/fsh-generated/resources/Bundle-HIMS-Investigations-Bundle : 0 / 0 / 13
+ /github/workspace/fsh-generated/resources/Bundle-HIMS-Medical-History-Bundle : 0 / 0 / 9
+ /github/workspace/fsh-generated/resources/Bundle-HIMS-Risk-Behaviour-Bundle : 0 / 0 / 11
+ /github/workspace/fsh-generated/resources/Bundle-HIMS-Transactional-Bundle : 0 / 0 / 41
+ /github/workspace/fsh-generated/resources/Bundle-HIMS-Weight-Height-Bundle : 0 / 0 / 15
+ /github/workspace/fsh-generated/resources/CarePlan-FollowUpAtHLCExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-cvd-risk-category : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-follow-up-reasons : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-identifier-types : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-investigation : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-medical-history-codes : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-medication-name : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-procedure : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-procedure-imaging : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-reason-for-encounter : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-register-patient-codes : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-risk-behaviour-codes : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Communication-NotifiableDiseasesNotifiedExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Composition-HIMSCompositionExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Condition-MedicalHistoryExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Encounter-TargetFacilityEncounterExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ImagingStudy-ImagingExample : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ImplementationGuide-openhie.fhir.sri-lanka : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Location-ProvidersLocationExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/MedicationAdministration-InjectionsExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/MedicationAdministration-InjectionsNoCodeExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/MedicationDispense-DrugDispensationExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/MedicationRequest-PrescriptionsExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Observation-BMIExample : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Observation-BloodPressureExample : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Observation-FastingBloodSugarExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Observation-GenericObservationExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Observation-HeightExample : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Observation-RandomBloodSugarExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Observation-RiskBehaviourPhysicalActivityExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Observation-RiskBehaviourTobaccoSmokerExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Observation-TotalCholesterolExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Observation-WeightExample : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Organization-OrganizationExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Patient-HHIMSPatientExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Patient-HIMSPatientExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Practitioner-GeneralPractitionerExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Procedure-ProceduresExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Questionnaire-HIMSMedicalHistoryQuestionnaire : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Questionnaire-HIMSRegisterPatientQuestionnaire : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Questionnaire-HIMSRiskBehaviourQuestionnaire-PhysicalActivity : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Questionnaire-HIMSRiskBehaviourQuestionnaire-TobaccoSmoking : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/QuestionnaireResponse-HIMSRegisterPatientQuestionnaireResponse : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/QuestionnaireResponse-HIMSRiskBehaviourQuestionnaireResponse-PhysicalActivity : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/QuestionnaireResponse-HIMSRiskBehaviourQuestionnaireResponse-TobaccoSmoking : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/RiskAssessment-CVDRiskCategoryExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ServiceRequest-FollowUpPlanServiceRequestExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ServiceRequest-GeneralReferralServiceRequestExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ServiceRequest-GenericServiceRequestExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ServiceRequest-ImagingServiceRequestExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ServiceRequest-InvestigationsServiceRequestExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-HIMSMedicalHistoryDataDictionary : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-HIMSPatientRegistrationDataDictionary : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-HIMSRiskBehaviourDataDictionary : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-allergy-intolerance : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-blood-pressure : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-bmi : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-cvd-risk-category : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-drug-dispensation : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/StructureDefinition-fasting-blood-sugar : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-follow-up-at-hlc : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-follow-up-plan : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-general-referral-request : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-generic-observation : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-generic-service-request : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-generic-task : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-height : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-hhims-patient : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-hims-composition : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-hims-patient : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-imaging-request : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-imaging-study : 0 / 2 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-imaging-task : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-injection : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-investigations-request : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-investigations-task : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-medical-history : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-medication-request : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-notifiable-diseases-notified : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-organization : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-practitioner : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-procedure : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-providers-location : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-random-blood-sugar : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-referral-task : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-risk-behaviour-physical-activity : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-risk-behaviour-tobacco-smoker : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-target-facility-encounter : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-total-cholesterol : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-weight : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Task-GenericTaskExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Task-HHIMSReferralTaskExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Task-ImagingTaskExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Task-InvestigationsTaskExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-allergies : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-cvd-risk-category : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-follow-up-plan : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-follow-up-reasons : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-investigation : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-medical-conditions : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-medication-name : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-procedure : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-procedure-imaging : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-reason-for-encounter : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-risk-behaviour-physical-activity : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-risk-behaviour-tobacco-smoker : 0 / 0 / 1
+ /github/workspace/input/maps/HIMSLMToPatientRegistration : 0 / 0 / 1
+ /github/workspace/input/maps/HIMSMedicalHistoryLMToCondition : 1 / 0 / 1
+ /github/workspace/input/maps/HIMSMedicalHistoryQRToCondition : 2 / 0 / 1
+ /github/workspace/input/maps/HIMSMedicalHistoryQRToLM : 0 / 1 / 1
+ /github/workspace/input/maps/HIMSPatientQRToLM : 1 / 1 / 1
+ /github/workspace/input/maps/HIMSQRToPatient : 2 / 0 / 1
+ /github/workspace/input/maps/HIMSRiskBehaviourLMToObs-PhysicalActivity : 1 / 1 / 1
+ /github/workspace/input/maps/HIMSRiskBehaviourLMToObs-TobaccoSmoking : 1 / 1 / 1
+ /github/workspace/input/maps/HIMSRiskBehaviourQRToLM-PhysicalActivity : 0 / 2 / 1
+ /github/workspace/input/maps/HIMSRiskBehaviourQRToLM-TobaccoSmoking : 0 / 2 / 1
+ /github/workspace/input/maps/HIMSRiskBehaviourQRToObs-PhysicalActivity : 4 / 1 / 1
+ /github/workspace/input/maps/HIMSRiskBehaviourQRToObs-TobaccoSmoking : 4 / 1 / 1
+</table>
+== n/a ==
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/HIMSLMToPatientRegistration.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/HIMSMedicalHistoryLMToCondition.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/HIMSMedicalHistoryQRToCondition.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/HIMSMedicalHistoryQRToLM.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/HIMSPatientQRToLM.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/HIMSQRToPatient.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/HIMSRiskBehaviourLMToObs-PhysicalActivity.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/HIMSRiskBehaviourLMToObs-TobaccoSmoking.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/HIMSRiskBehaviourQRToLM-PhysicalActivity.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/HIMSRiskBehaviourQRToLM-TobaccoSmoking.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/HIMSRiskBehaviourQRToObs-PhysicalActivity.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/HIMSRiskBehaviourQRToObs-TobaccoSmoking.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: package.tgz: Error converting pacakge to R4B: Error processing package/StructureMap-HIMSPatientQRToLM.json: Not a JSON Object: null
+ERROR: /github/workspace/output/Questionnaire-HIMSRiskBehaviourQuestionnaire-TobaccoSmoking-form.html: Unable to read attribute on <div> at line 218 column 71
+ERROR: /github/workspace/output/Questionnaire-HIMSRegisterPatientQuestionnaire-form.html: Unable to read attribute on <div> at line 218 column 71
+ERROR: /github/workspace/output/Questionnaire-HIMSMedicalHistoryQuestionnaire-form.html: Unable to read attribute on <div> at line 218 column 71
+ERROR: /github/workspace/output/Questionnaire-HIMSRiskBehaviourQuestionnaire-PhysicalActivity-form.html: Unable to read attribute on <div> at line 218 column 71
+ERROR: /github/workspace/output/index.html#/html/body/div/div/div/div/div/div/div/p/a at Line 242, column 136: The link 'package.r4.tgz' for "R4 (openhie.fhir.sri-lanka.r4)" cannot be resolved
+ERROR: /github/workspace/output/index.html#/html/body/div/div/div/div/div/div/div/p/a at Line 242, column 200: The link 'package.r4b.tgz' for "R4B (openhie.fhir.sri-lanka.r4b)" cannot be resolved
+== fsh-generated/resources/AllergyIntolerance-AllergiesExample.json ==
+== fsh-generated/resources/AllergyIntolerance-AllergiesNoCodeExample.json ==
+WARNING: AllergyIntolerance/AllergiesNoCodeExample: AllergyIntolerance.code: No code provided, and a code should be provided from the value set 'Allergies' (http://openhie.org/fhir/sri-lanka/ValueSet/vs-allergies|0.1.0)
+== fsh-generated/resources/Bundle-HHIMS-Imaging-Bundle.json ==
+== fsh-generated/resources/Bundle-HHIMS-Investigation-Requests-Bundle.json ==
+== fsh-generated/resources/Bundle-HHIMS-OPD-Encounter-1-Bundle.json ==
+== fsh-generated/resources/Bundle-HHIMS-OPD-Encounter-2-Bundle.json ==
+== fsh-generated/resources/Bundle-HHIMS-OPD-Prescription-Bundle.json ==
+== fsh-generated/resources/Bundle-HHIMS-OPD-Prescription-Dispenses-Bundle.json ==
+== fsh-generated/resources/Bundle-HHIMS-Procedure-Bundle.json ==
+== fsh-generated/resources/Bundle-HHIMS-Transactional-Bundle.json ==
+WARNING: Bundle/HHIMS-Transactional-Bundle: Bundle.entry[17].resource/*ImagingStudy/ImagingExample*/.series[0].modality: ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html not found
+== fsh-generated/resources/Bundle-HIMS-Blood-Pressure-Bundle.json ==
+== fsh-generated/resources/Bundle-HIMS-CVS-Risk-Factor-Bundle.json ==
+== fsh-generated/resources/Bundle-HIMS-Document-Bundle.json ==
+== fsh-generated/resources/Bundle-HIMS-Follow-Up-Plan-Bundle.json ==
+== fsh-generated/resources/Bundle-HIMS-Investigations-Bundle.json ==
+== fsh-generated/resources/Bundle-HIMS-Medical-History-Bundle.json ==
+== fsh-generated/resources/Bundle-HIMS-Risk-Behaviour-Bundle.json ==
+== fsh-generated/resources/Bundle-HIMS-Transactional-Bundle.json ==
+== fsh-generated/resources/Bundle-HIMS-Weight-Height-Bundle.json ==
+== fsh-generated/resources/CarePlan-FollowUpAtHLCExample.json ==
+== fsh-generated/resources/CodeSystem-cs-cvd-risk-category.json ==
+== fsh-generated/resources/CodeSystem-cs-follow-up-reasons.json ==
+== fsh-generated/resources/CodeSystem-cs-identifier-types.json ==
+== fsh-generated/resources/CodeSystem-cs-investigation.json ==
+== fsh-generated/resources/CodeSystem-cs-medical-history-codes.json ==
+== fsh-generated/resources/CodeSystem-cs-medication-name.json ==
+== fsh-generated/resources/CodeSystem-cs-procedure.json ==
+== fsh-generated/resources/CodeSystem-cs-procedure-imaging.json ==
+== fsh-generated/resources/CodeSystem-cs-reason-for-encounter.json ==
+== fsh-generated/resources/CodeSystem-cs-register-patient-codes.json ==
+== fsh-generated/resources/CodeSystem-cs-risk-behaviour-codes.json ==
+== fsh-generated/resources/Communication-NotifiableDiseasesNotifiedExample.json ==
+== fsh-generated/resources/Composition-HIMSCompositionExample.json ==
+== fsh-generated/resources/Condition-MedicalHistoryExample.json ==
+== fsh-generated/resources/Encounter-TargetFacilityEncounterExample.json ==
+== fsh-generated/resources/ImagingStudy-ImagingExample.json ==
+WARNING: ImagingStudy/ImagingExample: ImagingStudy.series[0].modality: ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html not found
+== fsh-generated/resources/ImplementationGuide-openhie.fhir.sri-lanka.json ==
+== fsh-generated/resources/Location-ProvidersLocationExample.json ==
+== fsh-generated/resources/MedicationAdministration-InjectionsExample.json ==
+== fsh-generated/resources/MedicationAdministration-InjectionsNoCodeExample.json ==
+== fsh-generated/resources/MedicationDispense-DrugDispensationExample.json ==
+== fsh-generated/resources/MedicationRequest-PrescriptionsExample.json ==
+== fsh-generated/resources/Observation-BMIExample.json ==
+== fsh-generated/resources/Observation-BloodPressureExample.json ==
+== fsh-generated/resources/Observation-FastingBloodSugarExample.json ==
+== fsh-generated/resources/Observation-GenericObservationExample.json ==
+== fsh-generated/resources/Observation-HeightExample.json ==
+== fsh-generated/resources/Observation-RandomBloodSugarExample.json ==
+== fsh-generated/resources/Observation-RiskBehaviourPhysicalActivityExample.json ==
+== fsh-generated/resources/Observation-RiskBehaviourTobaccoSmokerExample.json ==
+== fsh-generated/resources/Observation-TotalCholesterolExample.json ==
+== fsh-generated/resources/Observation-WeightExample.json ==
+== fsh-generated/resources/Organization-OrganizationExample.json ==
+== fsh-generated/resources/Patient-HHIMSPatientExample.json ==
+== fsh-generated/resources/Patient-HIMSPatientExample.json ==
+== fsh-generated/resources/Practitioner-GeneralPractitionerExample.json ==
+== fsh-generated/resources/Procedure-ProceduresExample.json ==
+== fsh-generated/resources/Questionnaire-HIMSMedicalHistoryQuestionnaire.json ==
+== fsh-generated/resources/Questionnaire-HIMSRegisterPatientQuestionnaire.json ==
+== fsh-generated/resources/Questionnaire-HIMSRiskBehaviourQuestionnaire-PhysicalActivity.json ==
+== fsh-generated/resources/Questionnaire-HIMSRiskBehaviourQuestionnaire-TobaccoSmoking.json ==
+== fsh-generated/resources/QuestionnaireResponse-HIMSRegisterPatientQuestionnaireResponse.json ==
+== fsh-generated/resources/QuestionnaireResponse-HIMSRiskBehaviourQuestionnaireResponse-PhysicalActivity.json ==
+== fsh-generated/resources/QuestionnaireResponse-HIMSRiskBehaviourQuestionnaireResponse-TobaccoSmoking.json ==
+== fsh-generated/resources/RiskAssessment-CVDRiskCategoryExample.json ==
+== fsh-generated/resources/ServiceRequest-FollowUpPlanServiceRequestExample.json ==
+== fsh-generated/resources/ServiceRequest-GeneralReferralServiceRequestExample.json ==
+== fsh-generated/resources/ServiceRequest-GenericServiceRequestExample.json ==
+== fsh-generated/resources/ServiceRequest-ImagingServiceRequestExample.json ==
+== fsh-generated/resources/ServiceRequest-InvestigationsServiceRequestExample.json ==
+== fsh-generated/resources/StructureDefinition-HIMSMedicalHistoryDataDictionary.json ==
+== fsh-generated/resources/StructureDefinition-HIMSPatientRegistrationDataDictionary.json ==
+== fsh-generated/resources/StructureDefinition-HIMSRiskBehaviourDataDictionary.json ==
+== fsh-generated/resources/StructureDefinition-allergy-intolerance.json ==
+== fsh-generated/resources/StructureDefinition-blood-pressure.json ==
+== fsh-generated/resources/StructureDefinition-bmi.json ==
+== fsh-generated/resources/StructureDefinition-cvd-risk-category.json ==
+== fsh-generated/resources/StructureDefinition-drug-dispensation.json ==
+INFORMATION: StructureDefinition/drug-dispensation: StructureDefinition.snapshot.element[29].mapping[0].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+== fsh-generated/resources/StructureDefinition-fasting-blood-sugar.json ==
+== fsh-generated/resources/StructureDefinition-follow-up-at-hlc.json ==
+== fsh-generated/resources/StructureDefinition-follow-up-plan.json ==
+== fsh-generated/resources/StructureDefinition-general-referral-request.json ==
+== fsh-generated/resources/StructureDefinition-generic-observation.json ==
+== fsh-generated/resources/StructureDefinition-generic-service-request.json ==
+== fsh-generated/resources/StructureDefinition-generic-task.json ==
+== fsh-generated/resources/StructureDefinition-height.json ==
+== fsh-generated/resources/StructureDefinition-hhims-patient.json ==
+== fsh-generated/resources/StructureDefinition-hims-composition.json ==
+== fsh-generated/resources/StructureDefinition-hims-patient.json ==
+== fsh-generated/resources/StructureDefinition-imaging-request.json ==
+== fsh-generated/resources/StructureDefinition-imaging-study.json ==
+WARNING: StructureDefinition/imaging-study: StructureDefinition.snapshot.element[22].binding: The valueSet reference http://www.rsna.org/RadLex_Playbook.aspx on element ImagingStudy.procedureCode could not be resolved
+WARNING: StructureDefinition/imaging-study: StructureDefinition.snapshot.element[53].binding: The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1 on element ImagingStudy.series.instance.sopClass could not be resolved
+== fsh-generated/resources/StructureDefinition-imaging-task.json ==
+== fsh-generated/resources/StructureDefinition-injection.json ==
+== fsh-generated/resources/StructureDefinition-investigations-request.json ==
+== fsh-generated/resources/StructureDefinition-investigations-task.json ==
+== fsh-generated/resources/StructureDefinition-medical-history.json ==
+== fsh-generated/resources/StructureDefinition-medication-request.json ==
+== fsh-generated/resources/StructureDefinition-notifiable-diseases-notified.json ==
+== fsh-generated/resources/StructureDefinition-organization.json ==
+== fsh-generated/resources/StructureDefinition-practitioner.json ==
+== fsh-generated/resources/StructureDefinition-procedure.json ==
+== fsh-generated/resources/StructureDefinition-providers-location.json ==
+== fsh-generated/resources/StructureDefinition-random-blood-sugar.json ==
+== fsh-generated/resources/StructureDefinition-referral-task.json ==
+== fsh-generated/resources/StructureDefinition-risk-behaviour-physical-activity.json ==
+== fsh-generated/resources/StructureDefinition-risk-behaviour-tobacco-smoker.json ==
+== fsh-generated/resources/StructureDefinition-target-facility-encounter.json ==
+== fsh-generated/resources/StructureDefinition-total-cholesterol.json ==
+== fsh-generated/resources/StructureDefinition-weight.json ==
+== fsh-generated/resources/Task-GenericTaskExample.json ==
+== fsh-generated/resources/Task-HHIMSReferralTaskExample.json ==
+== fsh-generated/resources/Task-ImagingTaskExample.json ==
+== fsh-generated/resources/Task-InvestigationsTaskExample.json ==
+== fsh-generated/resources/ValueSet-vs-allergies.json ==
+== fsh-generated/resources/ValueSet-vs-cvd-risk-category.json ==
+== fsh-generated/resources/ValueSet-vs-follow-up-plan.json ==
+== fsh-generated/resources/ValueSet-vs-follow-up-reasons.json ==
+== fsh-generated/resources/ValueSet-vs-investigation.json ==
+== fsh-generated/resources/ValueSet-vs-medical-conditions.json ==
+== fsh-generated/resources/ValueSet-vs-medication-name.json ==
+== fsh-generated/resources/ValueSet-vs-procedure.json ==
+== fsh-generated/resources/ValueSet-vs-procedure-imaging.json ==
+== fsh-generated/resources/ValueSet-vs-reason-for-encounter.json ==
+== fsh-generated/resources/ValueSet-vs-risk-behaviour-physical-activity.json ==
+== fsh-generated/resources/ValueSet-vs-risk-behaviour-tobacco-smoker.json ==
+== input/maps/HIMSLMToPatientRegistration.fml ==
+== input/maps/HIMSMedicalHistoryLMToCondition.fml ==
+ERROR: StructureMap/HIMSMedicalHistoryLMToCondition: StructureMap.group[0].rule[0].rule[0].target[0]: The target context 'cond' is not known at this point
+== input/maps/HIMSMedicalHistoryQRToCondition.fml ==
+ERROR: StructureMap/HIMSMedicalHistoryQRToCondition: StructureMap.group[0].rule[2].rule[0].dependent[0].variable[1]: The target parameter 'immzc'  was not found
+ERROR: StructureMap/HIMSMedicalHistoryQRToCondition: StructureMap.group[0].rule[2].rule[1].dependent[0].variable[0]: The source parameter 'immzc'  was not found
+== input/maps/HIMSMedicalHistoryQRToLM.fml ==
+WARNING: StructureMap/HIMSMedicalHistoryQRToLM: StructureMap.group[0].rule[0].rule[0].rule[0].rule[0].source[0]: The target path coding.code refers to the path QuestionnaireResponse.item.answer.value[x].code which could be a reference to multiple elements (Coding.code, Quantity.code). No further checking can be performed
+== input/maps/HIMSPatientQRToLM.fml ==
+ERROR: StructureMap/HIMSPatientQRToLM: StructureMap.group[1].rule[0].rule[2].rule[0].rule[0].rule[0].target[0].parameter[1]: StructureMap.group.rule.target.parameter.value[x]: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/StructureMap|4.0.1)
+WARNING: StructureMap/HIMSPatientQRToLM: StructureMap.group[0].rule[0].rule[6].rule[0].rule[0].source[0]: The target path coding.code refers to the path QuestionnaireResponse.item.answer.value[x].code which could be a reference to multiple elements (Coding.code, Quantity.code). No further checking can be performed
+== input/maps/HIMSQRToPatient.fml ==
+ERROR: StructureMap/HIMSQRToPatient: StructureMap.group[0].rule[2].rule[0].dependent[0].variable[1]: The target parameter 'immzc'  was not found
+ERROR: StructureMap/HIMSQRToPatient: StructureMap.group[0].rule[2].rule[1].dependent[0].variable[0]: The source parameter 'immzc'  was not found
+== input/maps/HIMSRiskBehaviourLMToObs-PhysicalActivity.fml ==
+WARNING: StructureMap/HIMSRiskBehaviourLMToObs-PhysicalActivity: StructureMap: Constraint failed: smp-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation'
+ERROR: StructureMap/HIMSRiskBehaviourLMToObs-PhysicalActivity: StructureMap.group[0].rule[0].rule[0].target[0]: The target context 'obs' is not known at this point
+== input/maps/HIMSRiskBehaviourLMToObs-TobaccoSmoking.fml ==
+WARNING: StructureMap/HIMSRiskBehaviourLMToObs-TobaccoSmoking: StructureMap: Constraint failed: smp-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation'
+ERROR: StructureMap/HIMSRiskBehaviourLMToObs-TobaccoSmoking: StructureMap.group[0].rule[0].rule[0].target[0]: The target context 'obs' is not known at this point
+== input/maps/HIMSRiskBehaviourQRToLM-PhysicalActivity.fml ==
+WARNING: StructureMap/HIMSRiskBehaviourQRToLM-PhysicalActivity: StructureMap: Constraint failed: smp-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation'
+WARNING: StructureMap/HIMSRiskBehaviourQRToLM-PhysicalActivity: StructureMap.group[0].rule[0].rule[0].rule[0].rule[0].source[0]: The target path coding.code refers to the path QuestionnaireResponse.item.answer.value[x].code which could be a reference to multiple elements (Coding.code, Quantity.code). No further checking can be performed
+== input/maps/HIMSRiskBehaviourQRToLM-TobaccoSmoking.fml ==
+WARNING: StructureMap/HIMSRiskBehaviourQRToLM-TobaccoSmoking: StructureMap: Constraint failed: smp-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation'
+WARNING: StructureMap/HIMSRiskBehaviourQRToLM-TobaccoSmoking: StructureMap.group[0].rule[0].rule[0].rule[0].rule[0].source[0]: The target path coding.code refers to the path QuestionnaireResponse.item.answer.value[x].code which could be a reference to multiple elements (Coding.code, Quantity.code). No further checking can be performed
+== input/maps/HIMSRiskBehaviourQRToObs-PhysicalActivity.fml ==
+WARNING: StructureMap/HIMSRiskBehaviourQRToObs-PhysicalActivity: StructureMap: Constraint failed: smp-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation'
+ERROR: StructureMap/HIMSRiskBehaviourQRToObs-PhysicalActivity: StructureMap.group[0].rule[2].rule[0].dependent[0].variable[1]: The target parameter 'immzc'  was not found
+ERROR: StructureMap/HIMSRiskBehaviourQRToObs-PhysicalActivity: StructureMap.group[0].rule[2].rule[1].dependent[0].variable[0]: The source parameter 'immzc'  was not found
+ERROR: StructureMap/HIMSRiskBehaviourQRToObs-PhysicalActivity: StructureMap.group[0].rule[2].rule[3].target[1]: The target context 'c' is not known at this point
+ERROR: StructureMap/HIMSRiskBehaviourQRToObs-PhysicalActivity: StructureMap.group[0].rule[2].rule[3].target[2]: The target context 'c' is not known at this point
+== input/maps/HIMSRiskBehaviourQRToObs-TobaccoSmoking.fml ==
+WARNING: StructureMap/HIMSRiskBehaviourQRToObs-TobaccoSmoking: StructureMap: Constraint failed: smp-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation'
+ERROR: StructureMap/HIMSRiskBehaviourQRToObs-TobaccoSmoking: StructureMap.group[0].rule[2].rule[0].dependent[0].variable[1]: The target parameter 'immzc'  was not found
+ERROR: StructureMap/HIMSRiskBehaviourQRToObs-TobaccoSmoking: StructureMap.group[0].rule[2].rule[1].dependent[0].variable[0]: The source parameter 'immzc'  was not found
+ERROR: StructureMap/HIMSRiskBehaviourQRToObs-TobaccoSmoking: StructureMap.group[0].rule[2].rule[3].target[1]: The target context 'c' is not known at this point
+ERROR: StructureMap/HIMSRiskBehaviourQRToObs-TobaccoSmoking: StructureMap.group[0].rule[2].rule[3].target[2]: The target context 'c' is not known at this point

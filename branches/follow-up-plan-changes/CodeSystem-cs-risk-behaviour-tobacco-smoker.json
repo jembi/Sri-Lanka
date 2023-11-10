@@ -1,0 +1,56 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "cs-risk-behaviour-tobacco-smoker",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-sensitive code system <code>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-tobacco-smoker</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">Non-User<a name=\"cs-risk-behaviour-tobacco-smoker-Non-User\"> </a></td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">User<a name=\"cs-risk-behaviour-tobacco-smoker-User\"> </a></td><td>Needs definition</td></tr></table></div>"
+  },
+  "url" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-tobacco-smoker",
+  "version" : "0.1.0",
+  "name" : "CSRiskBehaviourTobaccoSmoker",
+  "title" : "Risk Assessment - Tobacco Smoker",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-10-18T11:45:28+00:00",
+  "publisher" : "Jembi Health Systems",
+  "contact" : [{
+    "name" : "Jembi Health Systems",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.jembi.org"
+    },
+    {
+      "system" : "email",
+      "value" : "info@jembi.org"
+    }]
+  },
+  {
+    "name" : "Richard Langford",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "richard.langford@jembi.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Risk Assessment - Tobacco Smoker",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 2,
+  "concept" : [{
+    "code" : "Non-User",
+    "display" : "Non-User",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "User",
+    "display" : "User",
+    "definition" : "Needs definition"
+  }]
+}

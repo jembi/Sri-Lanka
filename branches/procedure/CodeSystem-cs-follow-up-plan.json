@@ -1,0 +1,71 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "cs-follow-up-plan",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-sensitive code system <code>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-plan</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">Reffered-to-medical-clinic-of-same-institute<a name=\"cs-follow-up-plan-Reffered-to-medical-clinic-of-same-institute\"> </a></td><td>Reffered to medical clinic of same institute</td><td>Sri Lanka team to provide defitinion for this coded value</td></tr><tr><td style=\"white-space:nowrap\">Referred-to-specialised-clinic<a name=\"cs-follow-up-plan-Referred-to-specialised-clinic\"> </a></td><td>Referred to specialised clinic</td><td>Sri Lanka team to provide defitinion for this coded value</td></tr><tr><td style=\"white-space:nowrap\">Follow-up-at-hlc<a name=\"cs-follow-up-plan-Follow-up-at-hlc\"> </a></td><td>Follow up at HLC</td><td>Sri Lanka team to provide defitinion for this coded value</td></tr><tr><td style=\"white-space:nowrap\">Referred-to-dental-clinic<a name=\"cs-follow-up-plan-Referred-to-dental-clinic\"> </a></td><td>Referred to Dental Clinic</td><td>Sri Lanka team to provide defitinion for this coded value</td></tr><tr><td style=\"white-space:nowrap\">Referred-to-wwc<a name=\"cs-follow-up-plan-Referred-to-wwc\"> </a></td><td>Referred to WWC</td><td>Sri Lanka team to provide defitinion for this coded value</td></tr></table></div>"
+  },
+  "url" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-plan",
+  "version" : "0.1.0",
+  "name" : "CSFollowUpPlan",
+  "title" : "Follow-up plan",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-10-13T12:15:39+00:00",
+  "publisher" : "Jembi Health Systems",
+  "contact" : [{
+    "name" : "Jembi Health Systems",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.jembi.org"
+    },
+    {
+      "system" : "email",
+      "value" : "info@jembi.org"
+    }]
+  },
+  {
+    "name" : "Richard Langford",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "richard.langford@jembi.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Follow-up plan",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 5,
+  "concept" : [{
+    "code" : "Reffered-to-medical-clinic-of-same-institute",
+    "display" : "Reffered to medical clinic of same institute",
+    "definition" : "Sri Lanka team to provide defitinion for this coded value"
+  },
+  {
+    "code" : "Referred-to-specialised-clinic",
+    "display" : "Referred to specialised clinic",
+    "definition" : "Sri Lanka team to provide defitinion for this coded value"
+  },
+  {
+    "code" : "Follow-up-at-hlc",
+    "display" : "Follow up at HLC",
+    "definition" : "Sri Lanka team to provide defitinion for this coded value"
+  },
+  {
+    "code" : "Referred-to-dental-clinic",
+    "display" : "Referred to Dental Clinic",
+    "definition" : "Sri Lanka team to provide defitinion for this coded value"
+  },
+  {
+    "code" : "Referred-to-wwc",
+    "display" : "Referred to WWC",
+    "definition" : "Sri Lanka team to provide defitinion for this coded value"
+  }]
+}

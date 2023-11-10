@@ -1,0 +1,1284 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Medication Names - JSON Representation - HL7 FHIR Implementation Guide: Sri Lanka v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/openhie.css" rel="stylesheet"/>
+<link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"3.61"}
+    h3,h4,h5,h6{--heading-prefix:"3.61"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+<!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://ohie.org/">
+            <img height="71" alt="Project home" src="assets/images/home.png"/>
+          </a>
+        </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="70" alt="FHIR website" src="assets/images/fire.png"/> </a>
+        </div>
+
+<!-- search icon - if you want -->
+<!--
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 FHIR Implementation Guide: Sri Lanka</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - STU1
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul
+	xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+	<li>
+		<a href="index.html">IG Home</a>
+	</li>
+	<li>
+		<a href="toc.html">Table of Contents</a>
+	</li>
+<!--
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Background<b class="caret"></b>
+		</a>
+
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Description<b class="caret"></b>
+		</a>
+
+	</li>
+-->
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Specifications<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="artifacts.html">Artifact Index</a>
+			</li>
+		</ul>
+	</li>
+</ul>      
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Medication Names</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">HL7 FHIR Implementation Guide: Sri Lanka, published by Jembi Health Systems. This is not an authorized publication; it is the continuous build for version 0.1.0). This version is based on the current content of <a href="https://github.com/jembi/Sri-Lanka">https://github.com/jembi/Sri-Lanka</a> and changes regularly. See the <a href="http://openhie.org/fhir/sri-lanka/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="CodeSystem-cs-medication-name.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="CodeSystem-cs-medication-name.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="CodeSystem-cs-medication-name.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: Medication Names - JSON Representation</h2>
+
+  <table class="colsi">
+    <tr>
+
+      <td colspan="2">
+        
+          Active
+          
+            as of 2023-10-17
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="CodeSystem-cs-medication-name.json" no-download="true">Raw json</a> | <a href="CodeSystem-cs-medication-name.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json" style="white-space: pre; overflow: hidden"><code>
+{
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem">resourceType</a>" : "CodeSystem",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.id">id</a>" : "cs-medication-name",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;This case-sensitive code system &lt;code&gt;http://openhie.org/fhir/sri-lanka/CodeSystem/cs-medication-name&lt;/code&gt; defines the following codes:&lt;/p&gt;&lt;table class=\&quot;codes\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Alpha-Chole-Calciferol&lt;a name=\&quot;cs-medication-name-Alpha-Chole-Calciferol\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Alpha Chole Calciferol&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Acarbose&lt;a name=\&quot;cs-medication-name-Acarbose\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Acarbose&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Aciclovir&lt;a name=\&quot;cs-medication-name-Aciclovir\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;aciclovir&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Alendronate&lt;a name=\&quot;cs-medication-name-Alendronate\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Alendronate&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Allopurinol&lt;a name=\&quot;cs-medication-name-Allopurinol\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Allopurinol&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Alprazolam&lt;a name=\&quot;cs-medication-name-Alprazolam\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Alprazolam&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Amiodarone&lt;a name=\&quot;cs-medication-name-Amiodarone\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Amiodarone&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Amitriptyline&lt;a name=\&quot;cs-medication-name-Amitriptyline\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;amitriptyline&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Amlodipine&lt;a name=\&quot;cs-medication-name-Amlodipine\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Amlodipine&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Amoxycillin&lt;a name=\&quot;cs-medication-name-Amoxycillin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Amoxycillin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Ascorbic-Acid&lt;a name=\&quot;cs-medication-name-Ascorbic-Acid\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ascorbic acid&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Aspirin&lt;a name=\&quot;cs-medication-name-Aspirin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;aspirin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Atorvastatin&lt;a name=\&quot;cs-medication-name-Atorvastatin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;atorvastatin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Cetrizine&lt;a name=\&quot;cs-medication-name-Cetrizine\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Cetrizine&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Chloramphenicol&lt;a name=\&quot;cs-medication-name-Chloramphenicol\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;chloramphenicol&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Chlorpheniramine&lt;a name=\&quot;cs-medication-name-Chlorpheniramine\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;chlorpheniramine&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Chlorpromazine&lt;a name=\&quot;cs-medication-name-Chlorpromazine\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;chlorpromazine&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Cilnidipine&lt;a name=\&quot;cs-medication-name-Cilnidipine\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Cilnidipine&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Ciprofloxacin&lt;a name=\&quot;cs-medication-name-Ciprofloxacin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ciprofloxacin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Clarythromycin&lt;a name=\&quot;cs-medication-name-Clarythromycin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;clarythromycin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Clinidipine&lt;a name=\&quot;cs-medication-name-Clinidipine\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;clinidipine&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Clobazam&lt;a name=\&quot;cs-medication-name-Clobazam\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Clobazam&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Clonazepam&lt;a name=\&quot;cs-medication-name-Clonazepam\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;clonazepam&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Clopidogrel&lt;a name=\&quot;cs-medication-name-Clopidogrel\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;clopidogrel&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Clotrimazole&lt;a name=\&quot;cs-medication-name-Clotrimazole\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Clotrimazole&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Cloxacillin&lt;a name=\&quot;cs-medication-name-Cloxacillin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Cloxacillin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Co-Q-Enzyme&lt;a name=\&quot;cs-medication-name-Co-Q-Enzyme\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Co - Q enzyme&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Co-Amoxiclav&lt;a name=\&quot;cs-medication-name-Co-Amoxiclav\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Co-amoxiclav&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Co-Careldopa-Carbidopa-Bp+Levodopa-Bp&lt;a name=\&quot;cs-medication-name-Co-Careldopa-Carbidopa-Bp.43Levodopa-Bp\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Co-Careldopa (Carbidopa BP + Levodopa BP)&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Concer&lt;a name=\&quot;cs-medication-name-Concer\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;concer&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Cotrimoxazole&lt;a name=\&quot;cs-medication-name-Cotrimoxazole\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;cotrimoxazole&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Crepe-Bandage&lt;a name=\&quot;cs-medication-name-Crepe-Bandage\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;crepe bandage&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Dapaglifiozin&lt;a name=\&quot;cs-medication-name-Dapaglifiozin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Dapaglifiozin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Dapoxetine&lt;a name=\&quot;cs-medication-name-Dapoxetine\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Dapoxetine&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Desioratadine&lt;a name=\&quot;cs-medication-name-Desioratadine\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Desioratadine&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Dexamethasone&lt;a name=\&quot;cs-medication-name-Dexamethasone\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;dexamethasone&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Diamicron&lt;a name=\&quot;cs-medication-name-Diamicron\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Diamicron&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Diazepam&lt;a name=\&quot;cs-medication-name-Diazepam\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;diazepam&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Diclofenac-Na&lt;a name=\&quot;cs-medication-name-Diclofenac-Na\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;diclofenac-Na&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Diethylcarbamazine-Hetrazan&lt;a name=\&quot;cs-medication-name-Diethylcarbamazine-Hetrazan\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;diethylcarbamazine (Hetrazan)&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Digoxin&lt;a name=\&quot;cs-medication-name-Digoxin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;digoxin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Diltiazem&lt;a name=\&quot;cs-medication-name-Diltiazem\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Diltiazem&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Domperidone&lt;a name=\&quot;cs-medication-name-Domperidone\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Domperidone&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Donepezil&lt;a name=\&quot;cs-medication-name-Donepezil\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Donepezil&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Doxycycline&lt;a name=\&quot;cs-medication-name-Doxycycline\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Doxycycline&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Asthalin&lt;a name=\&quot;cs-medication-name-Asthalin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Asthalin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Beclate&lt;a name=\&quot;cs-medication-name-Beclate\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Beclate&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Beclomethazone-Diproprionate&lt;a name=\&quot;cs-medication-name-Beclomethazone-Diproprionate\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Beclomethazone diproprionate&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Dp-Haler&lt;a name=\&quot;cs-medication-name-Dp-Haler\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;DP Haler&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Salmetrol+Fluticazone&lt;a name=\&quot;cs-medication-name-Salmetrol.43Fluticazone\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Salmetrol + Fluticazone&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Ecosprin&lt;a name=\&quot;cs-medication-name-Ecosprin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ecosprin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Empagliflozin&lt;a name=\&quot;cs-medication-name-Empagliflozin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Empagliflozin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Enalapril&lt;a name=\&quot;cs-medication-name-Enalapril\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;enalapril&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Erythromycin&lt;a name=\&quot;cs-medication-name-Erythromycin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;erythromycin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Erythropoietin&lt;a name=\&quot;cs-medication-name-Erythropoietin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Erythropoietin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Ezetimibe&lt;a name=\&quot;cs-medication-name-Ezetimibe\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ezetimibe&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Famotidine&lt;a name=\&quot;cs-medication-name-Famotidine\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Famotidine&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Fenofibrate&lt;a name=\&quot;cs-medication-name-Fenofibrate\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Fenofibrate&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Ferrous-Fumarate&lt;a name=\&quot;cs-medication-name-Ferrous-Fumarate\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ferrous fumarate&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Ferrous-Sulphate&lt;a name=\&quot;cs-medication-name-Ferrous-Sulphate\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ferrous sulphate&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Finasteride&lt;a name=\&quot;cs-medication-name-Finasteride\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Finasteride&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Flucloxacillin&lt;a name=\&quot;cs-medication-name-Flucloxacillin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;FLUCLOXACILLIN&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Flunarizine&lt;a name=\&quot;cs-medication-name-Flunarizine\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Flunarizine&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Fluoxetine&lt;a name=\&quot;cs-medication-name-Fluoxetine\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Fluoxetine&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Folic-Acid&lt;a name=\&quot;cs-medication-name-Folic-Acid\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;folic acid&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Frisium&lt;a name=\&quot;cs-medication-name-Frisium\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;frisium&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Frusemide&lt;a name=\&quot;cs-medication-name-Frusemide\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;frusemide&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Furazolidone&lt;a name=\&quot;cs-medication-name-Furazolidone\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;furazolidone&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Fusigel&lt;a name=\&quot;cs-medication-name-Fusigel\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;FUSIGEL&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Gabapentin&lt;a name=\&quot;cs-medication-name-Gabapentin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Gabapentin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Glibenclamide-Diaonil&lt;a name=\&quot;cs-medication-name-Glibenclamide-Diaonil\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;glibenclamide (Diaonil)&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Gliclazide&lt;a name=\&quot;cs-medication-name-Gliclazide\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;gliclazide&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Glimepride&lt;a name=\&quot;cs-medication-name-Glimepride\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Glimepride&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Glucophage&lt;a name=\&quot;cs-medication-name-Glucophage\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Glucophage&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Glycery/Trinitrate-Gtn-Sublingual&lt;a name=\&quot;cs-medication-name-Glycery.47Trinitrate-Gtn-Sublingual\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;glycery/trinitrate (GTN) sublingual&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Glycomet&lt;a name=\&quot;cs-medication-name-Glycomet\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Glycomet&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Griseofulvin&lt;a name=\&quot;cs-medication-name-Griseofulvin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;griseofulvin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Hydrochlorothiazide&lt;a name=\&quot;cs-medication-name-Hydrochlorothiazide\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;hydrochlorothiazide&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Hydrocortisone&lt;a name=\&quot;cs-medication-name-Hydrocortisone\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hydrocortisone&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Hyosine-Butylbromide-Buscopan&lt;a name=\&quot;cs-medication-name-Hyosine-Butylbromide-Buscopan\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hyosine butylbromide (Buscopan)&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Ibuprofen&lt;a name=\&quot;cs-medication-name-Ibuprofen\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ibuprofen&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Imipramine&lt;a name=\&quot;cs-medication-name-Imipramine\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;imipramine&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Indapamide&lt;a name=\&quot;cs-medication-name-Indapamide\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Indapamide&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Indomethacin&lt;a name=\&quot;cs-medication-name-Indomethacin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;indomethacin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Insulin&lt;a name=\&quot;cs-medication-name-Insulin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;insulin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Irbesartan&lt;a name=\&quot;cs-medication-name-Irbesartan\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;irbesartan&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Isosorbide-Dinitrate-Isdn&lt;a name=\&quot;cs-medication-name-Isosorbide-Dinitrate-Isdn\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;isosorbide dinitrate (ISDN)&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Isosorbide-Mononitrate&lt;a name=\&quot;cs-medication-name-Isosorbide-Mononitrate\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;isosorbide mononitrate&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Ivabradine&lt;a name=\&quot;cs-medication-name-Ivabradine\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ivabradine&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Kcl&lt;a name=\&quot;cs-medication-name-Kcl\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;KCL&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Lamotrigine&lt;a name=\&quot;cs-medication-name-Lamotrigine\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lamotrigine&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Levetiracetam&lt;a name=\&quot;cs-medication-name-Levetiracetam\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Levetiracetam&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Levofloxacin&lt;a name=\&quot;cs-medication-name-Levofloxacin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Levofloxacin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Linagliptin&lt;a name=\&quot;cs-medication-name-Linagliptin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;linagliptin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Lithium-Carbonate&lt;a name=\&quot;cs-medication-name-Lithium-Carbonate\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;lithium carbonate&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Losartan&lt;a name=\&quot;cs-medication-name-Losartan\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Losartan&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Methyl-Salicylate&lt;a name=\&quot;cs-medication-name-Methyl-Salicylate\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Methyl Salicylate&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Magnesium-Sulphate&lt;a name=\&quot;cs-medication-name-Magnesium-Sulphate\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;magnesium sulphate&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Manorest&lt;a name=\&quot;cs-medication-name-Manorest\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Manorest&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Beclomethasone&lt;a name=\&quot;cs-medication-name-Beclomethasone\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Beclomethasone&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Ipravent&lt;a name=\&quot;cs-medication-name-Ipravent\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ipravent&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Salbutamol-Asthalin&lt;a name=\&quot;cs-medication-name-Salbutamol-Asthalin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Salbutamol (Asthalin)&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Salmetrol/Fluticazone&lt;a name=\&quot;cs-medication-name-Salmetrol.47Fluticazone\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Salmetrol / Fluticazone&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Seroflo&lt;a name=\&quot;cs-medication-name-Seroflo\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Seroflo&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Tiova&lt;a name=\&quot;cs-medication-name-Tiova\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Tiova&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Mebendazole&lt;a name=\&quot;cs-medication-name-Mebendazole\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Mebendazole&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Metalazone&lt;a name=\&quot;cs-medication-name-Metalazone\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Metalazone&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Metaprolol&lt;a name=\&quot;cs-medication-name-Metaprolol\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Metaprolol&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Metformin&lt;a name=\&quot;cs-medication-name-Metformin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Metformin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Methotrexate&lt;a name=\&quot;cs-medication-name-Methotrexate\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Methotrexate&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Methyl-Prednisolone&lt;a name=\&quot;cs-medication-name-Methyl-Prednisolone\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Methyl Prednisolone&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Methyldopa-Aldomet&lt;a name=\&quot;cs-medication-name-Methyldopa-Aldomet\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;methyldopa (Aldomet)&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Metronidazole&lt;a name=\&quot;cs-medication-name-Metronidazole\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;metronidazole&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Miconazole&lt;a name=\&quot;cs-medication-name-Miconazole\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MICONAZOLE&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Minipress&lt;a name=\&quot;cs-medication-name-Minipress\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Minipress&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Montelukast&lt;a name=\&quot;cs-medication-name-Montelukast\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Montelukast&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Mycostatin&lt;a name=\&quot;cs-medication-name-Mycostatin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;mycostatin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Nebivolol&lt;a name=\&quot;cs-medication-name-Nebivolol\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Nebivolol&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Neuroton&lt;a name=\&quot;cs-medication-name-Neuroton\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Neuroton&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Nicorandil&lt;a name=\&quot;cs-medication-name-Nicorandil\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Nicorandil&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Nifedipine&lt;a name=\&quot;cs-medication-name-Nifedipine\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;nifedipine&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Nitrocontin&lt;a name=\&quot;cs-medication-name-Nitrocontin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Nitrocontin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Nitrofurantoin&lt;a name=\&quot;cs-medication-name-Nitrofurantoin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Nitrofurantoin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Noklot&lt;a name=\&quot;cs-medication-name-Noklot\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Noklot&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Normal-Saline-Nasal-Drops&lt;a name=\&quot;cs-medication-name-Normal-Saline-Nasal-Drops\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;normal saline nasal drops&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Olanzapine&lt;a name=\&quot;cs-medication-name-Olanzapine\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;olanzapine&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Omeprazole&lt;a name=\&quot;cs-medication-name-Omeprazole\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;omeprazole&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Oral-Rehydration-Salts&lt;a name=\&quot;cs-medication-name-Oral-Rehydration-Salts\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;oral rehydration salts&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Pantaprazole&lt;a name=\&quot;cs-medication-name-Pantaprazole\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Pantaprazole&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Paracetamol&lt;a name=\&quot;cs-medication-name-Paracetamol\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;paracetamol&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Penicillin&lt;a name=\&quot;cs-medication-name-Penicillin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;penicillin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Persantin&lt;a name=\&quot;cs-medication-name-Persantin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Persantin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Capsulephenobarbital-Luminal&lt;a name=\&quot;cs-medication-name-Capsulephenobarbital-Luminal\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Capsulephenobarbital (Luminal)&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Phenytoin-Sodium&lt;a name=\&quot;cs-medication-name-Phenytoin-Sodium\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;phenytoin sodium&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Pioglitazone&lt;a name=\&quot;cs-medication-name-Pioglitazone\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Pioglitazone&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Potassium-Permanganate&lt;a name=\&quot;cs-medication-name-Potassium-Permanganate\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;potassium permanganate&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Prazosin&lt;a name=\&quot;cs-medication-name-Prazosin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;prazosin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Pregabalin&lt;a name=\&quot;cs-medication-name-Pregabalin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Pregabalin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Prednisolone&lt;a name=\&quot;cs-medication-name-Prednisolone\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;prednisolone&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Prochlorperazine-Stemetil&lt;a name=\&quot;cs-medication-name-Prochlorperazine-Stemetil\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;prochlorperazine (Stemetil)&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Promethazine-Phenergan&lt;a name=\&quot;cs-medication-name-Promethazine-Phenergan\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;promethazine (Phenergan)&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Propranolol&lt;a name=\&quot;cs-medication-name-Propranolol\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;propranolol&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Propyithiouracil&lt;a name=\&quot;cs-medication-name-Propyithiouracil\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Propyithiouracil&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Pulse-Tri-Omega&lt;a name=\&quot;cs-medication-name-Pulse-Tri-Omega\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Pulse Tri Omega&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Pyrantel-Pamoate&lt;a name=\&quot;cs-medication-name-Pyrantel-Pamoate\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;pyrantel pamoate&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Quetiapine&lt;a name=\&quot;cs-medication-name-Quetiapine\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Quetiapine&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Ranalazine&lt;a name=\&quot;cs-medication-name-Ranalazine\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ranalazine&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Rifaximin&lt;a name=\&quot;cs-medication-name-Rifaximin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Rifaximin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Risperidone&lt;a name=\&quot;cs-medication-name-Risperidone\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;risperidone&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Ropinirole&lt;a name=\&quot;cs-medication-name-Ropinirole\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ropinirole&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Rosuvastatin&lt;a name=\&quot;cs-medication-name-Rosuvastatin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Rosuvastatin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Salbutamol&lt;a name=\&quot;cs-medication-name-Salbutamol\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;salbutamol&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Sertalin&lt;a name=\&quot;cs-medication-name-Sertalin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Sertalin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Sildenafil&lt;a name=\&quot;cs-medication-name-Sildenafil\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;sildenafil&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Sinemet&lt;a name=\&quot;cs-medication-name-Sinemet\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Sinemet&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Sitagliptin&lt;a name=\&quot;cs-medication-name-Sitagliptin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;sitagliptin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Sodium-Bicarbonate-Nahco3&lt;a name=\&quot;cs-medication-name-Sodium-Bicarbonate-Nahco3\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Sodium Bicarbonate (NaHCO3)&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Sodium-Bicarbonate-Ear-Drops&lt;a name=\&quot;cs-medication-name-Sodium-Bicarbonate-Ear-Drops\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;sodium bicarbonate ear drops&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Sodium-Valproate&lt;a name=\&quot;cs-medication-name-Sodium-Valproate\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;sodium valproate&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Soframycin-Cream&lt;a name=\&quot;cs-medication-name-Soframycin-Cream\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Soframycin Cream&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Spacer-Device&lt;a name=\&quot;cs-medication-name-Spacer-Device\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Spacer Device&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Spironolactone&lt;a name=\&quot;cs-medication-name-Spironolactone\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;spironolactone&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Stematil&lt;a name=\&quot;cs-medication-name-Stematil\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Stematil&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Sulphasalazine&lt;a name=\&quot;cs-medication-name-Sulphasalazine\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;sulphasalazine&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Syndpa&lt;a name=\&quot;cs-medication-name-Syndpa\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Syndpa&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Tamsulosin&lt;a name=\&quot;cs-medication-name-Tamsulosin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;tamsulosin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Tazloc&lt;a name=\&quot;cs-medication-name-Tazloc\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;tazloc&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Telmisartan&lt;a name=\&quot;cs-medication-name-Telmisartan\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Telmisartan&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Theophylline&lt;a name=\&quot;cs-medication-name-Theophylline\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;theophylline&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Thiamin&lt;a name=\&quot;cs-medication-name-Thiamin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Thiamin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Thyroxine&lt;a name=\&quot;cs-medication-name-Thyroxine\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;thyroxine&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Tolbutamide&lt;a name=\&quot;cs-medication-name-Tolbutamide\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;tolbutamide&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Topiramate&lt;a name=\&quot;cs-medication-name-Topiramate\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Topiramate&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Tramadol&lt;a name=\&quot;cs-medication-name-Tramadol\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;tramadol&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Trifluoperazine-Stelazine&lt;a name=\&quot;cs-medication-name-Trifluoperazine-Stelazine\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;trifluoperazine (Stelazine)&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Urimax&lt;a name=\&quot;cs-medication-name-Urimax\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Urimax&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Ursodiol&lt;a name=\&quot;cs-medication-name-Ursodiol\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ursodiol&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Verapamil&lt;a name=\&quot;cs-medication-name-Verapamil\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;verapamil&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Vildagliptin&lt;a name=\&quot;cs-medication-name-Vildagliptin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;vildagliptin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Vitamin-A-&amp;amp;-D&lt;a name=\&quot;cs-medication-name-Vitamin-A-.38-D\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;vitamin A &amp;amp; D&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Vitamin-B&lt;a name=\&quot;cs-medication-name-Vitamin-B\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;vitamin B&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Vitamin-E&lt;a name=\&quot;cs-medication-name-Vitamin-E\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Vitamin E&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Warfarin&lt;a name=\&quot;cs-medication-name-Warfarin\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;warfarin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Zinc-Sulphate&lt;a name=\&quot;cs-medication-name-Zinc-Sulphate\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Zinc Sulphate&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.url">url</a>" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-medication-name",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.version">version</a>" : "0.1.0",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.name">name</a>" : "CSMedicationNames",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.title">title</a>" : "Medication Names",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.experimental">experimental</a>" : false,
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.date">date</a>" : "2023-10-17T08:56:25+00:00",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.publisher">publisher</a>" : "Jembi Health Systems",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "Jembi Health Systems",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "https://www.jembi.org"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "info@jembi.org"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "Richard Langford",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "richard.langford@jembi.org",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "work"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.description">description</a>" : "Medication Names",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.jurisdiction">jurisdiction</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "001",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "World"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a>" : true,
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.content">content</a>" : "complete",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.count">count</a>" : 184,
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Alpha-Chole-Calciferol",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Alpha Chole Calciferol",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Acarbose",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Acarbose",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Aciclovir",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "aciclovir",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Alendronate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Alendronate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Allopurinol",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Allopurinol",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Alprazolam",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Alprazolam",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Amiodarone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Amiodarone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Amitriptyline",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "amitriptyline",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Amlodipine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Amlodipine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Amoxycillin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Amoxycillin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Ascorbic-Acid",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Ascorbic acid",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Aspirin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "aspirin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Atorvastatin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "atorvastatin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Cetrizine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Cetrizine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Chloramphenicol",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "chloramphenicol",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Chlorpheniramine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "chlorpheniramine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Chlorpromazine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "chlorpromazine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Cilnidipine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Cilnidipine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Ciprofloxacin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "ciprofloxacin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Clarythromycin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "clarythromycin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Clinidipine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "clinidipine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Clobazam",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Clobazam",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Clonazepam",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "clonazepam",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Clopidogrel",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "clopidogrel",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Clotrimazole",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Clotrimazole",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Cloxacillin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Cloxacillin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Co-Q-Enzyme",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Co - Q enzyme",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Co-Amoxiclav",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Co-amoxiclav",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Co-Careldopa-Carbidopa-Bp+Levodopa-Bp",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Co-Careldopa (Carbidopa BP + Levodopa BP)",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Concer",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "concer",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Cotrimoxazole",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "cotrimoxazole",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Crepe-Bandage",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "crepe bandage",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Dapaglifiozin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dapaglifiozin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Dapoxetine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Dapoxetine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Desioratadine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Desioratadine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Dexamethasone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "dexamethasone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Diamicron",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Diamicron",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Diazepam",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "diazepam",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Diclofenac-Na",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "diclofenac-Na",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Diethylcarbamazine-Hetrazan",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "diethylcarbamazine (Hetrazan)",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Digoxin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "digoxin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Diltiazem",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Diltiazem",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Domperidone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Domperidone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Donepezil",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Donepezil",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Doxycycline",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Doxycycline",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Asthalin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Asthalin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Beclate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Beclate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Beclomethazone-Diproprionate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Beclomethazone diproprionate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Dp-Haler",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "DP Haler",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Salmetrol+Fluticazone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Salmetrol + Fluticazone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Ecosprin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Ecosprin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Empagliflozin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Empagliflozin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Enalapril",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "enalapril",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Erythromycin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "erythromycin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Erythropoietin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Erythropoietin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Ezetimibe",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Ezetimibe",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Famotidine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Famotidine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Fenofibrate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Fenofibrate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Ferrous-Fumarate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "ferrous fumarate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Ferrous-Sulphate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "ferrous sulphate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Finasteride",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Finasteride",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Flucloxacillin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "FLUCLOXACILLIN",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Flunarizine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Flunarizine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Fluoxetine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Fluoxetine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Folic-Acid",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "folic acid",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Frisium",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "frisium",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Frusemide",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "frusemide",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Furazolidone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "furazolidone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Fusigel",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "FUSIGEL",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Gabapentin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Gabapentin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Glibenclamide-Diaonil",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "glibenclamide (Diaonil)",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Gliclazide",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "gliclazide",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Glimepride",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Glimepride",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Glucophage",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Glucophage",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Glycery/Trinitrate-Gtn-Sublingual",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "glycery/trinitrate (GTN) sublingual",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Glycomet",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Glycomet",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Griseofulvin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "griseofulvin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Hydrochlorothiazide",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "hydrochlorothiazide",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Hydrocortisone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hydrocortisone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Hyosine-Butylbromide-Buscopan",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Hyosine butylbromide (Buscopan)",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Ibuprofen",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "ibuprofen",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Imipramine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "imipramine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Indapamide",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Indapamide",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Indomethacin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "indomethacin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Insulin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "insulin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Irbesartan",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "irbesartan",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Isosorbide-Dinitrate-Isdn",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "isosorbide dinitrate (ISDN)",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Isosorbide-Mononitrate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "isosorbide mononitrate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Ivabradine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Ivabradine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Kcl",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "KCL",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Lamotrigine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Lamotrigine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Levetiracetam",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Levetiracetam",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Levofloxacin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Levofloxacin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Linagliptin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "linagliptin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Lithium-Carbonate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "lithium carbonate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Losartan",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Losartan",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Methyl-Salicylate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Methyl Salicylate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Magnesium-Sulphate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "magnesium sulphate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Manorest",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Manorest",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Beclomethasone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Beclomethasone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Ipravent",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Ipravent",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Salbutamol-Asthalin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Salbutamol (Asthalin)",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Salmetrol/Fluticazone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Salmetrol / Fluticazone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Seroflo",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Seroflo",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Tiova",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Tiova",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Mebendazole",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Mebendazole",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Metalazone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Metalazone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Metaprolol",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Metaprolol",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Metformin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Metformin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Methotrexate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Methotrexate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Methyl-Prednisolone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Methyl Prednisolone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Methyldopa-Aldomet",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "methyldopa (Aldomet)",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Metronidazole",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "metronidazole",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Miconazole",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "MICONAZOLE",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Minipress",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Minipress",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Montelukast",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Montelukast",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Mycostatin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "mycostatin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Nebivolol",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Nebivolol",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Neuroton",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Neuroton",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Nicorandil",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Nicorandil",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Nifedipine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "nifedipine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Nitrocontin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Nitrocontin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Nitrofurantoin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Nitrofurantoin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Noklot",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Noklot",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Normal-Saline-Nasal-Drops",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "normal saline nasal drops",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Olanzapine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "olanzapine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Omeprazole",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "omeprazole",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Oral-Rehydration-Salts",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "oral rehydration salts",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Pantaprazole",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Pantaprazole",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Paracetamol",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "paracetamol",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Penicillin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "penicillin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Persantin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Persantin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Capsulephenobarbital-Luminal",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Capsulephenobarbital (Luminal)",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Phenytoin-Sodium",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "phenytoin sodium",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Pioglitazone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Pioglitazone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Potassium-Permanganate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "potassium permanganate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Prazosin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "prazosin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Pregabalin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Pregabalin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Prednisolone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "prednisolone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Prochlorperazine-Stemetil",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "prochlorperazine (Stemetil)",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Promethazine-Phenergan",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "promethazine (Phenergan)",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Propranolol",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "propranolol",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Propyithiouracil",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Propyithiouracil",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Pulse-Tri-Omega",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Pulse Tri Omega",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Pyrantel-Pamoate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "pyrantel pamoate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Quetiapine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Quetiapine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Ranalazine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Ranalazine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Rifaximin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Rifaximin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Risperidone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "risperidone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Ropinirole",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Ropinirole",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Rosuvastatin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Rosuvastatin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Salbutamol",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "salbutamol",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Sertalin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sertalin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Sildenafil",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "sildenafil",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Sinemet",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sinemet",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Sitagliptin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "sitagliptin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Sodium-Bicarbonate-Nahco3",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Sodium Bicarbonate (NaHCO3)",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Sodium-Bicarbonate-Ear-Drops",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "sodium bicarbonate ear drops",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Sodium-Valproate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "sodium valproate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Soframycin-Cream",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Soframycin Cream",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Spacer-Device",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Spacer Device",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Spironolactone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "spironolactone",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Stematil",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Stematil",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Sulphasalazine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "sulphasalazine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Syndpa",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Syndpa",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Tamsulosin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "tamsulosin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Tazloc",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "tazloc",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Telmisartan",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Telmisartan",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Theophylline",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "theophylline",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Thiamin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Thiamin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Thyroxine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "thyroxine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Tolbutamide",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "tolbutamide",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Topiramate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Topiramate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Tramadol",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "tramadol",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Trifluoperazine-Stelazine",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "trifluoperazine (Stelazine)",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Urimax",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Urimax",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Ursodiol",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Ursodiol",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Verapamil",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "verapamil",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Vildagliptin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "vildagliptin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Vitamin-A-&amp;-D",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "vitamin A &amp; D",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Vitamin-B",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "vitamin B",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Vitamin-E",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Vitamin E",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Warfarin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "warfarin",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Zinc-Sulphate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Zinc Sulphate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Needs definition"
+    }
+  ]
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+           
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2021+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.sri-lanka#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 17, 2023 08:56+0000">2023-10-17</span>
+          <br/>
+          <span style="color: #FFFF77">
+                      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+                 <a style="color: #81BEF7" href="qa.html">QA Report</a> |
+                 
+                 <a style="color: #81BEF7" target="_blank" href="http://openhie.org/fhir/sri-lanka/history.html">Version History</a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC-BY" src="assets/images/cc-by.png" height="17"/></a> |
+                 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+  <!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

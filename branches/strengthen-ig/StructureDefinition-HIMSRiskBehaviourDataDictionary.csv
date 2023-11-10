@@ -1,0 +1,9 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping","Mapping: null"
+"HIMSRiskBehaviourDataDictionary","HIMSRiskBehaviourDataDictionary","","","",0,*,"","","","null {[]} {[]}
+","HIMS Risk Behaviour","Data elements for the HIMS Risk Behaviour Data Dictionary.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","Observation"
+"HIMSRiskBehaviourDataDictionary.physicalActivity","HIMSRiskBehaviourDataDictionary.physicalActivity","","","",0,1,"","","","string {[]} {[]}
+","Physical activity","Physical activity status for the patient.","","","","","","","","","",,"extensible","","http://openhie.org/fhir/sri-lanka/ValueSet/vs-risk-behaviour-physical-activity","http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-codes#RA1
+",,,,"HIMSRiskBehaviourDataDictionary.physicalActivity",0,1,"","","Observation.valueCodeableConcept"
+"HIMSRiskBehaviourDataDictionary.tobaccoSmoking","HIMSRiskBehaviourDataDictionary.tobaccoSmoking","","","",0,1,"","","","string {[]} {[]}
+","Tobacco smoking","Tobacco smoking status for the patient.","","","","","","","","","",,"extensible","","http://openhie.org/fhir/sri-lanka/ValueSet/vs-risk-behaviour-tobacco-smoker","http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-codes#RA2
+",,,,"HIMSRiskBehaviourDataDictionary.tobaccoSmoking",0,1,"","","Observation.valueCodeableConcept"

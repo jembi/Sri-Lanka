@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureMap xmlns="http://hl7.org/fhir">
+  <id value="HIMSRiskBehaviourLogicalModelToObservation-PhysicalActivity"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><pre class="fml">
+<b>map</b><span style="color: navy"> &quot;</span>http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourLogicalModelToObservation-PhysicalActivity<span style="color: navy">&quot; = &quot;</span>HIMSRiskBehaviourLogicalModelToObservation-PhysicalActivity<span style="color: navy">&quot;
+
+</span><span style="color: navy">// </span><span style="color: green">Maps the HIMS logical model data elements to the Observation resource data elements.</span>
+
+<b>uses</b><span style="color: navy"> &quot;</span><a href="StructureDefinition-HIMSRiskBehaviourDataDictionary.html" title="HIMS Risk Behaviour">http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSRiskBehaviourDataDictionary</a><span style="color: navy">&quot; </span><b>alias </b>IMMZC <b>as </b><b>source</b>
+<b>uses</b><span style="color: navy"> &quot;</span><a href="http://hl7.org/fhir/R4/bundle.html" title="Bundle">http://hl7.org/fhir/StructureDefinition/Bundle</a><span style="color: navy">&quot; </span><b>alias </b>Bundle <b>as </b><b>target</b>
+<b>uses</b><span style="color: navy"> &quot;</span><a href="http://hl7.org/fhir/R4/observation.html" title="Observation">http://hl7.org/fhir/StructureDefinition/Observation</a><span style="color: navy">&quot; </span><b>alias </b>Observation <b>as </b><b>target</b>
+
+<b>group </b>DataDictToObservation<span style="color: navy">(</span><b>source</b> <span style="color: maroon">immzc</span><span style="color: navy"> : </span>IMMZC, <b>target</b> <span style="color: maroon">observation</span><span style="color: navy"> : </span>Observation<span style="color: navy">)</span><span style="color: navy"> {
+</span>  immzc.physicalActivity<b> as </b><span style="color: maroon">physicalActivity</span><span style="color: navy"><b> -&gt; </b></span><span style="color: maroon">observation</span><b> as </b><span style="color: maroon">obs</span><b> then</b><span style="color: navy"> {
+</span>    physicalActivity<span style="color: navy"><b> -&gt; </b></span>obs.valueCodeableConcept = <span style="color: maroon">physicalActivity</span> <i>&quot;SetPhysicalActivityValue&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;SetPhysicalActivity&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span></pre></div>
+  </text>
+  <url value="http://openhie.org/fhir/sri-lanka/StructureMap/HIMSRiskBehaviourLogicalModelToObservation-PhysicalActivity"/>
+  <version value="0.1.0"/>
+  <name value="HIMSRiskBehaviourLogicalModelToObservation-PhysicalActivity"/>
+  <status value="draft"/>
+  <date value="2023-11-08T10:01:28+00:00"/>
+  <publisher value="Jembi Health Systems"/>
+  <contact>
+    <name value="Jembi Health Systems"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.jembi.org"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@jembi.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Richard Langford"/>
+    <telecom>
+      <system value="email"/>
+      <value value="richard.langford@jembi.org"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Maps the HIMS logical model data elements to the Observation resource data elements."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <structure>
+    <url value="http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSRiskBehaviourDataDictionary"/>
+    <mode value="source"/>
+    <alias value="IMMZC"/>
+  </structure>
+  <structure>
+    <url value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+    <mode value="target"/>
+    <alias value="Bundle"/>
+  </structure>
+  <structure>
+    <url value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+    <mode value="target"/>
+    <alias value="Observation"/>
+  </structure>
+  <group>
+    <name value="DataDictToObservation"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="immzc"/>
+      <type value="IMMZC"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="observation"/>
+      <type value="Observation"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="SetPhysicalActivity"/>
+      <source>
+        <context value="immzc"/>
+        <element value="physicalActivity"/>
+        <variable value="physicalActivity"/>
+      </source>
+      <target>
+        <contextType value="variable"/>
+        <variable value="obs"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="observation"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="SetPhysicalActivityValue"/>
+        <source>
+          <context value="physicalActivity"/>
+        </source>
+        <target>
+          <context value="obs"/>
+          <contextType value="variable"/>
+          <element value="valueCodeableConcept"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="physicalActivity"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+  </group>
+</StructureMap>

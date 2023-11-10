@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="cs-risk-behaviour-physical-activity"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This case-sensitive code system <code>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-physical-activity</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">Physically-active<a name="cs-risk-behaviour-physical-activity-Physically-active"> </a></td><td>Physically active</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Physically-not-active<a name="cs-risk-behaviour-physical-activity-Physically-not-active"> </a></td><td>Physically not active</td><td>Needs definition</td></tr></table></div>
+  </text>
+  <url value="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-physical-activity"/>
+  <version value="0.1.0"/>
+  <name value="CSRiskBehaviourPhysicalActivity"/>
+  <title value="Risk Assessment - Physical Activity"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2023-10-18T13:09:21+00:00"/>
+  <publisher value="Jembi Health Systems"/>
+  <contact>
+    <name value="Jembi Health Systems"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.jembi.org"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@jembi.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Richard Langford"/>
+    <telecom>
+      <system value="email"/>
+      <value value="richard.langford@jembi.org"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Risk Assessment - Physical Activity"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="2"/>
+  <concept>
+    <code value="Physically-active"/>
+    <display value="Physically active"/>
+    <definition value="Needs definition"/>
+  </concept>
+  <concept>
+    <code value="Physically-not-active"/>
+    <display value="Physically not active"/>
+    <definition value="Needs definition"/>
+  </concept>
+</CodeSystem>

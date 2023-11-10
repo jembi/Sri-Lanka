@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="cs-medical-conditions"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This case-sensitive code system <code>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-medical-conditions</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">Bronchial-asthma<a name="cs-medical-conditions-Bronchial-asthma"> </a></td><td>Bronchial Asthma</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Diabetes<a name="cs-medical-conditions-Diabetes"> </a></td><td>Diabetes</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Cerebrovascular-Accident<a name="cs-medical-conditions-Cerebrovascular-Accident"> </a></td><td>Cerebrovascular Accident</td><td>Needs definition</td></tr></table></div>
+  </text>
+  <url value="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-medical-conditions"/>
+  <version value="0.1.0"/>
+  <name value="CSMedicalConditions"/>
+  <title value="Conditions"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2023-10-16T15:06:43+00:00"/>
+  <publisher value="Jembi Health Systems"/>
+  <contact>
+    <name value="Jembi Health Systems"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.jembi.org"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@jembi.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Richard Langford"/>
+    <telecom>
+      <system value="email"/>
+      <value value="richard.langford@jembi.org"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Represents previous, pre-existing and new conditions."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="Bronchial-asthma"/>
+    <display value="Bronchial Asthma"/>
+    <definition value="Needs definition"/>
+  </concept>
+  <concept>
+    <code value="Diabetes"/>
+    <display value="Diabetes"/>
+    <definition value="Needs definition"/>
+  </concept>
+  <concept>
+    <code value="Cerebrovascular-Accident"/>
+    <display value="Cerebrovascular Accident"/>
+    <definition value="Needs definition"/>
+  </concept>
+</CodeSystem>

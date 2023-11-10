@@ -1,0 +1,248 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openhie.org/fhir/sri-lanka/Composition/HIMSCompositionExample> a fhir:Composition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "HIMSCompositionExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/sri-lanka/StructureDefinition/hims-composition"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/sri-lanka/StructureDefinition/hims-composition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Composition</b><a name=\"HIMSCompositionExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Composition &quot;HIMSCompositionExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-hims-composition.html\">HIMS Composition</a></p></div><p><b>identifier</b>: id: PAT0001-v1</p><p><b>status</b>: final</p><p><b>type</b>: 11502-2 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#11502-2)</span></p><p><b>encounter</b>: <a href=\"Encounter-TargetFacilityEncounterExample.html\">Encounter/TargetFacilityEncounterExample</a></p><p><b>date</b>: 2023-08-22</p><p><b>author</b>: </p><ul><li><a href=\"Practitioner-GeneralPractitionerExample.html\">Practitioner/GeneralPractitionerExample</a> &quot; SMITH&quot;</li><li><a href=\"Organization-OrganizationExample.html\">Organization/OrganizationExample</a> &quot;Some Health Facility&quot;</li></ul><p><b>title</b>: Sri Lanka team to advise on title</p></div>"
+  ] ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "http://openhie.org/fhir/sri-lanka/identifier/document"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "PAT0001-v1" ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:11502-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "11502-2" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://openhie.org/fhir/sri-lanka/Patient/HHIMSPatientExample> ;
+     fhir:reference [ fhir:v "Patient/HHIMSPatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://openhie.org/fhir/sri-lanka/Encounter/TargetFacilityEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/TargetFacilityEncounterExample" ]
+  ] ; # 
+  fhir:date [ fhir:v "2023-08-22"^^xsd:date] ; # 
+  fhir:author ( [
+     fhir:link <http://openhie.org/fhir/sri-lanka/Practitioner/GeneralPractitionerExample> ;
+     fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+  ] [
+     fhir:link <http://openhie.org/fhir/sri-lanka/Organization/OrganizationExample> ;
+     fhir:reference [ fhir:v "Organization/OrganizationExample" ]
+  ] ) ; # 
+  fhir:title [ fhir:v "Sri Lanka team to advise on title"] ; # 
+  fhir:section ( [
+     fhir:title [ fhir:v "Risk Behaviour - Assessment of Physical Activity" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a sct:398636004 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "398636004" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://openhie.org/fhir/sri-lanka/Observation/RiskBehaviourPhysicalActivityExample> ;
+       fhir:reference [ fhir:v "Observation/RiskBehaviourPhysicalActivityExample" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Risk Behaviour - Tobacco smoking Assessment" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:72166-2 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "72166-2" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://openhie.org/fhir/sri-lanka/Observation/RiskBehaviourTobaccoSmokerExample> ;
+       fhir:reference [ fhir:v "Observation/RiskBehaviourTobaccoSmokerExample" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Blood Pressure" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a sct:75367002 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "75367002" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://openhie.org/fhir/sri-lanka/Observation/BloodPressureExample> ;
+       fhir:reference [ fhir:v "Observation/BloodPressureExample" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Patient Weight" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:3141-9 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "3141-9" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://openhie.org/fhir/sri-lanka/Observation/WeightExample> ;
+       fhir:reference [ fhir:v "Observation/WeightExample" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Patient Height" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:3137-7 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "3137-7" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://openhie.org/fhir/sri-lanka/Observation/HeightExample> ;
+       fhir:reference [ fhir:v "Observation/HeightExample" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Patient BMI" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:97057-4 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "97057-4" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://openhie.org/fhir/sri-lanka/Observation/BMIExample> ;
+       fhir:reference [ fhir:v "Observation/BMIExample" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Bloodwork" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:LA17759-4 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "LA17759-4" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://openhie.org/fhir/sri-lanka/Observation/RandomBloodSugarExample> ;
+       fhir:reference [ fhir:v "Observation/RandomBloodSugarExample" ]
+     ] [
+       fhir:link <http://openhie.org/fhir/sri-lanka/Observation/FastingBloodSugarExample> ;
+       fhir:reference [ fhir:v "Observation/FastingBloodSugarExample" ]
+     ] [
+       fhir:link <http://openhie.org/fhir/sri-lanka/Observation/TotalCholesterolExample> ;
+       fhir:reference [ fhir:v "Observation/TotalCholesterolExample" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Risk Assessment Report" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:71482-4 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "71482-4" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://openhie.org/fhir/sri-lanka/RiskAssessment/CVDRiskCategoryExample> ;
+       fhir:reference [ fhir:v "RiskAssessment/CVDRiskCategoryExample" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Referral Requests" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:LA24277-8 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "LA24277-8" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://openhie.org/fhir/sri-lanka/ServiceRequest/FollowUpPlanServiceRequestExample> ;
+       fhir:reference [ fhir:v "ServiceRequest/FollowUpPlanServiceRequestExample" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Treatment and Care" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:68833-3 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "68833-3" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://openhie.org/fhir/sri-lanka/CarePlan/FollowUpAtHLCExample> ;
+       fhir:reference [ fhir:v "CarePlan/FollowUpAtHLCExample" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Previous, pre-existing and new conditions" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:67804-5 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "67804-5" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://openhie.org/fhir/sri-lanka/Condition/MedicalHistoryExample> ;
+       fhir:reference [ fhir:v "Condition/MedicalHistoryExample" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

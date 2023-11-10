@@ -1,0 +1,71 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "cs-absent-or-unknown-allergies",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-sensitive code system <code>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-absent-or-unknown-allergies</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">no-allergy-info<a name=\"cs-absent-or-unknown-allergies-no-allergy-info\"> </a></td><td>No information about allergies</td><td>There is no information available regarding the subject's allergy conditions.</td></tr><tr><td style=\"white-space:nowrap\">no-known-allergies<a name=\"cs-absent-or-unknown-allergies-no-known-allergies\"> </a></td><td>No known allergies</td><td>The subject has no known allergy conditions.</td></tr><tr><td style=\"white-space:nowrap\">no-known-medication-allergies<a name=\"cs-absent-or-unknown-allergies-no-known-medication-allergies\"> </a></td><td>No known medication allergies</td><td>The subject has no known medication allergy conditions.</td></tr><tr><td style=\"white-space:nowrap\">no-known-environmental-allergies<a name=\"cs-absent-or-unknown-allergies-no-known-environmental-allergies\"> </a></td><td>No known environmental allergies</td><td>The subject has no known environmental allergy conditions.</td></tr><tr><td style=\"white-space:nowrap\">no-known-food-allergies<a name=\"cs-absent-or-unknown-allergies-no-known-food-allergies\"> </a></td><td>No known food allergies</td><td>The subject has no known food allergy conditions.</td></tr></table></div>"
+  },
+  "url" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-absent-or-unknown-allergies",
+  "version" : "0.1.0",
+  "name" : "CSAbsentOrUnknownAllergies",
+  "title" : "Absent or Unknown Allergies",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-10-11T19:33:00+00:00",
+  "publisher" : "Jembi Health Systems",
+  "contact" : [{
+    "name" : "Jembi Health Systems",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.jembi.org"
+    },
+    {
+      "system" : "email",
+      "value" : "info@jembi.org"
+    }]
+  },
+  {
+    "name" : "Richard Langford",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "richard.langford@jembi.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Absent or Unknown Allergies",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 5,
+  "concept" : [{
+    "code" : "no-allergy-info",
+    "display" : "No information about allergies",
+    "definition" : "There is no information available regarding the subject's allergy conditions."
+  },
+  {
+    "code" : "no-known-allergies",
+    "display" : "No known allergies",
+    "definition" : "The subject has no known allergy conditions."
+  },
+  {
+    "code" : "no-known-medication-allergies",
+    "display" : "No known medication allergies",
+    "definition" : "The subject has no known medication allergy conditions."
+  },
+  {
+    "code" : "no-known-environmental-allergies",
+    "display" : "No known environmental allergies",
+    "definition" : "The subject has no known environmental allergy conditions."
+  },
+  {
+    "code" : "no-known-food-allergies",
+    "display" : "No known food allergies",
+    "definition" : "The subject has no known food allergy conditions."
+  }]
+}

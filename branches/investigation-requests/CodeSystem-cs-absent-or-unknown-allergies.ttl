@@ -1,0 +1,74 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openhie.org/fhir/sri-lanka/CodeSystem/cs-absent-or-unknown-allergies> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cs-absent-or-unknown-allergies"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-sensitive code system <code>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-absent-or-unknown-allergies</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">no-allergy-info<a name=\"cs-absent-or-unknown-allergies-no-allergy-info\"> </a></td><td>No information about allergies</td><td>There is no information available regarding the subject's allergy conditions.</td></tr><tr><td style=\"white-space:nowrap\">no-known-allergies<a name=\"cs-absent-or-unknown-allergies-no-known-allergies\"> </a></td><td>No known allergies</td><td>The subject has no known allergy conditions.</td></tr><tr><td style=\"white-space:nowrap\">no-known-medication-allergies<a name=\"cs-absent-or-unknown-allergies-no-known-medication-allergies\"> </a></td><td>No known medication allergies</td><td>The subject has no known medication allergy conditions.</td></tr><tr><td style=\"white-space:nowrap\">no-known-environmental-allergies<a name=\"cs-absent-or-unknown-allergies-no-known-environmental-allergies\"> </a></td><td>No known environmental allergies</td><td>The subject has no known environmental allergy conditions.</td></tr><tr><td style=\"white-space:nowrap\">no-known-food-allergies<a name=\"cs-absent-or-unknown-allergies-no-known-food-allergies\"> </a></td><td>No known food allergies</td><td>The subject has no known food allergy conditions.</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-absent-or-unknown-allergies"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "CSAbsentOrUnknownAllergies"] ; # 
+  fhir:title [ fhir:v "Absent or Unknown Allergies"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-10-16T06:39:53+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Jembi Health Systems"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Jembi Health Systems" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.jembi.org" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "info@jembi.org" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Richard Langford" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "richard.langford@jembi.org" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Absent or Unknown Allergies"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "5"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "no-allergy-info" ] ;
+     fhir:display [ fhir:v "No information about allergies" ] ;
+     fhir:definition [ fhir:v "There is no information available regarding the subject's allergy conditions." ]
+  ] [
+     fhir:code [ fhir:v "no-known-allergies" ] ;
+     fhir:display [ fhir:v "No known allergies" ] ;
+     fhir:definition [ fhir:v "The subject has no known allergy conditions." ]
+  ] [
+     fhir:code [ fhir:v "no-known-medication-allergies" ] ;
+     fhir:display [ fhir:v "No known medication allergies" ] ;
+     fhir:definition [ fhir:v "The subject has no known medication allergy conditions." ]
+  ] [
+     fhir:code [ fhir:v "no-known-environmental-allergies" ] ;
+     fhir:display [ fhir:v "No known environmental allergies" ] ;
+     fhir:definition [ fhir:v "The subject has no known environmental allergy conditions." ]
+  ] [
+     fhir:code [ fhir:v "no-known-food-allergies" ] ;
+     fhir:display [ fhir:v "No known food allergies" ] ;
+     fhir:definition [ fhir:v "The subject has no known food allergy conditions." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

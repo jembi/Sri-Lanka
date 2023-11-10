@@ -1,0 +1,52 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openhie.org/fhir/sri-lanka/Task/ImagingTaskExample> a fhir:Task ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ImagingTaskExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/sri-lanka/StructureDefinition/imaging-task"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/sri-lanka/StructureDefinition/imaging-task>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Task</b><a name=\"ImagingTaskExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Task &quot;ImagingTaskExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-imaging-task.html\">Imaging Task</a></p></div><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>priority</b>: routine</p><p><b>description</b>: some information regarding the need for the imaging request, if any.</p><p><b>focus</b>: <a href=\"ServiceRequest-GeneralReferralServiceRequestExample.html\">ServiceRequest/GeneralReferralServiceRequestExample</a></p><p><b>for</b>: <a href=\"Patient-HHIMSPatientExample.html\">Patient/HHIMSPatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href=\"Encounter-TargetFacilityEncounterExample.html\">Encounter/TargetFacilityEncounterExample</a></p><p><b>executionPeriod</b>: 2023-10-06 13:28:17-0500 --&gt; 2023-10-09 16:28:17-0500</p><p><b>authoredOn</b>: 2023-10-06 13:28:17-0500</p><p><b>requester</b>: <a href=\"Practitioner-GeneralPractitionerExample.html\">Practitioner/GeneralPractitionerExample</a> &quot; SMITH&quot;</p><p><b>location</b>: <a href=\"Location-ProvidersLocationExample.html\">Location/ProvidersLocationExample</a> &quot;Name for the location&quot;</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:priority [ fhir:v "routine"] ; # 
+  fhir:description [ fhir:v "some information regarding the need for the imaging request, if any."] ; # 
+  fhir:focus [
+     fhir:link <http://openhie.org/fhir/sri-lanka/ServiceRequest/GeneralReferralServiceRequestExample> ;
+     fhir:reference [ fhir:v "ServiceRequest/GeneralReferralServiceRequestExample" ]
+  ] ; # 
+  fhir:for [
+     fhir:link <http://openhie.org/fhir/sri-lanka/Patient/HHIMSPatientExample> ;
+     fhir:reference [ fhir:v "Patient/HHIMSPatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://openhie.org/fhir/sri-lanka/Encounter/TargetFacilityEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/TargetFacilityEncounterExample" ]
+  ] ; # 
+  fhir:executionPeriod [
+     fhir:start [ fhir:v "2023-10-06T13:28:17-05:00"^^xsd:dateTime ] ;
+     fhir:end [ fhir:v "2023-10-09T16:28:17-05:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2023-10-06T13:28:17-05:00"^^xsd:dateTime] ; # 
+  fhir:requester [
+     fhir:link <http://openhie.org/fhir/sri-lanka/Practitioner/GeneralPractitionerExample> ;
+     fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+  ] ; # 
+  fhir:location [
+     fhir:link <http://openhie.org/fhir/sri-lanka/Location/ProvidersLocationExample> ;
+     fhir:reference [ fhir:v "Location/ProvidersLocationExample" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

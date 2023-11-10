@@ -1,0 +1,51 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "vs-procedure",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-cs-procedure.html\"><code>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-procedure</code></a></li><li>Include all codes defined in <a href=\"CodeSystem-cs-procedure-imaging.html\"><code>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-procedure-imaging</code></a></li></ul></div>"
+  },
+  "url" : "http://openhie.org/fhir/sri-lanka/ValueSet/vs-procedure",
+  "version" : "0.1.0",
+  "name" : "VSProcedures",
+  "title" : "Procedures",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-10-31T12:18:19+00:00",
+  "publisher" : "Jembi Health Systems",
+  "contact" : [{
+    "name" : "Jembi Health Systems",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.jembi.org"
+    },
+    {
+      "system" : "email",
+      "value" : "info@jembi.org"
+    }]
+  },
+  {
+    "name" : "Richard Langford",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "richard.langford@jembi.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Other Procedures",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-procedure"
+    },
+    {
+      "system" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-procedure-imaging"
+    }]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "vs-cvd-risk-category",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-cs-cvd-risk-category.html\"><code>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-cvd-risk-category</code></a></li></ul></div>"
+  },
+  "url" : "http://openhie.org/fhir/sri-lanka/ValueSet/vs-cvd-risk-category",
+  "version" : "0.1.0",
+  "name" : "VSCVDRiskCategory",
+  "title" : "Cardiovascular Risk Category Probability Percentage Ranges",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-10-17T13:27:36+00:00",
+  "publisher" : "Jembi Health Systems",
+  "contact" : [{
+    "name" : "Jembi Health Systems",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.jembi.org"
+    },
+    {
+      "system" : "email",
+      "value" : "info@jembi.org"
+    }]
+  },
+  {
+    "name" : "Richard Langford",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "richard.langford@jembi.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Cardiovascular Risk Category Probability Percentage Ranges",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-cvd-risk-category"
+    }]
+  }
+}

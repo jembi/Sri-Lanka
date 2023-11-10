@@ -1,0 +1,56 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "vs-follow-up-reasons",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  descends from  183616001 (null)</li><li>Include all codes defined in <a href=\"CodeSystem-cs-follow-up-reasons.html\"><code>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-reasons</code></a></li></ul></div>"
+  },
+  "url" : "http://openhie.org/fhir/sri-lanka/ValueSet/vs-follow-up-reasons",
+  "version" : "0.1.0",
+  "name" : "VSFollowUpReasons",
+  "title" : "Follow up at HLC",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-10-19T08:46:21+00:00",
+  "publisher" : "Jembi Health Systems",
+  "contact" : [{
+    "name" : "Jembi Health Systems",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.jembi.org"
+    },
+    {
+      "system" : "email",
+      "value" : "info@jembi.org"
+    }]
+  },
+  {
+    "name" : "Richard Langford",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "richard.langford@jembi.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Follow up at HLC",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "183616001"
+      }]
+    },
+    {
+      "system" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-reasons"
+    }]
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "resourceType" : "Patient",
+  "id" : "HIMSPatientExample",
+  "meta" : {
+    "profile" : ["http://openhie.org/fhir/sri-lanka/StructureDefinition/hims-patient"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Mike John Smith (OFFICIAL)</b> male, DoB: 1983-05-22 ( Passport number:\u00a0A patient can have multiple passport IDs.)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li>Personal Health Number:\u00a0personal health number</li><li>Driver's license number:\u00a0A patient may have multiple drivers license numbers.</li><li>National identity number:\u00a0A patient may have multiple national identity numbers.</li><li>Senior Citizen Number:\u00a0A patient may have multiple senior citizen numbers.</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Details:</td><td colspan=\"3\"><ul><li><a href=\"tel:+27829999999\">+27829999999</a></li><li><a href=\"mailto:someone@something.com\">someone@something.com</a></li><li><a href=\"mailto:someone2@something.com\">someone2@something.com</a></li><li>177 Nawala Road Nugegoda Colombo 32350 Sri Lanka </li></ul></td></tr></table></div>"
+  },
+  "identifier" : [{
+    "extension" : [{
+      "url" : "http://openhie.org/fhir/sri-lanka/StructureDefinition/multiple-values-for-patient-identifier",
+      "valueString" : "Passport-1"
+    },
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/StructureDefinition/multiple-values-for-patient-identifier",
+      "valueString" : "Passport-2"
+    }],
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "PPN"
+      }],
+      "text" : "Passport number"
+    },
+    "system" : "http://openhie.org/fhir/sri-lanka/identifier/passport",
+    "value" : "A patient can have multiple passport IDs."
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-identifier-types",
+        "code" : "PHN"
+      }],
+      "text" : "Personal Health Number"
+    },
+    "system" : "http://openhie.org/fhir/sri-lanka/identifier/phn",
+    "value" : "personal health number"
+  },
+  {
+    "extension" : [{
+      "url" : "http://openhie.org/fhir/sri-lanka/StructureDefinition/multiple-values-for-patient-identifier",
+      "valueString" : "Drivers license-1"
+    },
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/StructureDefinition/multiple-values-for-patient-identifier",
+      "valueString" : "Drivers license-2"
+    }],
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "DL"
+      }],
+      "text" : "Driver's license number"
+    },
+    "system" : "http://openhie.org/fhir/sri-lanka/identifier/drivers",
+    "value" : "A patient may have multiple drivers license numbers."
+  },
+  {
+    "extension" : [{
+      "url" : "http://openhie.org/fhir/sri-lanka/StructureDefinition/multiple-values-for-patient-identifier",
+      "valueString" : "National identity number-1"
+    },
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/StructureDefinition/multiple-values-for-patient-identifier",
+      "valueString" : "National identity number-2"
+    }],
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "NNLKA"
+      }],
+      "text" : "National identity number"
+    },
+    "system" : "http://openhie.org/fhir/sri-lanka/identifier/nic",
+    "value" : "A patient may have multiple national identity numbers."
+  },
+  {
+    "extension" : [{
+      "url" : "http://openhie.org/fhir/sri-lanka/StructureDefinition/multiple-values-for-patient-identifier",
+      "valueString" : "Senior citizen number-1"
+    },
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/StructureDefinition/multiple-values-for-patient-identifier",
+      "valueString" : "Senior citizen number-2"
+    }],
+    "type" : {
+      "coding" : [{
+        "system" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-identifier-types",
+        "code" : "SCN"
+      }],
+      "text" : "Senior Citizen Number"
+    },
+    "system" : "http://openhie.org/fhir/sri-lanka/identifier/scn",
+    "value" : "A patient may have multiple senior citizen numbers."
+  }],
+  "name" : [{
+    "use" : "official",
+    "family" : "Smith",
+    "given" : ["Mike",
+    "John"]
+  }],
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+27829999999"
+  },
+  {
+    "system" : "email",
+    "value" : "someone@something.com"
+  },
+  {
+    "system" : "email",
+    "value" : "someone2@something.com"
+  }],
+  "gender" : "male",
+  "birthDate" : "1983-05-22",
+  "address" : [{
+    "type" : "postal",
+    "line" : ["177",
+    "Nawala Road"],
+    "city" : "Nugegoda",
+    "district" : "Ampara",
+    "state" : "Colombo",
+    "postalCode" : "32350",
+    "country" : "Sri Lanka"
+  }]
+}

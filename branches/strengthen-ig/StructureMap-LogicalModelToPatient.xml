@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureMap xmlns="http://hl7.org/fhir">
+  <id value="LogicalModelToPatient"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><pre class="fml">
+<b>map</b><span style="color: navy"> &quot;</span>http://openhie.org/fhir/sri-lanka/StructureMap/LogicalModelToPatient<span style="color: navy">&quot; = &quot;</span>LogicalModelToPatient<span style="color: navy">&quot;
+
+</span><b>uses</b><span style="color: navy"> &quot;</span><a href="StructureDefinition-RegisterPatientDataDictionary.html" title="Register Patient">http://openhie.org/fhir/sri-lanka/StructureDefinition/RegisterPatientDataDictionary</a><span style="color: navy">&quot; </span><b>alias </b>IMMZC <b>as </b><b>source</b>
+<b>uses</b><span style="color: navy"> &quot;</span><a href="http://hl7.org/fhir/R4/bundle.html" title="Bundle">http://hl7.org/fhir/StructureDefinition/Bundle</a><span style="color: navy">&quot; </span><b>alias </b>Bundle <b>as </b><b>target</b>
+<b>uses</b><span style="color: navy"> &quot;</span><a href="http://hl7.org/fhir/R4/patient.html" title="Patient">http://hl7.org/fhir/StructureDefinition/Patient</a><span style="color: navy">&quot; </span><b>alias </b>Patient <b>as </b><b>target</b>
+
+<b>group </b>DataDictToPatient<span style="color: navy">(</span><b>source</b> <span style="color: maroon">immzc</span><span style="color: navy"> : </span>IMMZC, <b>target</b> <span style="color: maroon">patient</span><span style="color: navy"> : </span>Patient<span style="color: navy">)</span><span style="color: navy"> {
+</span>  immzc.personalHealthNumber<b> as </b><span style="color: maroon">id1</span><span style="color: navy"><b> -&gt; </b></span>patient.identifier<b> as </b><span style="color: maroon">identifier</span><b> then</b><span style="color: navy"> {
+</span>    id1<span style="color: navy"><b> -&gt; </b></span>identifier.value = <span style="color: maroon">id1</span> <i>&quot;SetPersonalHealthNumberValue&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;SetPHN&quot;</i><span style="color: navy">;</span>
+  immzc.nationalIdentityCard<b> as </b><span style="color: maroon">id2</span><span style="color: navy"><b> -&gt; </b></span>patient.identifier<b> as </b><span style="color: maroon">identifier</span><b> then</b><span style="color: navy"> {
+</span>    id2<span style="color: navy"><b> -&gt; </b></span>identifier.value = <span style="color: maroon">id2</span> <i>&quot;SetNationalIdentityCardNumberValue&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;SetNIC&quot;</i><span style="color: navy">;</span>
+  immzc.pasport<b> as </b><span style="color: maroon">id3</span><span style="color: navy"><b> -&gt; </b></span>patient.identifier<b> as </b><span style="color: maroon">identifier</span><b> then</b><span style="color: navy"> {
+</span>    id3<span style="color: navy"><b> -&gt; </b></span>identifier.value = <span style="color: maroon">id3</span> <i>&quot;SetPassportNumberValue&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;SetPassport&quot;</i><span style="color: navy">;</span>
+  immzc.drivingLicense<b> as </b><span style="color: maroon">id4</span><span style="color: navy"><b> -&gt; </b></span>patient.identifier<b> as </b><span style="color: maroon">identifier</span><b> then</b><span style="color: navy"> {
+</span>    id4<span style="color: navy"><b> -&gt; </b></span>identifier.value = <span style="color: maroon">id4</span> <i>&quot;SetDrivingLicenseNumberValue&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;SetDL&quot;</i><span style="color: navy">;</span>
+  immzc.seniorCitizenNumber<b> as </b><span style="color: maroon">id5</span><span style="color: navy"><b> -&gt; </b></span>patient.identifier<b> as </b><span style="color: maroon">identifier</span><b> then</b><span style="color: navy"> {
+</span>    id5<span style="color: navy"><b> -&gt; </b></span>identifier.value = <span style="color: maroon">id5</span> <i>&quot;SetSeniorCitizenNumberValue&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;SetSCN&quot;</i><span style="color: navy">;</span>
+  <span style="color: #b36b00" title="This element was not defined prior to R5">// immzc -&gt; patient.name as pname then NameToHumanName( immzc, pname ) &quot;SetName&quot;;</span>
+  immzc.sex<b> as </b><span style="color: maroon">sex</span><span style="color: navy"><b> -&gt; </b></span>patient.gender = <b>translate</b><span style="color: navy">(</span><span style="color: maroon">sex</span><span style="color: navy">, </span><span style="color: blue">'http://openhie.org/fhir/sri-lanka/ConceptMap/DataDictionarySexToAdministrativeGender'</span><span style="color: navy">, </span><span style="color: blue">'code'</span><span style="color: navy">)</span> <i>&quot;SetGender&quot;</i><span style="color: navy">;</span>
+  immzc.birthDate<b> as </b><span style="color: maroon">birthDate</span><span style="color: navy"><b> -&gt; </b></span>patient.birthDate = <span style="color: maroon">birthDate</span> <i>&quot;SetBirthDate&quot;</i><span style="color: navy">;</span>
+  <span style="color: #b36b00" title="This element was not defined prior to R5">// immzc.patientName as patient -&gt; patient.name as pName</span>
+  <span style="color: navy">// </span><span style="color: green">then NameToHumanName( patient, pName ) &quot;SetPatientNames&quot;;</span>
+  immzc.patientName<b> as </b><span style="color: maroon">patientName</span><span style="color: navy"><b> -&gt; </b></span>patient.name<b> as </b><span style="color: maroon">hname</span><b> then </b>NameToHumanName<span style="color: navy">(</span><span style="color: maroon">patientName</span><span style="color: navy">, </span><span style="color: maroon">hname</span><span style="color: navy">)</span> <i>&quot;SetPatientNames&quot;</i><span style="color: navy">;</span>
+  immzc.address<b> as </b><span style="color: maroon">address</span><span style="color: navy"><b> -&gt; </b></span>patient.address<b> as </b><span style="color: maroon">haddy</span><b> then </b>AddyToAddress<span style="color: navy">(</span><span style="color: maroon">address</span><span style="color: navy">, </span><span style="color: maroon">haddy</span><span style="color: navy">)</span> <i>&quot;SetAddresses&quot;</i><span style="color: navy">;</span>
+  immzc.contactDetails<b> as </b><span style="color: maroon">contactDetails</span><span style="color: navy"><b> -&gt; </b></span>patient.telecom<b> as </b><span style="color: maroon">hcontact</span><b> then </b>ContactDetailsToContactPoint<span style="color: navy">(</span><span style="color: maroon">contactDetails</span><span style="color: navy">, </span><span style="color: maroon">hcontact</span><span style="color: navy">)</span> <i>&quot;SetContactDetails&quot;</i><span style="color: navy">;</span>
+<span style="color: #b36b00" title="This element was not defined prior to R5">// immzc.phone as phone -&gt; patient.telecom as telecom then {     phone as content -&gt; telecom.value = content, telecom.system = 'phone' &quot;SetPhoneValue&quot;;   } &quot;SetPhone&quot;;</span>
+<span style="color: #b36b00" title="This element was not defined prior to R5">// immzc.administrativeArea as area -&gt; patient.address as address then {     area.coding first as coding -&gt; address then {       coding.code as content -&gt; address.text = content &quot;SetAddressToCode&quot;;       coding.display as content -&gt; address.text = content &quot;SetAddressToDisplay&quot;;     } &quot;SetAddressText&quot;;   } &quot;SetAdministrativeArea&quot;;</span>
+<span style="color: navy">}
+
+</span><b>group </b>NameToHumanName<span style="color: navy">(</span><b>source</b> <span style="color: maroon">name</span>, <b>target</b> <span style="color: maroon">hname</span><span style="color: navy">)</span><span style="color: navy"> {
+</span>  name.fullName<b> as </b><span style="color: maroon">fullName</span><span style="color: navy"><b> -&gt; </b></span>hname.text = <span style="color: maroon">fullName</span> <i>&quot;SetFullName&quot;</i><span style="color: navy">;</span>
+  name.firstName<b> as </b><span style="color: maroon">firstName</span><span style="color: navy"><b> -&gt; </b></span>hname.given = <span style="color: maroon">firstName</span> <i>&quot;SetFirstName&quot;</i><span style="color: navy">;</span>
+  name.surname<b> as </b><span style="color: maroon">surname</span><span style="color: navy"><b> -&gt; </b></span>hname.family = <span style="color: maroon">surname</span> <i>&quot;SetFamilyName&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span><b>group </b>AddyToAddress<span style="color: navy">(</span><b>source</b> <span style="color: maroon">address</span>, <b>target</b> <span style="color: maroon">haddy</span><span style="color: navy">)</span><span style="color: navy"> {
+</span>  address.streetNameAndNr<b> as </b><span style="color: maroon">streetNameAndNr</span><span style="color: navy"><b> -&gt; </b></span>haddy.line = <span style="color: maroon">streetNameAndNr</span> <i>&quot;SetStreetNameAndNr&quot;</i><span style="color: navy">;</span>
+  address.city<b> as </b><span style="color: maroon">city</span><span style="color: navy"><b> -&gt; </b></span>haddy.city = <span style="color: maroon">city</span> <i>&quot;SetCity&quot;</i><span style="color: navy">;</span>
+  address.state<b> as </b><span style="color: maroon">state</span><span style="color: navy"><b> -&gt; </b></span>haddy.state = <span style="color: maroon">state</span> <i>&quot;SetState&quot;</i><span style="color: navy">;</span>
+  address.country<b> as </b><span style="color: maroon">country</span><span style="color: navy"><b> -&gt; </b></span>haddy.country = <span style="color: maroon">country</span> <i>&quot;SetCountry&quot;</i><span style="color: navy">;</span>
+  address.postalCode<b> as </b><span style="color: maroon">postalCode</span><span style="color: navy"><b> -&gt; </b></span>haddy.postalCode = <span style="color: maroon">postalCode</span> <i>&quot;SetPostalCode&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span><b>group </b>ContactDetailsToContactPoint<span style="color: navy">(</span><b>source</b> <span style="color: maroon">contact</span>, <b>target</b> <span style="color: maroon">hcontact</span><span style="color: navy">)</span><span style="color: navy"> {
+</span>  contact.mobileNumber<b> as </b><span style="color: maroon">mobileNumber</span><span style="color: navy"><b> -&gt; </b></span>hcontact.value = <span style="color: maroon">mobileNumber</span> <i>&quot;SetMobileNumber&quot;</i><span style="color: navy">;</span>
+  contact.landline<b> as </b><span style="color: maroon">landline</span><span style="color: navy"><b> -&gt; </b></span>hcontact.value = <span style="color: maroon">landline</span> <i>&quot;SetLandline&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span></pre></div>
+  </text>
+  <url value="http://openhie.org/fhir/sri-lanka/StructureMap/LogicalModelToPatient"/>
+  <version value="0.1.0"/>
+  <name value="LogicalModelToPatient"/>
+  <status value="draft"/>
+  <date value="2023-11-02T18:12:34+00:00"/>
+  <publisher value="Jembi Health Systems"/>
+  <contact>
+    <name value="Jembi Health Systems"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.jembi.org"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@jembi.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Richard Langford"/>
+    <telecom>
+      <system value="email"/>
+      <value value="richard.langford@jembi.org"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <structure>
+    <url value="http://openhie.org/fhir/sri-lanka/StructureDefinition/RegisterPatientDataDictionary"/>
+    <mode value="source"/>
+    <alias value="IMMZC"/>
+  </structure>
+  <structure>
+    <url value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+    <mode value="target"/>
+    <alias value="Bundle"/>
+  </structure>
+  <structure>
+    <url value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <mode value="target"/>
+    <alias value="Patient"/>
+  </structure>
+  <group>
+    <name value="DataDictToPatient"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="immzc"/>
+      <type value="IMMZC"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="patient"/>
+      <type value="Patient"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="SetPHN"/>
+      <source>
+        <context value="immzc"/>
+        <element value="personalHealthNumber"/>
+        <variable value="id1"/>
+      </source>
+      <target>
+        <context value="patient"/>
+        <contextType value="variable"/>
+        <element value="identifier"/>
+        <variable value="identifier"/>
+      </target>
+      <rule>
+        <name value="SetPersonalHealthNumberValue"/>
+        <source>
+          <context value="id1"/>
+        </source>
+        <target>
+          <context value="identifier"/>
+          <contextType value="variable"/>
+          <element value="value"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="id1"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="SetNIC"/>
+      <source>
+        <context value="immzc"/>
+        <element value="nationalIdentityCard"/>
+        <variable value="id2"/>
+      </source>
+      <target>
+        <context value="patient"/>
+        <contextType value="variable"/>
+        <element value="identifier"/>
+        <variable value="identifier"/>
+      </target>
+      <rule>
+        <name value="SetNationalIdentityCardNumberValue"/>
+        <source>
+          <context value="id2"/>
+        </source>
+        <target>
+          <context value="identifier"/>
+          <contextType value="variable"/>
+          <element value="value"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="id2"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="SetPassport"/>
+      <source>
+        <context value="immzc"/>
+        <element value="pasport"/>
+        <variable value="id3"/>
+      </source>
+      <target>
+        <context value="patient"/>
+        <contextType value="variable"/>
+        <element value="identifier"/>
+        <variable value="identifier"/>
+      </target>
+      <rule>
+        <name value="SetPassportNumberValue"/>
+        <source>
+          <context value="id3"/>
+        </source>
+        <target>
+          <context value="identifier"/>
+          <contextType value="variable"/>
+          <element value="value"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="id3"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="SetDL"/>
+      <source>
+        <context value="immzc"/>
+        <element value="drivingLicense"/>
+        <variable value="id4"/>
+      </source>
+      <target>
+        <context value="patient"/>
+        <contextType value="variable"/>
+        <element value="identifier"/>
+        <variable value="identifier"/>
+      </target>
+      <rule>
+        <name value="SetDrivingLicenseNumberValue"/>
+        <source>
+          <context value="id4"/>
+        </source>
+        <target>
+          <context value="identifier"/>
+          <contextType value="variable"/>
+          <element value="value"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="id4"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="SetSCN"/>
+      <source>
+        <context value="immzc"/>
+        <element value="seniorCitizenNumber"/>
+        <variable value="id5"/>
+      </source>
+      <target>
+        <context value="patient"/>
+        <contextType value="variable"/>
+        <element value="identifier"/>
+        <variable value="identifier"/>
+      </target>
+      <rule>
+        <name value="SetSeniorCitizenNumberValue"/>
+        <source>
+          <context value="id5"/>
+        </source>
+        <target>
+          <context value="identifier"/>
+          <contextType value="variable"/>
+          <element value="value"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="id5"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="SetGender"/>
+      <source>
+        <context value="immzc"/>
+        <element value="sex"/>
+        <variable value="sex"/>
+      </source>
+      <target>
+        <context value="patient"/>
+        <contextType value="variable"/>
+        <element value="gender"/>
+        <transform value="translate"/>
+        <parameter>
+          <valueId value="sex"/>
+        </parameter>
+        <parameter>
+          <valueString value="http://openhie.org/fhir/sri-lanka/ConceptMap/DataDictionarySexToAdministrativeGender"/>
+        </parameter>
+        <parameter>
+          <valueString value="code"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="SetBirthDate"/>
+      <source>
+        <context value="immzc"/>
+        <element value="birthDate"/>
+        <variable value="birthDate"/>
+      </source>
+      <target>
+        <context value="patient"/>
+        <contextType value="variable"/>
+        <element value="birthDate"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="birthDate"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="SetPatientNames"/>
+      <source>
+        <context value="immzc"/>
+        <element value="patientName"/>
+        <variable value="patientName"/>
+      </source>
+      <target>
+        <context value="patient"/>
+        <contextType value="variable"/>
+        <element value="name"/>
+        <variable value="hname"/>
+      </target>
+      <dependent>
+        <name value="NameToHumanName"/>
+        <variable value="patientName"/>
+        <variable value="hname"/>
+      </dependent>
+    </rule>
+    <rule>
+      <name value="SetAddresses"/>
+      <source>
+        <context value="immzc"/>
+        <element value="address"/>
+        <variable value="address"/>
+      </source>
+      <target>
+        <context value="patient"/>
+        <contextType value="variable"/>
+        <element value="address"/>
+        <variable value="haddy"/>
+      </target>
+      <dependent>
+        <name value="AddyToAddress"/>
+        <variable value="address"/>
+        <variable value="haddy"/>
+      </dependent>
+    </rule>
+    <rule>
+      <name value="SetContactDetails"/>
+      <source>
+        <context value="immzc"/>
+        <element value="contactDetails"/>
+        <variable value="contactDetails"/>
+      </source>
+      <target>
+        <context value="patient"/>
+        <contextType value="variable"/>
+        <element value="telecom"/>
+        <variable value="hcontact"/>
+      </target>
+      <dependent>
+        <name value="ContactDetailsToContactPoint"/>
+        <variable value="contactDetails"/>
+        <variable value="hcontact"/>
+      </dependent>
+    </rule>
+  </group>
+  <group>
+    <name value="NameToHumanName"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="name"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="hname"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="SetFullName"/>
+      <source>
+        <context value="name"/>
+        <element value="fullName"/>
+        <variable value="fullName"/>
+      </source>
+      <target>
+        <context value="hname"/>
+        <contextType value="variable"/>
+        <element value="text"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="fullName"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="SetFirstName"/>
+      <source>
+        <context value="name"/>
+        <element value="firstName"/>
+        <variable value="firstName"/>
+      </source>
+      <target>
+        <context value="hname"/>
+        <contextType value="variable"/>
+        <element value="given"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="firstName"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="SetFamilyName"/>
+      <source>
+        <context value="name"/>
+        <element value="surname"/>
+        <variable value="surname"/>
+      </source>
+      <target>
+        <context value="hname"/>
+        <contextType value="variable"/>
+        <element value="family"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="surname"/>
+        </parameter>
+      </target>
+    </rule>
+  </group>
+  <group>
+    <name value="AddyToAddress"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="address"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="haddy"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="SetStreetNameAndNr"/>
+      <source>
+        <context value="address"/>
+        <element value="streetNameAndNr"/>
+        <variable value="streetNameAndNr"/>
+      </source>
+      <target>
+        <context value="haddy"/>
+        <contextType value="variable"/>
+        <element value="line"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="streetNameAndNr"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="SetCity"/>
+      <source>
+        <context value="address"/>
+        <element value="city"/>
+        <variable value="city"/>
+      </source>
+      <target>
+        <context value="haddy"/>
+        <contextType value="variable"/>
+        <element value="city"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="city"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="SetState"/>
+      <source>
+        <context value="address"/>
+        <element value="state"/>
+        <variable value="state"/>
+      </source>
+      <target>
+        <context value="haddy"/>
+        <contextType value="variable"/>
+        <element value="state"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="state"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="SetCountry"/>
+      <source>
+        <context value="address"/>
+        <element value="country"/>
+        <variable value="country"/>
+      </source>
+      <target>
+        <context value="haddy"/>
+        <contextType value="variable"/>
+        <element value="country"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="country"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="SetPostalCode"/>
+      <source>
+        <context value="address"/>
+        <element value="postalCode"/>
+        <variable value="postalCode"/>
+      </source>
+      <target>
+        <context value="haddy"/>
+        <contextType value="variable"/>
+        <element value="postalCode"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="postalCode"/>
+        </parameter>
+      </target>
+    </rule>
+  </group>
+  <group>
+    <name value="ContactDetailsToContactPoint"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="contact"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="hcontact"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="SetMobileNumber"/>
+      <source>
+        <context value="contact"/>
+        <element value="mobileNumber"/>
+        <variable value="mobileNumber"/>
+      </source>
+      <target>
+        <context value="hcontact"/>
+        <contextType value="variable"/>
+        <element value="value"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="mobileNumber"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="SetLandline"/>
+      <source>
+        <context value="contact"/>
+        <element value="landline"/>
+        <variable value="landline"/>
+      </source>
+      <target>
+        <context value="hcontact"/>
+        <contextType value="variable"/>
+        <element value="value"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="landline"/>
+        </parameter>
+      </target>
+    </rule>
+  </group>
+</StructureMap>

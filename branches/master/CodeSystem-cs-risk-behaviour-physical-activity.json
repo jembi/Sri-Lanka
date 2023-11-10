@@ -1,0 +1,56 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "cs-risk-behaviour-physical-activity",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-sensitive code system <code>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-physical-activity</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">Physically-active<a name=\"cs-risk-behaviour-physical-activity-Physically-active\"> </a></td><td>Physically active</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Physically-not-active<a name=\"cs-risk-behaviour-physical-activity-Physically-not-active\"> </a></td><td>Physically not active</td><td>Needs definition</td></tr></table></div>"
+  },
+  "url" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-physical-activity",
+  "version" : "0.1.0",
+  "name" : "CSRiskBehaviourPhysicalActivity",
+  "title" : "Risk Assessment - Physical Activity",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-10-18T11:51:30+00:00",
+  "publisher" : "Jembi Health Systems",
+  "contact" : [{
+    "name" : "Jembi Health Systems",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.jembi.org"
+    },
+    {
+      "system" : "email",
+      "value" : "info@jembi.org"
+    }]
+  },
+  {
+    "name" : "Richard Langford",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "richard.langford@jembi.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Risk Assessment - Physical Activity",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 2,
+  "concept" : [{
+    "code" : "Physically-active",
+    "display" : "Physically active",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "Physically-not-active",
+    "display" : "Physically not active",
+    "definition" : "Needs definition"
+  }]
+}

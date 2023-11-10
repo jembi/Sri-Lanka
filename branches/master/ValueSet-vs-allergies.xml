@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-allergies"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/165008002">165008002</a></td><td>Allergy testing not done</td></tr><tr><td><a href="http://snomed.info/id/716186003">716186003</a></td><td>No known allergy</td></tr><tr><td><a href="http://snomed.info/id/416098002">416098002</a></td><td>Allergy to drug</td></tr><tr><td><a href="http://snomed.info/id/426232007">426232007</a></td><td>Environmental allergy</td></tr><tr><td><a href="http://snomed.info/id/414285001">414285001</a></td><td>Allergy to food</td></tr></table></li></ul></div>
+  </text>
+  <url value="http://openhie.org/fhir/sri-lanka/ValueSet/vs-allergies"/>
+  <version value="0.1.0"/>
+  <name value="VSAllergies"/>
+  <title value="Allergies"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2023-10-31T12:26:25+00:00"/>
+  <publisher value="Jembi Health Systems"/>
+  <contact>
+    <name value="Jembi Health Systems"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.jembi.org"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@jembi.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Richard Langford"/>
+    <telecom>
+      <system value="email"/>
+      <value value="richard.langford@jembi.org"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Allergies"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="165008002"/>
+        <display value="Allergy testing not done"/>
+      </concept>
+      <concept>
+        <code value="716186003"/>
+        <display value="No known allergy"/>
+      </concept>
+      <concept>
+        <code value="416098002"/>
+        <display value="Allergy to drug"/>
+      </concept>
+      <concept>
+        <code value="426232007"/>
+        <display value="Environmental allergy"/>
+      </concept>
+      <concept>
+        <code value="414285001"/>
+        <display value="Allergy to food"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

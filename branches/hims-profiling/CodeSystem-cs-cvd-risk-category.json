@@ -1,0 +1,71 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "cs-cvd-risk-category",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-sensitive code system <code>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-cvd-risk-category</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">less-than-5<a name=\"cs-cvd-risk-category-less-than-5\"> </a></td><td>Less than 5%</td><td>Sri Lanka team to provide defitinion for this coded value</td></tr><tr><td style=\"white-space:nowrap\">5-to-less-than-10<a name=\"cs-cvd-risk-category-5-to-less-than-10\"> </a></td><td>5% to less than 10%</td><td>Sri Lanka team to provide defitinion for this coded value</td></tr><tr><td style=\"white-space:nowrap\">10-to-less-than-20<a name=\"cs-cvd-risk-category-10-to-less-than-20\"> </a></td><td>10% to less than 20%</td><td>Sri Lanka team to provide defitinion for this coded value</td></tr><tr><td style=\"white-space:nowrap\">20-to-less-than-30<a name=\"cs-cvd-risk-category-20-to-less-than-30\"> </a></td><td>20% to less than 30%</td><td>Sri Lanka team to provide defitinion for this coded value</td></tr><tr><td style=\"white-space:nowrap\">greater-than-or-equal-to-30<a name=\"cs-cvd-risk-category-greater-than-or-equal-to-30\"> </a></td><td>Equal or more than 30%</td><td>Sri Lanka team to provide defitinion for this coded value</td></tr></table></div>"
+  },
+  "url" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-cvd-risk-category",
+  "version" : "0.1.0",
+  "name" : "CSCVDRiskCategory",
+  "title" : "Cardiovascular Risk Category Probability Percentage Ranges",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-10-10T17:27:27+00:00",
+  "publisher" : "Jembi Health Systems",
+  "contact" : [{
+    "name" : "Jembi Health Systems",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.jembi.org"
+    },
+    {
+      "system" : "email",
+      "value" : "info@jembi.org"
+    }]
+  },
+  {
+    "name" : "Richard Langford",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "richard.langford@jembi.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Cardiovascular Risk Category Probability Percentage Ranges",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 5,
+  "concept" : [{
+    "code" : "less-than-5",
+    "display" : "Less than 5%",
+    "definition" : "Sri Lanka team to provide defitinion for this coded value"
+  },
+  {
+    "code" : "5-to-less-than-10",
+    "display" : "5% to less than 10%",
+    "definition" : "Sri Lanka team to provide defitinion for this coded value"
+  },
+  {
+    "code" : "10-to-less-than-20",
+    "display" : "10% to less than 20%",
+    "definition" : "Sri Lanka team to provide defitinion for this coded value"
+  },
+  {
+    "code" : "20-to-less-than-30",
+    "display" : "20% to less than 30%",
+    "definition" : "Sri Lanka team to provide defitinion for this coded value"
+  },
+  {
+    "code" : "greater-than-or-equal-to-30",
+    "display" : "Equal or more than 30%",
+    "definition" : "Sri Lanka team to provide defitinion for this coded value"
+  }]
+}

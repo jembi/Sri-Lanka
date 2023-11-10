@@ -1,0 +1,66 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "cs-follow-up-reasons",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-sensitive code system <code>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-reasons</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">Followed-in-3-months-at-hlc<a name=\"cs-follow-up-reasons-Followed-in-3-months-at-hlc\"> </a></td><td>Followed in 3 months at HLC</td><td>Sri Lanka team to provide defitinion for this coded value</td></tr><tr><td style=\"white-space:nowrap\">Followed-in-6-months-at-hlc<a name=\"cs-follow-up-reasons-Followed-in-6-months-at-hlc\"> </a></td><td>Followed in 6 months at HLC</td><td>Sri Lanka team to provide defitinion for this coded value</td></tr><tr><td style=\"white-space:nowrap\">Followed-in-1-year-at-hlc<a name=\"cs-follow-up-reasons-Followed-in-1-year-at-hlc\"> </a></td><td>Followed in 1 year at HLC</td><td>Sri Lanka team to provide defitinion for this coded value</td></tr><tr><td style=\"white-space:nowrap\">Followed-in-3-years-at-hlc<a name=\"cs-follow-up-reasons-Followed-in-3-years-at-hlc\"> </a></td><td>Followed in 3 years at HLC</td><td>Sri Lanka team to provide defitinion for this coded value</td></tr></table></div>"
+  },
+  "url" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-reasons",
+  "version" : "0.1.0",
+  "name" : "CSFollowUpReasons",
+  "title" : "Follow up at HLC",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-10-12T09:48:00+00:00",
+  "publisher" : "Jembi Health Systems",
+  "contact" : [{
+    "name" : "Jembi Health Systems",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.jembi.org"
+    },
+    {
+      "system" : "email",
+      "value" : "info@jembi.org"
+    }]
+  },
+  {
+    "name" : "Richard Langford",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "richard.langford@jembi.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Follow up at HLC",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 4,
+  "concept" : [{
+    "code" : "Followed-in-3-months-at-hlc",
+    "display" : "Followed in 3 months at HLC",
+    "definition" : "Sri Lanka team to provide defitinion for this coded value"
+  },
+  {
+    "code" : "Followed-in-6-months-at-hlc",
+    "display" : "Followed in 6 months at HLC",
+    "definition" : "Sri Lanka team to provide defitinion for this coded value"
+  },
+  {
+    "code" : "Followed-in-1-year-at-hlc",
+    "display" : "Followed in 1 year at HLC",
+    "definition" : "Sri Lanka team to provide defitinion for this coded value"
+  },
+  {
+    "code" : "Followed-in-3-years-at-hlc",
+    "display" : "Followed in 3 years at HLC",
+    "definition" : "Sri Lanka team to provide defitinion for this coded value"
+  }]
+}

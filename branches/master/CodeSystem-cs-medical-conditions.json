@@ -1,0 +1,61 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "cs-medical-conditions",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-sensitive code system <code>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-medical-conditions</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">Bronchial-asthma<a name=\"cs-medical-conditions-Bronchial-asthma\"> </a></td><td>Bronchial Asthma</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Diabetes<a name=\"cs-medical-conditions-Diabetes\"> </a></td><td>Diabetes</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Cerebrovascular-Accident<a name=\"cs-medical-conditions-Cerebrovascular-Accident\"> </a></td><td>Cerebrovascular Accident</td><td>Needs definition</td></tr></table></div>"
+  },
+  "url" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-medical-conditions",
+  "version" : "0.1.0",
+  "name" : "CSMedicalConditions",
+  "title" : "Conditions",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-10-17T13:43:34+00:00",
+  "publisher" : "Jembi Health Systems",
+  "contact" : [{
+    "name" : "Jembi Health Systems",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.jembi.org"
+    },
+    {
+      "system" : "email",
+      "value" : "info@jembi.org"
+    }]
+  },
+  {
+    "name" : "Richard Langford",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "richard.langford@jembi.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Represents previous, pre-existing and new conditions.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 3,
+  "concept" : [{
+    "code" : "Bronchial-asthma",
+    "display" : "Bronchial Asthma",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "Diabetes",
+    "display" : "Diabetes",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "Cerebrovascular-Accident",
+    "display" : "Cerebrovascular Accident",
+    "definition" : "Needs definition"
+  }]
+}

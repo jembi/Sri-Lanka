@@ -1,0 +1,114 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openhie.org/fhir/sri-lanka/StructureMap/HIMSMedicalHistoryLMToCondition> a fhir:StructureMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "HIMSMedicalHistoryLMToCondition"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre class=\"fml\">\r\n<b>map</b><span style=\"color: navy\"> &quot;</span>http://openhie.org/fhir/sri-lanka/StructureMap/HIMSMedicalHistoryLMToCondition<span style=\"color: navy\">&quot; = &quot;</span>HIMSMedicalHistoryLMToCondition<span style=\"color: navy\">&quot;\r\n\r\n</span><span style=\"color: navy\">// </span><span style=\"color: green\">Maps the HIMS logical model data elements to the Condition resource data elements.</span>\r\n\r\n<b>uses</b><span style=\"color: navy\"> &quot;</span><a href=\"StructureDefinition-HIMSMedicalHistoryDataDictionary.html\" title=\"HIMS Medical History\">http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSMedicalHistoryDataDictionary</a><span style=\"color: navy\">&quot; </span><b>alias </b>IMMZC <b>as </b><b>source</b>\r\n<b>uses</b><span style=\"color: navy\"> &quot;</span><a href=\"http://hl7.org/fhir/R4/bundle.html\" title=\"Bundle\">http://hl7.org/fhir/StructureDefinition/Bundle</a><span style=\"color: navy\">&quot; </span><b>alias </b>Bundle <b>as </b><b>target</b>\r\n<b>uses</b><span style=\"color: navy\"> &quot;</span><a href=\"http://hl7.org/fhir/R4/condition.html\" title=\"Condition\">http://hl7.org/fhir/StructureDefinition/Condition</a><span style=\"color: navy\">&quot; </span><b>alias </b>Condition <b>as </b><b>target</b>\r\n\r\n<b>group </b>DataDictToCondition<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">immzc</span><span style=\"color: navy\"> : </span>IMMZC, <b>target</b> <span style=\"color: maroon\">condition</span><span style=\"color: navy\"> : </span>Condition<span style=\"color: navy\">)</span><span style=\"color: navy\"> {\r\n</span>  immzc.medicalHistory<b> as </b><span style=\"color: maroon\">medicalHistory</span><span style=\"color: navy\"><b> -&gt; </b></span><span style=\"color: maroon\">condition</span><b> as </b><span style=\"color: maroon\">cond</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    medicalHistory<span style=\"color: navy\"><b> -&gt; </b></span>cond.code = <span style=\"color: maroon\">medicalHistory</span> <i>&quot;SetMedicalHistoryValue&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;SetMedicalHistory&quot;</i><span style=\"color: navy\">;</span>\r\n<span style=\"color: navy\">}\r\n\r\n</span></pre></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSMedicalHistoryLMToCondition"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "HIMSMedicalHistoryLMToCondition"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2023-11-10T04:37:53+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Jembi Health Systems"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Jembi Health Systems" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.jembi.org" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "info@jembi.org" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Richard Langford" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "richard.langford@jembi.org" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Maps the HIMS logical model data elements to the Condition resource data elements."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:structure ( [
+     fhir:url [
+       fhir:v "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSMedicalHistoryDataDictionary"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSMedicalHistoryDataDictionary>
+     ] ;
+     fhir:mode [ fhir:v "source" ] ;
+     fhir:alias [ fhir:v "IMMZC" ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/Bundle"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/Bundle>
+     ] ;
+     fhir:mode [ fhir:v "target" ] ;
+     fhir:alias [ fhir:v "Bundle" ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/Condition"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/Condition>
+     ] ;
+     fhir:mode [ fhir:v "target" ] ;
+     fhir:alias [ fhir:v "Condition" ]
+  ] ) ; # 
+  fhir:group ( [
+     fhir:name [ fhir:v "DataDictToCondition" ] ;
+     fhir:typeMode [ fhir:v "none" ] ;
+     fhir:input ( [
+       fhir:name [ fhir:v "immzc" ] ;
+       fhir:type [ fhir:v "IMMZC" ] ;
+       fhir:mode [ fhir:v "source" ]
+     ] [
+       fhir:name [ fhir:v "condition" ] ;
+       fhir:type [ fhir:v "Condition" ] ;
+       fhir:mode [ fhir:v "target" ]
+     ] ) ;
+     fhir:rule ( [
+       fhir:name [ fhir:v "SetMedicalHistory" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "immzc" ] ;
+         fhir:element [ fhir:v "medicalHistory" ] ;
+         fhir:variable [ fhir:v "medicalHistory" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:variable [ fhir:v "cond" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "condition" ]
+         ] )
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "SetMedicalHistoryValue" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "medicalHistory" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "cond" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "code" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [ fhir:v "medicalHistory" ]
+           ] )
+         ] )
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

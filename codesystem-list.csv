@@ -1,0 +1,12 @@
+URL,Version,Status,OIDs,Name,Title,Descriptino,Used
+http://openhie.org/fhir/sri-lanka/CodeSystem/cs-cvd-risk-category,0.1.0,active,,CSCVDRiskCategory,Cardiovascular Risk Categories,"Cardiovascular risk is expressed as a percentage",
+http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-reasons,0.1.0,active,,CSFollowUpReasons,Follow up at HLC,"Follow up at Healthy Lifestyle Center",
+http://openhie.org/fhir/sri-lanka/CodeSystem/cs-identifier-types,0.1.0,active,,CSIdentifierTypes,Patient Business Identifier Types,"Patient Business Identifier Types",
+http://openhie.org/fhir/sri-lanka/CodeSystem/cs-investigation,0.1.0,active,,CSInvestigations,Investigations,"Investigations",
+http://openhie.org/fhir/sri-lanka/CodeSystem/cs-medical-history-codes,0.1.0,active,,CSMedicalHistoryCodes,Medical History,"CodeSystem for Medical History Data Elements",
+http://openhie.org/fhir/sri-lanka/CodeSystem/cs-medication-name,0.1.0,active,,CSMedicationNames,Medication Names,"Medication Names",
+http://openhie.org/fhir/sri-lanka/CodeSystem/cs-procedure,0.1.0,active,,CSProcedures,Procedures,"Other Procedures",
+http://openhie.org/fhir/sri-lanka/CodeSystem/cs-procedure-imaging,0.1.0,active,,CSImagingProcedures,Procedures,"Imaging Procedures",
+http://openhie.org/fhir/sri-lanka/CodeSystem/cs-reason-for-encounter,0.1.0,active,,CSReasonForEncounter,Reason For Encounter,"Encounter reasons.",
+http://openhie.org/fhir/sri-lanka/CodeSystem/cs-register-patient-codes,0.1.0,active,,CSRegisterPatientCodes,Register Patient,"CodeSystem for Register Patient Data Elements",
+http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-codes,0.1.0,active,,CSRiskBehaviourCodes,Risk Behaviour,"CodeSystem for Risk Behaviour Data Elements",

@@ -1,0 +1,123 @@
+﻿SriLanka : Validation Results
+=========================================
+
+err = 0, warn = 0, info = 0
+IG Publisher Version: 1.4.14
+Generated Tue Oct 10 17:29:14 UTC 2023. FHIR version 4.0.1 for openhie.fhir.sri-lanka#0.1.0 (canonical = http://openhie.org/fhir/sri-lanka)
+ Build Errors : 0 / 0 / 0
+ /github/workspace/fsh-generated/resources/Bundle-HIMS-Document-Bundle : 0 / 0 / 41
+ /github/workspace/fsh-generated/resources/Bundle-HIMS-Transactional-Bundle : 0 / 0 / 35
+ /github/workspace/fsh-generated/resources/CarePlan-FollowUpAtHLCExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-cvd-risk-category : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-follow-up-plan : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-follow-up-reasons : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-identifier-types : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-medical-conditions : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-risk-behaviour-physical-activity : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-risk-behaviour-tobacco-smoker : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Composition-HIMSCompositionExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Condition-MedicalHistoryExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Encounter-TargetFacilityEncounterExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ImplementationGuide-openhie.fhir.sri-lanka : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Observation-BMIExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Observation-BloodPressureExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Observation-FastingBloodSugarExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Observation-HeightExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Observation-HypertensionExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Observation-RandomBloodSugarExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Observation-RiskBehaviourPhysicalActivityExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Observation-RiskBehaviourTobaccoSmokerExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Observation-TotalCholesterolExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Observation-WeightExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Organization-OrganizationExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Patient-HHIMSPatientExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Patient-HIMSPatientExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Practitioner-GeneralPractitionerExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/RiskAssessment-CVDRiskCategoryExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ServiceRequest-FollowUpPlanServiceRequestExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-MedicalHistory : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-blood-pressure : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-bmi : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-cvd-risk-category : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-fasting-blood-sugar : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-follow-up-at-hlc : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-follow-up-plan : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-height : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-hhims-patient : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-hims-composition : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-hims-patient : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-hypertension : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-multiple-values-for-patient-identifier : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-organization : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-practitioner : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-random-blood-sugar : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-risk-behaviour-physical-activity : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-risk-behaviour-tobacco-smoker : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-target-facility-encounter : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-total-cholesterol : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-weight : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-cvd-risk-category : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-follow-up-plan : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-follow-up-reasons : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-medical-conditions : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-risk-behaviour-physical-activity : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-risk-behaviour-tobacco-smoker : 0 / 0 / 1
+</table>
+== n/a ==
+== fsh-generated/resources/Bundle-HIMS-Document-Bundle.json ==
+== fsh-generated/resources/Bundle-HIMS-Transactional-Bundle.json ==
+== fsh-generated/resources/CarePlan-FollowUpAtHLCExample.json ==
+== fsh-generated/resources/CodeSystem-cs-cvd-risk-category.json ==
+== fsh-generated/resources/CodeSystem-cs-follow-up-plan.json ==
+== fsh-generated/resources/CodeSystem-cs-follow-up-reasons.json ==
+== fsh-generated/resources/CodeSystem-cs-identifier-types.json ==
+== fsh-generated/resources/CodeSystem-cs-medical-conditions.json ==
+== fsh-generated/resources/CodeSystem-cs-risk-behaviour-physical-activity.json ==
+== fsh-generated/resources/CodeSystem-cs-risk-behaviour-tobacco-smoker.json ==
+== fsh-generated/resources/Composition-HIMSCompositionExample.json ==
+== fsh-generated/resources/Condition-MedicalHistoryExample.json ==
+== fsh-generated/resources/Encounter-TargetFacilityEncounterExample.json ==
+== fsh-generated/resources/ImplementationGuide-openhie.fhir.sri-lanka.json ==
+== fsh-generated/resources/Observation-BMIExample.json ==
+== fsh-generated/resources/Observation-BloodPressureExample.json ==
+== fsh-generated/resources/Observation-FastingBloodSugarExample.json ==
+== fsh-generated/resources/Observation-HeightExample.json ==
+== fsh-generated/resources/Observation-HypertensionExample.json ==
+== fsh-generated/resources/Observation-RandomBloodSugarExample.json ==
+== fsh-generated/resources/Observation-RiskBehaviourPhysicalActivityExample.json ==
+== fsh-generated/resources/Observation-RiskBehaviourTobaccoSmokerExample.json ==
+== fsh-generated/resources/Observation-TotalCholesterolExample.json ==
+== fsh-generated/resources/Observation-WeightExample.json ==
+== fsh-generated/resources/Organization-OrganizationExample.json ==
+== fsh-generated/resources/Patient-HHIMSPatientExample.json ==
+== fsh-generated/resources/Patient-HIMSPatientExample.json ==
+== fsh-generated/resources/Practitioner-GeneralPractitionerExample.json ==
+== fsh-generated/resources/RiskAssessment-CVDRiskCategoryExample.json ==
+== fsh-generated/resources/ServiceRequest-FollowUpPlanServiceRequestExample.json ==
+== fsh-generated/resources/StructureDefinition-MedicalHistory.json ==
+== fsh-generated/resources/StructureDefinition-blood-pressure.json ==
+== fsh-generated/resources/StructureDefinition-bmi.json ==
+== fsh-generated/resources/StructureDefinition-cvd-risk-category.json ==
+== fsh-generated/resources/StructureDefinition-fasting-blood-sugar.json ==
+== fsh-generated/resources/StructureDefinition-follow-up-at-hlc.json ==
+== fsh-generated/resources/StructureDefinition-follow-up-plan.json ==
+== fsh-generated/resources/StructureDefinition-height.json ==
+== fsh-generated/resources/StructureDefinition-hhims-patient.json ==
+== fsh-generated/resources/StructureDefinition-hims-composition.json ==
+== fsh-generated/resources/StructureDefinition-hims-patient.json ==
+== fsh-generated/resources/StructureDefinition-hypertension.json ==
+== fsh-generated/resources/StructureDefinition-multiple-values-for-patient-identifier.json ==
+== fsh-generated/resources/StructureDefinition-organization.json ==
+== fsh-generated/resources/StructureDefinition-practitioner.json ==
+== fsh-generated/resources/StructureDefinition-random-blood-sugar.json ==
+== fsh-generated/resources/StructureDefinition-risk-behaviour-physical-activity.json ==
+== fsh-generated/resources/StructureDefinition-risk-behaviour-tobacco-smoker.json ==
+== fsh-generated/resources/StructureDefinition-target-facility-encounter.json ==
+== fsh-generated/resources/StructureDefinition-total-cholesterol.json ==
+== fsh-generated/resources/StructureDefinition-weight.json ==
+== fsh-generated/resources/ValueSet-vs-cvd-risk-category.json ==
+== fsh-generated/resources/ValueSet-vs-follow-up-plan.json ==
+== fsh-generated/resources/ValueSet-vs-follow-up-reasons.json ==
+== fsh-generated/resources/ValueSet-vs-medical-conditions.json ==
+== fsh-generated/resources/ValueSet-vs-risk-behaviour-physical-activity.json ==
+== fsh-generated/resources/ValueSet-vs-risk-behaviour-tobacco-smoker.json ==

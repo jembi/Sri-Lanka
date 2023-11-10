@@ -1,0 +1,56 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "cs-identifier-types",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-sensitive code system <code>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-identifier-types</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">SCN<a name=\"cs-identifier-types-SCN\"> </a></td><td>Senior Citizen Number</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">PHN<a name=\"cs-identifier-types-PHN\"> </a></td><td>Personal Health Number</td><td>Needs definition</td></tr></table></div>"
+  },
+  "url" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-identifier-types",
+  "version" : "0.1.0",
+  "name" : "CSIdentifierTypes",
+  "title" : "Patient Business Identifier Types",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-10-19T09:31:51+00:00",
+  "publisher" : "Jembi Health Systems",
+  "contact" : [{
+    "name" : "Jembi Health Systems",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.jembi.org"
+    },
+    {
+      "system" : "email",
+      "value" : "info@jembi.org"
+    }]
+  },
+  {
+    "name" : "Richard Langford",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "richard.langford@jembi.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Patient Business Identifier Types",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 2,
+  "concept" : [{
+    "code" : "SCN",
+    "display" : "Senior Citizen Number",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "PHN",
+    "display" : "Personal Health Number",
+    "definition" : "Needs definition"
+  }]
+}

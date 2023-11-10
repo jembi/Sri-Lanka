@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="HIMSCompositionExample"/>
+  <meta>
+    <profile value="http://openhie.org/fhir/sri-lanka/StructureDefinition/hims-composition"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Composition</b><a name="HIMSCompositionExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Composition &quot;HIMSCompositionExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-hims-composition.html">HIMS Composition</a></p></div><p><b>identifier</b>: id: PAT0001-v1</p><p><b>status</b>: final</p><p><b>type</b>: 11502-2 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#11502-2)</span></p><p><b>encounter</b>: <a href="Encounter-TargetFacilityEncounterExample.html">Encounter/TargetFacilityEncounterExample</a></p><p><b>date</b>: 2023-08-22</p><p><b>author</b>: </p><ul><li><a href="Practitioner-GeneralPractitionerExample.html">Practitioner/GeneralPractitionerExample</a> &quot; SMITH&quot;</li><li><a href="Organization-OrganizationExample.html">Organization/OrganizationExample</a> &quot;Some Health Facility&quot;</li></ul><p><b>title</b>: Sri Lanka team to advise on title</p></div>
+  </text>
+  <identifier>
+    <system value="http://openhie.org/fhir/sri-lanka/identifier/document"/>
+    <value value="PAT0001-v1"/>
+  </identifier>
+  <status value="final"/>
+  <type>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="11502-2"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/HIMSPatientExample"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/TargetFacilityEncounterExample"/>
+  </encounter>
+  <date value="2023-08-22"/>
+  <author>
+    <reference value="Practitioner/GeneralPractitionerExample"/>
+  </author>
+  <author>
+    <reference value="Organization/OrganizationExample"/>
+  </author>
+  <title value="Sri Lanka team to advise on title"/>
+  <section>
+    <title value="Risk Behaviour - Assessment of Physical Activity"/>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="398636004"/>
+      </coding>
+    </code>
+    <text>
+      <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>To be added</p></div>
+    </text>
+    <entry>
+      <reference value="Observation/RiskBehaviourPhysicalActivityExample"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Risk Behaviour - Tobacco smoking Assessment"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="72166-2"/>
+      </coding>
+    </code>
+    <text>
+      <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>To be added</p></div>
+    </text>
+    <entry>
+      <reference value="Observation/RiskBehaviourTobaccoSmokerExample"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Blood Pressure"/>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="75367002"/>
+      </coding>
+    </code>
+    <text>
+      <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>To be added</p></div>
+    </text>
+    <entry>
+      <reference value="Observation/BloodPressureExample"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Patient Weight"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="3141-9"/>
+      </coding>
+    </code>
+    <text>
+      <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>To be added</p></div>
+    </text>
+    <entry>
+      <reference value="Observation/WeightExample"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Patient Height"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="3137-7"/>
+      </coding>
+    </code>
+    <text>
+      <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>To be added</p></div>
+    </text>
+    <entry>
+      <reference value="Observation/HeightExample"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Patient BMI"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="97057-4"/>
+      </coding>
+    </code>
+    <text>
+      <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>To be added</p></div>
+    </text>
+    <entry>
+      <reference value="Observation/BMIExample"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Bloodwork"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="LA17759-4"/>
+      </coding>
+    </code>
+    <text>
+      <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>To be added</p></div>
+    </text>
+    <entry>
+      <reference value="Observation/RandomBloodSugarExample"/>
+    </entry>
+    <entry>
+      <reference value="Observation/FastingBloodSugarExample"/>
+    </entry>
+    <entry>
+      <reference value="Observation/TotalCholesterolExample"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Risk Assessment Report"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="71482-4"/>
+      </coding>
+    </code>
+    <text>
+      <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>To be added</p></div>
+    </text>
+    <entry>
+      <reference value="RiskAssessment/CVSRiskFactorExample"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Referral Requests"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="LA24277-8"/>
+      </coding>
+    </code>
+    <text>
+      <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>To be added</p></div>
+    </text>
+    <entry>
+      <reference value="ServiceRequest/FollowUpPlanServiceRequestExample"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Treatment and Care"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="68833-3"/>
+      </coding>
+    </code>
+    <text>
+      <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>To be added</p></div>
+    </text>
+    <entry>
+      <reference value="CarePlan/FollowUpAtHLCExample"/>
+    </entry>
+  </section>
+</Composition>

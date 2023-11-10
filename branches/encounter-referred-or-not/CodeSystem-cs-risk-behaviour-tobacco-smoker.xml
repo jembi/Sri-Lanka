@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="cs-risk-behaviour-tobacco-smoker"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This case-sensitive code system <code>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-tobacco-smoker</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">Non-User<a name="cs-risk-behaviour-tobacco-smoker-Non-User"> </a></td><td>Sri Lanka team to provide defitinion for this coded value</td></tr><tr><td style="white-space:nowrap">User<a name="cs-risk-behaviour-tobacco-smoker-User"> </a></td><td>Sri Lanka team to provide defitinion for this coded value</td></tr></table></div>
+  </text>
+  <url value="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-tobacco-smoker"/>
+  <version value="0.1.0"/>
+  <name value="CSRiskBehaviourTobaccoSmoker"/>
+  <title value="Risk Assessment - Tobacco Smoker"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2023-10-13T06:24:40+00:00"/>
+  <publisher value="Jembi Health Systems"/>
+  <contact>
+    <name value="Jembi Health Systems"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.jembi.org"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@jembi.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Richard Langford"/>
+    <telecom>
+      <system value="email"/>
+      <value value="richard.langford@jembi.org"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Risk Assessment - Tobacco Smoker"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="2"/>
+  <concept>
+    <code value="Non-User"/>
+    <display value="Non-User"/>
+    <definition value="Sri Lanka team to provide defitinion for this coded value"/>
+  </concept>
+  <concept>
+    <code value="User"/>
+    <display value="User"/>
+    <definition value="Sri Lanka team to provide defitinion for this coded value"/>
+  </concept>
+</CodeSystem>

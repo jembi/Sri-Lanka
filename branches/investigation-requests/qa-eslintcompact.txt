@@ -1,0 +1,10 @@
+﻿/github/workspace/fsh-generated/resources/Bundle-HIMS-Document-Bundle.json: line 666, col 12, Info - None of the codings provided are in the value set 'Encounter Reason Codes' (http://hl7.org/fhir/ValueSet/encounter-reason|4.0.1), and a coding is recommended to come from this value set) (codes = http://openhie.org/fhir/sri-lanka/CodeSystem/cs-reason-for-encounter#LKRFE73) (CODEINVALID)
+/github/workspace/fsh-generated/resources/Bundle-HIMS-Transactional-Bundle.json: line 282, col 12, Info - None of the codings provided are in the value set 'Encounter Reason Codes' (http://hl7.org/fhir/ValueSet/encounter-reason|4.0.1), and a coding is recommended to come from this value set) (codes = http://openhie.org/fhir/sri-lanka/CodeSystem/cs-reason-for-encounter#LKRFE73) (CODEINVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-drug-dispensation.json: line 1, col 65177, Info - The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk (INVALID)
+
+SriLanka : Validation Results
+=========================================
+
+err = 0, warn = 0, info = 3
+IG Publisher Version: 1.4.15
+Generated Mon Oct 16 06:43:21 UTC 2023. FHIR version 4.0.1 for openhie.fhir.sri-lanka#0.1.0 (canonical = http://openhie.org/fhir/sri-lanka)

@@ -1,0 +1,13 @@
+﻿/github/workspace/fsh-generated/resources/Bundle-HIMS-Document-Bundle.json: line 666, col 12, Info - None of the codings provided are in the value set 'Encounter Reason Codes' (http://hl7.org/fhir/ValueSet/encounter-reason|4.0.1), and a coding is recommended to come from this value set) (codes = http://openhie.org/fhir/sri-lanka/CodeSystem/cs-reason-for-encounter#LKRFE73) (CODEINVALID)
+/github/workspace/fsh-generated/resources/Bundle-HIMS-Transactional-Bundle.json: line 282, col 12, Info - None of the codings provided are in the value set 'Encounter Reason Codes' (http://hl7.org/fhir/ValueSet/encounter-reason|4.0.1), and a coding is recommended to come from this value set) (codes = http://openhie.org/fhir/sri-lanka/CodeSystem/cs-reason-for-encounter#LKRFE73) (CODEINVALID)
+/github/workspace/fsh-generated/resources/ImagingStudy-ImagingExample.json: line 32, col 8, Warning - ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html not found (CODEINVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-drug-dispensation.json: line 1, col 65314, Info - The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk (INVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-imaging-study.json: line 0, col 0, Warning - The valueSet reference http://www.rsna.org/RadLex_Playbook.aspx on element ImagingStudy.procedureCode could not be resolved (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/StructureDefinition-imaging-study.json: line 0, col 0, Warning - The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1 on element ImagingStudy.series.instance.sopClass could not be resolved (BUSINESSRULE)
+
+SriLanka : Validation Results
+=========================================
+
+err = 0, warn = 3, info = 3
+IG Publisher Version: 1.4.16
+Generated Tue Oct 17 08:59:44 UTC 2023. FHIR version 4.0.1 for openhie.fhir.sri-lanka#0.1.0 (canonical = http://openhie.org/fhir/sri-lanka)

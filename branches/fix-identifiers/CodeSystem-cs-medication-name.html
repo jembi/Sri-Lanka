@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Medication Names - HL7 FHIR Implementation Guide: Sri Lanka v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/openhie.css" rel="stylesheet"/>
+<link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"3.52"}
+    h3,h4,h5,h6{--heading-prefix:"3.52"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+<!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://ohie.org/">
+            <img height="71" alt="Project home" src="assets/images/home.png"/>
+          </a>
+        </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="70" alt="FHIR website" src="assets/images/fire.png"/> </a>
+        </div>
+
+<!-- search icon - if you want -->
+<!--
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 FHIR Implementation Guide: Sri Lanka</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - STU1
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul
+	xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+	<li>
+		<a href="index.html">IG Home</a>
+	</li>
+	<li>
+		<a href="toc.html">Table of Contents</a>
+	</li>
+<!--
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Background<b class="caret"></b>
+		</a>
+
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Description<b class="caret"></b>
+		</a>
+
+	</li>
+-->
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Specifications<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="artifacts.html">Artifact Index</a>
+			</li>
+		</ul>
+	</li>
+</ul>      
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Medication Names</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HL7 FHIR Implementation Guide: Sri Lanka, published by Jembi Health Systems. This is not an authorized publication; it is the continuous build for version 0.1.0). This version is based on the current content of <a href="https://github.com/jembi/Sri-Lanka">https://github.com/jembi/Sri-Lanka</a> and changes regularly. See the <a href="http://openhie.org/fhir/sri-lanka/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="CodeSystem-cs-medication-name.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="CodeSystem-cs-medication-name.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="CodeSystem-cs-medication-name.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+  <h2 id="root">CodeSystem: Medication Names
+
+  </h2>
+
+  <table class="colsi">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://openhie.org/fhir/sri-lanka/CodeSystem/cs-medication-name<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-medication-name"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-medication-name|0.1.0"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Active
+          
+            as of 2023-10-31
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">CSMedicationNames</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+<p>
+<p>Medication Names</p>
+
+</p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <p>
+  This Code system is referenced in the content logical definition of the following value sets:
+  </p>
+
+  
+<ul>
+ <li><a href="ValueSet-vs-medication-name.html">VSMedicationNames</a></li>
+</ul>
+
+
+  <div xmlns="http://www.w3.org/1999/xhtml"><p>This case-sensitive code system <code>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-medication-name</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">Alpha-Chole-Calciferol<a name="cs-medication-name-Alpha-Chole-Calciferol"> </a></td><td>Alpha Chole Calciferol</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Acarbose<a name="cs-medication-name-Acarbose"> </a></td><td>Acarbose</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Aciclovir<a name="cs-medication-name-Aciclovir"> </a></td><td>aciclovir</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Alendronate<a name="cs-medication-name-Alendronate"> </a></td><td>Alendronate</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Allopurinol<a name="cs-medication-name-Allopurinol"> </a></td><td>Allopurinol</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Alprazolam<a name="cs-medication-name-Alprazolam"> </a></td><td>Alprazolam</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Amiodarone<a name="cs-medication-name-Amiodarone"> </a></td><td>Amiodarone</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Amitriptyline<a name="cs-medication-name-Amitriptyline"> </a></td><td>amitriptyline</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Amlodipine<a name="cs-medication-name-Amlodipine"> </a></td><td>Amlodipine</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Amoxycillin<a name="cs-medication-name-Amoxycillin"> </a></td><td>Amoxycillin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Ascorbic-Acid<a name="cs-medication-name-Ascorbic-Acid"> </a></td><td>Ascorbic acid</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Aspirin<a name="cs-medication-name-Aspirin"> </a></td><td>aspirin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Atorvastatin<a name="cs-medication-name-Atorvastatin"> </a></td><td>atorvastatin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Cetrizine<a name="cs-medication-name-Cetrizine"> </a></td><td>Cetrizine</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Chloramphenicol<a name="cs-medication-name-Chloramphenicol"> </a></td><td>chloramphenicol</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Chlorpheniramine<a name="cs-medication-name-Chlorpheniramine"> </a></td><td>chlorpheniramine</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Chlorpromazine<a name="cs-medication-name-Chlorpromazine"> </a></td><td>chlorpromazine</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Cilnidipine<a name="cs-medication-name-Cilnidipine"> </a></td><td>Cilnidipine</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Ciprofloxacin<a name="cs-medication-name-Ciprofloxacin"> </a></td><td>ciprofloxacin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Clarythromycin<a name="cs-medication-name-Clarythromycin"> </a></td><td>clarythromycin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Clinidipine<a name="cs-medication-name-Clinidipine"> </a></td><td>clinidipine</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Clobazam<a name="cs-medication-name-Clobazam"> </a></td><td>Clobazam</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Clonazepam<a name="cs-medication-name-Clonazepam"> </a></td><td>clonazepam</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Clopidogrel<a name="cs-medication-name-Clopidogrel"> </a></td><td>clopidogrel</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Clotrimazole<a name="cs-medication-name-Clotrimazole"> </a></td><td>Clotrimazole</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Cloxacillin<a name="cs-medication-name-Cloxacillin"> </a></td><td>Cloxacillin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Co-Q-Enzyme<a name="cs-medication-name-Co-Q-Enzyme"> </a></td><td>Co - Q enzyme</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Co-Amoxiclav<a name="cs-medication-name-Co-Amoxiclav"> </a></td><td>Co-amoxiclav</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Co-Careldopa-Carbidopa-Bp+Levodopa-Bp<a name="cs-medication-name-Co-Careldopa-Carbidopa-Bp.43Levodopa-Bp"> </a></td><td>Co-Careldopa (Carbidopa BP + Levodopa BP)</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Concer<a name="cs-medication-name-Concer"> </a></td><td>concer</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Cotrimoxazole<a name="cs-medication-name-Cotrimoxazole"> </a></td><td>cotrimoxazole</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Crepe-Bandage<a name="cs-medication-name-Crepe-Bandage"> </a></td><td>crepe bandage</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Dapaglifiozin<a name="cs-medication-name-Dapaglifiozin"> </a></td><td>Dapaglifiozin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Dapoxetine<a name="cs-medication-name-Dapoxetine"> </a></td><td>Dapoxetine</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Desioratadine<a name="cs-medication-name-Desioratadine"> </a></td><td>Desioratadine</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Dexamethasone<a name="cs-medication-name-Dexamethasone"> </a></td><td>dexamethasone</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Diamicron<a name="cs-medication-name-Diamicron"> </a></td><td>Diamicron</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Diazepam<a name="cs-medication-name-Diazepam"> </a></td><td>diazepam</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Diclofenac-Na<a name="cs-medication-name-Diclofenac-Na"> </a></td><td>diclofenac-Na</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Diethylcarbamazine-Hetrazan<a name="cs-medication-name-Diethylcarbamazine-Hetrazan"> </a></td><td>diethylcarbamazine (Hetrazan)</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Digoxin<a name="cs-medication-name-Digoxin"> </a></td><td>digoxin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Diltiazem<a name="cs-medication-name-Diltiazem"> </a></td><td>Diltiazem</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Domperidone<a name="cs-medication-name-Domperidone"> </a></td><td>Domperidone</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Donepezil<a name="cs-medication-name-Donepezil"> </a></td><td>Donepezil</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Doxycycline<a name="cs-medication-name-Doxycycline"> </a></td><td>Doxycycline</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Asthalin<a name="cs-medication-name-Asthalin"> </a></td><td>Asthalin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Beclate<a name="cs-medication-name-Beclate"> </a></td><td>Beclate</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Beclomethazone-Diproprionate<a name="cs-medication-name-Beclomethazone-Diproprionate"> </a></td><td>Beclomethazone diproprionate</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Dp-Haler<a name="cs-medication-name-Dp-Haler"> </a></td><td>DP Haler</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Salmetrol+Fluticazone<a name="cs-medication-name-Salmetrol.43Fluticazone"> </a></td><td>Salmetrol + Fluticazone</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Ecosprin<a name="cs-medication-name-Ecosprin"> </a></td><td>Ecosprin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Empagliflozin<a name="cs-medication-name-Empagliflozin"> </a></td><td>Empagliflozin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Enalapril<a name="cs-medication-name-Enalapril"> </a></td><td>enalapril</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Erythromycin<a name="cs-medication-name-Erythromycin"> </a></td><td>erythromycin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Erythropoietin<a name="cs-medication-name-Erythropoietin"> </a></td><td>Erythropoietin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Ezetimibe<a name="cs-medication-name-Ezetimibe"> </a></td><td>Ezetimibe</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Famotidine<a name="cs-medication-name-Famotidine"> </a></td><td>Famotidine</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Fenofibrate<a name="cs-medication-name-Fenofibrate"> </a></td><td>Fenofibrate</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Ferrous-Fumarate<a name="cs-medication-name-Ferrous-Fumarate"> </a></td><td>ferrous fumarate</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Ferrous-Sulphate<a name="cs-medication-name-Ferrous-Sulphate"> </a></td><td>ferrous sulphate</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Finasteride<a name="cs-medication-name-Finasteride"> </a></td><td>Finasteride</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Flucloxacillin<a name="cs-medication-name-Flucloxacillin"> </a></td><td>FLUCLOXACILLIN</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Flunarizine<a name="cs-medication-name-Flunarizine"> </a></td><td>Flunarizine</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Fluoxetine<a name="cs-medication-name-Fluoxetine"> </a></td><td>Fluoxetine</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Folic-Acid<a name="cs-medication-name-Folic-Acid"> </a></td><td>folic acid</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Frisium<a name="cs-medication-name-Frisium"> </a></td><td>frisium</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Frusemide<a name="cs-medication-name-Frusemide"> </a></td><td>frusemide</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Furazolidone<a name="cs-medication-name-Furazolidone"> </a></td><td>furazolidone</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Fusigel<a name="cs-medication-name-Fusigel"> </a></td><td>FUSIGEL</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Gabapentin<a name="cs-medication-name-Gabapentin"> </a></td><td>Gabapentin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Glibenclamide-Diaonil<a name="cs-medication-name-Glibenclamide-Diaonil"> </a></td><td>glibenclamide (Diaonil)</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Gliclazide<a name="cs-medication-name-Gliclazide"> </a></td><td>gliclazide</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Glimepride<a name="cs-medication-name-Glimepride"> </a></td><td>Glimepride</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Glucophage<a name="cs-medication-name-Glucophage"> </a></td><td>Glucophage</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Glycery/Trinitrate-Gtn-Sublingual<a name="cs-medication-name-Glycery.47Trinitrate-Gtn-Sublingual"> </a></td><td>glycery/trinitrate (GTN) sublingual</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Glycomet<a name="cs-medication-name-Glycomet"> </a></td><td>Glycomet</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Griseofulvin<a name="cs-medication-name-Griseofulvin"> </a></td><td>griseofulvin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Hydrochlorothiazide<a name="cs-medication-name-Hydrochlorothiazide"> </a></td><td>hydrochlorothiazide</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Hydrocortisone<a name="cs-medication-name-Hydrocortisone"> </a></td><td>Hydrocortisone</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Hyosine-Butylbromide-Buscopan<a name="cs-medication-name-Hyosine-Butylbromide-Buscopan"> </a></td><td>Hyosine butylbromide (Buscopan)</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Ibuprofen<a name="cs-medication-name-Ibuprofen"> </a></td><td>ibuprofen</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Imipramine<a name="cs-medication-name-Imipramine"> </a></td><td>imipramine</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Indapamide<a name="cs-medication-name-Indapamide"> </a></td><td>Indapamide</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Indomethacin<a name="cs-medication-name-Indomethacin"> </a></td><td>indomethacin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Insulin<a name="cs-medication-name-Insulin"> </a></td><td>insulin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Irbesartan<a name="cs-medication-name-Irbesartan"> </a></td><td>irbesartan</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Isosorbide-Dinitrate-Isdn<a name="cs-medication-name-Isosorbide-Dinitrate-Isdn"> </a></td><td>isosorbide dinitrate (ISDN)</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Isosorbide-Mononitrate<a name="cs-medication-name-Isosorbide-Mononitrate"> </a></td><td>isosorbide mononitrate</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Ivabradine<a name="cs-medication-name-Ivabradine"> </a></td><td>Ivabradine</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Kcl<a name="cs-medication-name-Kcl"> </a></td><td>KCL</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Lamotrigine<a name="cs-medication-name-Lamotrigine"> </a></td><td>Lamotrigine</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Levetiracetam<a name="cs-medication-name-Levetiracetam"> </a></td><td>Levetiracetam</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Levofloxacin<a name="cs-medication-name-Levofloxacin"> </a></td><td>Levofloxacin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Linagliptin<a name="cs-medication-name-Linagliptin"> </a></td><td>linagliptin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Lithium-Carbonate<a name="cs-medication-name-Lithium-Carbonate"> </a></td><td>lithium carbonate</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Losartan<a name="cs-medication-name-Losartan"> </a></td><td>Losartan</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Methyl-Salicylate<a name="cs-medication-name-Methyl-Salicylate"> </a></td><td>Methyl Salicylate</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Magnesium-Sulphate<a name="cs-medication-name-Magnesium-Sulphate"> </a></td><td>magnesium sulphate</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Manorest<a name="cs-medication-name-Manorest"> </a></td><td>Manorest</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Beclomethasone<a name="cs-medication-name-Beclomethasone"> </a></td><td>Beclomethasone</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Ipravent<a name="cs-medication-name-Ipravent"> </a></td><td>Ipravent</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Salbutamol-Asthalin<a name="cs-medication-name-Salbutamol-Asthalin"> </a></td><td>Salbutamol (Asthalin)</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Salmetrol/Fluticazone<a name="cs-medication-name-Salmetrol.47Fluticazone"> </a></td><td>Salmetrol / Fluticazone</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Seroflo<a name="cs-medication-name-Seroflo"> </a></td><td>Seroflo</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Tiova<a name="cs-medication-name-Tiova"> </a></td><td>Tiova</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Mebendazole<a name="cs-medication-name-Mebendazole"> </a></td><td>Mebendazole</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Metalazone<a name="cs-medication-name-Metalazone"> </a></td><td>Metalazone</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Metaprolol<a name="cs-medication-name-Metaprolol"> </a></td><td>Metaprolol</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Metformin<a name="cs-medication-name-Metformin"> </a></td><td>Metformin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Methotrexate<a name="cs-medication-name-Methotrexate"> </a></td><td>Methotrexate</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Methyl-Prednisolone<a name="cs-medication-name-Methyl-Prednisolone"> </a></td><td>Methyl Prednisolone</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Methyldopa-Aldomet<a name="cs-medication-name-Methyldopa-Aldomet"> </a></td><td>methyldopa (Aldomet)</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Metronidazole<a name="cs-medication-name-Metronidazole"> </a></td><td>metronidazole</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Miconazole<a name="cs-medication-name-Miconazole"> </a></td><td>MICONAZOLE</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Minipress<a name="cs-medication-name-Minipress"> </a></td><td>Minipress</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Montelukast<a name="cs-medication-name-Montelukast"> </a></td><td>Montelukast</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Mycostatin<a name="cs-medication-name-Mycostatin"> </a></td><td>mycostatin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Nebivolol<a name="cs-medication-name-Nebivolol"> </a></td><td>Nebivolol</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Neuroton<a name="cs-medication-name-Neuroton"> </a></td><td>Neuroton</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Nicorandil<a name="cs-medication-name-Nicorandil"> </a></td><td>Nicorandil</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Nifedipine<a name="cs-medication-name-Nifedipine"> </a></td><td>nifedipine</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Nitrocontin<a name="cs-medication-name-Nitrocontin"> </a></td><td>Nitrocontin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Nitrofurantoin<a name="cs-medication-name-Nitrofurantoin"> </a></td><td>Nitrofurantoin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Noklot<a name="cs-medication-name-Noklot"> </a></td><td>Noklot</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Normal-Saline-Nasal-Drops<a name="cs-medication-name-Normal-Saline-Nasal-Drops"> </a></td><td>normal saline nasal drops</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Olanzapine<a name="cs-medication-name-Olanzapine"> </a></td><td>olanzapine</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Omeprazole<a name="cs-medication-name-Omeprazole"> </a></td><td>omeprazole</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Oral-Rehydration-Salts<a name="cs-medication-name-Oral-Rehydration-Salts"> </a></td><td>oral rehydration salts</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Pantaprazole<a name="cs-medication-name-Pantaprazole"> </a></td><td>Pantaprazole</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Paracetamol<a name="cs-medication-name-Paracetamol"> </a></td><td>paracetamol</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Penicillin<a name="cs-medication-name-Penicillin"> </a></td><td>penicillin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Persantin<a name="cs-medication-name-Persantin"> </a></td><td>Persantin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Capsulephenobarbital-Luminal<a name="cs-medication-name-Capsulephenobarbital-Luminal"> </a></td><td>Capsulephenobarbital (Luminal)</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Phenytoin-Sodium<a name="cs-medication-name-Phenytoin-Sodium"> </a></td><td>phenytoin sodium</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Pioglitazone<a name="cs-medication-name-Pioglitazone"> </a></td><td>Pioglitazone</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Potassium-Permanganate<a name="cs-medication-name-Potassium-Permanganate"> </a></td><td>potassium permanganate</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Prazosin<a name="cs-medication-name-Prazosin"> </a></td><td>prazosin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Pregabalin<a name="cs-medication-name-Pregabalin"> </a></td><td>Pregabalin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Prednisolone<a name="cs-medication-name-Prednisolone"> </a></td><td>prednisolone</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Prochlorperazine-Stemetil<a name="cs-medication-name-Prochlorperazine-Stemetil"> </a></td><td>prochlorperazine (Stemetil)</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Promethazine-Phenergan<a name="cs-medication-name-Promethazine-Phenergan"> </a></td><td>promethazine (Phenergan)</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Propranolol<a name="cs-medication-name-Propranolol"> </a></td><td>propranolol</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Propyithiouracil<a name="cs-medication-name-Propyithiouracil"> </a></td><td>Propyithiouracil</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Pulse-Tri-Omega<a name="cs-medication-name-Pulse-Tri-Omega"> </a></td><td>Pulse Tri Omega</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Pyrantel-Pamoate<a name="cs-medication-name-Pyrantel-Pamoate"> </a></td><td>pyrantel pamoate</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Quetiapine<a name="cs-medication-name-Quetiapine"> </a></td><td>Quetiapine</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Ranalazine<a name="cs-medication-name-Ranalazine"> </a></td><td>Ranalazine</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Rifaximin<a name="cs-medication-name-Rifaximin"> </a></td><td>Rifaximin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Risperidone<a name="cs-medication-name-Risperidone"> </a></td><td>risperidone</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Ropinirole<a name="cs-medication-name-Ropinirole"> </a></td><td>Ropinirole</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Rosuvastatin<a name="cs-medication-name-Rosuvastatin"> </a></td><td>Rosuvastatin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Salbutamol<a name="cs-medication-name-Salbutamol"> </a></td><td>salbutamol</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Sertalin<a name="cs-medication-name-Sertalin"> </a></td><td>Sertalin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Sildenafil<a name="cs-medication-name-Sildenafil"> </a></td><td>sildenafil</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Sinemet<a name="cs-medication-name-Sinemet"> </a></td><td>Sinemet</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Sitagliptin<a name="cs-medication-name-Sitagliptin"> </a></td><td>sitagliptin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Sodium-Bicarbonate-Nahco3<a name="cs-medication-name-Sodium-Bicarbonate-Nahco3"> </a></td><td>Sodium Bicarbonate (NaHCO3)</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Sodium-Bicarbonate-Ear-Drops<a name="cs-medication-name-Sodium-Bicarbonate-Ear-Drops"> </a></td><td>sodium bicarbonate ear drops</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Sodium-Valproate<a name="cs-medication-name-Sodium-Valproate"> </a></td><td>sodium valproate</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Soframycin-Cream<a name="cs-medication-name-Soframycin-Cream"> </a></td><td>Soframycin Cream</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Spacer-Device<a name="cs-medication-name-Spacer-Device"> </a></td><td>Spacer Device</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Spironolactone<a name="cs-medication-name-Spironolactone"> </a></td><td>spironolactone</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Stematil<a name="cs-medication-name-Stematil"> </a></td><td>Stematil</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Sulphasalazine<a name="cs-medication-name-Sulphasalazine"> </a></td><td>sulphasalazine</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Syndpa<a name="cs-medication-name-Syndpa"> </a></td><td>Syndpa</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Tamsulosin<a name="cs-medication-name-Tamsulosin"> </a></td><td>tamsulosin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Tazloc<a name="cs-medication-name-Tazloc"> </a></td><td>tazloc</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Telmisartan<a name="cs-medication-name-Telmisartan"> </a></td><td>Telmisartan</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Theophylline<a name="cs-medication-name-Theophylline"> </a></td><td>theophylline</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Thiamin<a name="cs-medication-name-Thiamin"> </a></td><td>Thiamin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Thyroxine<a name="cs-medication-name-Thyroxine"> </a></td><td>thyroxine</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Tolbutamide<a name="cs-medication-name-Tolbutamide"> </a></td><td>tolbutamide</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Topiramate<a name="cs-medication-name-Topiramate"> </a></td><td>Topiramate</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Tramadol<a name="cs-medication-name-Tramadol"> </a></td><td>tramadol</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Trifluoperazine-Stelazine<a name="cs-medication-name-Trifluoperazine-Stelazine"> </a></td><td>trifluoperazine (Stelazine)</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Urimax<a name="cs-medication-name-Urimax"> </a></td><td>Urimax</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Ursodiol<a name="cs-medication-name-Ursodiol"> </a></td><td>Ursodiol</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Verapamil<a name="cs-medication-name-Verapamil"> </a></td><td>verapamil</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Vildagliptin<a name="cs-medication-name-Vildagliptin"> </a></td><td>vildagliptin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Vitamin-A-&amp;-D<a name="cs-medication-name-Vitamin-A-.38-D"> </a></td><td>vitamin A &amp; D</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Vitamin-B<a name="cs-medication-name-Vitamin-B"> </a></td><td>vitamin B</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Vitamin-E<a name="cs-medication-name-Vitamin-E"> </a></td><td>Vitamin E</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Warfarin<a name="cs-medication-name-Warfarin"> </a></td><td>warfarin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Zinc-Sulphate<a name="cs-medication-name-Zinc-Sulphate"> </a></td><td>Zinc Sulphate</td><td>Needs definition</td></tr></table></div>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+           
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2021+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.sri-lanka#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 31, 2023 12:18+0000">2023-10-31</span>
+          <br/>
+          <span style="color: #FFFF77">
+                      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+                 <a style="color: #81BEF7" href="qa.html">QA Report</a> |
+                 
+                 <a style="color: #81BEF7" target="_blank" href="http://openhie.org/fhir/sri-lanka/history.html">Version History</a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC-BY" src="assets/images/cc-by.png" height="17"/></a> |
+                 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+  <!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

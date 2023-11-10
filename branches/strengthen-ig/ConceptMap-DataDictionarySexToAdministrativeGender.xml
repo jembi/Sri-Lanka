@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="DataDictionarySexToAdministrativeGender"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p>Mapping from (not specified) to (not specified)</p><p>ACTIVE. Published on 2023-08-09 by Jembi Health Systems (Jembi Health Systems: <a href="https://www.jembi.org">https://www.jembi.org</a>, <a href="mailto:info@jembi.org">info@jembi.org</a>, Richard Langford: <a href="mailto:richard.langford@jembi.org">richard.langford@jembi.org</a>). </p><div><p>Mapping to and from data dictionary sex coding to FHIR Administrative Gender.</p>
+</div><br/><p><b>Group 1</b>Mapping from <a href="CodeSystem-cs-register-patient-codes.html">Register Patient CodeSystem for Data Elements</a> to <a href="http://hl7.org/fhir/R4/codesystem-administrative-gender.html">AdministrativeGender</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>RP21 (Male)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#null"/></td><td>male</td></tr><tr><td>RP22 (Female)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#null"/></td><td>female</td></tr><tr><td>RP23 (Unknown)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#null"/></td><td>unknown</td></tr><tr><td>RP24 (Other)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#null"/></td><td>other</td></tr></table><hr/><p><b>Group 2</b>Mapping from <a href="http://hl7.org/fhir/R4/codesystem-administrative-gender.html">AdministrativeGender</a> to <a href="CodeSystem-cs-register-patient-codes.html">Register Patient CodeSystem for Data Elements</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>male</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#null"/></td><td>RP21 (Male)</td><td/></tr><tr><td>female</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#null"/></td><td>RP22 (Female)</td><td/></tr><tr><td>unknown</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#null"/></td><td>RP23 (Unknown)</td><td/></tr><tr><td>other</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#null"/></td><td>RP24 (Other)</td><td>The source concept is more specific than the target</td></tr></table></div>
+  </text>
+  <url value="http://openhie.org/fhir/sri-lanka/ConceptMap/DataDictionarySexToAdministrativeGender"/>
+  <version value="0.1.0"/>
+  <name value="DataDictionary_SexToAdministrativeGender"/>
+  <title value="ConceptMap to and From data dictionary sex to administrative gender"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2023-08-09"/>
+  <publisher value="Jembi Health Systems"/>
+  <contact>
+    <name value="Jembi Health Systems"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.jembi.org"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@jembi.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Richard Langford"/>
+    <telecom>
+      <system value="email"/>
+      <value value="richard.langford@jembi.org"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Mapping to and from data dictionary sex coding to FHIR Administrative Gender."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-register-patient-codes"/>
+    <target value="http://hl7.org/fhir/administrative-gender"/>
+    <element>
+      <code value="RP21"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="male"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="RP22"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="female"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="RP23"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="unknown"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="RP24"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="other"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="http://hl7.org/fhir/administrative-gender"/>
+    <target value="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-register-patient-codes"/>
+    <element>
+      <code value="male"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="RP21"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="female"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="RP22"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="unknown"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="RP23"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="other"/>
+      <target>
+        <modifierExtension url="http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence">
+          <valueCode value="equivalent"/>
+        </modifierExtension>
+        <code value="RP24"/>
+        <equivalence value="equivalent"/>
+        <comment value="The source concept is more specific than the target"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

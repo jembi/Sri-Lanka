@@ -1,0 +1,128 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/ValueSet/vs-allergies",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSAllergies",
+      "title" : "Allergies",
+      "description" : "Allergies",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/ValueSet/vs-cvd-risk-category",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSCVDRiskCategory",
+      "title" : "Cardiovascular Risk Categories",
+      "description" : "Cardiovascular risk is expressed as a percentage",
+      "systems" : [
+        "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-cvd-risk-category"
+      ]
+    },
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/ValueSet/vs-follow-up-plan",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSFollowUpPlan",
+      "title" : "Follow-up plan",
+      "description" : "Follow-up plan",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/ValueSet/vs-follow-up-reasons",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSFollowUpReasons",
+      "title" : "Follow up at HLC",
+      "description" : "Follow up at Healthy Lifestyle Center",
+      "systems" : [
+        "http://snomed.info/sct",
+        "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-reasons"
+      ]
+    },
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/ValueSet/vs-investigation",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSInvestigations",
+      "title" : "Investigations",
+      "description" : "Investigations",
+      "systems" : [
+        "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-investigation"
+      ]
+    },
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/ValueSet/vs-medical-conditions",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSMedicalConditions",
+      "title" : "Conditions",
+      "description" : "Represents previous, pre-existing and new conditions.",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/ValueSet/vs-medication-name",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSMedicationNames",
+      "title" : "Medication Names",
+      "description" : "Medication Names",
+      "systems" : [
+        "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-medication-name"
+      ]
+    },
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/ValueSet/vs-procedure",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSProcedures",
+      "title" : "Procedures",
+      "description" : "Other Procedures",
+      "systems" : [
+        "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-procedure-imaging",
+        "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-procedure"
+      ]
+    },
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/ValueSet/vs-procedure-imaging",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSImagingProcedures",
+      "title" : "Procedures",
+      "description" : "Imaging Procedures",
+      "systems" : [
+        "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-procedure-imaging"
+      ]
+    },
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/ValueSet/vs-reason-for-encounter",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSReasonForEncounter",
+      "title" : "Reason For Encounter",
+      "description" : "Encounter reasons.",
+      "systems" : [
+        "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-reason-for-encounter"
+      ]
+    },
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/ValueSet/vs-risk-behaviour-physical-activity",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSRiskBehaviourPhysicalActivity",
+      "title" : "Physical Activity",
+      "description" : "Physical Activity Status",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/ValueSet/vs-risk-behaviour-tobacco-smoker",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSRiskBehaviourTobaccoSmoker",
+      "title" : "Tobacco Smoker",
+      "description" : "Tobacco Smoker Status",
+      "systems" : ["http://snomed.info/sct"]
+    }
+  ]
+}

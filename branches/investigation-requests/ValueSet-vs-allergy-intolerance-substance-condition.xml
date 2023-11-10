@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-allergy-intolerance-substance-condition"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  descends from  105590001 (null)</li><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  descends from  373873005 (null)</li><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  descends from  418038007 (null)</li><li>Include all codes defined in <a href="CodeSystem-cs-absent-or-unknown-allergies.html"><code>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-absent-or-unknown-allergies</code></a></li></ul></div>
+  </text>
+  <url value="http://openhie.org/fhir/sri-lanka/ValueSet/vs-allergy-intolerance-substance-condition"/>
+  <version value="0.1.0"/>
+  <name value="VSAllergyIntoleranceSubstanceCondition"/>
+  <title value="Allergy Intolerance"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2023-10-16T06:39:53+00:00"/>
+  <publisher value="Jembi Health Systems"/>
+  <contact>
+    <name value="Jembi Health Systems"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.jembi.org"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@jembi.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Richard Langford"/>
+    <telecom>
+      <system value="email"/>
+      <value value="richard.langford@jembi.org"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="IPS Allergy intolerance codes value set. This value set includes codes from SNOMED Clinical Terms®: all descendants of 373873005 &amp;#124;Pharmaceutical / biologic product (product)&amp;#124;&amp;#59; all descendants of 105590001 &amp;#124;Substance (substance)&amp;#124;&amp;#59; all descendants of 418038007 &amp;#124;Propensity to adverse reactions to substance (finding)&amp;#124; plus codes for absent and unknown allergies."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <version value="http://snomed.info/sct/900000000000207008"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="105590001"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <version value="http://snomed.info/sct/900000000000207008"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="373873005"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <version value="http://snomed.info/sct/900000000000207008"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="418038007"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-absent-or-unknown-allergies"/>
+    </include>
+  </compose>
+</ValueSet>

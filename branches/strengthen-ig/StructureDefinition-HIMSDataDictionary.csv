@@ -1,0 +1,130 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping","Mapping: null"
+"HIMSDataDictionary","HIMSDataDictionary","","","",0,*,"","","","null {[]} {[]}
+","HIMS Master","Data elements for the HIMS Data Dictionary.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","Patient","Observation"
+"HIMSDataDictionary.personalHealthNumber","HIMSDataDictionary.personalHealthNumber","","","",1,1,"","","Y","string {[]} {[]}
+","Personal health number","Unique identifier for the patient, according to the policies applicable to each country.","","","","","","","","","",,,,,"http://openhie.org/fhir/sri-lanka/CodeSystem/cs-register-patient-codes#RP1
+",,,,"HIMSDataDictionary.personalHealthNumber",1,1,"","","Patient.identifier.value"
+"HIMSDataDictionary.nationalIdentityCard","HIMSDataDictionary.nationalIdentityCard","","","",0,*,"","","Y","string {[]} {[]}
+","National identity card","Unique identifier for the patient, according to the policies applicable to each country.","","","","","","","","","",,,,,"http://openhie.org/fhir/sri-lanka/CodeSystem/cs-register-patient-codes#RP2
+",,,,"HIMSDataDictionary.nationalIdentityCard",0,*,"","","Patient.identifier.value"
+"HIMSDataDictionary.passport","HIMSDataDictionary.passport","","","",0,*,"","","Y","string {[]} {[]}
+","Passport","Unique identifier for the patient, according to the policies applicable to each country.","","","","","","","","","",,,,,"http://openhie.org/fhir/sri-lanka/CodeSystem/cs-register-patient-codes#RP3
+",,,,"HIMSDataDictionary.passport",0,*,"","","Patient.identifier.value"
+"HIMSDataDictionary.drivingLicense","HIMSDataDictionary.drivingLicense","","","",0,*,"","","Y","string {[]} {[]}
+","Driving license","Unique identifier for the patient, according to the policies applicable to each country.","","","","","","","","","",,,,,"http://openhie.org/fhir/sri-lanka/CodeSystem/cs-register-patient-codes#RP4
+",,,,"HIMSDataDictionary.drivingLicense",0,*,"","","Patient.identifier.value"
+"HIMSDataDictionary.seniorCitizenNumber","HIMSDataDictionary.seniorCitizenNumber","","","",0,*,"","","Y","string {[]} {[]}
+","Senior citizen number","Unique identifier for the patient, according to the policies applicable to each country.","","","","","","","","","",,,,,"http://openhie.org/fhir/sri-lanka/CodeSystem/cs-register-patient-codes#RP5
+",,,,"HIMSDataDictionary.seniorCitizenNumber",0,*,"","","Patient.identifier.value"
+"HIMSDataDictionary.patientName","HIMSDataDictionary.patientName","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Name","Name","","","","","","","","","",,,,,"http://openhie.org/fhir/sri-lanka/CodeSystem/cs-register-patient-codes#RP18
+",,,,"HIMSDataDictionary.patientName",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Patient.name"
+"HIMSDataDictionary.patientName.id","HIMSDataDictionary.patientName.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"HIMSDataDictionary.patientName.extension","HIMSDataDictionary.patientName.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a"
+"HIMSDataDictionary.patientName.modifierExtension","HIMSDataDictionary.patientName.modifierExtension","","extensions
+user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensions that cannot be ignored even if unrecognized","May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","N/A"
+"HIMSDataDictionary.patientName.fullName","HIMSDataDictionary.patientName.fullName","","","",0,1,"","","","string {[]} {[]}
+","Full name","Patient's full name","","","","","","","","","",,,,,"http://openhie.org/fhir/sri-lanka/CodeSystem/cs-register-patient-codes#RP6
+",,,,"HIMSDataDictionary.patientName.fullName",0,1,"","HIMS-name-1:Only letters and special characters (period, dash) allowed. {$this.matches('[A-Za-z-.]*')}
+","Patient.name.text"
+"HIMSDataDictionary.patientName.firstName","HIMSDataDictionary.patientName.firstName","","","",0,1,"","","","string {[]} {[]}
+","First name","Patient's first name or given name","","","","","","","","","",,,,,"http://openhie.org/fhir/sri-lanka/CodeSystem/cs-register-patient-codes#RP7
+",,,,"HIMSDataDictionary.patientName.firstName",0,1,"","HIMS-name-1:Only letters and special characters (period, dash) allowed. {$this.matches('[A-Za-z-.]*')}
+","Patient.name.given"
+"HIMSDataDictionary.patientName.surname","HIMSDataDictionary.patientName.surname","","","",0,1,"","","","string {[]} {[]}
+","Last name","Patient's family name or last name","","","","","","","","","",,,,,"http://openhie.org/fhir/sri-lanka/CodeSystem/cs-register-patient-codes#RP8
+",,,,"HIMSDataDictionary.patientName.surname",0,1,"","HIMS-name-1:Only letters and special characters (period, dash) allowed. {$this.matches('[A-Za-z-.]*')}
+","Patient.name.family"
+"HIMSDataDictionary.sex","HIMSDataDictionary.sex","","","",1,1,"","","","code {[]} {[]}
+","Sex","Documentation of a specific instance of sex information for the patient","","","","","","","","","",,"required","","http://hl7.org/fhir/ValueSet/administrative-gender","http://openhie.org/fhir/sri-lanka/CodeSystem/cs-register-patient-codes#RP9
+",,,,"HIMSDataDictionary.sex",1,1,"","","Patient.gender"
+"HIMSDataDictionary.address","HIMSDataDictionary.address","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Address","Address","","","","","","","","","",,,,,"http://openhie.org/fhir/sri-lanka/CodeSystem/cs-register-patient-codes#RP19
+",,,,"HIMSDataDictionary.address",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Patient.address"
+"HIMSDataDictionary.address.id","HIMSDataDictionary.address.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"HIMSDataDictionary.address.extension","HIMSDataDictionary.address.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a"
+"HIMSDataDictionary.address.modifierExtension","HIMSDataDictionary.address.modifierExtension","","extensions
+user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensions that cannot be ignored even if unrecognized","May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","N/A"
+"HIMSDataDictionary.address.streetNameAndNr","HIMSDataDictionary.address.streetNameAndNr","","","",0,1,"","","","string {[]} {[]}
+","Street name and number","Street name and number","","","","","","","","","",,,,,"http://openhie.org/fhir/sri-lanka/CodeSystem/cs-register-patient-codes#RP11
+",,,,"HIMSDataDictionary.address.streetNameAndNr",0,1,"","","Patient.address"
+"HIMSDataDictionary.address.city","HIMSDataDictionary.address.city","","","",0,1,"","","","string {[]} {[]}
+","City","City","","","","","","","","","",,,,,"http://openhie.org/fhir/sri-lanka/CodeSystem/cs-register-patient-codes#RP10
+",,,,"HIMSDataDictionary.address.city",0,1,"","","Patient.address.city"
+"HIMSDataDictionary.address.state","HIMSDataDictionary.address.state","","","",0,1,"","","","string {[]} {[]}
+","State","State","","","","","","","","","",,,,,"http://openhie.org/fhir/sri-lanka/CodeSystem/cs-register-patient-codes#RP12
+",,,,"HIMSDataDictionary.address.state",0,1,"","","Patient.address.state"
+"HIMSDataDictionary.address.country","HIMSDataDictionary.address.country","","","",0,1,"","","","string {[]} {[]}
+","Country","Country","","","","","","","","","",,,,,"http://openhie.org/fhir/sri-lanka/CodeSystem/cs-register-patient-codes#RP13
+",,,,"HIMSDataDictionary.address.country",0,1,"","","Patient.address.country"
+"HIMSDataDictionary.address.postalCode","HIMSDataDictionary.address.postalCode","","","",0,1,"","","","string {[]} {[]}
+","Postal code","Postal code","","","","","","","","","",,,,,"http://openhie.org/fhir/sri-lanka/CodeSystem/cs-register-patient-codes#RP14
+",,,,"HIMSDataDictionary.address.postalCode",0,1,"","","Patient.address.postalCode"
+"HIMSDataDictionary.birthDate","HIMSDataDictionary.birthDate","","","",1,1,"","","","date {[]} {[]}
+","Date of birth","Patient's date of birth (DOB) if known; if unknown, use assigned DOB for administrative purposes","","","","","","","","","",,,,,"http://openhie.org/fhir/sri-lanka/CodeSystem/cs-register-patient-codes#RP15
+",,,,"HIMSDataDictionary.birthDate",1,1,"","","Patient.birthDate"
+"HIMSDataDictionary.contactDetails","HIMSDataDictionary.contactDetails","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Contact details","Contact details","","","","","","","","","",,,,,"http://openhie.org/fhir/sri-lanka/CodeSystem/cs-register-patient-codes#RP20
+",,,,"HIMSDataDictionary.contactDetails",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Patient.telecom"
+"HIMSDataDictionary.contactDetails.id","HIMSDataDictionary.contactDetails.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"HIMSDataDictionary.contactDetails.extension","HIMSDataDictionary.contactDetails.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a"
+"HIMSDataDictionary.contactDetails.modifierExtension","HIMSDataDictionary.contactDetails.modifierExtension","","extensions
+user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensions that cannot be ignored even if unrecognized","May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","N/A"
+"HIMSDataDictionary.contactDetails.mobileNumber","HIMSDataDictionary.contactDetails.mobileNumber","","","",0,1,"","","","string {[]} {[]}
+","Mobile phone number","Patient's mobile phone number","","","","","","","","","",,,,,"http://openhie.org/fhir/sri-lanka/CodeSystem/cs-register-patient-codes#RP16
+http://hl7.org/fhir/contact-point-system#phone",,,,"HIMSDataDictionary.contactDetails.mobileNumber",0,1,"","","Patient.telecom.value"
+"HIMSDataDictionary.contactDetails.landline","HIMSDataDictionary.contactDetails.landline","","","",0,1,"","","","string {[]} {[]}
+","Landline phone number","Patient's landline phone number","","","","","","","","","",,,,,"http://openhie.org/fhir/sri-lanka/CodeSystem/cs-register-patient-codes#RP17
+http://hl7.org/fhir/contact-point-system#phone",,,,"HIMSDataDictionary.contactDetails.landline",0,1,"","","Patient.telecom.value"
+"HIMSDataDictionary.riskBehaviour","HIMSDataDictionary.riskBehaviour","","","",0,1,"","","","BackboneElement {[]} {[]}
+","Risk Behaviour","Risk Behaviour","","","","","","","","","",,,,,"",,,,"HIMSDataDictionary.riskBehaviour",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"HIMSDataDictionary.riskBehaviour.id","HIMSDataDictionary.riskBehaviour.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"HIMSDataDictionary.riskBehaviour.extension","HIMSDataDictionary.riskBehaviour.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a"
+"HIMSDataDictionary.riskBehaviour.modifierExtension","HIMSDataDictionary.riskBehaviour.modifierExtension","","extensions
+user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensions that cannot be ignored even if unrecognized","May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","N/A"
+"HIMSDataDictionary.riskBehaviour.physicalActivity","HIMSDataDictionary.riskBehaviour.physicalActivity","","","",0,1,"","","","string {[]} {[]}
+","Physical activity","Physical activity status for the patient.","","","","","","","","","",,"extensible","","http://openhie.org/fhir/sri-lanka/ValueSet/vs-risk-behaviour-physical-activity","http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-codes#RA1
+",,,,"HIMSDataDictionary.riskBehaviour.physicalActivity",0,1,"","","Observation.valueCodeableConcept"
+"HIMSDataDictionary.riskBehaviour.tobaccoSmoking","HIMSDataDictionary.riskBehaviour.tobaccoSmoking","","","",0,1,"","","","string {[]} {[]}
+","Tobacco smoking","Tobacco smoking status for the patient.","","","","","","","","","",,"extensible","","http://openhie.org/fhir/sri-lanka/ValueSet/vs-risk-behaviour-tobacco-smoker","http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-codes#RA2
+",,,,"HIMSDataDictionary.riskBehaviour.tobaccoSmoking",0,1,"","","Observation.valueCodeableConcept"

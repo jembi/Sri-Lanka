@@ -1,0 +1,92 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-cvd-risk-category",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSCVDRiskCategory",
+      "title" : "Cardiovascular Risk Categories",
+      "description" : "Cardiovascular risk is expressed as a percentage"
+    },
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-follow-up-reasons",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSFollowUpReasons",
+      "title" : "Follow up at HLC",
+      "description" : "Follow up at Healthy Lifestyle Center"
+    },
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-identifier-types",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSIdentifierTypes",
+      "title" : "Patient Business Identifier Types",
+      "description" : "Patient Business Identifier Types"
+    },
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-investigation",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSInvestigations",
+      "title" : "Investigations",
+      "description" : "Investigations"
+    },
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-medical-history-codes",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSMedicalHistoryCodes",
+      "title" : "Medical History",
+      "description" : "CodeSystem for Medical History Data Elements"
+    },
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-medication-name",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSMedicationNames",
+      "title" : "Medication Names",
+      "description" : "Medication Names"
+    },
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-procedure",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSProcedures",
+      "title" : "Procedures",
+      "description" : "Other Procedures"
+    },
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-procedure-imaging",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSImagingProcedures",
+      "title" : "Procedures",
+      "description" : "Imaging Procedures"
+    },
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-reason-for-encounter",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSReasonForEncounter",
+      "title" : "Reason For Encounter",
+      "description" : "Encounter reasons."
+    },
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-register-patient-codes",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSRegisterPatientCodes",
+      "title" : "Register Patient",
+      "description" : "CodeSystem for Register Patient Data Elements"
+    },
+    {
+      "url" : "http://openhie.org/fhir/sri-lanka/CodeSystem/cs-risk-behaviour-codes",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSRiskBehaviourCodes",
+      "title" : "Risk Behaviour",
+      "description" : "CodeSystem for Risk Behaviour Data Elements"
+    }
+  ]
+}

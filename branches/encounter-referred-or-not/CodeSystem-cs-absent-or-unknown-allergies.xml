@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="cs-absent-or-unknown-allergies"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This case-sensitive code system <code>http://openhie.org/fhir/sri-lanka/CodeSystem/cs-absent-or-unknown-allergies</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">no-allergy-info<a name="cs-absent-or-unknown-allergies-no-allergy-info"> </a></td><td>No information about allergies</td><td>There is no information available regarding the subject's allergy conditions.</td></tr><tr><td style="white-space:nowrap">no-known-allergies<a name="cs-absent-or-unknown-allergies-no-known-allergies"> </a></td><td>No known allergies</td><td>The subject has no known allergy conditions.</td></tr><tr><td style="white-space:nowrap">no-known-medication-allergies<a name="cs-absent-or-unknown-allergies-no-known-medication-allergies"> </a></td><td>No known medication allergies</td><td>The subject has no known medication allergy conditions.</td></tr><tr><td style="white-space:nowrap">no-known-environmental-allergies<a name="cs-absent-or-unknown-allergies-no-known-environmental-allergies"> </a></td><td>No known environmental allergies</td><td>The subject has no known environmental allergy conditions.</td></tr><tr><td style="white-space:nowrap">no-known-food-allergies<a name="cs-absent-or-unknown-allergies-no-known-food-allergies"> </a></td><td>No known food allergies</td><td>The subject has no known food allergy conditions.</td></tr></table></div>
+  </text>
+  <url value="http://openhie.org/fhir/sri-lanka/CodeSystem/cs-absent-or-unknown-allergies"/>
+  <version value="0.1.0"/>
+  <name value="CSAbsentOrUnknownAllergies"/>
+  <title value="Absent or Unknown Allergies"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2023-10-13T06:24:40+00:00"/>
+  <publisher value="Jembi Health Systems"/>
+  <contact>
+    <name value="Jembi Health Systems"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.jembi.org"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@jembi.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Richard Langford"/>
+    <telecom>
+      <system value="email"/>
+      <value value="richard.langford@jembi.org"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Absent or Unknown Allergies"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="5"/>
+  <concept>
+    <code value="no-allergy-info"/>
+    <display value="No information about allergies"/>
+    <definition value="There is no information available regarding the subject's allergy conditions."/>
+  </concept>
+  <concept>
+    <code value="no-known-allergies"/>
+    <display value="No known allergies"/>
+    <definition value="The subject has no known allergy conditions."/>
+  </concept>
+  <concept>
+    <code value="no-known-medication-allergies"/>
+    <display value="No known medication allergies"/>
+    <definition value="The subject has no known medication allergy conditions."/>
+  </concept>
+  <concept>
+    <code value="no-known-environmental-allergies"/>
+    <display value="No known environmental allergies"/>
+    <definition value="The subject has no known environmental allergy conditions."/>
+  </concept>
+  <concept>
+    <code value="no-known-food-allergies"/>
+    <display value="No known food allergies"/>
+    <definition value="The subject has no known food allergy conditions."/>
+  </concept>
+</CodeSystem>

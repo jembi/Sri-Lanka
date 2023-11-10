@@ -1,0 +1,500 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openhie.org/fhir/sri-lanka/StructureMap/HIMSLMToPatientRegistration> a fhir:StructureMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "HIMSLMToPatientRegistration"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre class=\"fml\">\r\n<b>map</b><span style=\"color: navy\"> &quot;</span>http://openhie.org/fhir/sri-lanka/StructureMap/HIMSLMToPatientRegistration<span style=\"color: navy\">&quot; = &quot;</span>HIMSLMToPatientRegistration<span style=\"color: navy\">&quot;\r\n\r\n</span><span style=\"color: navy\">// </span><span style=\"color: green\">Maps the HIMS logical model data elements to the Patient resource data elements</span>\r\n\r\n<b>uses</b><span style=\"color: navy\"> &quot;</span><a href=\"StructureDefinition-HIMSPatientRegistrationDataDictionary.html\" title=\"HIMS Patient Registration\">http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSPatientRegistrationDataDictionary</a><span style=\"color: navy\">&quot; </span><b>alias </b>IMMZC <b>as </b><b>source</b>\r\n<b>uses</b><span style=\"color: navy\"> &quot;</span><a href=\"http://hl7.org/fhir/R4/bundle.html\" title=\"Bundle\">http://hl7.org/fhir/StructureDefinition/Bundle</a><span style=\"color: navy\">&quot; </span><b>alias </b>Bundle <b>as </b><b>target</b>\r\n<b>uses</b><span style=\"color: navy\"> &quot;</span><a href=\"http://hl7.org/fhir/R4/patient.html\" title=\"Patient\">http://hl7.org/fhir/StructureDefinition/Patient</a><span style=\"color: navy\">&quot; </span><b>alias </b>Patient <b>as </b><b>target</b>\r\n\r\n<b>group </b>DataDictToPatient<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">immzc</span><span style=\"color: navy\"> : </span>IMMZC, <b>target</b> <span style=\"color: maroon\">patient</span><span style=\"color: navy\"> : </span>Patient<span style=\"color: navy\">)</span><span style=\"color: navy\"> {\r\n</span>  immzc.personalHealthNumber<b> as </b><span style=\"color: maroon\">id1</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.identifier<b> as </b><span style=\"color: maroon\">identifier</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    id1<span style=\"color: navy\"><b> -&gt; </b></span>identifier.value = <span style=\"color: maroon\">id1</span> <i>&quot;SetPersonalHealthNumberValue&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;SetPHN&quot;</i><span style=\"color: navy\">;</span>\r\n  immzc.nationalIdentityCard<b> as </b><span style=\"color: maroon\">id2</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.identifier<b> as </b><span style=\"color: maroon\">identifier</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    id2<span style=\"color: navy\"><b> -&gt; </b></span>identifier.value = <span style=\"color: maroon\">id2</span> <i>&quot;SetNationalIdentityCardNumberValue&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;SetNIC&quot;</i><span style=\"color: navy\">;</span>\r\n  immzc.passport<b> as </b><span style=\"color: maroon\">id3</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.identifier<b> as </b><span style=\"color: maroon\">identifier</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    id3<span style=\"color: navy\"><b> -&gt; </b></span>identifier.value = <span style=\"color: maroon\">id3</span> <i>&quot;SetPassportNumberValue&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;SetPassport&quot;</i><span style=\"color: navy\">;</span>\r\n  immzc.drivingLicense<b> as </b><span style=\"color: maroon\">id4</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.identifier<b> as </b><span style=\"color: maroon\">identifier</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    id4<span style=\"color: navy\"><b> -&gt; </b></span>identifier.value = <span style=\"color: maroon\">id4</span> <i>&quot;SetDrivingLicenseNumberValue&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;SetDL&quot;</i><span style=\"color: navy\">;</span>\r\n  immzc.seniorCitizenNumber<b> as </b><span style=\"color: maroon\">id5</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.identifier<b> as </b><span style=\"color: maroon\">identifier</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    id5<span style=\"color: navy\"><b> -&gt; </b></span>identifier.value = <span style=\"color: maroon\">id5</span> <i>&quot;SetSeniorCitizenNumberValue&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;SetSCN&quot;</i><span style=\"color: navy\">;</span>\r\n  immzc.sex<b> as </b><span style=\"color: maroon\">sex</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.gender = <span style=\"color: maroon\">sex</span> <i>&quot;SetGender&quot;</i><span style=\"color: navy\">;</span>\r\n  immzc.birthDate<b> as </b><span style=\"color: maroon\">birthDate</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.birthDate = <span style=\"color: maroon\">birthDate</span> <i>&quot;SetBirthDate&quot;</i><span style=\"color: navy\">;</span>\r\n  immzc.patientName<b> as </b><span style=\"color: maroon\">patientName</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.name<b> as </b><span style=\"color: maroon\">hname</span><b> then </b>NameToHumanName<span style=\"color: navy\">(</span><span style=\"color: maroon\">patientName</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">hname</span><span style=\"color: navy\">)</span> <i>&quot;SetPatientNames&quot;</i><span style=\"color: navy\">;</span>\r\n  immzc.address<b> as </b><span style=\"color: maroon\">address</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.address<b> as </b><span style=\"color: maroon\">haddy</span><b> then </b>AddyToAddress<span style=\"color: navy\">(</span><span style=\"color: maroon\">address</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">haddy</span><span style=\"color: navy\">)</span> <i>&quot;SetAddresses&quot;</i><span style=\"color: navy\">;</span>\r\n  immzc.contactDetails<b> as </b><span style=\"color: maroon\">contactDetails</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.telecom<b> as </b><span style=\"color: maroon\">hcontact</span><b> then </b>ContactDetailsToContactPoint<span style=\"color: navy\">(</span><span style=\"color: maroon\">contactDetails</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">hcontact</span><span style=\"color: navy\">)</span> <i>&quot;SetContactDetails&quot;</i><span style=\"color: navy\">;</span>\r\n<span style=\"color: navy\">}\r\n\r\n</span><b>group </b>NameToHumanName<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">name</span>, <b>target</b> <span style=\"color: maroon\">hname</span><span style=\"color: navy\">)</span><span style=\"color: navy\"> {\r\n</span>  name.fullName<b> as </b><span style=\"color: maroon\">fullName</span><span style=\"color: navy\"><b> -&gt; </b></span>hname.text = <span style=\"color: maroon\">fullName</span> <i>&quot;SetFullName&quot;</i><span style=\"color: navy\">;</span>\r\n  name.firstName<b> as </b><span style=\"color: maroon\">firstName</span><span style=\"color: navy\"><b> -&gt; </b></span>hname.given = <span style=\"color: maroon\">firstName</span> <i>&quot;SetFirstName&quot;</i><span style=\"color: navy\">;</span>\r\n  name.surname<b> as </b><span style=\"color: maroon\">surname</span><span style=\"color: navy\"><b> -&gt; </b></span>hname.family = <span style=\"color: maroon\">surname</span> <i>&quot;SetFamilyName&quot;</i><span style=\"color: navy\">;</span>\r\n<span style=\"color: navy\">}\r\n\r\n</span><b>group </b>AddyToAddress<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">address</span>, <b>target</b> <span style=\"color: maroon\">haddy</span><span style=\"color: navy\">)</span><span style=\"color: navy\"> {\r\n</span>  address.streetNameAndNr<b> as </b><span style=\"color: maroon\">streetNameAndNr</span><span style=\"color: navy\"><b> -&gt; </b></span>haddy.line = <span style=\"color: maroon\">streetNameAndNr</span> <i>&quot;SetStreetNameAndNr&quot;</i><span style=\"color: navy\">;</span>\r\n  address.city<b> as </b><span style=\"color: maroon\">city</span><span style=\"color: navy\"><b> -&gt; </b></span>haddy.city = <span style=\"color: maroon\">city</span> <i>&quot;SetCity&quot;</i><span style=\"color: navy\">;</span>\r\n  address.state<b> as </b><span style=\"color: maroon\">state</span><span style=\"color: navy\"><b> -&gt; </b></span>haddy.state = <span style=\"color: maroon\">state</span> <i>&quot;SetState&quot;</i><span style=\"color: navy\">;</span>\r\n  address.country<b> as </b><span style=\"color: maroon\">country</span><span style=\"color: navy\"><b> -&gt; </b></span>haddy.country = <span style=\"color: maroon\">country</span> <i>&quot;SetCountry&quot;</i><span style=\"color: navy\">;</span>\r\n  address.postalCode<b> as </b><span style=\"color: maroon\">postalCode</span><span style=\"color: navy\"><b> -&gt; </b></span>haddy.postalCode = <span style=\"color: maroon\">postalCode</span> <i>&quot;SetPostalCode&quot;</i><span style=\"color: navy\">;</span>\r\n<span style=\"color: navy\">}\r\n\r\n</span><b>group </b>ContactDetailsToContactPoint<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">contact</span>, <b>target</b> <span style=\"color: maroon\">hcontact</span><span style=\"color: navy\">)</span><span style=\"color: navy\"> {\r\n</span>  contact.mobileNumber<b> as </b><span style=\"color: maroon\">mobileNumber</span><span style=\"color: navy\"><b> -&gt; </b></span>hcontact.value = <span style=\"color: maroon\">mobileNumber</span> <i>&quot;SetMobileNumber&quot;</i><span style=\"color: navy\">;</span>\r\n  contact.landline<b> as </b><span style=\"color: maroon\">landline</span><span style=\"color: navy\"><b> -&gt; </b></span>hcontact.value = <span style=\"color: maroon\">landline</span> <i>&quot;SetLandline&quot;</i><span style=\"color: navy\">;</span>\r\n<span style=\"color: navy\">}\r\n\r\n</span></pre></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://openhie.org/fhir/sri-lanka/StructureMap/HIMSLMToPatientRegistration"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "HIMSLMToPatientRegistration"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2023-11-10T04:37:53+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Jembi Health Systems"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Jembi Health Systems" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.jembi.org" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "info@jembi.org" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Richard Langford" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "richard.langford@jembi.org" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Maps the HIMS logical model data elements to the Patient resource data elements"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:structure ( [
+     fhir:url [
+       fhir:v "http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSPatientRegistrationDataDictionary"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/sri-lanka/StructureDefinition/HIMSPatientRegistrationDataDictionary>
+     ] ;
+     fhir:mode [ fhir:v "source" ] ;
+     fhir:alias [ fhir:v "IMMZC" ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/Bundle"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/Bundle>
+     ] ;
+     fhir:mode [ fhir:v "target" ] ;
+     fhir:alias [ fhir:v "Bundle" ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/Patient"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/Patient>
+     ] ;
+     fhir:mode [ fhir:v "target" ] ;
+     fhir:alias [ fhir:v "Patient" ]
+  ] ) ; # 
+  fhir:group ( [
+     fhir:name [ fhir:v "DataDictToPatient" ] ;
+     fhir:typeMode [ fhir:v "none" ] ;
+     fhir:input ( [
+       fhir:name [ fhir:v "immzc" ] ;
+       fhir:type [ fhir:v "IMMZC" ] ;
+       fhir:mode [ fhir:v "source" ]
+     ] [
+       fhir:name [ fhir:v "patient" ] ;
+       fhir:type [ fhir:v "Patient" ] ;
+       fhir:mode [ fhir:v "target" ]
+     ] ) ;
+     fhir:rule ( [
+       fhir:name [ fhir:v "SetPHN" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "immzc" ] ;
+         fhir:element [ fhir:v "personalHealthNumber" ] ;
+         fhir:variable [ fhir:v "id1" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "patient" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "identifier" ] ;
+         fhir:variable [ fhir:v "identifier" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "SetPersonalHealthNumberValue" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "id1" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "identifier" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "value" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [ fhir:v "id1" ]
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "SetNIC" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "immzc" ] ;
+         fhir:element [ fhir:v "nationalIdentityCard" ] ;
+         fhir:variable [ fhir:v "id2" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "patient" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "identifier" ] ;
+         fhir:variable [ fhir:v "identifier" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "SetNationalIdentityCardNumberValue" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "id2" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "identifier" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "value" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [ fhir:v "id2" ]
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "SetPassport" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "immzc" ] ;
+         fhir:element [ fhir:v "passport" ] ;
+         fhir:variable [ fhir:v "id3" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "patient" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "identifier" ] ;
+         fhir:variable [ fhir:v "identifier" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "SetPassportNumberValue" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "id3" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "identifier" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "value" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [ fhir:v "id3" ]
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "SetDL" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "immzc" ] ;
+         fhir:element [ fhir:v "drivingLicense" ] ;
+         fhir:variable [ fhir:v "id4" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "patient" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "identifier" ] ;
+         fhir:variable [ fhir:v "identifier" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "SetDrivingLicenseNumberValue" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "id4" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "identifier" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "value" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [ fhir:v "id4" ]
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "SetSCN" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "immzc" ] ;
+         fhir:element [ fhir:v "seniorCitizenNumber" ] ;
+         fhir:variable [ fhir:v "id5" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "patient" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "identifier" ] ;
+         fhir:variable [ fhir:v "identifier" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "SetSeniorCitizenNumberValue" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "id5" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "identifier" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "value" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [ fhir:v "id5" ]
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "SetGender" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "immzc" ] ;
+         fhir:element [ fhir:v "sex" ] ;
+         fhir:variable [ fhir:v "sex" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "patient" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "gender" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "sex" ]
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "SetBirthDate" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "immzc" ] ;
+         fhir:element [ fhir:v "birthDate" ] ;
+         fhir:variable [ fhir:v "birthDate" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "patient" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "birthDate" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "birthDate" ]
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "SetPatientNames" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "immzc" ] ;
+         fhir:element [ fhir:v "patientName" ] ;
+         fhir:variable [ fhir:v "patientName" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "patient" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "name" ] ;
+         fhir:variable [ fhir:v "hname" ]
+       ] ) ;
+       fhir:dependent ( [
+         fhir:name [ fhir:v "NameToHumanName" ] ;
+         fhir:variable ( [ fhir:v "patientName" ] [ fhir:v "hname" ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "SetAddresses" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "immzc" ] ;
+         fhir:element [ fhir:v "address" ] ;
+         fhir:variable [ fhir:v "address" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "patient" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "address" ] ;
+         fhir:variable [ fhir:v "haddy" ]
+       ] ) ;
+       fhir:dependent ( [
+         fhir:name [ fhir:v "AddyToAddress" ] ;
+         fhir:variable ( [ fhir:v "address" ] [ fhir:v "haddy" ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "SetContactDetails" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "immzc" ] ;
+         fhir:element [ fhir:v "contactDetails" ] ;
+         fhir:variable [ fhir:v "contactDetails" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "patient" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "telecom" ] ;
+         fhir:variable [ fhir:v "hcontact" ]
+       ] ) ;
+       fhir:dependent ( [
+         fhir:name [ fhir:v "ContactDetailsToContactPoint" ] ;
+         fhir:variable ( [ fhir:v "contactDetails" ] [ fhir:v "hcontact" ] )
+       ] )
+     ] )
+  ] [
+     fhir:name [ fhir:v "NameToHumanName" ] ;
+     fhir:typeMode [ fhir:v "none" ] ;
+     fhir:input ( [
+       fhir:name [ fhir:v "name" ] ;
+       fhir:mode [ fhir:v "source" ]
+     ] [
+       fhir:name [ fhir:v "hname" ] ;
+       fhir:mode [ fhir:v "target" ]
+     ] ) ;
+     fhir:rule ( [
+       fhir:name [ fhir:v "SetFullName" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "name" ] ;
+         fhir:element [ fhir:v "fullName" ] ;
+         fhir:variable [ fhir:v "fullName" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "hname" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "text" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "fullName" ]
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "SetFirstName" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "name" ] ;
+         fhir:element [ fhir:v "firstName" ] ;
+         fhir:variable [ fhir:v "firstName" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "hname" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "given" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "firstName" ]
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "SetFamilyName" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "name" ] ;
+         fhir:element [ fhir:v "surname" ] ;
+         fhir:variable [ fhir:v "surname" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "hname" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "family" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "surname" ]
+         ] )
+       ] )
+     ] )
+  ] [
+     fhir:name [ fhir:v "AddyToAddress" ] ;
+     fhir:typeMode [ fhir:v "none" ] ;
+     fhir:input ( [
+       fhir:name [ fhir:v "address" ] ;
+       fhir:mode [ fhir:v "source" ]
+     ] [
+       fhir:name [ fhir:v "haddy" ] ;
+       fhir:mode [ fhir:v "target" ]
+     ] ) ;
+     fhir:rule ( [
+       fhir:name [ fhir:v "SetStreetNameAndNr" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "address" ] ;
+         fhir:element [ fhir:v "streetNameAndNr" ] ;
+         fhir:variable [ fhir:v "streetNameAndNr" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "haddy" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "line" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "streetNameAndNr" ]
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "SetCity" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "address" ] ;
+         fhir:element [ fhir:v "city" ] ;
+         fhir:variable [ fhir:v "city" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "haddy" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "city" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "city" ]
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "SetState" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "address" ] ;
+         fhir:element [ fhir:v "state" ] ;
+         fhir:variable [ fhir:v "state" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "haddy" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "state" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "state" ]
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "SetCountry" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "address" ] ;
+         fhir:element [ fhir:v "country" ] ;
+         fhir:variable [ fhir:v "country" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "haddy" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "country" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "country" ]
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "SetPostalCode" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "address" ] ;
+         fhir:element [ fhir:v "postalCode" ] ;
+         fhir:variable [ fhir:v "postalCode" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "haddy" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "postalCode" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "postalCode" ]
+         ] )
+       ] )
+     ] )
+  ] [
+     fhir:name [ fhir:v "ContactDetailsToContactPoint" ] ;
+     fhir:typeMode [ fhir:v "none" ] ;
+     fhir:input ( [
+       fhir:name [ fhir:v "contact" ] ;
+       fhir:mode [ fhir:v "source" ]
+     ] [
+       fhir:name [ fhir:v "hcontact" ] ;
+       fhir:mode [ fhir:v "target" ]
+     ] ) ;
+     fhir:rule ( [
+       fhir:name [ fhir:v "SetMobileNumber" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "contact" ] ;
+         fhir:element [ fhir:v "mobileNumber" ] ;
+         fhir:variable [ fhir:v "mobileNumber" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "hcontact" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "value" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "mobileNumber" ]
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "SetLandline" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "contact" ] ;
+         fhir:element [ fhir:v "landline" ] ;
+         fhir:variable [ fhir:v "landline" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "hcontact" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "value" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "landline" ]
+         ] )
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

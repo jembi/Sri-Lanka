@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="PrescriptionRequestExample"/>
+  <meta>
+    <profile value="http://openhie.org/fhir/sri-lanka/StructureDefinition/prescription-request"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: MedicationRequest</b><a name="PrescriptionRequestExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource MedicationRequest &quot;PrescriptionRequestExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-prescription-request.html">Prescription Request</a></p></div><p><b>identifier</b>: id: PRES00212321</p><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>medication</b>: Patient Prescription <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#261000)</span></p><p><b>subject</b>: <a href="Patient-HHIMSPatientExample.html">Patient/HHIMSPatientExample</a> &quot; SMITH&quot;</p><p><b>authoredOn</b>: 2023-10-11 17:21:33-0800</p><p><b>note</b>: Additional information regarding the patient's medication prescription (By Organization/OrganizationExample @Oct 12, 2023, 1:21:33 AM)</p><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Duration 2days, Once per 3 days</p><blockquote><p><b>doseAndRate</b></p></blockquote></blockquote><h3>DispenseRequests</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Quantity</b></td></tr><tr><td style="display: none">*</td><td>5</td></tr></table></div>
+  </text>
+  <identifier>
+    <system value="http://openhie.org/fhir/sri-lanka/identifier/prescription-request"/>
+    <value value="PRES00212321"/>
+  </identifier>
+  <status value="completed"/>
+  <intent value="order"/>
+  <medicationCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="261000"/>
+    </coding>
+    <text value="Patient Prescription"/>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/HHIMSPatientExample"/>
+  </subject>
+  <authoredOn value="2023-10-11T17:21:33-08:00"/>
+  <note>
+    <authorReference>
+      <reference value="Organization/OrganizationExample"/>
+    </authorReference>
+    <time value="2023-10-11T17:21:33-08:00"/>
+    <text value="Additional information regarding the patient's medication prescription"/>
+  </note>
+  <dosageInstruction>
+    <timing>
+      <repeat>
+        <duration value="2"/>
+        <durationUnit value="d"/>
+        <period value="3"/>
+        <periodUnit value="d"/>
+      </repeat>
+    </timing>
+    <doseAndRate>
+      <doseQuantity>
+        <value value="3"/>
+      </doseQuantity>
+    </doseAndRate>
+  </dosageInstruction>
+  <dispenseRequest>
+    <quantity>
+      <value value="5"/>
+    </quantity>
+  </dispenseRequest>
+</MedicationRequest>

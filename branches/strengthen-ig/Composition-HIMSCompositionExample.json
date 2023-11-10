@@ -1,0 +1,218 @@
+{
+  "resourceType" : "Composition",
+  "id" : "HIMSCompositionExample",
+  "meta" : {
+    "profile" : ["http://openhie.org/fhir/sri-lanka/StructureDefinition/hims-composition"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Composition</b><a name=\"HIMSCompositionExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Composition &quot;HIMSCompositionExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-hims-composition.html\">HIMS Composition</a></p></div><p><b>identifier</b>: id:\u00a0PAT0001-v1</p><p><b>status</b>: final</p><p><b>type</b>: 11502-2 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#11502-2)</span></p><p><b>encounter</b>: <a href=\"Encounter-TargetFacilityEncounterExample.html\">Encounter/TargetFacilityEncounterExample</a></p><p><b>date</b>: 2023-08-22</p><p><b>author</b>: </p><ul><li><a href=\"Practitioner-GeneralPractitionerExample.html\">Practitioner/GeneralPractitionerExample</a> &quot; SMITH&quot;</li><li><a href=\"Organization-OrganizationExample.html\">Organization/OrganizationExample</a> &quot;Some Health Facility&quot;</li></ul><p><b>title</b>: Sri Lanka team to advise on title</p></div>"
+  },
+  "identifier" : {
+    "system" : "http://openhie.org/fhir/sri-lanka/identifier/document",
+    "value" : "PAT0001-v1"
+  },
+  "status" : "final",
+  "type" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "11502-2"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/HHIMSPatientExample"
+  },
+  "encounter" : {
+    "reference" : "Encounter/TargetFacilityEncounterExample"
+  },
+  "date" : "2023-08-22",
+  "author" : [{
+    "reference" : "Practitioner/GeneralPractitionerExample"
+  },
+  {
+    "reference" : "Organization/OrganizationExample"
+  }],
+  "title" : "Sri Lanka team to advise on title",
+  "section" : [{
+    "title" : "Risk Behaviour - Assessment of Physical Activity",
+    "code" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "398636004"
+      }]
+    },
+    "text" : {
+      "status" : "generated",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+    },
+    "entry" : [{
+      "reference" : "Observation/RiskBehaviourPhysicalActivityExample"
+    }]
+  },
+  {
+    "title" : "Risk Behaviour - Tobacco smoking Assessment",
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "72166-2"
+      }]
+    },
+    "text" : {
+      "status" : "generated",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+    },
+    "entry" : [{
+      "reference" : "Observation/RiskBehaviourTobaccoSmokerExample"
+    }]
+  },
+  {
+    "title" : "Blood Pressure",
+    "code" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "75367002"
+      }]
+    },
+    "text" : {
+      "status" : "generated",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+    },
+    "entry" : [{
+      "reference" : "Observation/BloodPressureExample"
+    }]
+  },
+  {
+    "title" : "Patient Weight",
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "3141-9"
+      }]
+    },
+    "text" : {
+      "status" : "generated",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+    },
+    "entry" : [{
+      "reference" : "Observation/WeightExample"
+    }]
+  },
+  {
+    "title" : "Patient Height",
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "3137-7"
+      }]
+    },
+    "text" : {
+      "status" : "generated",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+    },
+    "entry" : [{
+      "reference" : "Observation/HeightExample"
+    }]
+  },
+  {
+    "title" : "Patient BMI",
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "97057-4"
+      }]
+    },
+    "text" : {
+      "status" : "generated",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+    },
+    "entry" : [{
+      "reference" : "Observation/BMIExample"
+    }]
+  },
+  {
+    "title" : "Bloodwork",
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "LA17759-4"
+      }]
+    },
+    "text" : {
+      "status" : "generated",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+    },
+    "entry" : [{
+      "reference" : "Observation/RandomBloodSugarExample"
+    },
+    {
+      "reference" : "Observation/FastingBloodSugarExample"
+    },
+    {
+      "reference" : "Observation/TotalCholesterolExample"
+    }]
+  },
+  {
+    "title" : "Risk Assessment Report",
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "71482-4"
+      }]
+    },
+    "text" : {
+      "status" : "generated",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+    },
+    "entry" : [{
+      "reference" : "RiskAssessment/CVDRiskCategoryExample"
+    }]
+  },
+  {
+    "title" : "Referral Requests",
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "LA24277-8"
+      }]
+    },
+    "text" : {
+      "status" : "generated",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+    },
+    "entry" : [{
+      "reference" : "ServiceRequest/FollowUpPlanServiceRequestExample"
+    }]
+  },
+  {
+    "title" : "Treatment and Care",
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "68833-3"
+      }]
+    },
+    "text" : {
+      "status" : "generated",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+    },
+    "entry" : [{
+      "reference" : "CarePlan/FollowUpAtHLCExample"
+    }]
+  },
+  {
+    "title" : "Previous, pre-existing and new conditions",
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "67804-5"
+      }]
+    },
+    "text" : {
+      "status" : "generated",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>To be added</p></div>"
+    },
+    "entry" : [{
+      "reference" : "Condition/MedicalHistoryExample"
+    }]
+  }]
+}
